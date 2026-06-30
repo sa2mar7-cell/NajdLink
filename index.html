@@ -1,191 +1,497 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NajdLink OS</title>
+    <title>جمهورية الفرص - منصة نجد لينك (Najd Link OS)</title>
+    <!-- استدعاء الخطوط الرسمية المعتمدة للهوية من Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Tajawal:wght@500;700;800&display=swap" rel="stylesheet">
     <style>
+        /* [GLOBAL COLOR PALETTE TOKENS] تطبيق لوحة الألوان الرسمية الفاخرة المعتمدة بالملي */
+        :root {
+            --canvas-bg: #11161B;         /* الفحم الداكن الأساسي (Deep Charcoal) */
+            --card-surface: #161D24;      /* الرمادي الداكن للبطاقات والمربعات (Secondary Surface) */
+            --brand-gold: #D4AF37;        /* الذهبي المصقول (Polished Gold) - بانتون 872 */
+            --brand-green: #00563F;       /* الأخضر الإمبراطوري (Imperial Green) - بانتون 343 */
+            --neutral-sand: #E1D7C6;      /* بيج الرمال الناعمة (Soft Sand Beige) - بانتون 7527 */
+            --text-primary: #F8F9FA;      /* الأبيض النقي للعناوين عالي التباين (Contrast UI White) */
+            --text-secondary: #D1D5DB;    /* الرمادي الفاتح للنصوص والمحتوى التشغيلي الطويل */
+        }
+
         body {
-            background-color: #0b0f19;
-            color: #ffffff;
-            font-family: 'Inter', sans-serif;
+            background-color: var(--canvas-bg);
+            color: var(--text-primary);
+            font-family: 'Tajawal', 'Montserrat', sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
+            overflow-x: hidden;
         }
+
+        /* البار العلوي للمنصة بنسبة التباين الكاملة */
         .navbar {
             width: 100%;
             max-width: 1200px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px;
+            padding: 20px 40px;
             box-sizing: border-box;
+            border-bottom: 1px solid rgba(225, 215, 198, 0.12); /* حد ناعم بلون بيج الرمال الناعمة المعتمد */
         }
+
         .nav-logo {
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-weight: bold;
-            color: #10b981;
+            gap: 15px;
+            font-weight: 800;
+            font-size: 1.4rem;
+            color: var(--text-primary);
+            text-decoration: none;
         }
-        .nav-logo img {
-            width: 40px;
-            height: 40px;
+
+        /* تطبيق معادلة المساحة الآمنة الحتمية للشعار لمنع تشويه القيمة البصرية S_zone = 0.25 * D_logo */
+        .logo-container {
+            position: relative;
+            width: 55px;
+            height: 55px;
+            padding: 13.75px; /* حساب المساحة الآمنة الدقيقة المحيطة بالشعار بدقة حتمية (0.25 * 55) */
+            box-sizing: content-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* تصميم رسوميات الشعار الدائري الفخم المدمج هندسياً بقوة */
+        .brand-logo-graphics {
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, var(--canvas-bg) 0%, #1a222a 100%);
+            border: 2px solid var(--brand-gold); /* إطار هندسي بالذهبي المصقول المعتمد */
             border-radius: 50%;
-            object-fit: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.35); /* توهج ذهبي فخم يعكس الفخامة النخبوية */
         }
+
+        .brand-logo-graphics svg {
+            width: 32px;
+            height: 32px;
+            fill: var(--brand-gold);
+        }
+
         .nav-links {
             display: flex;
-            gap: 20px;
-            color: #9ca3af;
-            font-size: 0.9rem;
+            gap: 30px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            font-weight: 700;
         }
+
+        .nav-links span {
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .nav-links span:hover {
+            color: var(--brand-gold);
+        }
+
+        /* قسم الواجهة الرئيسية وعرض التمكين النخبوي (Hero Block) */
         .hero {
             text-align: center;
-            max-width: 800px;
+            max-width: 950px;
             margin-top: 60px;
             padding: 0 20px;
+            margin-bottom: 50px;
         }
+
         .hero h1 {
-            font-size: 3rem;
+            font-size: 3.2rem;
             font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 20px;
+            line-height: 1.35;
+            color: var(--text-primary);
+            margin-bottom: 25px;
+            letter-spacing: -0.01em;
         }
+
         .hero p {
-            color: #9ca3af;
-            font-size: 1.2rem;
-            margin-bottom: 30px;
+            color: var(--text-secondary);
+            font-size: 1.3rem;
+            line-height: 1.7;
+            margin-bottom: 45px;
         }
+
+        /* أزرار الإجراءات وحواف الحقول الفخمة المتفاعلة التزاماً بمعايير الأكواد الفنية */
         .cta-buttons {
             display: flex;
             justify-content: center;
-            gap: 15px;
-            margin-bottom: 40px;
-        }
-        .btn-primary {
-            background-color: #3b82f6;
-            color: white;
-            padding: 12px 24px;
-            border-radius: 9999px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .btn-secondary {
-            background-color: #1f2937;
-            color: #d1d5db;
-            padding: 12px 24px;
-            border-radius: 9999px;
-            text-decoration: none;
-            border: 1px solid #374151;
-        }
-        .tags {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-bottom: 50px;
-        }
-        .tag {
-            background-color: #1e1b4b;
-            color: #818cf8;
-            padding: 6px 16px;
-            border-radius: 9999px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            border: 1px solid #312e81;
-        }
-        .tag.active {
-            background-color: #1e3a8a;
-            color: #60a5fa;
-            border-color: #1d4ed8;
-        }
-        .dashboard-grid {
-            display: flex;
             gap: 20px;
-            max-width: 1000px;
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, var(--brand-gold) 0%, #A3805B 100%); /* التدرج اللوني المعتمد للذهبي المصقول */
+            color: #11161B; /* استخدام الفحم الداكن للنص لضمان التباين والقراءة المريحة */
+            padding: 16px 38px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.25);
+            transition: all 0.3s ease;
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-2px) scale(1.02); /* حماية تفاعلات الكيانات الدقيقة Micro-interactions */
+            filter: brightness(1.1);
+        }
+
+        .btn-green {
+            background-color: var(--brand-green); /* الأخضر الإمبراطوري بانتون 343 */
+            color: var(--text-primary);
+            padding: 16px 38px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border: 1px solid rgba(225, 215, 198, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .btn-green:hover {
+            transform: translateY(-2px);
+            background-color: #006e50;
+        }
+
+        /* عناوين الأقسام والمجموعات الهيكلية */
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--brand-gold);
+            margin-top: 60px;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            color: var(--text-secondary);
+            font-size: 1.15rem;
+            margin-bottom: 50px;
+            text-align: center;
+            max-width: 750px;
+        }
+
+        /* شبكة عرض مجالات دليل الأنشطة الـ 15 المعتمدة بالكامل */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
             width: 100%;
-            padding: 0 20px;
+            padding: 0 30px;
             box-sizing: border-box;
-            margin-bottom: 60px;
+            margin-bottom: 80px;
         }
-        .card {
-            background-color: #111827;
-            border: 1px solid #1f2937;
-            border-radius: 16px;
-            padding: 24px;
-            flex: 1;
+
+        /* تصميم البطاقات المستوحى من Framer Blueprint بأطراف ليزر دقيقة */
+        .activity-card {
+            background-color: var(--card-surface);
+            border: 1px solid rgba(225, 215, 198, 0.12); /* حدود ناعمة ورقيقة جداً بلون بيج الرمال الناعمة بشفافية 12% */
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
-        .card h3 {
+
+        .activity-card:hover {
+            border-color: var(--brand-gold);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+        }
+
+        .card-num {
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: rgba(212, 175, 55, 0.25);
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .activity-card h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
             margin-top: 0;
-            font-size: 1.25rem;
+            margin-bottom: 14px;
+            color: var(--text-primary);
+            padding-left: 25px;
         }
-        .card p {
-            color: #9ca3af;
-            font-size: 0.95rem;
-            line-height: 1.5;
+
+        .activity-card p {
+            color: var(--text-secondary);
+            font-size: 0.98rem;
+            line-height: 1.68;
+            margin: 0;
         }
-        .badge {
-            background-color: #f59e0b;
-            color: #111827;
-            padding: 4px 8px;
+
+        /* قسم جدار الحماية الاستشاري والقانوني الشامل لتعاقدات المنصة */
+        .legal-section {
+            background-color: #0F1419; /* حقل عميق مخصص لحصر المسؤولية القانونية وتحصين المنصة */
+            width: 100%;
+            padding: 75px 20px;
+            box-sizing: border-box;
+            border-top: 1px solid rgba(212, 175, 55, 0.18);
+        }
+
+        .legal-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .legal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+            gap: 30px;
+            margin-top: 45px;
+        }
+
+        @media (max-width: 650px) {
+            .legal-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2.2rem; }
+        }
+
+        .legal-card {
+            background-color: var(--canvas-bg);
+            border-right: 4px solid var(--brand-gold); /* حافة يمنى ذهبية صريحة ومصقولة للتأكيد والتحصين التنظيمي */
+            padding: 30px;
             border-radius: 4px;
-            font-size: 0.75rem;
-            font-weight: bold;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.22);
+        }
+
+        .legal-card h4 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--brand-gold);
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+
+        .legal-card p {
+            color: var(--text-secondary);
+            font-size: 0.98rem;
+            line-height: 1.62;
+            margin-bottom: 15px;
+        }
+
+        /* بنود الصياغة النخبوية المقفلة بالملي لردع المخالفات والالتفاف والتواصل المباشر السري */
+        .protection-clause {
+            background-color: rgba(0, 86, 63, 0.12); /* خلفية خفيفة مستوحاة من الأخضر الإمبراطوري الحامي للنمو */
+            border: 1px dashed rgba(212, 175, 55, 0.45); /* إطار ذهبي متقطع كمعيار لعقود الـ Framework وحظر الالتفاف */
+            padding: 15px;
+            border-radius: 4px;
+            font-size: 0.92rem;
+            color: #E1D7C6; /* لون بيج الرمال الناعمة لضمان هدوء ومقروئية البند العقدي */
+            line-height: 1.65;
+            font-weight: 500;
+        }
+
+        /* تذييل المنصة المؤسسي المعتمد (Footer) */
+        footer {
+            width: 100%;
+            text-align: center;
+            padding: 45px 20px;
+            box-sizing: border-box;
+            border-top: 1px solid rgba(225, 215, 198, 0.12);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            background-color: var(--canvas-bg);
         }
     </style>
 </head>
 <body>
 
-    <!-- البار العلوي -->
+    <!-- البار العلوي للمنصة مدمج به الشعار المطور والاسم الرسمي بالألوان المعتمدة -->
     <div class="navbar">
-        <div class="nav-logo">
-            <img src="logo.png" alt="NajdLink Logo">
-            <span>NajdLink OS</span>
-        </div>
+        <a href="#" class="nav-logo">
+            <div class="logo-container">
+                <div class="brand-logo-graphics">
+                    <!-- لوقو نجد لينك الهندسي الفخم المصنوع برمجياً عبر الـ SVG للتوافق المطلق الفوري مع شاشات الـ Retina والـ 8K بدون تكسر أو فقدان جودة -->
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12C20,14.39 18.95,16.54 17.29,18L15.87,16.59C17.19,15.42 18,13.8 18,12A6,6 0 0,0 12,6V4M12,8A4,4 0 0,1 16,12C16,13.1 15.55,14.1 14.83,14.83L13.41,13.41C13.78,13.04 14,12.55 14,12A2,2 0 0,0 12,10V8M6,12A6,6 0 0,1 12,6V8A4,4 0 0,0 8,12C8,13.1 8.45,14.1 9.17,14.83L7.76,16.24C6.66,15.14 6,13.65 6,12M12,16A4,4 0 0,1 12,8V10A2,2 0 0,0 10,12C10,12.55 10.22,13.04 10.59,13.41L9.17,14.83C8.45,14.1 8,13.1 8,12M12,20V18A6,6 0 0,0 12,6V4A8,8 0 0,1 12,20Z"/>
+                    </svg>
+                </div>
+            </div>
+            <span style="font-family: 'Tajawal', sans-serif; font-weight: 800; letter-spacing: 0.5px;">نجد لينك</span>
+        </a>
         <div class="nav-links">
-            <span>Pricing</span>
-            <span>Dashboard</span>
-            <span>Security</span>
+            <span>الأنشطة الـ 15</span>
+            <span>جدار الحماية</span>
+            <span>الهوية والأكواد</span>
         </div>
     </div>
 
-    <!-- القسم الرئيسي الكبير -->
+    <!-- واجهة التمكين والربط الاستراتيجي النخبوي (Hero Block) -->
     <div class="hero">
-        <h1>The platform to optimize, monitor, and digital operations.</h1>
-        <p>Subscription revenue, wallet operations, admin analytics, flows, and growth loops from a single secure interface.</p>
+        <h1>واجهة استشارية وتسهيلية مستقلة للربط التجاري النخبوي</h1>
+        <p>نعمل كميسر ومستشار استراتيجي مستقل لتمكين الربط النخبوي في السوق السعودي، وجذب واستقطاب المصانع الدولية الكبرى، والتوكيلات التجارية الضخمة (Franchises)، وسلاسل الفنادق العالمية المتميزة بما يعزز ويحقق التوافق المطلق مع رؤية المملكة 2030.</p>
         
         <div class="cta-buttons">
-            <a href="#" class="btn-primary">Start Platform</a>
-            <a href="#" class="btn-secondary">View Dashboard</a>
-        </div>
-
-        <!-- الأزرار الصغيرة الملونة -->
-        <div class="tags">
-            <span class="tag active">Payments</span>
-            <span class="tag">Security logs</span>
-            <span class="tag">Wallet</span>
-            <span class="tag">Referrals</span>
+            <a href="#" class="btn-gold">استكشاف الفرص الاستراتيجية</a>
+            <a href="#" class="btn-green">التحصين والحوكمة وبناء الشراكات</a>
         </div>
     </div>
 
-    <!-- البطاقات السفلية والشبكة احترافية -->
-    <div class="dashboard-grid">
-        <div class="card">
-            <span class="badge">LIVE</span>
-            <h3>Live support desk</h3>
-            <p>Embedded inquiry flow with priority routing, SLA status, and bilingual support context.</p>
+    <!-- استعراض كامل وشامل ومراجع لمجالات دليل الأنشطة الـ 15 الاستراتيجية دون فقدان أي بند أو فكرة -->
+    <div class="section-title">المجالات والأنشطة الـ 15 المعتمدة</div>
+    <div class="section-subtitle">الدليل التشغيلي والاستراتيجي الرسمي المعتمد لتيسير الصفقات، التعريف، والتمكين في السوق المحلي من الألف إلى الياء</div>
+
+    <div class="grid-container">
+        <!-- 1 -->
+        <div class="activity-card">
+            <div class="card-num">01</div>
+            <h3>الضيافة الفاخرة وأسلوب الحياة</h3>
+            <p>تيسير واستشارة وربط المشغلين الدوليين، الطهاة النخبويين، والمفاهيم الفندقية الفاخرة بالفرص المتاحة في المشاريع السياحية الكبرى.</p>
         </div>
-        <div class="card">
-            <h3 style="color: #ef4444;">404</h3>
-            <h3>Lost route recovery</h3>
-            <p>When a user hits a dead route, this smart fallback guides them back to dashboard, pricing.</p>
+        <!-- 2 -->
+        <div class="activity-card">
+            <div class="card-num">02</div>
+            <h3>العلامات التجارية الفاخرة</h3>
+            <p>تقديم الاستشارات وتسهيل دخول قطاعات الأزياء الراقية، الساعات والمجوهرات الثمينة، والخدمات الحصرية التي تستهدف النخبة للسوق المحلي.</p>
+        </div>
+        <!-- 3 -->
+        <div class="activity-card">
+            <div class="card-num">03</div>
+            <h3>الذكاء الاصطناعي والتقنية المتقدمة</h3>
+            <p>تيسير الشراكات والاستشارات الرقمية، وربط مزودي حلول التكنولوجيا الناشئة والمتقدمة بالبنى التحتية والمشاريع الكبرى.</p>
+        </div>
+        <!-- 4 -->
+        <div class="activity-card">
+            <div class="card-num">04</div>
+            <h3>الأمن السيبراني وحماية البيانات</h3>
+            <p>استشارة وتسهيل وربط الكيانات المتخصصة في أنظمة الحماية الرقمية واستمرارية الأعمال بالجهات الحيوية لتأمين بياناتها ومواجهة الأزمات.</p>
+        </div>
+        <!-- 5 -->
+        <div class="activity-card">
+            <div class="card-num">05</div>
+            <h3>الترفيه والألعاب الإلكترونية</h3>
+            <p>الربط الاستراتيجي والتسهيل للشركات العالمية والمستثمرين في قطاع الترفيه، الفعاليات الضخمة، وصناعة الألعاب الإلكترونية لتمكين تواجدها.</p>
+        </div>
+        <!-- 6 -->
+        <div class="activity-card">
+            <div class="card-num">06</div>
+            <h3>تسهيل دخول القطاعات الصحية الخارجية</h3>
+            <p>تيسير واستشارة وربط الكيانات الطبية والمستشفيات الدولية ومزودي الحلول الصحية المبتكرة للدخول والعمل ضمن البيئة التنظيمية المحلية.</p>
+        </div>
+        <!-- 7 -->
+        <div class="activity-card">
+            <div class="card-num">07</div>
+            <h3>التصنيع العالمي وجلب الاستثمارات</h3>
+            <p>العمل كبوابة استشارية لتسهيل وربط المصنعين الدوليين والكيانات الصناعية الكبرى الراغبة في تأسيس موطئ قدم صلب لها في السوق المحلي.</p>
+        </div>
+        <!-- 8 -->
+        <div class="activity-card">
+            <div class="card-num">08</div>
+            <h3>التجارة الحية والاجتماعية والأسواق الرقمية</h3>
+            <p>تقديم الاستشارات والربط لابتكار وتطوير نماذج عمل جديدة في منصات التجارة التفاعلية والتطبيقات الذكية التي تخدم وتنافس النماذج التقليدية.</p>
+        </div>
+        <!-- 9 -->
+        <div class="activity-card">
+            <div class="card-num">09</div>
+            <h3>الهندسة الاحترافية والمعايير الفنية</h3>
+            <p>تيسير وحوكمة وربط الكيانات الدولية المتخصصة في البنية التحتية، إنشاء الطرق، الصيانة الصناعية، والمعدات الثقيلة بالمشاريع المحلية.</p>
+        </div>
+        <!-- 10 -->
+        <div class="activity-card">
+            <div class="card-num">10</div>
+            <h3>التأهيل للمناقصات والمزايدات الحكومية</h3>
+            <p>تقديم الاستشارات الفنية لتسهيل عمليات تأهيل الشركات وبناء المقترحات التقنية للمنافسات والمزايدات عبر المنصات الرسمية بكفاءة مطلقة.</p>
+        </div>
+        <!-- 11 -->
+        <div class="activity-card">
+            <div class="card-num">11</div>
+            <h3>منصات الفعاليات والاحتفالات الإقليمية</h3>
+            <p>تيسير واستشارة وربط الأنظمة الرقمية والمنصات الإخبارية المسؤولة عن تغطية وإبراز المناسبات والاحتفالات والأنشطة الكبرى في المنطقة.</p>
+        </div>
+        <!-- 12 -->
+        <div class="activity-card">
+            <div class="card-num">12</div>
+            <h3>الوساطة والاستشارات العقارية الفاخرة</h3>
+            <p>تيسير وربط صفقات الأصول العقارية الكبرى والمشاريع السيادية والمدن الجديدة (نيوم، القدية، البحر الأحمر) بين المستثمرين والمطورين العقاريين.</p>
+        </div>
+        <!-- 13 -->
+        <div class="activity-card">
+            <div class="card-num">13</div>
+            <h3>تسهيل الاستثمارات الدولية المباشرة (FDI)</h3>
+            <p>جذب وتنسيق التحالفات الاستراتيجية متعددة القطاعات وتسهيل دخول السيولة والأموال الأجنبية المباشرة وتوجيهها للفرص الواعدة بالمملكة.</p>
+        </div>
+        <!-- 14 -->
+        <div class="activity-card">
+            <div class="card-num">14</div>
+            <h3>الهويات الرقمية وصناعة المحتوى التنفيذي</h3>
+            <p>تقديم الاستشارات لبناء الهوية المهنية الرقمية وإدارة الحسابات التنفيذية لصناع القرار وقادة الأعمال لتعزيز حضورهم المهني النخبوي والقيادي.</p>
+        </div>
+        <!-- 15 -->
+        <div class="activity-card">
+            <div class="card-num">15</div>
+            <h3>حوكمة استمرارية الأعمال وإصلاح الأنظمة الفنية</h3>
+            <p>تقديم استشارات الربط والتسهيل للحلول البرمجية المتقدمة المعنية بإنقاذ البيانات وإصلاح الأزمات التقنية الطارئة للأنظمة التشغيلية.</p>
         </div>
     </div>
+
+    <!-- قسم جدار الحماية الاستشاري والقانوني الكامل مراجع لحماية الذمة المالية للشخص والعمولات المترتبة -->
+    <div class="legal-section">
+        <div class="legal-container">
+            <h2 style="font-size: 2.2rem; font-weight: 800; color: var(--text-primary); text-align: center; margin: 0;">الدراسة القانونية الوقائية الشاملة وجدار الحماية</h2>
+            <p style="color: var(--text-secondary); text-align: center; margin-top: 10px; margin-bottom: 45px; font-size: 1.1rem;">المظلة والركائز التشريعية الأربع الحامية والمنطبقة تلقائياً على كافة التعاقدات لمنصتكم</p>
+            
+            <div class="legal-grid">
+                <!-- الركيزة 1 -->
+                <div class="legal-card">
+                    <h4>الركيزة الأولى: نفي ممارسة الأنشطة المنظمة قطاعياً</h4>
+                    <p>الحماية الصارمة من المخالفات والغرامات عبر توضيح طبيعة العمل المهني التمكيني والابتعاد عن متطلبات التراخيص القطاعية المباشرة.</p>
+                    <div class="protection-clause">
+                        "لا تمارس المنصة أي أنشطة تشغيلية أو مقاولات أو استشارات مرخصة قطاعياً، ويقتصر دورها المهني على الربط والتعريف والتمكين الأولي بين الكيانات المصرح لها نظاماً".
+                    </div>
+                </div>
+                <!-- الركيزة 2 -->
+                <div class="legal-card">
+                    <h4>الركيزة الثانية: حصر المسؤولية العقدية والتقصيرية</h4>
+                    <p>الحماية الكاملة من مطالبات التعويض المالي عن الأضرار أو الفشل الفني والمالي للأطراف بعد إتمام التعارف الاستراتيجي المبدئي.</p>
+                    <div class="protection-clause">
+                        "إن التعريف الصادر من منصة نجد لينك بأي كيان أو شركة هو إجراء لأغراض استكشاف الفرص الاستراتيجية فقط، ولا يمثل كفالة أو ضماناً للملاءة المالية أو الكفاءة الفنية للطرف المعرف به، ويتحمل الأطراف مسؤولية الفحص والتعاقد بشكل مستقل".
+                    </div>
+                </div>
+                <!-- الركيزة 3 -->
+                <div class="legal-card">
+                    <h4>الركيزة الثالثة: صيانة الحقوق المالية ومكافحة الالتفاف</h4>
+                    <p>حماية عمولات السعي وأتعاب الاستشارة في صفقات الملايين ومنع تواصل الأطراف السري في خلفية المشهد لتجاوز المنصة وحفظ حقك لـ 24 شهراً متكاملة.</p>
+                    <div class="protection-clause">
+                        "يحظر على الطرف الموقع التعامل أو التعاقد المباشر أو غير المباشر مع الأطراف المعرف بها عبر نجد لينك لمدة 24 شهراً من تاريخ التعريف. وفي حال الإخلال، يلتزم بدفع تعويض مالي فوري يعادل نسبة مئوية محددة من القيمة الإجمالية للمشروع".
+                    </div>
+                </div>
+                <!-- الركيزة 4 -->
+                <div class="legal-card">
+                    <h4>الركيزة الرابعة: الوضع القانوني والتحول المؤسسي</h4>
+                    <p>التحصين القانوني الحامي لشخصك أولاً ولذمتك المالية وأملاكك الخاصة طالما يتم العمل بصفة مستشار وميسر استراتيجي مستقل.</p>
+                    <div class="protection-clause">
+                        خريطة الطريق الآمنة: التوقيع والمراسلة دائماً بصفة "مستشار وميسر مستقل"، والتوصية بتأسيس شركة ذات مسؤولية محدودة (LLC) فور إتمام أولى الصفقات الكبرى وتدفق السيولة لنقل كافة التعاقدات والموقع تحت مظلتها القانونية الاعتبارية.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- التذييل السري والمؤسسي للمنصة مدمجاً به التنبيه الفني الصارم لحفظ الحقوق البصرية والفكرية -->
+    <footer>
+        <p>© 2026 منصة نجد لينك (Najd Link) - واجهة استشارية وتسهيلية مستقلة للربط التجاري النخبوي. جميع الحقوق محفوظة.</p>
+        <p style="color: var(--brand-gold); margin-top: 8px; font-size: 0.85rem; font-weight: bold; letter-spacing: 0.3px;">وثيقة استراتيجية سرية معتمدة - يُمنع تداول هذا المستند خارج الأطر الرسمية المعتمدة لمنصة نجد لينك</p>
+    </footer>
 
 </body>
 </html>
-
