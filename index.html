@@ -1,1 +1,191 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NajdLink OS</title>
+    <style>
+        body {
+            background-color: #0b0f19;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .navbar {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: bold;
+            color: #10b981;
+        }
+        .nav-logo img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            color: #9ca3af;
+            font-size: 0.9rem;
+        }
+        .hero {
+            text-align: center;
+            max-width: 800px;
+            margin-top: 60px;
+            padding: 0 20px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            color: #9ca3af;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+        .btn-primary {
+            background-color: #3b82f6;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .btn-secondary {
+            background-color: #1f2937;
+            color: #d1d5db;
+            padding: 12px 24px;
+            border-radius: 9999px;
+            text-decoration: none;
+            border: 1px solid #374151;
+        }
+        .tags {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+        .tag {
+            background-color: #1e1b4b;
+            color: #818cf8;
+            padding: 6px 16px;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid #312e81;
+        }
+        .tag.active {
+            background-color: #1e3a8a;
+            color: #60a5fa;
+            border-color: #1d4ed8;
+        }
+        .dashboard-grid {
+            display: flex;
+            gap: 20px;
+            max-width: 1000px;
+            width: 100%;
+            padding: 0 20px;
+            box-sizing: border-box;
+            margin-bottom: 60px;
+        }
+        .card {
+            background-color: #111827;
+            border: 1px solid #1f2937;
+            border-radius: 16px;
+            padding: 24px;
+            flex: 1;
+        }
+        .card h3 {
+            margin-top: 0;
+            font-size: 1.25rem;
+        }
+        .card p {
+            color: #9ca3af;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        .badge {
+            background-color: #f59e0b;
+            color: #111827;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- البار العلوي -->
+    <div class="navbar">
+        <div class="nav-logo">
+            <img src="logo.png" alt="NajdLink Logo">
+            <span>NajdLink OS</span>
+        </div>
+        <div class="nav-links">
+            <span>Pricing</span>
+            <span>Dashboard</span>
+            <span>Security</span>
+        </div>
+    </div>
+
+    <!-- القسم الرئيسي الكبير -->
+    <div class="hero">
+        <h1>The platform to optimize, monitor, and digital operations.</h1>
+        <p>Subscription revenue, wallet operations, admin analytics, flows, and growth loops from a single secure interface.</p>
+        
+        <div class="cta-buttons">
+            <a href="#" class="btn-primary">Start Platform</a>
+            <a href="#" class="btn-secondary">View Dashboard</a>
+        </div>
+
+        <!-- الأزرار الصغيرة الملونة -->
+        <div class="tags">
+            <span class="tag active">Payments</span>
+            <span class="tag">Security logs</span>
+            <span class="tag">Wallet</span>
+            <span class="tag">Referrals</span>
+        </div>
+    </div>
+
+    <!-- البطاقات السفلية والشبكة احترافية -->
+    <div class="dashboard-grid">
+        <div class="card">
+            <span class="badge">LIVE</span>
+            <h3>Live support desk</h3>
+            <p>Embedded inquiry flow with priority routing, SLA status, and bilingual support context.</p>
+        </div>
+        <div class="card">
+            <h3 style="color: #ef4444;">404</h3>
+            <h3>Lost route recovery</h3>
+            <p>When a user hits a dead route, this smart fallback guides them back to dashboard, pricing.</p>
+        </div>
+    </div>
+
+</body>
+</html>
 
