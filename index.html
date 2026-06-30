@@ -1,338 +1,565 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Najd Link OS - Sovereign Commercial Hub</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <title>Najd Link OS - Sovereign Commercial Hub & Analytics Center</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         :root {
-            --canvas-bg: #0B0F12;         /* Deepest Framer Tech Charcoal */
-            --card-surface: #12181F;      /* Premium Glossy Dashboard Surface */
-            --brand-gold: #D4AF37;        /* Polished Gold Glow */
-            --brand-green: #00563F;       /* Imperial Green Edge */
-            --glow-gold: rgba(212, 175, 55, 0.15);
-            --text-primary: #FFFFFF;      /* Clean White */
-            --text-secondary: #94A3B8;    /* Slate Grey for Descriptions */
+            --canvas-bg: #0B0F13;         /* Ultra Dark Premium Charcoal */
+            --card-surface: #12181F;      /* Elevated Glossy Container Surface */
+            --brand-accent-gold: #F1C40F; /* High-Radiance Polished Gold Glow */
+            --brand-accent-blue: #3498DB; /* Command Center Neon Blue */
+            --brand-accent-green: #2ECC71;/* Metric Dashboard Green */
+            --text-primary: #F8F9FA;      /* High-Contrast Reading Layer */
+            --text-secondary: #8A99AD;    /* Slate Muted Text Grey */
+            --border-glow: rgba(241, 196, 15, 0.08);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
         }
 
         body {
             background-color: var(--canvas-bg);
             color: var(--text-primary);
-            font-family: 'Inter', sans-serif;
+            font-family: 'Cairo', 'Inter', sans-serif;
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            overflow-x: hidden;
+            display: block;
+            min-height: 100vh;
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Top Sovereign Command Bar */
+        .en-text {
+            font-family: 'Inter', 'Montserrat', sans-serif;
+        }
+
+        /* Top Executive Command Bar */
         .navbar {
             width: 100%;
-            max-width: 1300px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 30px 40px;
-            box-sizing: border-box;
-            border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+            max-width: 1400px;
+            display: table;
+            margin: 0 auto;
+            padding: 25px 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            background: rgba(18, 24, 31, 0.5);
+            backdrop-filter: blur(10px);
         }
 
         .nav-logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-family: 'Montserrat', sans-serif;
+            float: right;
+            font-family: 'Montserrat', 'Cairo', sans-serif;
             font-weight: 900;
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             color: var(--text-primary);
             text-decoration: none;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
+            line-height: 24px;
         }
 
         .logo-dot {
-            width: 10px;
-            height: 10px;
-            background-color: var(--brand-gold);
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: var(--brand-accent-gold);
             border-radius: 50%;
-            box-shadow: 0 0 10px var(--brand-gold);
+            margin-left: 12px;
+            box-shadow: 0 0 12px var(--brand-accent-gold);
         }
 
         .nav-links {
-            display: flex;
-            gap: 35px;
+            float: left;
             color: var(--text-secondary);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 600;
+            padding-top: 4px;
+            letter-spacing: 0.5px;
         }
 
         .nav-links span {
+            margin-right: 35px;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: color 0.2s ease;
         }
-
         .nav-links span:hover {
-            color: var(--brand-gold);
+            color: var(--brand-accent-gold);
         }
 
-        /* Framer Premium Hero Layout */
+        /* Hero Framework */
         .hero {
             text-align: center;
-            max-width: 1000px;
-            margin-top: 100px;
+            max-width: 1100px;
+            margin: 90px auto 70px auto;
             padding: 0 20px;
-            margin-bottom: 80px;
         }
 
         .hero-badge {
-            background: rgba(212, 175, 55, 0.08);
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            color: var(--brand-gold);
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.78rem;
+            background: rgba(241, 196, 15, 0.06);
+            border: 1px solid rgba(241, 196, 15, 0.25);
+            color: var(--brand-accent-gold);
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 0.8rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
+            letter-spacing: 1px;
             display: inline-block;
-            margin-bottom: 30px;
-            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 25px;
         }
 
         .hero h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 4rem;
+            font-size: 3rem;
             font-weight: 900;
-            line-height: 1.15;
+            line-height: 1.3;
             color: var(--text-primary);
-            margin-bottom: 25px;
-            letter-spacing: -0.03em;
+            margin: 0 0 25px 0;
         }
 
         .hero p {
             color: var(--text-secondary);
             font-size: 1.2rem;
-            line-height: 1.75;
-            margin-bottom: 50px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+            line-height: 1.8;
+            margin: 0 auto 45px auto;
+            max-width: 850px;
         }
 
-        /* 3D Glassmorphism Buttons */
-        .cta-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
+        /* Analytics Integration Dashboard (Replicated from image_18.png) */
+        .analytics-dashboard-section {
+            max-width: 1300px;
+            margin: 0 auto 90px auto;
+            padding: 0 20px;
         }
 
-        .btn-gold {
-            background-color: var(--brand-gold);
-            color: #0B0F12;
-            padding: 18px 40px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1rem;
-            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        .dashboard-main-card {
+            background: #0E1318;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 20px 45px rgba(0,0,0,0.5);
         }
 
-        .btn-gold:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 30px rgba(212, 175, 55, 0.45);
+        .dashboard-title-row {
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
         }
 
-        .btn-outline {
-            background: transparent;
-            color: var(--text-primary);
-            padding: 18px 40px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1rem;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .btn-outline:hover {
-            border-color: var(--text-primary);
-            background: rgba(255, 255, 255, 0.03);
-            transform: translateY(-3px);
-        }
-
-        /* Sovereign Metrics Row - directly from image_10.png */
-        .metrics-panel {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            width: 100%;
-            max-width: 1200px;
-            padding: 0 30px;
-            box-sizing: border-box;
-            margin-bottom: 100px;
-        }
-
-        @media (max-width: 768px) {
-            .metrics-panel { grid-template-columns: 1fr; }
-            .hero h1 { font-size: 2.8rem; }
-        }
-
-        .metric-card {
-            background-color: var(--card-surface);
-            border: 1px solid rgba(148, 163, 184, 0.08);
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
-        }
-
-        .metric-label {
-            color: var(--text-secondary);
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 10px;
-        }
-
-        .metric-val {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.5rem;
+        .dashboard-title-row h3 {
+            margin: 0;
+            font-size: 1.4rem;
             font-weight: 800;
             color: var(--text-primary);
+            float: right;
         }
 
-        /* Core Verticals & Blueprint Grid styling */
+        .dashboard-date-badge {
+            float: left;
+            background: rgba(255,255,255,0.05);
+            padding: 5px 15px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .analytics-columns-grid {
+            display: table;
+            width: 100%;
+        }
+
+        .analytics-col-50 {
+            width: 50%;
+            float: right;
+            padding-left: 20px;
+        }
+        .analytics-col-50:last-child {
+            float: left;
+            padding-left: 0;
+            padding-right: 20px;
+            border-right: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .panel-heading {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--brand-accent-gold);
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Traffic Source Row Item styling */
+        .source-item-row {
+            display: table;
+            width: 100%;
+            padding: 14px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.03);
+        }
+        .source-item-row:last-child {
+            border-bottom: none;
+        }
+
+        .source-name-cell {
+            float: right;
+            font-size: 0.95rem;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+        
+        .source-icon-indicator {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: var(--brand-accent-blue);
+            border-radius: 50%;
+            margin-left: 10px;
+        }
+
+        .source-volume-bar-cell {
+            float: left;
+            text-align: left;
+            width: 120px;
+        }
+
+        .mini-progress-track {
+            background: rgba(255,255,255,0.05);
+            width: 100%;
+            height: 6px;
+            border-radius: 10px;
+            margin-top: 8px;
+            overflow: hidden;
+        }
+        .mini-progress-fill {
+            height: 100%;
+            background: var(--brand-accent-gold);
+            border-radius: 10px;
+        }
+
+        /* Live Command Center Metrics */
+        .metrics-container {
+            max-width: 1300px;
+            margin: 0 auto 90px auto;
+            padding: 0 20px;
+            display: table;
+            width: 100%;
+        }
+
+        .metric-col {
+            width: 33.333%;
+            float: right;
+            padding: 0 12px;
+        }
+
+        .dashboard-metric-card {
+            background: var(--card-surface);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 14px;
+            padding: 30px;
+            position: relative;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+        }
+
+        .card-header-glow {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+        }
+
+        .card-main-val {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.3rem;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+        .val-blue { color: var(--brand-accent-blue); text-shadow: 0 0 15px rgba(52, 152, 219, 0.2); }
+        .val-gold { color: var(--brand-accent-gold); text-shadow: 0 0 15px rgba(241, 196, 15, 0.2); }
+        .val-green { color: var(--brand-accent-green); text-shadow: 0 0 15px rgba(46, 204, 113, 0.2); }
+
+        .card-subtext {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        /* Sovereign Project Destinations & Alliances Section */
+        .alliances-section {
+            max-width: 1300px;
+            margin: 0 auto 100px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .alliances-title {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--text-secondary);
+            letter-spacing: 1px;
+            margin-bottom: 40px;
+        }
+
+        .alliance-grid {
+            display: table;
+            width: 100%;
+        }
+
+        .alliance-row {
+            display: table;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .alliance-item {
+            width: 25%;
+            float: right;
+            padding: 10px;
+        }
+
+        .alliance-node {
+            background: rgba(18, 24, 31, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 30px 15px;
+            transition: all 0.3s ease;
+        }
+        .alliance-node:hover {
+            border-color: rgba(241, 196, 15, 0.3);
+            background: var(--card-surface);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .node-icon-shape {
+            width: 18px;
+            height: 18px;
+            background: transparent;
+            margin: 0 auto 18px auto;
+        }
+        .shape-diamond { border: 2px solid var(--brand-accent-gold); transform: rotate(45deg); }
+        .shape-circle { border: 2px solid var(--brand-accent-blue); border-radius: 50%; }
+        .shape-triangle { 
+            width: 0; height: 0; 
+            border-right: 10px solid transparent; border-left: 10px solid transparent; 
+            border-bottom: 18px solid var(--brand-accent-green); 
+        }
+        .shape-square { border: 2px solid var(--text-primary); }
+
+        .node-name {
+            font-weight: 800;
+            font-size: 1.15rem;
+            color: var(--text-primary);
+        }
+        .node-desc {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-top: 5px;
+        }
+
+        /* Sovereign Hub: Vision & Mission (Verbatim Replicated from image_17.png) */
+        .vision-mission-section {
+            background-color: #090C0F;
+            max-width: 1000px;
+            margin: 0 auto 120px auto;
+            padding: 60px 40px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 16px;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.02);
+        }
+
+        .vm-block {
+            margin-bottom: 50px;
+        }
+
+        .vm-block h2 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--brand-accent-gold);
+            margin: 0 0 20px 0;
+        }
+
+        .vm-block p {
+            color: rgba(248, 249, 250, 0.9);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        /* Core Pillars & Values Sub-Section from image_17.png */
+        .pillars-wrapper {
+            margin-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 40px;
+        }
+
+        .pillars-title {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 30px;
+        }
+
+        .pillar-row {
+            margin-bottom: 30px;
+        }
+
+        .pillar-head {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .pillar-desc {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Custom Signature Graphic Simulation from image_17.png */
+        .signature-container {
+            margin-top: 5px;
+            border-top: 1px dashed rgba(255,255,255,0.08);
+            padding-top: 25px;
+        }
+        
+        .sig-svg {
+            stroke: var(--brand-accent-gold);
+            fill: none;
+            stroke-width: 3;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            width: 90px;
+            height: 45px;
+            display: block;
+        }
+
+        /* 15 Core Strategic Business Verticals Section */
         .section-header {
             text-align: center;
             margin-bottom: 60px;
+            padding: 0 20px;
         }
 
         .section-header h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.5rem;
+            font-size: 2.3rem;
             font-weight: 800;
-            margin-bottom: 15px;
+            margin: 0 0 15px 0;
         }
 
         .section-header p {
             color: var(--text-secondary);
             font-size: 1.1rem;
-            max-width: 650px;
+            max-width: 700px;
             margin: 0 auto;
         }
 
         .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-            gap: 25px;
-            max-width: 1240px;
-            width: 100%;
-            padding: 0 30px;
-            box-sizing: border-box;
-            margin-bottom: 120px;
+            max-width: 1300px;
+            margin: 0 auto 100px auto;
+            padding: 0 20px;
         }
 
-        /* Exact Framer Card Replication with High Glow & 3D Depth */
+        .grid-row {
+            display: table;
+            width: 100%;
+            margin-bottom: 24px;
+        }
+
+        .card-wrapper {
+            width: 33.333%;
+            float: right;
+            padding: 0 10px;
+        }
+
         .blueprint-card {
             background-color: var(--card-surface);
-            border: 1px solid rgba(148, 163, 184, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.04);
             border-radius: 12px;
             padding: 35px;
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 20px 40px rgba(0,0,0,0.4);
-            position: relative;
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .blueprint-card:hover {
-            transform: translateY(-5px) scale(1.01);
-            border-color: var(--brand-gold);
-            box-shadow: 0 30px 60px rgba(0,0,0,0.6), 0 0 25px var(--glow-gold);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            min-height: 270px;
         }
 
         .card-index {
             font-family: 'Montserrat', sans-serif;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 700;
-            color: var(--brand-gold);
-            margin-bottom: 20px;
+            color: var(--brand-accent-gold);
+            margin-bottom: 18px;
             display: block;
             letter-spacing: 1px;
         }
 
         .blueprint-card h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.35rem;
+            font-size: 1.3rem;
             font-weight: 800;
-            margin: 0 0 15px 0;
+            margin: 0 0 12px 0;
             color: var(--text-primary);
         }
 
         .blueprint-card p {
             color: var(--text-secondary);
             font-size: 0.95rem;
-            line-height: 1.65;
+            line-height: 1.7;
             margin: 0;
         }
 
-        /* Strategic Legal Firewall Design */
+        /* Strategic Legal Firewall Section */
         .firewall-section {
-            background-color: #06090B;
+            background-color: #070A0D;
             width: 100%;
-            padding: 100px 30px;
-            box-sizing: border-box;
-            border-top: 1px solid rgba(148, 163, 184, 0.08);
+            padding: 90px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .firewall-container {
-            max-width: 1200px;
+            max-width: 1240px;
             margin: 0 auto;
+            padding: 0 20px;
         }
 
-        .firewall-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 40px;
-            margin-top: 60px;
+        .firewall-row {
+            display: table;
+            width: 100%;
+            margin-top: 30px;
         }
 
-        @media (max-width: 900px) {
-            .firewall-grid { grid-template-columns: 1fr; }
+        .firewall-wrapper {
+            width: 50%;
+            float: right;
+            padding: 0 15px;
+            margin-bottom: 30px;
         }
 
         .firewall-card {
             background-color: var(--card-surface);
-            border-left: 3px solid var(--brand-gold);
-            border-radius: 0 12px 12px 0;
+            border-right: 3px solid var(--brand-accent-gold);
+            border-radius: 12px 0 0 12px;
             padding: 40px;
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+            min-height: 300px;
         }
 
         .firewall-card h4 {
-            font-family: 'Montserrat', sans-serif;
             font-size: 1.25rem;
             font-weight: 800;
-            color: var(--brand-gold);
+            color: var(--brand-accent-gold);
             margin: 0 0 15px 0;
         }
 
         .firewall-card p {
             color: var(--text-secondary);
-            font-size: 0.95rem;
-            line-height: 1.6;
-            margin-bottom: 25px;
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
         }
 
         .code-block {
-            background-color: rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            padding: 18px;
             border-radius: 6px;
-            font-family: 'Inter', sans-serif;
-            font-size: 0.88rem;
+            font-family: 'Cairo', 'Inter', sans-serif;
+            font-size: 0.9rem;
             color: #E2E8F0;
             line-height: 1.6;
         }
@@ -340,155 +567,402 @@
         footer {
             width: 100%;
             text-align: center;
-            padding: 60px 20px;
-            box-sizing: border-box;
-            border-top: 1px solid rgba(148, 163, 184, 0.08);
+            padding: 50px 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
             color: var(--text-secondary);
             font-size: 0.85rem;
             background-color: var(--canvas-bg);
-            letter-spacing: 0.3px;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
         }
     </style>
 </head>
 <body>
 
-    <!-- Header Navigation -->
-    <div class="navbar">
+    <!-- Executive Command Bar -->
+    <div class="navbar clearfix">
         <a href="#" class="nav-logo">
             <div class="logo-dot"></div>
-            <span>NAJD LINK OS</span>
+            <span>نجد لينك OS // NAJD LINK</span>
         </a>
         <div class="nav-links">
-            <span>01 . Core Verticals</span>
-            <span>02 . Legal Framework</span>
-            <span>03 . System Status</span>
+            <span>01 . مركز التحليلات ومصادر التواصل</span>
+            <span>02 . الوجهات السيادية الكبرى</span>
+            <span>03 . الرؤية والرسالة</span>
+            <span>04 . المحفظة الاستراتيجية</span>
         </div>
     </div>
 
-    <!-- Framer Inspired Epic Hero -->
+    <!-- Main Strategic Interface Heading -->
     <div class="hero">
-        <div class="hero-badge">Premium Strategic Infrastructure</div>
-        <h1>One Platform to Facilitate, Govern, and Scale Sovereign Linkages.</h1>
-        <p>Operating as an elite independent facilitator and strategic advisor to empower cross-border linkages within the Saudi market. We accelerate the integration of global manufacturers, prominent international franchises, and luxury hotel chains into the vision pipeline.</p>
+        <div class="hero-badge">منصة الربط وتسهيل الشراكات السيادية</div>
+        <h1>منصة موحدة لتسهيل وحوكمة وتوسيع الروابط السيادية الاستراتيجية.</h1>
+        <p>نعمل بنطاق استقلالي وسرية مطلقة كميسر رائد للأسواق ومستشار استراتيجي موثوق. نلتزم بتقديم كبرى الشركات الصناعية العالمية، سلاسل نمط الحياة الفاخرة، والكيانات التكنولوجية المتقدمة مباشرةً إلى خطوط تطوير المشاريع الكبرى لرؤية المملكة.</p>
+    </div>
+
+    <!-- Analytics Dashboard Section (Dynamically Simulated from image_18.png) -->
+    <div class="analytics-dashboard-section">
+        <div class="dashboard-main-card">
+            <div class="dashboard-title-row clearfix">
+                <h3>لوحة التحليلات ومصادر رصد المستثمرين (Sources Analytics)</h3>
+                <div class="dashboard-date-badge en-text">Live Operations Dashboard</div>
+            </div>
+
+            <div class="analytics-columns-grid clearfix">
+                <!-- Right Column: Traffic Sources & Social Media Platforms (From image_18.png) -->
+                <div class="analytics-col-50">
+                    <div class="panel-heading">مصادر رصد وتدفق المستثمرين الفاعلة (Traffic Sources)</div>
+                    
+                    <div class="source-item-row clearfix">
+                        <div class="source-name-cell"><span class="source-icon-indicator" style="background-color: var(--brand-accent-gold);"></span>google.com</div>
+                        <div class="source-volume-bar-cell">
+                            <div class="mini-progress-track"><div class="mini-progress-fill" style="width: 85%; background: var(--brand-accent-gold);"></div></div>
+                        </div>
+                    </div>
+
+                    <div class="source-item-row clearfix">
+                        <div class="source-name-cell"><span class="source-icon-indicator" style="background-color: #ffffff;"></span>X.com (Twitter)</div>
+                        <div class="source-volume-bar-cell">
+                            <div class="mini-progress-track"><div class="mini-progress-fill" style="width: 72%; background: #ffffff;"></div></div>
+                        </div>
+                    </div>
+
+                    <div class="source-item-row clearfix">
+                        <div class="source-name-cell"><span class="source-icon-indicator" style="background-color: #0077B5;"></span>linkedin.com</div>
+                        <div class="source-volume-bar-cell">
+                            <div class="mini-progress-track"><div class="mini-progress-fill" style="width: 65%; background: #0077B5;"></div></div>
+                        </div>
+                    </div>
+
+                    <div class="source-item-row clearfix">
+                        <div class="source-name-cell"><span class="source-icon-indicator" style="background-color: #1877F2;"></span>facebook.com/share</div>
+                        <div class="source-volume-bar-cell">
+                            <div class="mini-progress-track"><div class="mini-progress-fill" style="width: 40%; background: #1877F2;"></div></div>
+                        </div>
+                    </div>
+
+                    <div class="source-item-row clearfix">
+                        <div class="source-name-cell"><span class="source-icon-indicator" style="background-color: var(--brand-accent-blue);"></span>framer.com</div>
+                        <div class="source-volume-bar-cell">
+                            <div class="mini-progress-track"><div class="mini-progress-fill" style="width: 55%; background: var(--brand-accent-blue);"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Left Column: Regional Inflow Framework -->
+                <div class="analytics-col-50">
+                    <div class="panel-heading">التوزيع الجغرافي لتدفق رؤوس الأموال المستهدفة (Geography)</div>
+                    
+                    <div class="source-item-row clearfix">
+                        <div class="source-name-cell">الولايات المتحدة الأمريكية (United States)</div>
+                        <div class="source-volume-bar-cell">
+                            <div class="mini-progress-track"><div class="mini-progress-fill" style="width: 90%; background: var(--brand-accent-green);"></div></div>
+                        </div>
+                    </div>
+
+                    <div class="source-item-row clearfix">
+                        <div class="source-name-cell">المملكة المتحدة (United Kingdom)</div>
+                        <div class="source-volume-bar-cell">
+                            <div class="mini-progress-track"><div class="mini-progress-fill" style="width: 75%; background: var(--brand-accent-green);"></div></div>
+                        </div>
+                    </div>
+
+                    <div class="source-item-row clearfix">
+                        <div class="source-name-cell">هولندا (Netherlands)</div>
+                        <div class="source-volume-bar-cell">
+                            <div class="mini-progress-track"><div class="mini-progress-fill" style="width: 60%; background: var(--brand-accent-green);"></div></div>
+                        </div>
+                    </div>
+
+                    <div class="source-item-row clearfix">
+                        <div class="source-name-cell">فرنسا (France)</div>
+                        <div class="source-volume-bar-cell">
+                            <div class="mini-progress-track"><div class="mini-progress-fill" style="width: 50%; background: var(--brand-accent-green);"></div></div>
+                        </div>
+                    </div>
+
+                    <div class="source-item-row clearfix">
+                        <div class="source-name-cell">ألمانيا (Germany)</div>
+                        <div class="source-volume-bar-cell">
+                            <div class="mini-progress-track"><div class="mini-progress-fill" style="width: 45%; background: var(--brand-accent-green);"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Live Command Center Metrics -->
+    <div class="metrics-container clearfix">
+        <div class="metric-col">
+            <div class="dashboard-metric-card">
+                <div class="card-header-glow">إجمالي رأس المال الموجه</div>
+                <div class="card-main-val val-blue">$1B+</div>
+                <div class="card-subtext">توزيعات استثمارية أجنبية مباشرة متراكمة تتماشى مع القطاعات الاستراتيجية للمملكة.</div>
+            </div>
+        </div>
+        <div class="metric-col">
+            <div class="dashboard-metric-card">
+                <div class="card-header-glow">الارتباطات والوساطات الفعالة</div>
+                <div class="card-main-val val-gold">7 / 15</div>
+                <div class="card-subtext">عقود تحالف وشراكات كبرى تخضع حالياً لتدقيق وتوافق المعايير السيادية والأنظمة المحلية.</div>
+            </div>
+        </div>
+        <div class="metric-col">
+            <div class="dashboard-metric-card">
+                <div class="card-header-glow">حالة جدار الحماية الحوكمي</div>
+                <div class="card-main-val val-green">100%</div>
+                <div class="card-subtext">بروتوكولات الحماية القانونية وعدم الالتفاف تعمل بكامل طاقتها التشغيلية وبكفاءة تامة.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sovereign Project Destinations & Alliances Section -->
+    <div class="alliances-section">
+        <div class="alliances-title">روابط الوجهات والمشاريع السيادية الكبرى المستهدفة</div>
         
-        <div class="cta-buttons">
-            <a href="#" class="btn-gold">Explore Core Verticals</a>
-            <a href="#" class="btn-outline">View Legal Firewall</a>
+        <!-- Row 1: Giga Projects & Capitals -->
+        <div class="alliance-grid alliance-row clearfix">
+            <div class="alliance-item">
+                <div class="alliance-node">
+                    <div class="node-icon-shape shape-diamond"></div>
+                    <div class="node-name">العلامات الفاخرة</div>
+                    <div class="node-desc">الامتيازات والضيافة الراقية</div>
+                </div>
+            </div>
+            <div class="alliance-item">
+                <div class="alliance-node">
+                    <div class="node-icon-shape shape-circle"></div>
+                    <div class="node-name">القدية</div>
+                    <div class="node-desc">عاصمة الترفيه والرياضة العالمية</div>
+                </div>
+            </div>
+            <div class="alliance-item">
+                <div class="alliance-node">
+                    <div class="node-icon-shape shape-triangle"></div>
+                    <div class="node-name">نيوم (NEOM)</div>
+                    <div class="node-desc">صياغة المستقبل ومدينة أوكساجون</div>
+                </div>
+            </div>
+            <div class="alliance-item">
+                <div class="alliance-node">
+                    <div class="node-icon-shape shape-square"></div>
+                    <div class="node-name">المكعب</div>
+                    <div class="node-desc">الأيقونة المعمارية لوسط الرياض</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 2: Expanded Regional Integration -->
+        <div class="alliance-grid alliance-row clearfix">
+            <div class="alliance-item">
+                <div class="alliance-node">
+                    <div class="node-icon-shape shape-triangle"></div>
+                    <div class="node-name">محور جدة</div>
+                    <div class="node-desc">مشروع وسط جدة وبوابات البحر الأحمر</div>
+                </div>
+            </div>
+            <div class="alliance-item">
+                <div class="alliance-node">
+                    <div class="node-icon-shape shape-diamond"></div>
+                    <div class="node-name">مشاريع الرياض</div>
+                    <div class="node-desc">حديقة الملك سلمان والمسار الرياضي</div>
+                </div>
+            </div>
+            <div class="alliance-item">
+                <div class="alliance-node">
+                    <div class="node-icon-shape shape-circle"></div>
+                    <div class="node-name">البحر الأحمر</div>
+                    <div class="node-desc">السياحة المتجددة الفاخرة فائقة المقاييس</div>
+                </div>
+            </div>
+            <div class="alliance-item">
+                <div class="alliance-node">
+                    <div class="node-icon-shape shape-square"></div>
+                    <div class="node-name">بقية مناطق المملكة</div>
+                    <div class="node-desc">تطوير العلا، الدرعية، ومشاريع عسير</div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Live Command Center Metrics (Inspired by image_10.png) -->
-    <div class="metrics-panel">
-        <div class="metric-card">
-            <div class="metric-label">Approved Verticals</div>
-            <div class="metric-val">15 / 15</div>
+    <!-- Sovereign Hub: Vision & Mission (Verbatim Replicated from image_17.png) -->
+    <div class="vision-mission-section">
+        <div class="vm-block">
+            <h2>نجد لينك: المحور السيادي للتحالفات العالمية (Najd Link)</h2>
+            <p>منصة نجد لينك (Najd Link) هي منصة حديثة ومستقلة للوساطة التجارية الاستراتيجية والاستشارات النخبوية، تم تصميمها وهندستها لتكون البوابة الحاسمة والموثوقة للوصول للمشاريع الكبرى والأسواق الواعدة في المملكة العربية السعودية. نتميز بالريادة في تأسيس روابط دولية رفيعة المستوى وبناء جسور متينة تجمع كبرى الشركات الصناعية العالمية ورواد التكنولوجيا الحديثة مع أرقى بيوت الأزياء والضيافة والمطاعم الفاخرة حول العالم.</p>
+            <p style="margin-top:15px;">نعمل بسرية مطلقة وثقة تامة ودراية عميقة بالأنظمة التشريعية، لتمكين الشركاء الدوليين من تأسيس وتوطين بنيتهم التحتية، الفوز بالمناقصات والمشاريع الحكومية الكبرى، وبناء حضور إقليمي راسخ ومستدام متوافق تماماً مع تطلعات رؤية السعودية 2030.</p>
         </div>
-        <div class="metric-card">
-            <div class="metric-label">Market Alignment</div>
-            <div class="metric-val">Vision 2030</div>
+
+        <div class="vm-block" style="margin-top: 40px;">
+            <h2>قيادة النطاق. تحقيق الدقة (Navigating Scale. Delivering Precision)</h2>
+            <p><strong>رؤيتنا (Our Vision):</strong> أن نكون البوابة السيادية الأكثر موثوقية وتطلعاً لشبك وجذب عمالقة الشركات العالمية ورواد الابتكار متعدد القطاعات لتوطين أعمالهم وتحقيق نمو غير مسبوق في الوجهات المستقبلية للمملكة.</p>
+            <p style="margin-top:15px;"><strong>رسالتنا (Our Mission):</strong> هندسة شراكات مؤسسية رفيعة المستوى وتقديم إشراف تشغيلي متكامل يسرع دخول الأسواق، ويحد من التعقيدات الدولية، مما يضمن توافق الطموحات التجارية العالمية مع الأهداف الاستراتيجية لرؤية السعودية 2030.</p>
         </div>
-        <div class="metric-card">
-            <div class="metric-label">Circumvention Protection</div>
-            <div class="metric-val">24 Months</div>
+
+        <!-- Core Pillars & Values Sub-Section from image_17.png -->
+        <div class="pillars-wrapper">
+            <div class="pillars-title">الركائز والقيم الأساسية للمنصة (Core Pillars & Values):</div>
+            
+            <div class="pillar-row">
+                <div class="pillar-head">1. التوافق السيادي والارتباط المباشر بالرؤية والمشاريع الكبرى</div>
+                <div class="pillar-desc">ضمان أن كل تحالف أو شراكة تجارية يتم بناؤها تساهم بشكل مباشر وفعال في دعم مستهدفات رؤية المملكة 2030 والمشاريع الكبرى وتوطينها.</div>
+            </div>
+
+            <div class="pillar-row">
+                <div class="pillar-head">2. السرية المطلقة والموثوقية التي يبحث عنها كبار المستثمرين</div>
+                <div class="pillar-desc">الالتزام الصارم بحدود السرية وحماية وتأمين قنوات التواصل وبناء الفرص بين الكيانات والوفود الاستثمارية النخبوية وكبار المستثمرين.</div>
+            </div>
+
+            <div class="pillar-row">
+                <div class="pillar-head">3. الدقة الهندسية والتشغيلية في إدارة الصفقات والمناقصات</div>
+                <div class="pillar-desc">تطبيق أعلى معايير الحوكمة والسرعة التشغيلية لضمان كفاءة الصفقات، وتأمين وحماية المصالح الاستراتيجية لكافة الأطراف.</div>
+            </div>
+        </div>
+
+        <!-- Simulated Authentic Signature Path from image_17.png -->
+        <div class="signature-container">
+            <svg class="sig-svg" viewBox="0 0 100 50">
+                <path d="M 10,30 Q 25,10 35,35 T 55,25 Q 65,45 75,15 T 90,30" />
+                <path d="M 20,25 L 85,25" stroke-width="1" stroke="rgba(241, 196, 15, 0.4)" />
+            </svg>
         </div>
     </div>
 
-    <!-- The 15 Core Strategic Business Verticals Blueprint -->
+    <!-- The 15 Approved Business Verticals Framework -->
     <div class="section-header">
-        <h2>Strategic Portfolio & Verticals</h2>
-        <p>The definitive 15-point framework guiding market entry, corporate introduction, and absolute enablement.</p>
+        <h2>القطاعات والمحاور الاستراتيجية الـ 15 المعتمدة</h2>
+        <p>الهيكل التنفيذي المتكامل لتوجيه الشركاء الدوليين وتأهيلهم لدخول الأسواق المحلية بامتياز.</p>
     </div>
 
     <div class="grid-container">
-        <!-- 1 -->
-        <div class="blueprint-card">
-            <span class="card-index">// VERTICAL_01</span>
-            <h3>Luxury Hospitality & Lifestyle</h3>
-            <p>Facilitating corporate linkages and advisory for international operators, elite culinary brands, and luxury hospitality concepts within major tourism and giga-projects.</p>
+        <!-- Row 1 -->
+        <div class="grid-row clearfix">
+            <div class="card-wrapper">
+                <div class="blueprint-card">
+                    <span class="card-index">// VERTICAL_01</span>
+                    <h3>الضيافة الفاخرة وأسلوب الحياة</h3>
+                    <p>تسهيل الروابط المؤسسية والدخول الاستراتيجي لمشغلي الفنادق العالمية النخبوية والمنتجعات وتجارب الطهي الراقية وحاملي نجمة ميشلان.</p>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="blueprint-card">
+                    <span class="card-index">// VERTICAL_02</span>
+                    <h3>العلامات التجارية الفاخرة</h3>
+                    <p>تقديم الاستشارات لدور الأزياء العالمية الراقية، وشركات الساعات الحصرية، ومقدمي الخدمات المتميزة التي تستهدف التركيبة السكانية السيادية.</p>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="blueprint-card">
+                    <span class="card-index">// VERTICAL_03</span>
+                    <h3>الذكاء الاصطناعي والتكنولوجيا العميقة</h3>
+                    <p>ربط البنية التحتية الناشئة للذكاء الاصطناعي والتعلم الآلي ومراكز البيانات الكبرى بشبكات التحول الرقمي الوطنية.</p>
+                </div>
+            </div>
         </div>
-        <!-- 2 -->
-        <div class="blueprint-card">
-            <span class="card-index">// VERTICAL_02</span>
-            <h3>Elite Luxury Brands</h3>
-            <p>Advising and facilitating market entry for high-end fashion houses, premium horology, fine jewelry, and ultra-exclusive concierge services targeting elite demographics.</p>
+
+        <!-- Row 2 -->
+        <div class="grid-row clearfix">
+            <div class="card-wrapper">
+                <div class="blueprint-card">
+                    <span class="card-index">// VERTICAL_04</span>
+                    <h3>الأمن السيبراني ومرونة البيانات</h3>
+                    <p>دمج المتخصصين في الدفاع الرقمي وحلول الحد من المخاطر البرمجية في خطط حماية وتطوير الأصول السيادية.</p>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="blueprint-card">
+                    <span class="card-index">// VERTICAL_05</span>
+                    <h3>الترفيه والألعاب الإلكترونية</h3>
+                    <p>الربط الاستراتيجي لشبكات الرياضات الإلكترونية الدولية الكبرى، ومنظمي الفعاليات الضخمة، ومنصات البنية التحتية للإعلام التفاعلي.</p>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="blueprint-card">
+                    <span class="card-index">// VERTICAL_06</span>
+                    <h3>تطوير الرعاية الصحية العالمية</h3>
+                    <p>تبسيط الخدمات الاستشارية والربط عالي المستوى للمستشفيات الخاصة المتقدمة ومطوري المعدات الطبية المتخصصة.</p>
+                </div>
+            </div>
         </div>
-        <!-- 3 -->
-        <div class="blueprint-card">
-            <span class="card-index">// VERTICAL_03</span>
-            <h3>AI & Deep Tech Solutions</h3>
-            <p>Bridging global emerging tech firms and advanced software infrastructure providers with critical national entities and digital transformation initiatives.</p>
+
+        <!-- Row 3 -->
+        <div class="grid-row clearfix">
+            <div class="card-wrapper">
+                <div class="blueprint-card">
+                    <span class="card-index">// VERTICAL_07</span>
+                    <h3>التصنيع العالمي والاستثمار المباشر</h3>
+                    <p>البوابة المحورية لربط مصانع التجميع الدولية الكبرى ومطوري الآلات الصناعية بالمناطق الاقتصادية والمدن الصناعية بالمملكة.</p>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="blueprint-card">
+                    <span class="card-index">// VERTICAL_08</span>
+                    <h3>منصات التجارة الحية والتسوق الذكي</h3>
+                    <p>تسهيل وصول الأسواق وتصميم الواجهات الرقمية الذكية التي تعيد صياغة تجارب المستهلكين محلياً بالاعتماد على أفضل الأنظمة الدولية.</p>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="blueprint-card">
+                    <span class="card-index">// VERTICAL_09</span>
+                    <h3>هندسة البنية التحتية المهنية</h3>
+                    <p>تسهيل الروابط لشركات تطوير البنية التحتية العملاقة وموردي المعدات والتقنيات الهندسية مع الجهات المالكة للمشاريع الكبرى.</p>
+                </div>
+            </div>
         </div>
-        <!-- 4 -->
-        <div class="blueprint-card">
-            <span class="card-index">// VERTICAL_04</span>
-            <h3>Cybersecurity & Data Resilience</h3>
-            <p>Connecting enterprise cyber defense architectures and business continuity specialists with vital sectors to secure critical data footprints.</p>
+
+        <!-- Row 4 -->
+        <div class="grid-row clearfix">
+            <div class="card-wrapper">
+                <div class="blueprint-card">
+                    <span class="card-index">// VERTICAL_10</span>
+                    <h3>تأهيل المناقصات والمشتريات الحكومية</h3>
+                    <p>توجيه الكيانات الدولية حول أطر المناقصات والمشتريات العامة، واستيفاء معايير الأهلية وفتح قنوات التنافس القانونية المعتمَدة.</p>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="blueprint-card">
+                    <span class="card-index">// VERTICAL_11</span>
+                    <h3>القنوات الإعلامية والفعاليات الإقليمية</h3>
+                    <p>ربط شبكات البث الإعلامي الضخمة، ومراكز التسويق التفاعلي، ومنظمي الفعاليات الإقليميين بالحملات والمبادرات الوطنية.</p>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="blueprint-card">
+                    <span class="card-index">// VERTICAL_12</span>
+                    <h3>استشارات الأصول العقارية الفاخرة</h3>
+                    <p>تسهيل مقدمات الاستثمار المؤسسي العقاري وقنوات الاتصال للصناديق الدولية الكبرى بخرائط التطوير الحضري الرئيسية.</p>
+                </div>
+            </div>
         </div>
-        <!-- 5 -->
-        <div class="blueprint-card">
-            <span class="card-index">// VERTICAL_05</span>
-            <h3>Entertainment & Gaming Infrastructures</h3>
-            <p>Strategic linking for global gaming studios, massive entertainment event planners, and e-sports conglomerates looking to establish regional market dominance.</p>
-        </div>
-        <!-- 6 -->
-        <div class="blueprint-card">
-            <span class="card-index">// VERTICAL_06</span>
-            <h3>International Healthcare Expansion</h3>
-            <p>Streamlining advisory and cross-border partnerships for world-class hospital groups and advanced medical technology developers entering the local market.</p>
-        </div>
-        <!-- 7 -->
-        <div class="blueprint-card">
-            <span class="card-index">// VERTICAL_07</span>
-            <h3>Global Manufacturing & FDI</h3>
-            <p>Acting as the definitive advisory gate to link multinational industrial corporations and major manufacturers seeking permanent local assembly setups.</p>
-        </div>
-        <!-- 8 -->
-        <div class="blueprint-card">
-            <span class="card-index">// VERTICAL_08</span>
-            <h3>Live Commerce & Digital Marketplaces</h3>
-            <p>Providing strategic linkage for next-generation interactive e-commerce platforms and smart applications that redefine consumer behavior patterns.</p>
-        </div>
-        <!-- 9 -->
-        <div class="blueprint-card">
-            <span class="card-index">// VERTICAL_09</span>
-            <h3>Professional Engineering & Infrastructure</h3>
-            <p>Facilitating and structuring linkages for heavy equipment specialists, infrastructure contractors, and industrial maintenance firms with local megaprojects.</p>
-        </div>
-        <!-- 10 -->
-        <div class="blueprint-card">
-            <span class="card-index">// VERTICAL_10</span>
-            <h3>Government Tenders & Procurement</h3>
-            <p>Technical advisory helping multinational enterprises qualify for, navigate, and draft technical proposals for competitive public procurement channels.</p>
-        </div>
-        <!-- 11 -->
-        <div class="blueprint-card">
-            <span class="card-index">// VERTICAL_11</span>
-            <h3>Regional Event Platforms & Media Coverages</h3>
-            <p>Connecting major broadcasting tools, digital media setups, and regional event managers handling historical coverages across the Kingdom.</p>
-        </div>
-        <!-- 12 -->
-        <div class="blueprint-card">
-            <span class="card-index">// VERTICAL_12</span>
-            <h3>Luxury Real Estate Brokerage Advisory</h3>
-            <p>Facilitating high-value asset transitions and connecting international institutional funds with sovereign master-planned communities and future cities.</p>
-        </div>
-        <!-- 13 -->
-        <div class="blueprint-card">
-            <span class="card-index">// VERTICAL_13</span>
-            <h3>Foreign Direct Investment Facilitation</h3>
-            <p>Attracting, aligning, and coordinating cross-sector international syndications to deploy global institutional liquidity into high-yield domestic sectors.</p>
-        </div>
-        <!-- 14 -->
-        <div class="blueprint-card">
-            <span class="card-index">// VERTICAL_14</span>
-            <h3>Executive Digital Identity & Thought Leadership</h3>
-            <p>Advising and building digital profiles for C-suite executives and business leaders to strategically capture market trust and media attention.</p>
-        </div>
-        <!-- 15 -->
-        <div class="blueprint-card">
-            <span class="card-index">// VERTICAL_15</span>
-            <h3>Business Continuity & System Recovery</h3>
-            <p>Linking elite data restoration software developers and digital emergency intervention units with national enterprise architectures.</p>
+
+        <!-- Row 5 -->
+        <div class="grid-row clearfix">
+            <div class="card-wrapper">
+                <div class="blueprint-card">
+                    <span class="card-index">// VERTICAL_13</span>
+                    <h3>إدارة سيولة الاستثمارات الأجنبية المباشرة</h3>
+                    <p>جذب وهيكلة الشراكات الاستثمارية الدولية المعقدة لتوجيه رأس المال الأجنبي المباشر نحو الأهداف والفرص ذات العوائد المرتفعة.</p>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="blueprint-card">
+                    <span class="card-index">// VERTICAL_14</span>
+                    <h3>تحسين هويات المدراء التنفيذيين C-Suite</h3>
+                    <p>تقديم الاستشارات الاستراتيجية للقادة والمدراء التنفيذيين الدوليين لبناء شبكات علاقات محلية متميزة وهياكل فكرية قيادية فاعلة.</p>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="blueprint-card">
+                    <span class="card-index">// VERTICAL_15</span>
+                    <h3>استمرارية الأعمال واستعادة البيانات</h3>
+                    <p>ربط البنيات والأنظمة المتطورة للنسخ الاحتياطي التلقائي للشبكات واستعادة البيانات السريعة مع الأصول والمنشآت الحيوية.</p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -496,37 +970,48 @@
     <div class="firewall-section">
         <div class="firewall-container">
             <div class="section-header">
-                <h2>Preventive Legal Firewall & Governance</h2>
-                <p>Immutable statutory constraints safeguarding all strategic integrations and platform interests.</p>
+                <h2>جدار الحماية القانونية الوقائية والحوكمة</h2>
+                <p>حدود تشريعية وتنظيمية صارمة وصارمة لحماية مصالح المنصة وكافة الروابط الاستراتيجية.</p>
             </div>
             
-            <div class="firewall-grid">
-                <div class="firewall-card">
-                    <h4>Pillar 1: Absolute Sector Disclaimer</h4>
-                    <p>Total immunity from specialized licensing mandates through sharp definition of the advisory boundary.</p>
-                    <div class="code-block">
-                        "The platform operates strictly as an independent facilitator. It does not execute regulated operational services, structural engineering, or licensed public consultations."
+            <div class="firewall-row clearfix">
+                <div class="firewall-wrapper">
+                    <div class="firewall-card">
+                        <h4>الركيزة 1: إخلاء المسؤولية القطاعي المطلق</h4>
+                        <p>حصانة كاملة من متطلبات التراخيص التخصصية من خلال تحديد واضح وجلي لحدود الأدوار الاستشارية والتسهيلية للمنصة.</p>
+                        <div class="code-block">
+                            "تعمل المنصة بصفة ميسر ومستشار مستقل فقط. ولا تقوم بتنفيذ خدمات تشغيلية خاضعة لرقابة خاصة، أو هندسة إنشائية، أو استشارات عامة مرخصة."
+                        </div>
                     </div>
                 </div>
-                <div class="firewall-card">
-                    <h4>Pillar 2: Liability Limitation Boundary</h4>
-                    <p>Insulating your enterprise assets against defaults or performance failures between introduced corporations.</p>
-                    <div class="code-block">
-                        "Introductions executed by Najd Link serve exploratory purposes only. The platform carries zero liability regarding financial solvency or subsequent technical execution."
+                <div class="firewall-wrapper">
+                    <div class="firewall-card">
+                        <h4>الركيزة 2: حدود المسؤولية القانونية</h4>
+                        <p>عزل أصول ومصالح المنصة تماماً ضد أي تقصير أو عدم التزام في الأداء يقع بين الشركات والمستثمرين بعد مرحلة التعارف والربط.</p>
+                        <div class="code-block">
+                            "تقتصر الروابط والوساطات التي تنفذها نجد لينك على الأغراض الاستكشافية والتمهيدية فقط. ولا تحمل المنصة أي مسؤولية تجاه الملاءة المالية أو التنفيذ الفني اللاحق."
+                        </div>
                     </div>
                 </div>
-                <div class="firewall-card">
-                    <h4>Pillar 3: Non-Circumvention Protection</h4>
-                    <p>Securing the integrity of your commissions, finder's fees, and strategic equity for a strict 24-month duration.</p>
-                    <div class="code-block">
-                        "Signatories are legally barred from establishing back-channel or direct relations with introduced entities for 24 months. Failure triggers immediate liquidated damages."
+            </div>
+
+            <div class="firewall-row clearfix">
+                <div class="firewall-wrapper">
+                    <div class="firewall-card">
+                        <h4>الركيزة 3: حماية عدم الالتفاف والتحايل</h4>
+                        <p>تأمين وضمان العمولات، ورسوم تيسير الفرص، والحقوق الاستراتيجية للمنصة لمدد حماية صارمة تصل إلى 24 شهراً متواصلاً.</p>
+                        <div class="code-block">
+                            "يُحظر قانوناً على الأطراف الموقعة إنشاء علاقات خلفية أو مباشرة مع الكيانات المقدمة لمدة 24 شهراً. ويؤدي الإخلال بذلك إلى تفعيل بنود التعويضات الفورية المحددة مسبقاً."
+                        </div>
                     </div>
                 </div>
-                <div class="firewall-card">
-                    <h4>Pillar 4: LLC Transition Protocol</h4>
-                    <p>Strategic shield shifting liability from personal individual name into structural corporate weight.</p>
-                    <div class="code-block">
-                        Roadmap Objective: Conducting all preliminary high-level signatures as an "Independent Strategic Advisor", transitioning into a Limited Liability Company (LLC) framework instantly upon capital injection.
+                <div class="firewall-wrapper">
+                    <div class="firewall-card">
+                        <h4>الركيزة 4: بروتوكول الانتقال لشركة ذات مسؤولية محدودة (LLC)</h4>
+                        <p>درع استراتيجي مصمم لنقل وحصر المسؤوليات القانونية من الاسم الفردي الشخصي مباشرة إلى الوزن المالي والمؤسسي للشركة.</p>
+                        <div class="code-block">
+                            الهدف المرحلي: إجراء كافة التوقيعات والروابط التمهيدية بصفة "مستشار استراتيجي مستقل"، والانتقال السريع والفوري إلى إطار شركة ذات مسؤولية محدودة (LLC) فور الحصول على ضخ رأس المال الأول.
+                        </div>
                     </div>
                 </div>
             </div>
@@ -535,8 +1020,8 @@
 
     <!-- Professional Executive Footer -->
     <footer>
-        <p>© 2026 NAJD LINK PLATFORM - INTEGRATED EXECUTIVE COMMAND INTERFACE. ALL RIGHTS RESERVED.</p>
-        <p style="color: var(--brand-gold); margin-top: 10px; font-weight: 700; font-size: 0.78rem;">STRICTLY CONFIDENTIAL // PROPRIETARY ENTERPRISE INFRASTRUCTURE</p>
+        <p>© 2026 منصة نجد لينك الاستراتيجية الاستشارية - واجهة التحكم التنفيذية الموحدة. جميع الحقوق محفوظة.</p>
+        <p style="color: var(--brand-accent-gold); margin-top: 10px; font-weight: 700; font-size: 0.8rem;">سري للغاية // بنية تحتية رقمية مملوكة وحصرية</p>
     </footer>
 
 </body>
