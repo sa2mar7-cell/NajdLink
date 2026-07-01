@@ -3,46 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Najd Link OS - Sovereign Shield & Fast Ambient Matrix</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&family=Inter:wght@400;500;700;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <title>Najd Link — Sovereign Institutional Bridge</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --canvas-bg: #030508;         /* Obsidian Charcoal - لون الفحم الأسود الفاخر المطلق */
-            --card-surface: rgba(11, 14, 20, 0.7); /* Elevated Glassmorphism Container */
-            --text-primary: #FFFFFF;      
-            --text-secondary: #8E9AA8;    
-            --glow-gold: rgba(212, 175, 55, 0.25);
-            --glow-emerald: rgba(0, 168, 107, 0.25);
+            --bg-master: #07090e;        /* Dark Obsidian Void - الفحم العميق المستوحى من فرامير */
+            --surface-premium: #0d111a;  /* Framer Slate Card - لون الكروت النخبوية الداكنة */
+            --accent-gold: #e5c158;      /* Muted Premium Gold - ذهب مطفأ فاخر غير فاقع */
+            --text-pure: #ffffff;
+            --text-muted: #798694;       /* Slate gray للمظهر الأنيق الهادئ */
+            --border-framer: rgba(255, 255, 255, 0.04);
         }
 
-        /* أنيميشن التموج السائل فائق الفخامة للإضاءة المحيطية المخفية كل 5 ثوانٍ */
-        @keyframes hyperFluidGlow {
-            0% {
-                box-shadow: 0 20px 60px rgba(212, 175, 55, 0.15), inset 0 0 25px rgba(212, 175, 55, 0.03);
-                border-color: rgba(212, 175, 55, 0.2);
-            }
-            25% {
-                box-shadow: 0 20px 60px rgba(0, 168, 107, 0.15), inset 0 0 25px rgba(0, 168, 107, 0.03);
-                border-color: rgba(0, 168, 107, 0.2);
-            }
-            50% {
-                box-shadow: 0 20px 60px rgba(41, 128, 185, 0.18), inset 0 0 25px rgba(41, 128, 185, 0.03);
-                border-color: rgba(41, 128, 185, 0.2);
-            }
-            75% {
-                box-shadow: 0 20px 60px rgba(142, 68, 173, 0.15), inset 0 0 25px rgba(142, 68, 173, 0.03);
-                border-color: rgba(142, 68, 173, 0.2);
-            }
-            100% {
-                box-shadow: 0 20px 60px rgba(212, 175, 55, 0.15), inset 0 0 25px rgba(212, 175, 55, 0.03);
-                border-color: rgba(212, 175, 55, 0.2);
-            }
-        }
-
-        @keyframes dynamicBackgroundPulse {
-            0% { background: radial-gradient(circle at 10% 20%, rgba(212,175,55,0.04) 0%, transparent 50%), radial-gradient(circle at 90% 80%, rgba(0,168,107,0.02) 0%, transparent 50%); }
-            50% { background: radial-gradient(circle at 50% 50%, rgba(41,128,185,0.04) 0%, transparent 60%), radial-gradient(circle at 10% 80%, rgba(142,68,173,0.02) 0%, transparent 50%); }
-            100% { background: radial-gradient(circle at 10% 20%, rgba(212,175,55,0.04) 0%, transparent 50%), radial-gradient(circle at 90% 80%, rgba(0,168,107,0.02) 0%, transparent 50%); }
+        /* تأثير التموج السائل الخفي والمحيطي خلف الكواليس دون إزعاج العين */
+        @keyframes subtleAmbientFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         *, *::before, *::after {
@@ -52,494 +29,578 @@
         }
 
         body {
-            background-color: var(--canvas-bg);
-            color: var(--text-primary);
-            font-family: 'Cairo', sans-serif;
+            background-color: var(--bg-master);
+            color: var(--text-pure);
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
             min-height: 100vh;
-            line-height: 1.6;
+            line-height: 1.5;
             -webkit-font-smoothing: antialiased;
             overflow-x: hidden;
-            position: relative;
+            background: radial-gradient(circle at 50% -20%, rgba(229, 193, 88, 0.06) 0%, transparent 60%), 
+                        radial-gradient(circle at 10% 80%, rgba(13, 17, 26, 0.5) 0%, transparent 50%),
+                        #07090e;
         }
 
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            z-index: -1;
-            animation: dynamicBackgroundPulse 20s infinite ease-in-out;
-            pointer-events: none;
-        }
-
-        /* Executive Navbar */
+        /* Premium Minimalist Navbar */
         .navbar {
-            width: 100%;
-            max-width: 1440px;
+            max-width: 1300px;
             margin: 0 auto;
-            padding: 25px 40px;
+            padding: 30px 24px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.02);
-            background: rgba(3, 5, 8, 0.85);
-            backdrop-filter: blur(20px);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            border-bottom: 1px solid var(--border-framer);
         }
 
-        .nav-right { display: flex; align-items: center; gap: 15px; }
-        .logo-dot {
-            width: 9px; height: 9px;
-            background-color: #D4AF37;
+        .brand-identity {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-icon-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--accent-gold);
             border-radius: 50%;
-            box-shadow: 0 0 20px #D4AF37;
-        }
-        .nav-logo-text { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 1.3rem; letter-spacing: 1px; }
-        .nav-links { display: flex; gap: 25px; font-size: 0.85rem; font-weight: 700; color: var(--text-secondary); }
-        .nav-links span:hover { color: #D4AF37; cursor: pointer; }
-
-        .vision-2030-container {
-            background: rgba(0, 168, 107, 0.05);
-            border: 1px solid rgba(0, 168, 107, 0.2);
-            padding: 6px 16px; border-radius: 6px;
-            font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 0.85rem; color: #00A86B;
-            box-shadow: 0 0 15px rgba(0, 168, 107, 0.1);
         }
 
-        /* Hero Frame */
-        .hero-section {
-            max-width: 1200px;
-            margin: 70px auto 40px auto;
+        .brand-name {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .nav-navigation {
+            display: flex;
+            gap: 32px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        .nav-navigation span {
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .nav-navigation span:hover {
+            color: var(--text-pure);
+        }
+
+        .pill-vision {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 6px 16px;
+            border-radius: 100px;
+            color: var(--text-muted);
+        }
+
+        /* Hero Section Architectural Layout */
+        .hero-framework {
+            max-width: 900px;
+            margin: 100px auto 60px auto;
             text-align: center;
-            padding: 0 20px;
+            padding: 0 24px;
         }
-        .executive-badge {
-            background: rgba(212, 175, 55, 0.05);
-            border: 1px solid rgba(212, 175, 55, 0.25);
-            color: #D4AF37; padding: 8px 24px; border-radius: 50px; font-size: 0.85rem; font-weight: 800; display: inline-block; margin-bottom: 25px;
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.05);
-        }
-        .hero-section h1 {
-            font-size: 3.2rem; font-weight: 900; line-height: 1.3; margin-bottom: 20px;
-            background: linear-gradient(135deg, #FFFFFF 20%, #B89324 100%);
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-        }
-        .hero-section p { color: var(--text-secondary); font-size: 1.2rem; max-width: 950px; margin: 0 auto; font-weight: 400; }
 
-        /* Stats Grid Dashboard */
-        .stats-dashboard {
-            max-width: 1340px;
-            margin: 50px auto;
-            padding: 0 20px;
+        .executive-tagline {
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--accent-gold);
+            margin-bottom: 24px;
+        }
+
+        .hero-framework h1 {
+            font-size: 3.5rem;
+            font-weight: 600;
+            line-height: 1.25;
+            letter-spacing: -1px;
+            margin-bottom: 28px;
+            background: linear-gradient(180deg, #ffffff 0%, #a2adb9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-framework p {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            font-weight: 400;
+            max-width: 760px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Metric Dashboard Grid */
+        .metrics-grid {
+            max-width: 1200px;
+            margin: 40px auto 80px auto;
+            padding: 0 24px;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
+            gap: 24px;
         }
 
         @media (max-width: 992px) {
-            .stats-dashboard { grid-template-columns: 1fr; }
-            .portfolio-grid { grid-template-columns: 1fr; }
+            .metrics-grid { grid-template-columns: 1fr; }
+            .portfolio-architecture { grid-template-columns: 1fr; }
         }
 
-        .stat-card {
-            background: var(--card-surface);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.02);
-            border-radius: 20px;
-            padding: 45px 35px;
-            text-align: center;
+        .metric-card {
+            background-color: var(--surface-premium);
+            border: 1px solid var(--border-framer);
+            border-radius: 16px;
+            padding: 40px 32px;
             position: relative;
-            animation: hyperFluidGlow 20s infinite ease-in-out;
-            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: border-color 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        .stat-card:hover { transform: translateY(-8px); }
-
-        .stat-number {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 900;
-            font-size: 3.5rem;
-            line-height: 1;
-            margin-bottom: 15px;
-            background: linear-gradient(180deg, #FFFFFF 0%, #E2E8F0 100%);
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 30px rgba(255,255,255,0.05);
+        .metric-card:hover {
+            border-color: rgba(229, 193, 88, 0.2);
+            transform: translateY(-4px);
         }
 
-        .stat-label { font-size: 1.2rem; font-weight: 800; color: #F8FAFC; margin-bottom: 12px; }
-        .stat-desc { font-size: 0.92rem; color: var(--text-secondary); line-height: 1.7; }
-
-        /* Security & Speed Banner */
-        .security-speed-strip {
-            max-width: 1340px;
-            margin: -20px auto 40px auto;
-            padding: 0 20px;
-            display: flex;
-            gap: 20px;
+        .metric-number {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 3.2rem;
+            color: var(--text-pure);
+            margin-bottom: 8px;
+            letter-spacing: -1px;
         }
-        @media (max-width: 768px) { .security-speed-strip { flex-direction: column; } }
-        .strip-pill {
-            flex: 1; padding: 18px 25px; border-radius: 12px; font-size: 0.9rem; display: flex; align-items: center; gap: 12px;
-        }
-        .pill-secure { background: rgba(212, 175, 55, 0.03); border: 1px solid rgba(212, 175, 55, 0.15); color: #D4AF37; }
-        .pill-fast { background: rgba(0, 168, 107, 0.03); border: 1px solid rgba(0, 168, 107, 0.15); color: #00A86B; }
 
-        /* Facilitation Banner */
-        .facilitation-banner {
-            max-width: 1340px;
-            margin: 50px auto;
-            padding: 35px;
-            background: linear-gradient(90deg, rgba(5,7,11,0.9) 0%, rgba(15,22,33,0.9) 100%);
-            border-right: 4px solid #D4AF37;
-            border-left: 4px solid #00A86B;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        .metric-label {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--text-pure);
+            margin-bottom: 10px;
         }
-        .facilitation-banner p { font-size: 1.1rem; font-weight: 700; color: #F1F5F9; }
-        .facilitation-banner span.gold { color: #D4AF37; text-shadow: 0 0 10px rgba(212,175,55,0.2); }
 
-        /* Category Headings */
-        .category-headline {
-            max-width: 1340px;
-            margin: 80px auto 35px auto;
-            padding: 0 20px;
-            border-right: 4px solid #D4AF37;
-            padding-right: 18px;
+        .metric-details {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.6;
         }
-        .category-headline h2 { font-size: 1.85rem; font-weight: 900; letter-spacing: -0.5px; }
-        .category-headline p { color: var(--text-secondary); font-size: 0.98rem; margin-top: 6px; }
 
-        /* Assets Grid System */
-        .portfolio-grid {
-            max-width: 1340px;
-            margin: 0 auto 70px auto;
+        /* Section Headings */
+        .section-header-block {
+            max-width: 1200px;
+            margin: 100px auto 40px auto;
+            padding: 0 24px;
+        }
+
+        .section-header-block h2 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: var(--text-pure);
+            letter-spacing: -0.5px;
+        }
+
+        .section-header-block p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-top: 8px;
+        }
+
+        /* Portfolio Responsive Architecture */
+        .portfolio-architecture {
+            max-width: 1200px;
+            margin: 0 auto 100px auto;
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
-            gap: 35px;
-            padding: 0 20px;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 24px;
+            padding: 0 24px;
         }
 
-        .asset-card {
-            background: var(--card-surface);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.02);
-            border-radius: 20px;
+        .framer-asset-card {
+            background-color: var(--surface-premium);
+            border: 1px solid var(--border-framer);
+            border-radius: 16px;
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            animation: hyperFluidGlow 20s infinite ease-in-out;
-            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: border-color 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        .asset-card:hover { transform: translateY(-8px); }
+        .framer-asset-card:hover {
+            border-color: rgba(229, 193, 88, 0.2);
+            transform: translateY(-4px);
+        }
 
-        .asset-image-slot {
-            width: 100%; height: 240px;
-            background: rgba(255, 255, 255, 0.005);
+        .asset-visual-placeholder {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(180deg, rgba(255,255,255,0.01) 0%, rgba(0,0,0,0.2) 100%);
             position: relative;
-            border-bottom: 1px solid rgba(255,255,255,0.02);
+            border-bottom: 1px solid var(--border-framer);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .upload-blueprint-overlay {
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            display: flex; flex-direction: column; justify-content: center; align-items: center;
-            text-align: center; padding: 25px;
-            background: linear-gradient(180deg, rgba(3,5,8,0.05) 0%, rgba(3,5,8,0.98) 100%);
+        .visual-glyph {
+            font-size: 1.5rem;
+            opacity: 0.7;
         }
-        .blueprint-icon { font-size: 2rem; margin-bottom: 10px; filter: drop-shadow(0 0 10px rgba(212,175,55,0.2)); }
-        .blueprint-title { font-size: 0.88rem; font-weight: 700; color: #D4AF37; }
-        .blueprint-dimensions { font-family: 'Inter', sans-serif; font-size: 0.65rem; color: var(--text-secondary); margin-top: 2px; }
 
-        .asset-meta-body { padding: 35px; flex-grow: 1; display: flex; flex-direction: column; }
-        .meta-tag-line { display: flex; gap: 10px; margin-bottom: 18px; }
-        .badge-status { background: rgba(0, 168, 107, 0.08); color: #00A86B; border: 1px solid rgba(0,168,107,0.15); padding: 4px 14px; border-radius: 6px; font-size: 0.75rem; font-weight: 700; }
-        .badge-vertical { background: rgba(255, 255, 255, 0.03); color: var(--text-secondary); border: 1px solid rgba(255,255,255,0.05); padding: 4px 14px; border-radius: 6px; font-size: 0.75rem; font-weight: 600; }
-
-        .asset-meta-body h3 { font-size: 1.45rem; font-weight: 800; margin-bottom: 14px; color: #FFFFFF; }
-        .asset-meta-body p { color: var(--text-secondary); font-size: 0.98rem; line-height: 1.7; margin-bottom: 25px; flex-grow: 1; text-align: justify; }
-        .link-indicator-arrow { font-size: 0.88rem; font-weight: 700; color: #D4AF37; border-top: 1px solid rgba(255,255,255,0.02); padding-top: 18px; display: flex; align-items: center; gap: 5px; }
-
-        /* Corporate Brief Manifesto Block */
-        .sovereign-manifest-block {
-            max-width: 1340px; margin: 100px auto;
-            background: linear-gradient(145deg, #05080C 0%, #020406 100%);
-            border: 1px solid rgba(255,255,255,0.01);
-            border-radius: 24px; padding: 60px;
-            box-shadow: 0 30px 70px rgba(0,0,0,0.6);
+        .asset-metadata-area {
+            padding: 32px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
-        .manifest-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
-        @media (max-width: 992px) { .manifest-grid { grid-template-columns: 1fr; gap: 40px; } }
 
-        .manifest-col h3 { font-size: 1.7rem; font-weight: 900; color: #D4AF37; margin-bottom: 25px; text-shadow: 0 0 15px rgba(212,175,55,0.1); }
-        .manifest-col p { color: #E2E8F0; font-size: 1.08rem; line-height: 1.8; text-align: justify; margin-bottom: 18px; }
-        .pillar-item { margin-bottom: 25px; border-bottom: 1px dashed rgba(255,255,255,0.02); padding-bottom: 20px; }
-        .pillar-title-line { font-size: 1.2rem; font-weight: 800; margin-bottom: 6px; color: #FFFFFF; }
-        .pillar-body-text { color: var(--text-secondary); font-size: 0.98rem; line-height: 1.6; }
+        .asset-taxonomy-line {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
 
+        .taxonomy-badge {
+            font-size: 0.72rem;
+            font-weight: 500;
+            padding: 4px 12px;
+            border-radius: 100px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-primary {
+            background-color: rgba(229, 193, 88, 0.08);
+            color: var(--accent-gold);
+            border: 1px solid rgba(229, 193, 88, 0.15);
+        }
+
+        .badge-secondary {
+            background-color: rgba(255, 255, 255, 0.03);
+            color: var(--text-muted);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .framer-asset-card h3 {
+            font-size: 1.35rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--text-pure);
+        }
+
+        .framer-asset-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 24px;
+            flex-grow: 1;
+        }
+
+        .asset-action-footer {
+            font-size: 0.82rem;
+            font-weight: 500;
+            color: var(--accent-gold);
+            border-top: 1px solid rgba(255, 255, 255, 0.02);
+            padding-top: 16px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Manifest Global Overview */
+        .manifesto-container {
+            max-width: 1200px;
+            margin: 120px auto;
+            padding: 64px;
+            background-color: #0b0e14;
+            border: 1px solid var(--border-framer);
+            border-radius: 24px;
+        }
+
+        .manifesto-layout {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 64px;
+        }
+
+        @media (max-width: 992px) {
+            .manifesto-layout { grid-template-columns: 1fr; gap: 40px; }
+            .manifesto-container { padding: 32px; }
+        }
+
+        .manifesto-aside h3 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--accent-gold);
+            margin-bottom: 24px;
+        }
+
+        .manifesto-aside p {
+            color: #d1d5db;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .pillar-framework {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        .pillar-node {
+            border-bottom: 1px solid rgba(255,255,255,0.03);
+            padding-bottom: 16px;
+        }
+
+        .pillar-node:last-child {
+            border-bottom: none;
+        }
+
+        .pillar-node-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-pure);
+            margin-bottom: 6px;
+        }
+
+        .pillar-node-body {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Footer System */
         footer {
-            width: 100%; text-align: center; padding: 60px 20px; background-color: #020305;
-            border-top: 1px solid rgba(255, 255, 255, 0.03); color: var(--text-secondary); font-size: 0.88rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 24px;
+            border-top: 1px solid var(--border-framer);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        footer p.signature {
+            font-family: 'Inter', sans-serif;
+            color: var(--accent-gold);
+            font-weight: 500;
+            margin-top: 12px;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
         }
     </style>
 </head>
 <body>
 
     <div class="navbar">
-        <div class="nav-right">
-            <div class="logo-dot"></div>
-            <div class="nav-logo-text">نجد لينك // NAJD LINK OS</div>
+        <div class="brand-identity">
+            <div class="brand-icon-dot"></div>
+            <div class="brand-name">Najd Link</div>
         </div>
-        <div class="nav-links">
-            <span>01. لوحة التحكم الضوئي</span>
-            <span>02. المقرات الإقليمية وحجز المواقع</span>
-            <span>03. قطاعات الضيافة والامتيازات</span>
-            <span>04. الترفيه والتصنيع والتقنية</span>
-            <span>05. بيان الحوكمة والرؤية والتحصين</span>
+        <div class="nav-navigation">
+            <span>المنظومة الرقمية</span>
+            <span>المقرات والمواقع</span>
+            <span>الامتيازات والضيافة</span>
+            <span>الابتكار المعرفي</span>
+            <span>وثيقة الحوكمة</span>
         </div>
-        <div class="vision-2030-container">VISION 2030 // الرؤية المباركة ٢٠٣٠</div>
+        <div class="pill-vision">VISION 2030</div>
     </div>
 
-    <div class="hero-section">
-        <div class="executive-badge">المنظومة السيادية الفائقة للربط والعبور التجاري الاستراتيجي</div>
-        <h1>بوابة نجد لينك الأيقونية لتوجيه وصناعة الشراكات الاستثمارية</h1>
-        <p>الكيان الريادي الحتمي والأقوى في هندسة وتسهيل صفقات الربط بين كبرى سلاسل التصنيع والترفيه، الماركات الفاخرة، والأصول السيادية المليارية مع أصحاب الأعمال والمستثمرين بالمملكة.</p>
+    <div class="hero-framework">
+        <div class="executive-tagline">Sovereign Institutional Bridge</div>
+        <h1>بوابة التوجيه الاستراتيجي للشراكات الاستثمارية المليارية</h1>
+        <p>الكيان الريادي الحتمي في هندسة وتسهيل صفقات الربط بين كبرى سلاسل التصنيع والترفيه، الماركات العالمية الفاخرة، والأصول السيادية مع أصحاب الأعمال والمستثمرين بالمملكة.</p>
     </div>
 
-    <div class="stats-dashboard">
-        <div class="stat-card">
-            <div class="stat-number">12 +</div>
-            <div class="stat-label">مشاريع تم إنجازها بنجاح</div>
-            <div class="stat-desc">تم ربطها وهندستها وثوقياً وقانونياً مع كبار العملاء والمستثمرين الاستراتيجيين وتأمين مقراتها الإقليمية بالمملكة.</div>
+    <div class="metrics-grid">
+        <div class="metric-card">
+            <div class="metric-number">12</div>
+            <div class="metric-label">شراكة مكتملة التوطين</div>
+            <div class="metric-details">تمت هندستها وثوقياً وقانونياً لدعم المقرات الإقليمية الرئيسية داخل البيئة الاستثمارية المحلية.</div>
         </div>
 
-        <div class="stat-card">
-            <div class="stat-number">18 +</div>
-            <div class="stat-label">مشاريع قيد التنفيذ والربط النشط</div>
-            <div class="stat-desc">تخضع حالياً لهندسة وتأمين عقود الامتياز، وتوطين خطوط الإنتاج الكبرى مع الشركاء المحليين وأصحاب الأعمال.</div>
+        <div class="metric-card">
+            <div class="metric-number">18</div>
+            <div class="metric-label">قيد الصياغة الهيكلية</div>
+            <div class="metric-details">تخضع حالياً لمعايير الحوكمة الصارمة وعقود الامتياز الكبرى مع الشركاء الاستراتيجيين.</div>
         </div>
 
-        <div class="stat-card">
-            <div class="stat-number">35 +</div>
-            <div class="stat-label">مشاريع مستهدفة مستقبلية</div>
-            <div class="stat-desc">مخططات مرسومة في خارطة تدفقات الاستثمار لجذب عمالقة الابتكار الدوليين وبناء الشراكات في الوجهات الكبرى.</div>
-        </div>
-    </div>
-
-    <div class="security-speed-strip">
-        <div class="strip-pill pill-secure">
-            🛡️ <b>الجدار الناري السيادي النشط (WAF):</b> المنصة محصنة ومحمية بالكامل عبر طبقات أمنية مشفرة من طرف إلى طرف لصد كافة الاختراقات وحماية سرية المفاوضات.
-        </div>
-        <div class="strip-pill pill-fast">
-            ⚡ <b>الاستجابة اللحظية الفائقة (Zero-Lag OS):</b> الكود مهندس هندسة نقية وخفيفة لتوفير انتقال فوري بين الأقسام دون تأخير لخدمة وقت المستثمرين كبار الشخصيات.
+        <div class="metric-card">
+            <div class="metric-number">35</div>
+            <div class="metric-label">أصول مستهدفة وموجهة</div>
+            <div class="metric-details">مخططات مدروسة في خارطة التدفقات الاستثمارية لجذب عمالقة الصناعة والابتكار الدوليين.</div>
         </div>
     </div>
 
-    <div class="facilitation-banner">
-        <p>📌 <span class="gold">بيان التيسير والتمثيل الموثق:</span> تؤكد منصة <b>(نجد لينك)</b> التزامها الصارم بدورها بصفتها <span class="gold">المسهل والميسر والممثل الاستراتيجي الوحيد</span> لربط كافة الأنشطة، القطاعات، والامتيازات المدرجة أدناه لضمان تجربة عبور تجاري فائقة السرية وعالية الحوكمة.</p>
+    <div class="section-header-block">
+        <h2>أولاً: محفظة المقرات الإقليمية وتخصيص المواقع النخبوية</h2>
+        <p>إدارة وتيسير العبور الاستراتيجي وتوطين الحضور الدولي لبرندات السلع الراقية ودور الأزياء والساعات الحصرية.</p>
     </div>
 
-    <div class="category-headline">
-        <h2>أولاً: محفظة المقرات الإقليمية وحجز المواقع لدور الأزياء والساعات والعطور الفاخرة</h2>
-        <p>بوابة نجد لينك الاستراتيجية لتأمين وتيسير العبور اللوجستي وتوطين مكاتب ومواقع عمالقة السلع الراقية دولياً.</p>
-    </div>
-
-    <div class="portfolio-grid">
-        <div class="asset-card">
-            <div class="asset-image-slot">
-                <div class="upload-blueprint-overlay">
-                    <div class="blueprint-icon">👑</div>
-                    <div class="blueprint-title">تأمين المقرات الإقليمية الرئيسية (RHQ) للشركات المليارية</div>
-                    <div class="blueprint-dimensions">Regional_HQ_Framework</div>
-                </div>
+    <div class="portfolio-architecture">
+        <div class="framer-asset-card">
+            <div class="asset-visual-placeholder">
+                <div class="visual-glyph">⚜️</div>
             </div>
-            <div class="asset-meta-body">
-                <div class="meta-tag-line">
-                    <span class="badge-status">Active Link</span>
-                    <span class="badge-vertical">الحوكمة والتمثيل الإقليمي</span>
+            <div class="asset-metadata-area">
+                <div class="asset-taxonomy-line">
+                    <span class="badge-status taxonomy-badge badge-primary">Active Link</span>
+                    <span class="badge-vertical taxonomy-badge badge-secondary">الحوكمة الإقليمية</span>
                 </div>
-                <h3>تأمين المقرات الإقليمية (Regional HQ)</h3>
-                <p>هندسة وتسهيل انتقال مكاتب ومقرات المجموعات الدولية الكبرى المالكة لأرقى علامات الملابس والأحذية والساعات الفاخرة لتأسيس مركزها الرئيسي بالرياض تماشياً مع الأنظمة السيادية الجديدة.</p>
-                <div class="link-indicator-arrow">✦ الميسر القانوني والوسيط التنفيذي الحصري مع الجهات المعنية</div>
+                <h3>تأمين المقرات الإقليمية الرئيسية (RHQ)</h3>
+                <p>تسهيل انتقال مكاتب ومقرات المجموعات الدولية الكبرى المالكة لأرقى العلامات الفاخرة لتأسيس مراكزها الرئيسية بالرياض بما يتوافق مع النظم السيادية الحديثة.</p>
+                <div class="asset-action-footer">✦ الوسيط التنفيذي والحصري لتيسير قنوات العبور</div>
             </div>
         </div>
 
-        <div class="asset-card">
-            <div class="asset-image-slot">
-                <div class="upload-blueprint-overlay">
-                    <div class="blueprint-icon">💎</div>
-                    <div class="blueprint-title">حجز المواقع الفاخرة والشراكات العقارية الكبرى للبرندات</div>
-                    <div class="blueprint-dimensions">Luxury_Retail_Placement</div>
-                </div>
+        <div class="framer-asset-card">
+            <div class="asset-visual-placeholder">
+                <div class="visual-glyph">✦</div>
             </div>
-            <div class="asset-meta-body">
-                <div class="meta-tag-line">
-                    <span class="badge-status">Active Link</span>
-                    <span class="badge-vertical">التطوير العقاري النخبوي</span>
+            <div class="asset-metadata-area">
+                <div class="asset-taxonomy-line">
+                    <span class="badge-status taxonomy-badge badge-primary">Active Link</span>
+                    <span class="badge-vertical taxonomy-badge badge-secondary">التخصيص العقاري</span>
                 </div>
-                <h3>حجز المواقع الفاخرة والشراكات الاستراتيجية</h3>
-                <p>ربط الوكلاء الحصريين لدور الساعات السويسرية والملابس والأزياء الراقية مع كبار المطورين العقاريين لضمان تخصيص وحجز المواقع الأكثر استراتيجية في الوجهات التاريخية كالمربع والدرعية ونيوم.</p>
-                <div class="link-indicator-arrow">✦ هندسة العلاقات التعاقدية النخبوية قبل مرحلة الإطلاق الجماهيري</div>
+                <h3>تخصيص وحجز المواقع الاستراتيجية</h3>
+                <p>ربط المشغلين الدوليين لدور الساعات السويسرية والأزياء الراقية مع كبار المطورين لضمان حجز المواقع الأكثر استراتيجية في الوجهات التاريخية والمستقبلية الفاخرة.</p>
+                <div class="asset-action-footer">✦ هندسة العلاقات التعاقدية قبل مرحلة الإطلاق الاستثماري</div>
             </div>
         </div>
 
-        <div class="asset-card">
-            <div class="asset-image-slot">
-                <div class="upload-blueprint-overlay">
-                    <div class="blueprint-icon">🧪</div>
-                    <div class="blueprint-title">مختبرات العطور الحصرية والنسخ المستوحاة للمملكة</div>
-                    <div class="blueprint-dimensions">Niche_Perfumes_Sovereign</div>
-                </div>
+        <div class="framer-asset-card">
+            <div class="asset-visual-placeholder">
+                <div class="visual-glyph">🧪</div>
             </div>
-            <div class="asset-meta-body">
-                <div class="meta-tag-line">
-                    <span class="badge-status">Active Link</span>
-                    <span class="badge-vertical">العطور النخبوية والنيش</span>
+            <div class="asset-metadata-area">
+                <div class="asset-taxonomy-line">
+                    <span class="badge-status taxonomy-badge badge-primary">Active Link</span>
+                    <span class="badge-vertical taxonomy-badge badge-secondary">النيش النخبوي</span>
                 </div>
-                <h3>مختبرات العطور النخبوية والنسخ الخاصة</h3>
-                <p>استقطاب وتمثيل أشهر صانعي ومصممي عطور النيش المستقلين دولياً لتوطين خطوط إنتاج وتعبئة حصرية ومحدودة تستلهم عبق التراث السعودي لخدمة القصور الرئاسية والوجهات الفندقية الفاخرة.</p>
-                <div class="link-indicator-arrow">✦ تيسير عقود التوزيع الفائق والامتياز الحصري النادر</div>
+                <h3>مختبرات عطور النيش والنسخ الخاصة</h3>
+                <p>استقطاب أشهر مصممي العطور المستقلين دولياً لتوطين خطوط إنتاج حصرية ومحدودة تستلهم عبق التراث السعودي لخدمة القطاعات الفندقية الفاخرة والوجهات النخبوية.</p>
+                <div class="asset-action-footer">✦ إدارة وتيسير عقود الامتياز الحصري النادر</div>
             </div>
         </div>
     </div>
 
-    <div class="category-headline">
-        <h2>ثانياً: محفظة المطاعم العالمية والبرندات والحلويات النخبوية</h2>
-        <p>قنوات ربط وتمثيل سلاسل الطهي الحائزة على نجوم ميشلان وعلامات الشوكولاتة والحلويات الحصرية الفاخرة.</p>
+    <div class="section-header-block">
+        <h2>ثانياً: قطاعات الضيافة الفاخرة وسلاسل الطهي النخبوية</h2>
+        <p>قنوات الربط والتمثيل الاستراتيجي للعلامات التجارية الكبرى وعلامات الحلويات والشوكولاتة الحصرية.</p>
     </div>
 
-    <div class="portfolio-grid">
-        <div class="asset-card">
-            <div class="asset-image-slot">
-                <div class="upload-blueprint-overlay">
-                    <div class="blueprint-icon">🍽️</div>
-                    <div class="blueprint-title">مساحة صور المطاعم العالمية النخبوية والطهي الفاخر</div>
-                    <div class="blueprint-dimensions">Fine_Dining_Pipeline</div>
-                </div>
+    <div class="portfolio-architecture">
+        <div class="framer-asset-card">
+            <div class="asset-visual-placeholder">
+                <div class="visual-glyph">🍽️</div>
             </div>
-            <div class="asset-meta-body">
-                <div class="meta-tag-line">
-                    <span class="badge-status">Active Link</span>
-                    <span class="badge-vertical">الطهي النخبوي</span>
+            <div class="asset-metadata-area">
+                <div class="asset-taxonomy-line">
+                    <span class="badge-status taxonomy-badge badge-primary">Active Link</span>
+                    <span class="badge-vertical taxonomy-badge badge-secondary">الطهي الرفيع</span>
                 </div>
-                <h3>المطاعم العالمية والنخبوية</h3>
-                <p>تسهيل وتمثيل توسع سلاسل الطهي الفاخرة والحائزة على تقييمات وجوائز دولية رفيعة، لتأمين مواقع حصرية ومستدامة لها داخل الوجهات النخبوية الكبرى والمشاريع السياحية الفاخرة بالمملكة.</p>
-                <div class="link-indicator-arrow">✦ ربط فوري للمشغلين الدوليين مع كبار المطورين العقاريين</div>
+                <h3>المطاعم العالمية والتجارب النخبوية</h3>
+                <p>تسهيل توسع سلاسل الطهي الفاخرة والحائزة على تقييمات دولية رفيعة، لتأمين مواقع حصرية ومستدامة لها داخل الوجهات السياحية الكبرى والمشاريع الاستثمارية الفاخرة.</p>
+                <div class="asset-action-footer">✦ ربط فوري للمشغلين الدوليين مع البيئة العقارية النخبوية</div>
             </div>
         </div>
 
-        <div class="asset-card">
-            <div class="asset-image-slot">
-                <div class="upload-blueprint-overlay">
-                    <div class="blueprint-icon">🍫</div>
-                    <div class="blueprint-title">مساحة صور علامات الحلويات والشوكولاتة الفاخرة</div>
-                    <div class="blueprint-dimensions">Luxury_Sweets_Asset</div>
-                </div>
+        <div class="framer-asset-card">
+            <div class="asset-visual-placeholder">
+                <div class="visual-glyph">🍫</div>
             </div>
-            <div class="asset-meta-body">
-                <div class="meta-tag-line">
-                    <span class="badge-status">Active Link</span>
-                    <span class="badge-vertical">البرندات الفاخرة</span>
+            <div class="asset-metadata-area">
+                <div class="asset-taxonomy-line">
+                    <span class="badge-status taxonomy-badge badge-primary">Active Link</span>
+                    <span class="badge-vertical taxonomy-badge badge-secondary">العلامات الحصرية</span>
                 </div>
-                <h3>البرندات العالمية للحلويات والشوكولاتة</h3>
-                <p>استقطاب وتوطين أعرق دور وصالونات الشوكولاتة السويسرية والفرنسية والبلجيكية النخبوية، وهندسة عقود توزيعها لخدمة النزل الفندقية الفاخرة والعملاء النخبوين.</p>
-                <div class="link-indicator-arrow">✦ إدارة وتيسير الوكالات التجارية الحصرية مع أصحاب الأعمال</div>
+                <h3>دور وصالونات الحلويات والشوكولاتة الفاخرة</h3>
+                <p>استقطاب وتوطين أعرق صالونات الشوكولاتة السويسرية والفرنسية النخبوية، وهندسة عقود توزيعها لخدمة النزل الفندقية النخبوية وكبار أصحاب الأعمال.</p>
+                <div class="asset-action-footer">✦ تيسير الوكالات التجارية والامتيازات الحصرية</div>
             </div>
         </div>
     </div>
 
-    <div class="category-headline">
-        <h2>ثالثاً: استثمارات مدن الملاهي، الألعاب، والذكاء الاصطناعي والتصنيع</h2>
-        <p>توجيه وهندسة الصفقات المرتبطة بسلاسل الترفيه الجماهيري، البنى التكنولوجية العميقة، وقدرات الإنتاج الدقيق.</p>
+    <div class="section-header-block">
+        <h2>ثالثاً: قطاعات الترفيه الجماهيري، الابتكار المعرفي، والتصنيع المتقدم</h2>
+        <p>توجيه صفقات الربط التكنولوجي والقدرات الإنتاجية الدقيقة مع البنى التحتية المتطورة.</p>
     </div>
 
-    <div class="portfolio-grid">
-        <div class="asset-card">
-            <div class="asset-image-slot">
-                <div class="upload-blueprint-overlay">
-                    <div class="blueprint-icon">🎡</div>
-                    <div class="blueprint-title">مساحة صور مدن الملاهي الضخمة والترفيه الفائق</div>
-                    <div class="blueprint-dimensions">Mega_Theme_Parks</div>
-                </div>
+    <div class="portfolio-architecture">
+        <div class="framer-asset-card">
+            <div class="asset-visual-placeholder">
+                <div class="visual-glyph">🎡</div>
             </div>
-            <div class="asset-meta-body">
-                <div class="meta-tag-line">
-                    <span class="badge-status">Active Pipeline</span>
-                    <span class="badge-vertical">الترفيه والألعاب</span>
+            <div class="asset-metadata-area">
+                <div class="asset-taxonomy-line">
+                    <span class="badge-status taxonomy-badge badge-primary">Active Pipeline</span>
+                    <span class="badge-vertical">الترفيه التكاملي</span>
                 </div>
-                <h3>مدن الملاهي الكبيرة والترفيه الفائق</h3>
-                <p>تمثيل وربط مجموعات الترفيه الجماهيري، المدن الترفيهية المغلقة والمفتوحة، والمشاريع الكبرى للألعاب الإلكترونية، وربطها بمالكي الأراضي الاستراتيجية والوجهات الكبرى كالقدية.</p>
-                <div class="link-indicator-arrow">✦ جاري العمل حالياً على ربط شراكتين دوليتين ترفيهيتين</div>
+                <h3>مدن الملاهي الكبرى والمشاريع الترفيهية الفائقة</h3>
+                <p>تمثيل وربط مجموعات الترفيه الدولية، المدن الترفيهية المفتوحة، ومشاريع الألعاب الإلكترونية الكبرى، وشبكها بمالكي الأراضي الاستراتيجية في الوجهات الوطنية الكبرى.</p>
+                <div class="asset-action-footer">✦ ميسر استراتيجي لدمج الكيانات الترفيهية الكبرى</div>
             </div>
         </div>
 
-        <div class="asset-card">
-            <div class="asset-image-slot">
-                <div class="upload-blueprint-overlay">
-                    <div class="blueprint-icon">🤖</div>
-                    <div class="blueprint-title">مساحة صور مراكز البيانات والذكاء الاصطناعي السيادي</div>
-                    <div class="blueprint-dimensions">AI_Sovereign_Hub</div>
-                </div>
+        <div class="framer-asset-card">
+            <div class="asset-visual-placeholder">
+                <div class="visual-glyph">🤖</div>
             </div>
-            <div class="asset-meta-body">
-                <div class="meta-tag-line">
-                    <span class="badge-status">Active Pipeline</span>
-                    <span class="badge-vertical">الذكاء الاصطناعي</span>
+            <div class="asset-metadata-area">
+                <div class="asset-taxonomy-line">
+                    <span class="badge-status taxonomy-badge badge-primary">Active Pipeline</span>
+                    <span class="badge-vertical">التقنية العميقة</span>
                 </div>
                 <h3>الذكاء الاصطناعي والاستثمارات المعرفية</h3>
-                <p>تيسير وجلب قنوات الحوسبة السحابية العميقة، بناء مراكز البيانات الفائقة السرعة، وتوطين الابتكارات البرمجية المتقدمة لإدارة مدن الجيل القادم الذكية.</p>
-                <div class="link-indicator-arrow">✦ خطط مستقبلية مستهدفة لربط عمالقة وادي السليكون</div>
+                <p>تيسير وجلب قنوات الحوسبة السحابية العميقة، بناء مراكز البيانات الفائقة، وتوطين الابتكارات البرمجية المتقدمة لإدارة مدن الجيل القادم الذكية.</p>
+                <div class="asset-action-footer">✦ رؤية مستقبلية لربط قادة الابتكار التقني الدولي</div>
             </div>
         </div>
 
-        <div class="asset-card">
-            <div class="asset-image-slot">
-                <div class="upload-blueprint-overlay">
-                    <div class="blueprint-icon">🏭</div>
-                    <div class="blueprint-title">مساحة صور قطاع التصنيع ونقل خطوط الإنتاج</div>
-                    <div class="blueprint-dimensions">Advanced_Manufacturing</div>
-                </div>
+        <div class="framer-asset-card">
+            <div class="asset-visual-placeholder">
+                <div class="visual-glyph">🏭</div>
             </div>
-            <div class="asset-meta-body">
-                <div class="meta-tag-line">
-                    <span class="badge-status">Active Pipeline</span>
-                    <span class="badge-vertical">التصنيع المتقدم</span>
+            <div class="asset-metadata-area">
+                <div class="asset-taxonomy-line">
+                    <span class="badge-status taxonomy-badge badge-primary">Active Pipeline</span>
+                    <span class="badge-vertical">الصناعات المتطورة</span>
                 </div>
-                <h3>التصنيع وجلب أصحاب المصانع العالمية</h3>
-                <p>جذب واستقطاب قادة الصناعات المتطورة والإنتاج الدقيق، ونقل وتوطين براءات الاختراع وسلاسل الإمداد المتقدمة بالبنية التحتية للمدن الصناعية المتطورة بالمملكة.</p>
-                <div class="link-indicator-arrow">✦ تم إنجاز ربط مصنعين ومستهدف جلب 5 مصانع إضافية</div>
+                <h3>التصنيع المتقدم وجذب أصحاب المصانع العالمية</h3>
+                <p>جذب واستقطاب قادة الصناعات الدقيقة، ونقل وتوطين براءات الاختراع وسلاسل الإمداد المتقدمة بالبنية التحتية للمدن الصناعية المتطورة بالمملكة.</p>
+                <div class="asset-action-footer">✦ هندسة وتسهيل عقود نقل التكنولوجيا وسلاسل الإمداد</div>
             </div>
         </div>
     </div>
 
-    <div class="sovereign-manifest-block">
-        <div class="manifest-grid">
-            <div class="manifest-col">
-                <h3>نبذة عن منصتنا (About Najd Link)</h3>
-                <p>تأسست منصة نجد لينك (Najd Link) ككيان استشاري مستقل رائد في حوكمة وصياغة روابط الوساطة التجارية السيادية والتشغيلية عالية المستوى. نصمم ونقود القنوات الأكثر أماناً وموثوقية لشبك كبرى المجموعات الصناعية والتكنولوجية العالمية، وشركات الأصول النخبوية والمقرات الإقليمية، وأعرق دور البرندات والمطاعم والحلويات الفاخرة مع كبار المستثمرين وأصحاب الأعمال والقرار في المملكة العربية السعودية.</p>
-                <p>نعمل بآليات حوكمة صارمة ودقة هندسية مطلقة لتبسيط العقود والامتيازات المعقدة وتوطين القدرات الدولية، بما يضمن حضوراً دائماً ومستداماً للشركاء الأجانب في بيئة الاستثمار المحلية المتقدمة.</p>
+    <div class="manifesto-container">
+        <div class="manifesto-layout">
+            <div class="manifesto-aside">
+                <h3>عن نجد لينك // Institutional Manifesto</h3>
+                <p>تأسست منصة نجد لينك (Najd Link) ككيان استشاري مستقل رائد في حوكمة وصياغة روابط الوساطة التجارية السيادية والتشغيلية عالية المستوى. نصمم ونقود القنوات الأكثر أماناً وموثوقية لشبك كبرى المجموعات الصناعية والتكنولوجية العالمية مع كبار المستثمرين وأصحاب القرار في المملكة العربية السعودية.</p>
+                <p>نعمل بآليات حوكمة صارمة ودقة هندسية مطلقة لتبسيط العقود والامتيازات المعقدة وتوطين القدرات الدولية، بما يضمن حضوراً دائماً ومستداماً للشركاء الأجانب في بيئة الاستثمار المحلية المتقدمة تماشياً مع الرؤية المباركة 2030.</p>
             </div>
-            <div class="manifest-col">
-                <h3>رؤيتنا الاستراتيجية والتزام البنية الفائقة</h3>
-                <p>أن نكون المحرك الاستراتيجي والسيادي الأول والآمن لشبك وتوجيه التدفقات الاستثمارية وجذب عمالقة الابتكار والتصنيع والترفيه والطهي النخبوي والأصول الفاخرة حول العالم، وتوطين حضورهم وتأمين مقراتهم داخل وجهات المملكة بما يحقق كلياً الأهداف التنموية والمستهدفات الاقتصادية الطموحة لرؤية السعودية 2030.</p>
-                
-                <div style="margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.04); padding-top: 15px;">
-                    <div class="pillar-item">
-                        <div class="pillar-title-line">١. السرية المطلقة وحماية المفاوضات السيادية</div>
-                        <div class="pillar-body-text">الالتزام الصارم بتأمين وحماية البيانات والمفاوضات رفيعة المستوى المعبر عنها في لوحات تحكمنا لضمان سلامة قنوات الاستثمار الدولي والملكية الفكرية، والمعززة بحصن حماية وجدار ناري ذكي (WAF) مشفر بالكامل ومانع للاختراقات.</div>
-                    </div>
-                    <div class="pillar-item">
-                        <div class="pillar-title-line">٢. الهندسة النظيفة والأداء الفوري (Zero-Lag)</div>
-                        <div class="pillar-body-text">المنصة مطورة برمجياً بمعايير هندسية خفيفة للغاية لضمان التحميل اللحظي الفوري والانتقال البرقي بين المحافظ الاستثمارية، احتراماً لوقت المستثمرين وصناع القرار ومنع أي تأخير أو انتظار طويل.</div>
-                    </div>
+            <div class="pillar-framework">
+                <div class="pillar-node">
+                    <div class="pillar-node-title">السرية المطلقة وحوكمة البيانات</div>
+                    <div class="pillar-node-body">تلتزم المنصة بأعلى معايير الأمن السيبراني الصامت وحفظ سرية المفاوضات رفيعة المستوى لضمان سلامة قنوات الاستثمار الدولي وحماية الملكية الفكرية عبر جدار حماية مشفر خلف الكواليس.</div>
+                </div>
+                <div class="pillar-node">
+                    <div class="pillar-node-title">الهندسة النظيفة والاستدامة الرقمية</div>
+                    <div class="pillar-node-body">تم تطوير البنية التحتية للمنصة برمجياً بأوزان صفرية تضمن التحميل الفوري الفائق تلبيةً لتطلعات ومعايير الأداء الخاصة بكبار الشخصيات وصناع القرار.</div>
                 </div>
             </div>
         </div>
     </div>
 
     <footer>
-        <p>© 2026 منصة نجد لينك الاستشارية الاستراتيجية - نظام التحكم الرقمي بالمحافظ الاستثمارية الموحدة.</p>
-        <p style="color: #D4AF37; font-weight: 700; margin-top: 12px; font-size: 0.85rem; letter-spacing: 0.5px;">بنية تحتية رقمية أسطورية محصنة سيبرانياً ومحسنة كخيوط الليزر لتبرز الهوية الفحمية الفاخرة للربط الاستثماري السيادي الشامل من الالف إلى الياء</p>
+        <p>© 2026 NAJD LINK. ALL RIGHTS RESERVED.</p>
+        <p class="signature">SOVEREIGN INSTITUTIONAL BRIDGE — ENGINEERED FOR SUPREME OPERATIONAL INTEGRITY</p>
     </footer>
 
 </body>
