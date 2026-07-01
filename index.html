@@ -1,290 +1,218 @@
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NAJD LINK — Sovereign 12K Ultra-3D Institutional Portal</title>
+    <title>NAJD LINK — Sovereign Cinematic Experience</title>
     
-    <!-- Official High-End Typography & Animation Frameworks -->
+    <!-- استدعاء عائلة الخطوط الأسطورية والسينمائية الضخمة -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Syne:wght@700;800&family=Reem+Kufi:wght@500;700&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
     
-    <!-- الأداة الأسطورية للحركات فائقة الانسيابية -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <!-- مكتبة الأيقونات الفاخرة عالية الجودة -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         :root {
-            --bg-cosmic-black: #020202;     
-            --royal-gold-24k: #E5C158;      
-            --imperial-emerald: #0b4f31;    
-            --sand-silk: #f4eee1;           
-            --pure-white: #ffffff;
-            --subtle-gray: #7d848d;
-            --glass-surface: rgba(8, 8, 8, 0.82);
-            --border-neon-gold: rgba(229, 193, 88, 0.14);
-            --border-neon-hover: rgba(229, 193, 88, 0.75);
-            --neon-glow: 0 0 50px rgba(229, 193, 88, 0.3), 0 0 100px rgba(11, 79, 49, 0.5);
+            --bg-deep-space: #030304;     
+            --neon-gold-glow: #ffdf7a;      
+            --laser-emerald: #00ff87;    
+            --pure-crystal: #ffffff;
+            --muted-titanium: #9aa5b1;
+            --glass-backdrop: rgba(10, 11, 15, 0.85);
+            --border-heavy-glow: rgba(255, 223, 122, 0.2);
         }
 
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
-            background-color: var(--bg-cosmic-black);
-            color: var(--pure-white);
-            font-family: 'Montserrat', 'Tajawal', sans-serif;
+            background-color: var(--bg-deep-space);
+            color: var(--pure-crystal);
+            font-family: 'Space Grotesk', sans-serif;
             min-height: 100vh;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
-            perspective: 2000px; /* فضاء ثلاثي أبعاد أعمق */
+            perspective: 2000px;
         }
 
-        /* نظام الجزيئات الأسطوري المولد برمجياً خلف الكود */
-        #cosmic-particle-field {
-            position: fixed;
-            top: 0; left: 0; width: 100vw; height: 100vh;
-            z-index: 1; pointer-events: none;
+        /* نظام الإضاءة المحيطية السينمائية المتحركة بالخلفية */
+        .cinematic-aurora-glow {
+            position: fixed; width: 800px; height: 800px;
+            background: radial-gradient(circle, rgba(0, 255, 135, 0.12) 0%, transparent 65%);
+            top: -20%; left: -10%; z-index: 0; pointer-events: none; filter: blur(120px);
+            animation: floatGlow 12s infinite alternate ease-in-out;
+        }
+        .cinematic-aurora-glow.gold-laser {
+            background: radial-gradient(circle, rgba(255, 223, 122, 0.15) 0%, transparent 65%);
+            bottom: -20%; right: -10%; top: auto; left: auto;
+            animation: floatGlow 16s infinite alternate-reverse ease-in-out;
         }
 
-        /* نيون الخلفية الهلامي المتحرك */
-        .neon-aurora {
-            position: fixed; width: 600px; height: 600px;
-            background: radial-gradient(circle, rgba(11, 79, 49, 0.15) 0%, transparent 70%);
-            top: -10%; left: -10%; z-index: 0; pointer-events: none; filter: blur(80px);
-        }
-        .neon-aurora.gold {
-            background: radial-gradient(circle, rgba(229, 193, 88, 0.08) 0%, transparent 70%);
-            bottom: -10%; right: -10%; top: auto; left: auto;
+        @keyframes floatGlow {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(80px, 50px) scale(1.2); }
         }
 
         header {
-            max-width: 1500px; margin: 0 auto; padding: 40px 60px;
+            max-width: 1600px; margin: 0 auto; padding: 40px 60px;
             display: flex; justify-content: space-between; align-items: center;
             position: relative; z-index: 100;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.02);
-            background: rgba(2, 2, 2, 0.85); backdrop-filter: blur(35px); -webkit-backdrop-filter: blur(35px);
+            border-bottom: 2px solid rgba(255, 255, 255, 0.03);
+            background: rgba(3, 3, 4, 0.9); backdrop-filter: blur(40px);
         }
 
-        .logo-container { display: flex; align-items: center; gap: 18px; transform-style: preserve-3d; cursor: pointer; }
-        .iconic-logo-3d { width: 60px; height: 60px; filter: drop-shadow(0 0 25px rgba(229, 193, 88, 0.5)); transition: transform 0.3s; }
-        .logo-text { font-size: 1.4rem; font-weight: 600; letter-spacing: 6px; text-transform: uppercase; }
-        .logo-text span { color: var(--royal-gold-24k); text-shadow: 0 0 25px rgba(229,193,88,0.4); }
+        .logo-container { display: flex; align-items: center; gap: 15px; cursor: pointer; }
+        /* نوع خط أسطوري فخم جداً للشعار وعريض */
+        .logo-text { font-family: 'Cinzel', serif; font-size: 1.8rem; font-weight: 900; letter-spacing: 4px; text-transform: uppercase; }
+        .logo-text span { color: var(--neon-gold-glow); text-shadow: 0 0 30px rgba(255, 223, 122, 0.8); }
 
-        nav { display: flex; gap: 56px; font-size: 0.75rem; font-weight: 500; color: var(--subtle-gray); letter-spacing: 3px; text-transform: uppercase; }
-        nav span { position: relative; transition: color 0.4s; cursor: pointer; }
-        nav span:hover { color: var(--royal-gold-24k); }
-        nav span::after {
-            content: ''; position: absolute; bottom: -8px; left: 50%; width: 0; height: 1px; background: var(--royal-gold-24k); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); transform: translateX(-50%);
-        }
-        nav span:hover::after { width: 100%; box-shadow: 0 0 10px var(--royal-gold-24k); }
-        
-        .language-matrix { display: flex; gap: 14px; background: rgba(255, 255, 255, 0.01); padding: 10px 24px; border-radius: 100px; border: 1px solid rgba(229, 193, 88, 0.2); font-size: 0.75rem; font-weight: 600; }
-        .lang-node { cursor: pointer; color: var(--subtle-gray); transition: all 0.3s; }
-        .lang-node.active { color: var(--royal-gold-24k); text-shadow: 0 0 12px rgba(229, 193, 88, 0.8); }
+        nav { font-family: 'Space Grotesk', sans-serif; font-weight: 700; display: flex; gap: 50px; font-size: 0.85rem; letter-spacing: 3px; text-transform: uppercase; }
+        nav span { color: var(--muted-titanium); transition: all 0.3s; cursor: pointer; }
+        nav span:hover { color: #fff; text-shadow: 0 0 15px #fff; }
 
-        .section-spacer { height: 200px; position: relative; z-index: 2; }
+        .section-spacer { height: 140px; }
 
-        /* HERO VIEWPORT PORTAL */
+        /* HERO VIEWPORT - الخطوط الضخمة السينمائية */
         .hero-viewport {
-            max-width: 1300px; margin: 140px auto 0 auto; text-align: center; padding: 0 40px;
-            position: relative; z-index: 10; transform-style: preserve-3d;
+            max-width: 1400px; margin: 100px auto 0 auto; text-align: center; padding: 0 40px;
+            position: relative; z-index: 10;
         }
 
         .badge-system {
-            font-size: 0.75rem; font-weight: 600; letter-spacing: 5px; text-transform: uppercase; color: var(--royal-gold-24k); margin-bottom: 40px;
-            background: linear-gradient(90deg, rgba(229,193,88,0.02), rgba(11,79,49,0.1), rgba(229,193,88,0.02)); display: inline-block; padding: 8px 28px; border-radius: 4px; border: 1px solid rgba(229, 193, 88, 0.3);
-            box-shadow: 0 0 30px rgba(229, 193, 88, 0.1);
+            font-family: 'Space Grotesk', sans-serif; font-size: 0.8rem; font-weight: 700; letter-spacing: 6px; text-transform: uppercase; color: #00ff87; margin-bottom: 40px;
+            background: rgba(0, 255, 135, 0.05); display: inline-block; padding: 10px 32px; border-radius: 4px; border: 2px solid var(--laser-emerald);
+            box-shadow: 0 0 30px rgba(0, 255, 135, 0.2);
         }
 
+        /* خط أسطوري فائق الضخامة والسماكة غليظ ومشع */
         .hero-viewport h1 {
-            font-size: 5.6rem; font-weight: 100; line-height: 1.1; letter-spacing: -3px; margin-bottom: 48px;
-            background: linear-gradient(180deg, #ffffff 40%, #8b94a0 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            font-family: 'Syne', sans-serif; font-size: 6.5rem; font-weight: 800; line-height: 1.05; letter-spacing: -2px; margin-bottom: 40px;
+            text-transform: uppercase; color: #fff; text-shadow: 0 0 50px rgba(255, 255, 255, 0.15);
         }
 
-        .hero-viewport p { color: var(--subtle-gray); font-size: 1.45rem; font-weight: 300; max-width: 1000px; margin: 0 auto; line-height: 1.9; }
+        .hero-viewport p { font-family: 'Space Grotesk', sans-serif; color: var(--muted-titanium); font-size: 1.5rem; font-weight: 400; max-width: 1000px; margin: 0 auto; line-height: 1.8; }
 
-        .action-container { display: flex; justify-content: center; gap: 24px; margin-top: 64px; }
-        
+        /* أزرار تفاعلية بإضاءات قوية */
+        .action-container { display: flex; justify-content: center; gap: 30px; margin-top: 60px; }
         .btn-gold-glow {
-            background: linear-gradient(135deg, var(--royal-gold-24k) 0%, #b59434 100%); color: #000; font-weight: 700; font-size: 0.8rem; padding: 22px 48px; border-radius: 4px; border: none; cursor: pointer;
-            letter-spacing: 3px; text-transform: uppercase; box-shadow: 0 0 40px rgba(229, 193, 88, 0.35); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            background: #fff; color: #000; font-family: 'Syne', sans-serif; font-weight: 800; font-size: 0.9rem; padding: 24px 50px; border-radius: 4px; border: none; cursor: pointer;
+            letter-spacing: 3px; text-transform: uppercase; box-shadow: 0 0 50px rgba(255, 255, 255, 0.4); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .btn-gold-glow:hover { transform: translateY(-6px); box-shadow: 0 0 60px rgba(229, 193, 88, 0.7); }
-        
-        .btn-slate-neon { background: rgba(255,255,255,0.01); color: #fff; font-weight: 600; font-size: 0.8rem; padding: 22px 48px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.04); cursor: pointer; letter-spacing: 2px; text-transform: uppercase; transition: all 0.3s; }
-        .btn-slate-neon:hover { background: rgba(11, 79, 49, 0.15); border-color: var(--imperial-emerald); color: var(--royal-gold-24k); box-shadow: var(--neon-glow); }
+        .btn-gold-glow:hover { background: var(--neon-gold-glow); transform: scale(1.05); box-shadow: 0 0 60px var(--neon-gold-glow); }
 
-        /* Section Headlines */
+        /* العناوين الرئيسية للأقسام مع إضاءة محيطية ساحرة */
         .section-headline { max-width: 1400px; margin: 0 auto 80px auto; padding: 0 60px; position: relative; z-index: 10; }
-        .section-headline h2 { font-size: 2.5rem; font-weight: 100; letter-spacing: -1px; text-transform: uppercase; border-left: 4px solid var(--royal-gold-24k); padding-left: 24px; text-shadow: 0 0 20px rgba(229,193,88,0.15); }
-        .section-headline p { font-size: 1.05rem; color: var(--subtle-gray); margin-top: 16px; font-weight: 300; padding-left: 28px; }
-
-        /* 02 // MACRO DASHBOARD METRICS */
-        .dashboard-metrics-grid {
-            max-width: 1400px; margin: 0 auto; padding: 0 60px;
-            display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; position: relative; z-index: 10;
-        }
-        .metric-card {
-            background: linear-gradient(180deg, rgba(255,255,255,0.01) 0%, rgba(255,255,255,0.00) 100%); 
-            border: 1px solid var(--border-neon-gold); padding: 50px 40px; border-radius: 8px;
-            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-            transform-style: preserve-3d;
-        }
-        .metric-card:hover { 
-            border-color: var(--border-neon-hover); 
-            background: rgba(229, 193, 88, 0.02); 
-            box-shadow: 0 30px 60px rgba(0,0,0,0.8); 
-        }
-        .metric-num { font-size: 4rem; font-weight: 100; color: #fff; margin-bottom: 12px; transition: transform 0.3s; }
-        .metric-label { font-size: 0.75rem; color: var(--sand-silk); letter-spacing: 3px; text-transform: uppercase; font-weight: 500; }
-
-        /* 03 // SPATIAL HQ MATRIX */
-        .spatial-container { max-width: 1400px; margin: 0 auto; padding: 0 60px; position: relative; z-index: 10; }
-        .spatial-card {
-            background: var(--glass-surface); border: 1px solid var(--border-neon-gold); border-radius: 12px; padding: 80px;
-            display: grid; grid-template-columns: 1.1fr 1fr; gap: 80px; align-items: center;
-            backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px);
-            box-shadow: 0 40px 80px rgba(0,0,0,0.9);
-        }
-        .spatial-info h3 { font-size: 2.6rem; font-weight: 100; margin-bottom: 32px; }
-        .spatial-info p { color: var(--subtle-gray); line-height: 1.9; font-weight: 300; font-size: 1.1rem; }
-        
-        .spatial-map-mock {
-            height: 360px; background: #010101; border: 1px solid rgba(229,193,88,0.2);
-            border-radius: 6px; display: flex; align-items: center; justify-content: center; color: var(--royal-gold-24k);
-            font-size: 0.8rem; letter-spacing: 4px; text-transform: uppercase; position: relative; overflow: hidden;
-        }
-        .spatial-map-mock::before {
-            content: ''; position: absolute; width: 16px; height: 16px; background: var(--imperial-emerald);
-            border-radius: 50%; box-shadow: 0 0 40px var(--royal-gold-24k); top: 50%; left: 50%; transform: translate(-50%, -50%);
-            animation: hyperTarget 2.5s infinite;
-        }
-        @keyframes hyperTarget {
-            0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
-            100% { transform: translate(-50%, -50%) scale(3); opacity: 0; }
+        .section-headline h2 { 
+            font-family: 'Syne', sans-serif; font-size: 3.5rem; font-weight: 800; text-transform: uppercase; 
+            color: #fff; text-shadow: 0 0 40px rgba(255, 255, 255, 0.4);
+            border-left: 8px solid var(--laser-emerald); padding-left: 24px;
         }
 
-        /* 04 // THE 15 STRATEGIC ACTIVITY VERTICALS */
+        /* شبكة الـ 15 قسماً مع إضاءات محيطية خلف الكروت تتبع حركة الماوس */
         .asset-architecture-grid {
             max-width: 1400px; margin: 0 auto; padding: 0 60px;
-            display: grid; grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); gap: 32px;
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(420px, 1fr)); gap: 40px;
             position: relative; z-index: 10;
         }
 
         .framer-node {
-            background: var(--glass-surface); backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px);
-            border: 1px solid rgba(255,255,255,0.02); border-radius: 8px; overflow: hidden;
-            display: flex; flex-direction: column; position: relative; transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-            box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+            background: var(--glass-backdrop); backdrop-filter: blur(40px); -webkit-backdrop-filter: blur(40px);
+            border: 2px solid rgba(255, 255, 255, 0.05); border-radius: 12px; overflow: hidden;
+            display: flex; flex-direction: column; position: relative; transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
             transform-style: preserve-3d;
         }
-        
-        .framer-node:hover { 
-            border-color: var(--border-neon-hover); 
-            box-shadow: 0 50px 100px rgba(11, 79, 49, 0.3), 0 15px 40px rgba(229, 193, 88, 0.1); 
-        }
 
-        .geometric-icon-box {
-            width: 64px; height: 64px; background: rgba(2, 2, 2, 0.9); border: 1px solid rgba(229, 193, 88, 0.25);
-            border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin-bottom: 36px;
-            color: var(--royal-gold-24k); position: relative; transition: all 0.4s;
+        /* هالة إضاءة مخصصة تظهر كأنها خلف الكرت عند التحويم */
+        .framer-node::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(0, 255, 135, 0.15) 0%, transparent 60%);
+            z-index: 1; pointer-events: none; opacity: 0; transition: opacity 0.4s;
         }
-        .framer-node:hover .geometric-icon-box { background: var(--imperial-emerald); border-color: var(--royal-gold-24k); color: #fff; box-shadow: var(--neon-glow); }
+        .framer-node:hover::before { opacity: 1; }
+
+        .framer-node:hover { 
+            border-color: var(--laser-emerald); 
+            box-shadow: 0 0 50px rgba(0, 255, 135, 0.25), inset 0 0 20px rgba(0, 255, 135, 0.1);
+        }
 
         .node-content { padding: 50px; flex-grow: 1; display: flex; flex-direction: column; z-index: 2; position: relative; }
-        .node-tags { display: flex; gap: 10px; margin-bottom: 28px; }
-        .tag-pill { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; padding: 4px 14px; border-radius: 2px; }
-        .tag-gold { background: rgba(229,193,88,0.08); color: var(--royal-gold-24k); border: 1px solid rgba(229,193,88,0.2); }
-        .tag-slate { background: rgba(255,255,255,0.02); color: var(--subtle-gray); border: 1px solid rgba(255,255,255,0.04); }
 
-        .framer-node h3 { font-size: 1.4rem; font-weight: 400; margin-bottom: 20px; color: #fff; transition: color 0.3s; }
-        .framer-node:hover h3 { color: var(--royal-gold-24k); }
-        .framer-node p { color: var(--subtle-gray); font-size: 0.95rem; line-height: 1.8; font-weight: 300; margin-bottom: 40px; flex-grow: 1; }
-        .node-footer { font-size: 0.75rem; color: var(--royal-gold-24k); border-top: 1px solid rgba(255,255,255,0.02); padding-top: 28px; font-weight: 400; letter-spacing: 1px; opacity: 0.8; }
+        /* هندسة الأيقونات الزجاجية مع تركيز الإضاءة الذهبية بداخلها */
+        .geometric-icon-box {
+            width: 80px; height: 80px; 
+            background: rgba(255, 255, 255, 0.02); 
+            border: 2px solid var(--border-heavy-glow);
+            border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 36px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+            transition: all 0.4s ease;
+        }
+        .geometric-icon-box i {
+            font-size: 2.2rem; color: var(--neon-gold-glow);
+            filter: drop-shadow(0 0 15px var(--neon-gold-glow));
+            transition: all 0.4s;
+        }
 
-        /* BOUNDARY POLICY STRATEGY */
-        .identity-container { max-width: 1400px; margin: 0 auto; padding: 0 60px; position: relative; z-index: 10; }
-        .identity-split { display: grid; grid-template-columns: 1fr 1.2fr; gap: 100px; }
-        .identity-left h4 { font-size: 0.8rem; color: var(--royal-gold-24k); letter-spacing: 4px; text-transform: uppercase; margin-bottom: 20px; font-weight: 600; }
-        .identity-left h3 { font-size: 3rem; font-weight: 100; line-height: 1.2; }
-        .identity-right p { color: var(--subtle-gray); font-size: 1.15rem; line-height: 1.9; font-weight: 300; }
+        .framer-node:hover .geometric-icon-box {
+            background: #fff; border-color: #fff;
+            box-shadow: 0 0 40px #fff;
+        }
+        .framer-node:hover .geometric-icon-box i {
+            color: #000; filter: none; transform: scale(1.1);
+        }
 
-        /* SOVEREIGN MANIFESTO FRAME */
+        /* خط غليظ ومميز جداً لعناوين الأقسام الـ 15 */
+        .framer-node h3 { 
+            font-family: 'Space Grotesk', sans-serif; font-size: 1.6rem; font-weight: 700; 
+            margin-bottom: 20px; color: #fff; text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); 
+        }
+        .framer-node:hover h3 { color: var(--laser-emerald); text-shadow: 0 0 25px var(--laser-emerald); }
+
+        .framer-node p { color: var(--muted-titanium); font-size: 1.05rem; line-height: 1.8; font-weight: 400; margin-bottom: 40px; flex-grow: 1; }
+        
+        /* خط كوفي أسطوري للعبارات التوضيحية السفلية باللغة العربية */
+        .node-footer { 
+            font-family: 'Reem Kufi', sans-serif; font-weight: 700; font-size: 1.1rem; direction: rtl; text-align: right;
+            color: var(--neon-gold-glow); border-top: 2px solid rgba(255,255,255,0.04); padding-top: 24px; 
+            text-shadow: 0 0 15px rgba(255, 223, 122, 0.4);
+        }
+
+        /* لوحة البيان والبيان الختامي للرؤية السينمائية */
         .manifesto-blueprint-container { max-width: 1400px; margin: 0 auto; padding: 0 60px; position: relative; z-index: 10; }
         .manifesto-glass-panel {
-            background: linear-gradient(135deg, rgba(10, 10, 10, 0.98) 0%, rgba(2, 2, 2, 1) 100%);
-            border: 1px solid rgba(229, 193, 88, 0.22); border-radius: 12px; padding: 100px;
-            display: grid; grid-template-columns: 1fr 1.4fr; gap: 100px; align-items: flex-start;
-            box-shadow: 0 60px 120px rgba(0,0,0,0.9);
-            position: relative; overflow: hidden;
+            background: #000; border: 3px solid var(--laser-emerald); border-radius: 16px; padding: 100px;
+            display: grid; grid-template-columns: 1fr 1.3fr; gap: 100px;
+            box-shadow: 0 0 80px rgba(0, 255, 135, 0.2);
         }
-        .manifesto-glass-panel::after {
-            content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
-            background: linear-gradient(90deg, transparent, var(--royal-gold-24k), var(--imperial-emerald), transparent);
-            box-shadow: 0 -10px 40px var(--royal-gold-24k);
-        }
-        .manifesto-left h3 {
-            font-size: 3rem; font-weight: 100; line-height: 1.25; letter-spacing: -2px;
-            background: linear-gradient(135deg, #ffffff 40%, var(--royal-gold-24k) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-        }
+        .manifesto-left h3 { font-family: 'Syne', sans-serif; font-size: 3.8rem; font-weight: 800; line-height: 1.1; text-transform: uppercase; color: #fff; }
         
-        .vision-2030-neon-wrapper {
-            margin-top: 48px; display: flex; align-items: center; gap: 20px;
-            border: 1px solid rgba(229, 193, 88, 0.2); padding: 18px 28px; border-radius: 4px; width: fit-content;
-            background: rgba(11, 79, 49, 0.08); box-shadow: 0 0 30px rgba(229, 193, 88, 0.08);
-        }
-        .vision-2030-neon-wrapper svg { width: 36px; height: 36px; fill: var(--royal-gold-24k); filter: drop-shadow(0 0 12px var(--royal-gold-24k)); }
-        .vision-text-badge { font-size: 0.75rem; letter-spacing: 4px; font-weight: 600; text-transform: uppercase; color: #fff; }
-
-        .manifesto-right p { color: #ccd2da; font-size: 1.2rem; line-height: 1.95; font-weight: 300; margin-bottom: 32px; }
-        .manifesto-right p.philosophy-italic { color: var(--royal-gold-24k); font-size: 1.35rem; margin-top: 40px; line-height: 1.8; font-weight: 300; }
-
-        .vision-arabic-quote {
-            font-family: 'Tajawal', sans-serif; direction: rtl; text-align: right; color: var(--sand-silk);
-            font-size: 1.4rem; font-weight: 400; line-height: 2.1; border-right: 4px solid var(--royal-gold-24k);
-            padding-right: 28px; margin-top: 56px; text-shadow: 0 0 25px rgba(229,193,88,0.25);
+        /* الخط الكوفي العملاق والفاخر للمقتبس العربي الرئيسي */
+        .vision-arabic-quote { 
+            font-family: 'Reem Kufi', sans-serif; font-weight: 700; font-size: 1.9rem; line-height: 2.2; 
+            direction: rtl; text-align: right; color: #fff; 
+            border-right: 8px solid var(--neon-gold-glow); padding-right: 35px;
+            text-shadow: 0 0 40px rgba(255, 255, 255, 0.6);
         }
 
-        /* SIGNATURES */
-        .signatures-section { max-width: 1400px; margin: 0 auto; padding: 0 60px; position: relative; z-index: 10; }
-        .signature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 140px; border-top: 1px solid rgba(255, 255, 255, 0.03); padding-top: 80px; }
-        .signature-node { display: flex; flex-direction: column; position: relative; }
-        .signature-title { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 3px; color: var(--subtle-gray); margin-bottom: 28px; font-weight: 600; }
-        .signature-script { font-size: 2.8rem; color: var(--royal-gold-24k); font-weight: 300; letter-spacing: 3px; position: relative; margin-bottom: 16px; text-shadow: 0 0 20px rgba(229,193,88,0.4); font-style: italic; }
-        .signature-script::after { content: ''; position: absolute; bottom: -10px; left: 0; width: 220px; height: 1px; background: linear-gradient(90deg, var(--royal-gold-24k), var(--imperial-emerald), transparent); }
-        .signature-node:nth-child(2) .signature-script::after { left: auto; right: 0; background: linear-gradient(270deg, var(--royal-gold-24k), var(--imperial-emerald), transparent); }
-        .signature-subtext { font-size: 0.88rem; color: var(--subtle-gray); font-weight: 400; letter-spacing: 1px; margin-top: 8px; }
-
-        .metadata-cluster { max-width: 1400px; margin: 0 auto; padding: 0 60px; display: flex; flex-wrap: wrap; gap: 18px; font-size: 0.75rem; font-weight: 500; color: var(--subtle-gray); letter-spacing: 1.5px; opacity: 0.5; }
-        .metadata-tag { background: rgba(255,255,255,0.01); padding: 8px 20px; border-radius: 2px; border: 1px solid rgba(255,255,255,0.03); }
-
-        footer { max-width: 1400px; margin: 0 auto; padding: 80px 60px; border-top: 1px solid rgba(255, 255, 255, 0.03); display: flex; justify-content: space-between; align-items: center; color: var(--subtle-gray); font-size: 0.8rem; position: relative; z-index: 10; background: var(--bg-cosmic-black); }
-        footer .signature-line { color: var(--royal-gold-24k); font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; text-shadow: 0 0 15px rgba(229,193,88,0.25); }
+        footer { max-width: 1400px; margin: 0 auto; padding: 80px 60px; border-top: 2px solid rgba(255, 255, 255, 0.05); display: flex; justify-content: space-between; align-items: center; color: var(--muted-titanium); font-size: 0.9rem; position: relative; z-index: 10; }
+        footer .signature-line { font-family: 'Cinzel', serif; color: var(--neon-gold-glow); font-weight: 900; letter-spacing: 2px; }
 
         @media (max-width: 1200px) {
             .asset-architecture-grid { grid-template-columns: 1fr; }
-            .dashboard-metrics-grid { grid-template-columns: 1fr 1fr; }
-            .spatial-card { grid-template-columns: 1fr; }
-            .hero-viewport h1 { font-size: 3.4rem; }
-            .manifesto-glass-panel { grid-template-columns: 1fr; padding: 60px; gap: 50px; }
+            .hero-viewport h1 { font-size: 3.8rem; }
+            .manifesto-glass-panel { grid-template-columns: 1fr; padding: 60px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- الأداة الأسطورية: شبكة الجزيئات والنيون الفضائي التفاعلي -->
-    <div class="neon-aurora"></div>
-    <div class="neon-aurora gold"></div>
-    <canvas id="cosmic-particle-field"></canvas>
+    <div class="cinematic-aurora-glow"></div>
+    <div class="cinematic-aurora-glow gold-laser"></div>
 
     <!-- Header -->
     <header>
-        <div class="logo-container" id="master-logo">
-            <svg class="iconic-logo-3d" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="44" stroke="#E5C158" stroke-width="2" stroke-dasharray="8 4"/>
-                <path d="M30 32 C40 20, 60 20, 70 32 C76 42, 66 66, 50 82 C34 66, 24 42, 30 32 Z" fill="none" stroke="#0b4f31" stroke-width="4.5" stroke-linejoin="round"/>
-                <path d="M42 44 L50 34 L58 44 L50 64 Z" fill="none" stroke="#E5C158" stroke-width="2.5" stroke-linejoin="round"/>
-            </svg>
+        <div class="logo-container">
             <div class="logo-text">Najd <span>Link</span></div>
         </div>
         <nav>
@@ -292,498 +220,215 @@
             <span>Global Hubs</span>
             <span>Governance</span>
         </nav>
-        <div class="language-matrix">
-            <span class="lang-node active">EN</span> · 
-            <span class="lang-node">AR</span>
-        </div>
     </header>
 
-    <!-- 01 // HERO VIEWPORT PORTAL -->
+    <!-- HERO VIEWPORT Portal -->
     <div class="hero-viewport">
         <div class="badge-system">The Pinnacle of Market Entry Hubs</div>
-        <h1 id="hero-title">Architecting Strategic Corporate Integration</h1>
+        <h1>Architecting Strategic Corporate Integration</h1>
         <p>Transcending standard transactional paradigms to deliver an uncompromising, independent advisory ecosystem. We silently and flawlessly orient supreme international enterprises within Saudi Arabia's generational economic ascent.</p>
-        
         <div class="action-container">
             <button class="btn-gold-glow">Begin Your Saudi Journey</button>
-            <button class="btn-slate-neon">View Matrix Specs</button>
         </div>
     </div>
 
     <div class="section-spacer"></div>
 
-    <!-- 02 // ANALYTICS DASHBOARD -->
+    <!-- الأقسام الـ 15 المحدثة بالخطوط الأسطورية والإضاءات التفاعلية الساحرة -->
     <div class="section-headline">
-        <h2>02 // Sovereign Market Analytics & Indicators</h2>
-        <p>Rigorous structural indicators validating international capital entry paths.</p>
-    </div>
-    <div class="dashboard-metrics-grid">
-        <div class="metric-card">
-            <div class="metric-num" data-target="2030">0</div>
-            <div class="metric-label">Vision Blueprint Target</div>
-        </div>
-        <div class="metric-card">
-            <div class="metric-num" data-target="100">0</div>
-            <div class="metric-label">% Independent Integrity</div>
-        </div>
-        <div class="metric-card">
-            <div class="metric-num" data-target="15">0</div>
-            <div class="metric-label">Macro Segments</div>
-        </div>
-        <div class="metric-card">
-            <div class="metric-num" data-target="12">0</div>
-            <div class="metric-label">K Ultra Rendering</div>
-        </div>
-    </div>
-
-    <div class="section-spacer"></div>
-
-    <!-- 03 // SPATIAL HOOD REGIONAL INTEGRATION -->
-    <div class="section-headline">
-        <h2>03 // Spatial Allocation & Regional Headquarters (RHQ)</h2>
-        <p>Anchoring global tier-one operational command hubs into designated metropolitan zones.</p>
-    </div>
-    <div class="spatial-container">
-        <div class="spatial-card">
-            <div class="spatial-info">
-                <h3>Regional Headquarters (RHQ) Strategic Enablement</h3>
-                <p>We smooth out the sophisticated corporate facilitation layers required to seamlessly position multinational nodes inside local sovereign parameters, bypassing complex compliance hurdles inside Riyadh’s expansion networks.</p>
-            </div>
-            <div class="spatial-map-mock">
-                RIYADH GEOMETRIC EXPANSION VECTOR COMPLIANT // ACTIVE 12K GRID
-            </div>
-        </div>
-    </div>
-
-    <div class="section-spacer"></div>
-
-    <!-- 04 // THE 15 APPROVED STRATEGIC ACTIVITY VERTICALS -->
-    <div class="section-headline">
-        <h2>04 // The 15 Approved Strategic Activity Verticals</h2>
-        <p>Official tactical blueprint mapping independent advisory networks, prestige brokerage frameworks, and enterprise linkages.</p>
+        <h2>04 // Approved Verticals</h2>
     </div>
 
     <div class="asset-architecture-grid">
-        <!-- 1. Luxury Hospitality & Lifestyle -->
+        
+        <!-- 1 -->
         <div class="framer-node">
             <div class="node-content">
-                <div class="geometric-icon-box">🏝️</div>
-                <div class="node-tags">
-                    <span class="tag-pill tag-gold">Prestige Living</span>
-                    <span class="tag-pill tag-slate">Tourism</span>
-                </div>
+                <div class="geometric-icon-box"><i class="fa-solid fa-hotel"></i></div>
                 <h3>1. Luxury Hospitality & Lifestyle</h3>
                 <p>Facilitating independent advisory and linking elite global operators, master culinary creators, and ultra-luxury hospitality concepts with pristine giga-project masterdevelopments.</p>
-                <div class="node-footer">✦ Channeling elite creators into visionary mega-resorts</div>
+                <div class="node-footer">✦ توطين أرقى العلامات الفندقية والطهي الفاخر بداخل المشاريع الكبرى</div>
             </div>
         </div>
 
-        <!-- 2. Luxury Brands -->
+        <!-- 2 -->
         <div class="framer-node">
             <div class="node-content">
-                <div class="geometric-icon-box">💎</div>
-                <div class="node-tags">
-                    <span class="tag-pill tag-gold">Haute Couture</span>
-                    <span class="tag-pill tag-slate">Timepieces</span>
-                </div>
+                <div class="geometric-icon-box"><i class="fa-solid fa-gem"></i></div>
                 <h3>2. Luxury Brands</h3>
                 <p>Advising and streamlining immaculate entry strategies for haute couture maisons, fine watchmaking firms, rare high-end jewelers, and elite boutique franchises.</p>
-                <div class="node-footer">✦ Linking historic heritage maisons to high-net-worth landscapes</div>
+                <div class="node-footer">✦ ربط دور الأزياء العالمية والمجوهرات النادرة بالنخبة المحلية</div>
             </div>
         </div>
 
-        <!-- 3. Artificial Intelligence -->
+        <!-- 3 -->
         <div class="framer-node">
             <div class="node-content">
-                <div class="geometric-icon-box">🤖</div>
-                <div class="node-tags">
-                    <span class="tag-pill tag-gold">Advanced AI</span>
-                    <span class="tag-pill tag-slate">Deep Tech</span>
-                </div>
-                <h3>3. Artificial Intelligence & Advanced Tech</h3>
+                <div class="geometric-icon-box"><i class="fa-solid fa-brain"></i></div>
+                <h3>3. Artificial Intelligence & Tech</h3>
                 <p>Orchestrating digital entry networks, connecting emerging automation platforms, neural frameworks, and pioneering tech operators with mega smart city core systems.</p>
-                <div class="node-footer">✦ Integrating frontier computing frameworks into municipal layouts</div>
+                <div class="node-footer">✦ دمج أنظمة الذكاء الاصطناعي والحوسبة الفائقة بالمدن الذكية الكبرى</div>
             </div>
         </div>
 
-        <!-- 4. Cybersecurity -->
+        <!-- 4 -->
         <div class="framer-node">
             <div class="node-content">
-                <div class="geometric-icon-box">🛡️</div>
-                <div class="node-tags">
-                    <span class="tag-pill tag-gold">Data Protection</span>
-                    <span class="tag-pill tag-slate">Cyber Sovereignty</span>
-                </div>
+                <div class="geometric-icon-box"><i class="fa-solid fa-shield-halved"></i></div>
                 <h3>4. Cybersecurity & Data Protection</h3>
                 <p>Advising, structuring, and linking world-class digital defense providers and operational risk architects to protect institutional databases and core networks.</p>
-                <div class="node-footer">✦ Securing critical enterprise operational nodes against disruption</div>
+                <div class="node-footer">✦ تأمين البنى التحتية الحساسة وقواعد البيانات السيادية ضد المخاطر</div>
             </div>
         </div>
 
-        <!-- 5. Entertainment & Gaming -->
+        <!-- 5 -->
         <div class="framer-node">
             <div class="node-content">
-                <div class="geometric-icon-box">🎮</div>
-                <div class="node-tags">
-                    <span class="tag-pill tag-gold">Esports</span>
-                    <span class="tag-pill tag-slate">Massive Events</span>
-                </div>
+                <div class="geometric-icon-box"><i class="fa-solid fa-gamepad"></i></div>
                 <h3>5. Entertainment & Gaming</h3>
                 <p>Acting as the key strategic liaison for major international entertainment developers, gaming studios, and global event companies establishing high-value local ecosystems.</p>
-                <div class="node-footer">✦ Fast-tracking immersive event integration</div>
+                <div class="node-footer">✦ تسريع اندماج قطاعات الألعاب الإلكترونية والفعاليات الكبرى عالمياً</div>
             </div>
         </div>
 
-        <!-- 6. Global Healthcare -->
+        <!-- 6 -->
         <div class="framer-node">
             <div class="node-content">
-                <div class="geometric-icon-box">🧬</div>
-                <div class="node-tags">
-                    <span class="tag-pill tag-gold">Bio-Tech</span>
-                    <span class="tag-pill tag-slate">Healthcare Entry</span>
-                </div>
-                <h3>6. Global Healthcare Market Entry</h3>
+                <div class="geometric-icon-box"><i class="fa-solid fa-dna"></i></div>
+                <h3>6. Global Healthcare Entry</h3>
                 <p>Simplifying structural entry requirements for international clinical networks, bio-tech centers, and unique wellness solution providers to match localized health codes.</p>
-                <div class="node-footer">✦ Establishing advanced overseas medical intelligence safely</div>
+                <div class="node-footer">✦ استقطاب المراكز الطبية العالمية المتقدمة وحلول التكنولوجيا الحيوية</div>
             </div>
         </div>
 
-        <!-- 7. Global Manufacturing -->
+        <!-- 7 -->
         <div class="framer-node">
             <div class="node-content">
-                <div class="geometric-icon-box">🏭</div>
-                <div class="node-tags">
-                    <span class="tag-pill tag-gold">Heavy Precision</span>
-                    <span class="tag-pill tag-slate">Industrial</span>
-                </div>
+                <div class="geometric-icon-box"><i class="fa-solid fa-industry"></i></div>
                 <h3>7. Global Manufacturing</h3>
                 <p>Serving as the authoritative advisory gateway to align overseas precision manufacturing groups and heavy machinery providers with modern economic zones.</p>
-                <div class="node-footer">✦ Supporting localized industrial deployment and intellectual property safety</div>
+                <div class="node-footer">✦ دعم ونقل تقنيات التصنيع الدقيق إلى المناطق الاقتصادية الواعدة</div>
             </div>
         </div>
 
-        <!-- 8. Live & Social Commerce -->
+        <!-- 8 -->
         <div class="framer-node">
             <div class="node-content">
-                <div class="geometric-icon-box">📱</div>
-                <div class="node-tags">
-                    <span class="tag-pill tag-gold">Digital Markets</span>
-                    <span class="tag-pill tag-slate">Smart Commerce</span>
-                </div>
+                <div class="geometric-icon-box"><i class="fa-solid fa-mobile-screen-button"></i></div>
                 <h3>8. Live & Social Commerce</h3>
                 <p>Advising on the transition towards real-time transactional platforms, interactive live-sales applications, and elite systems outperforming traditional physical trade setups.</p>
-                <div class="node-footer">✦ Upgrading the commercial paradigm via agile software setups</div>
+                <div class="node-footer">✦ قفزة نوعية في منصات التجارة التفاعلية الحية وأنظمة البيع الرقمي</div>
             </div>
         </div>
 
-        <!-- 9. Professional Engineering -->
+        <!-- 9 -->
         <div class="framer-node">
             <div class="node-content">
-                <div class="geometric-icon-box">📐</div>
-                <div class="node-tags">
-                    <span class="tag-pill tag-gold">Infrastructure</span>
-                    <span class="tag-pill tag-slate">Technical Specs</span>
-                </div>
-                <h3>9. Professional Engineering & Maintenance</h3>
+                <div class="geometric-icon-box"><i class="fa-solid fa-compass-drafting"></i></div>
+                <h3>9. Engineering & Maintenance</h3>
                 <p>Facilitating high-level coordination and linking global engineering consortia specialized in modern infrastructure, specialized road specifications, and heavy industrial machinery maintenance standards.</p>
-                <div class="node-footer">✦ Aligning elite structural engineers with macro project pipelines</div>
+                <div class="node-footer">✦ ربط كبرى التحالفات الهندسية العالمية بمسارات التنمية المستدامة</div>
             </div>
         </div>
 
-        <!-- 10. Government Tenders -->
+        <!-- 10 -->
         <div class="framer-node">
             <div class="node-content">
-                <div class="geometric-icon-box">📝</div>
-                <div class="node-tags">
-                    <span class="tag-pill tag-gold">Procurement Bids</span>
-                    <span class="tag-pill tag-slate">Technical Proposals</span>
-                </div>
-                <h3>10. Government Tenders & Qualifications</h3>
+                <div class="geometric-icon-box"><i class="fa-solid fa-file-signature"></i></div>
+                <h3>10. Tenders & Qualifications</h3>
                 <p>Providing immaculate technical advice to ease municipal qualification stages, ensuring complete accuracy in drafting technical proposals for competitive public bids.</p>
-                <div class="node-footer">✦ Streamlining enterprise compliance with public bidding standards</div>
+                <div class="node-footer">✦ تعزيز جاهزية الامتثال الفني للشركات الكبرى في المنافسات العامة</div>
             </div>
         </div>
 
-        <!-- 11. Regional Events Platforms -->
+        <!-- 11 -->
         <div class="framer-node">
             <div class="node-content">
-                <div class="geometric-icon-box">✨</div>
-                <div class="node-tags">
-                    <span class="tag-pill tag-gold">Media Platforms</span>
-                    <span class="tag-pill tag-slate">Regional Reach</span>
-                </div>
+                <div class="geometric-icon-box"><i class="fa-solid fa-tower-broadcast"></i></div>
                 <h3>11. Regional Events Platforms</h3>
                 <p>Connecting prominent foreign media clusters, public relations networks, and digital news aggregators covering landmark corporate and economic occasions across the territory.</p>
-                <div class="node-footer">✦ Shaping impactful institutional announcements for regional stages</div>
+                <div class="node-footer">✦ صياغة وإبراز الإعلانات المؤسسية الكبرى على الساحتين الإقليمية والدولية</div>
             </div>
         </div>
 
-        <!-- 12. Luxury Real Estate -->
+        <!-- 12 -->
         <div class="framer-node">
             <div class="node-content">
-                <div class="geometric-icon-box">🏢</div>
-                <div class="node-tags">
-                    <span class="tag-pill tag-gold">Off-Market Land</span>
-                    <span class="tag-pill tag-slate">Sovereign Assets</span>
-                </div>
+                <div class="geometric-icon-box"><i class="fa-solid fa-city"></i></div>
                 <h3>12. Luxury Real Estate</h3>
                 <p>Brokerage and syndication of private off-market land deals, massive master-planned communities, and ultra-high-end property assets among development funds.</p>
-                <div class="node-footer">✦ Executing tier-one real estate matching under strict corporate privacy</div>
+                <div class="node-footer">✦ صفقات عقارية كبرى ومستقلة تدار بأعلى مستويات السرية والحوكمة</div>
             </div>
         </div>
 
-        <!-- 13. Global FDI -->
+        <!-- 13 -->
         <div class="framer-node">
             <div class="node-content">
-                <div class="geometric-icon-box">📈</div>
-                <div class="node-tags">
-                    <span class="tag-pill tag-gold">Capital Flows</span>
-                    <span class="tag-pill tag-slate">Direct Investment</span>
-                </div>
+                <div class="geometric-icon-box"><i class="fa-solid fa-chart-line"></i></div>
                 <h3>13. Global FDI</h3>
                 <p>Sourcing, organizing, and framing cross-border corporate partnerships to route major overseas liquidity blocks directly into pristine domestic production setups.</p>
-                <div class="node-footer">✦ Securing strategic cross-border investment flows directly into growth targets</div>
+                <div class="node-footer">✦ فتح قنوات التدفق الرأسمالي الأجنبي المباشر لخدمة الأهداف الإنتاجية</div>
             </div>
         </div>
 
-        <!-- 14. Executive Digital Branding -->
+        <!-- 14 -->
         <div class="framer-node">
             <div class="node-content">
-                <div class="geometric-icon-box">👤</div>
-                <div class="node-tags">
-                    <span class="tag-pill tag-gold">Elite Identity</span>
-                    <span class="tag-pill tag-slate">Executive Content</span>
-                </div>
+                <div class="geometric-icon-box"><i class="fa-solid fa-user-tie"></i></div>
                 <h3>14. Executive Digital Branding</h3>
                 <p>Advising on and curating the high-value professional digital identities, corporate authority, and private executive positioning of enterprise chairpersons and board members.</p>
-                <div class="node-footer">✦ Building elite reputational capital for prominent business leaders</div>
+                <div class="node-footer">✦ بناء وإدارة السمعة الرقمية والقيادية لرؤساء مجالس الإدارات</div>
             </div>
         </div>
 
-        <!-- 15. Business Continuity -->
+        <!-- 15 -->
         <div class="framer-node">
             <div class="node-content">
-                <div class="geometric-icon-box">🌱</div>
-                <div class="node-tags">
-                    <span class="tag-pill tag-gold">Tech Recovery</span>
-                    <span class="tag-pill tag-slate">System Continuity</span>
-                </div>
-                <h3>15. Business Continuity & Tech Recovery</h3>
+                <div class="geometric-icon-box"><i class="fa-solid fa-seedling"></i></div>
+                <h3>15. Continuity & Recovery</h3>
                 <p>Linking operational leadership with leading digital recovery structures, disaster mitigation networks, and agile software setups to safeguard key pipelines.</p>
-                <div class="node-footer">✦ Shielding critical systems from unexpected structural interruptions</div>
+                <div class="node-footer">✦ حماية استمرارية الأعمال الفنية والأنظمة الرقمية ضد أي انقطاع مفاجئ</div>
             </div>
         </div>
+
     </div>
 
     <div class="section-spacer"></div>
 
-    <!-- 05 // BOUND CLAUSE CONCEPT -->
-    <div class="identity-container">
-        <div class="identity-split">
-            <div class="identity-left">
-                <h4>05 // Strategic Bound Clause</h4>
-                <h3>Independent Facilitation Node.</h3>
-            </div>
-            <div class="identity-right">
-                <p>Najd Link operates purely as an independent corporate facilitator and strategic advisory portal. We do not construct structural installations or develop physical property. Our corporate mandate is strictly fixed on offering premier brokerage services and strategic linkages—safely bridging global multinational ambition with the local commercial landscape under total data privacy.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="section-spacer"></div>
-
-    <!-- 06 // MANIFESTO MATRIX -->
-    <div class="section-headline">
-        <h2>06 // Institutional Manifesto & Vision Integration</h2>
-        <p>The silent mechanisms governing elite corporate positioning inside the Vision 2030 landscape.</p>
-    </div>
-
+    <!-- بيان الرؤية السينمائي الفخم -->
     <div class="manifesto-blueprint-container">
         <div class="manifesto-glass-panel">
-            <div class="manifesto-left">
-                <h3>The future does not belong to those who generate noise.</h3>
-                <div class="vision-2030-neon-wrapper">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <polygon points="12,2 22,9 17,22 7,22 2,9" stroke="#E5C158" stroke-width="1.5" fill="none"/>
-                        <circle cx="12" cy="13" r="4" fill="#E5C158"/>
-                    </svg>
-                    <div class="vision-text-badge">Vision 2030 Hub Enabler</div>
-                </div>
-            </div>
-            <div class="manifesto-right">
-                <p>At Najd Link, we maintain an exclusive presence as trusted facilitators where global capability aligns with domestic long-term goals. We do not merely open entry routes; we foster multi-sector corporate development. From smoothing out initial multinational entry frameworks to designing custom strategic alliances for high-potential enterprises, our operation covers the entire continuum of corporate facilitation.</p>
-                <p class="philosophy-italic">"The future yields to the 'invisible orchestrators' and dedicated facilitators who pave the way to harmoniously transform disparate possibilities into precise, monumental, and lasting legacy."</p>
-                <div class="vision-arabic-quote">
-                    "نحن لا نقوم ببناء المشاريع إنشائياً، بل نعمل كقناة سيادية مستقلة لهندسة روابط الوساطة التجارية الرفيعة؛ لتوطين القدرات والتحالفات المليارية الكبرى بأعلى مستويات الحوكمة والسرية الصامتة خلف الكواليس."
-                </div>
-            </div>
+            <div class="manifesto-left"><h3>The future belongs to the silent architects.</h3></div>
+            <div class="vision-arabic-quote">"نحن لا نقوم ببناء المشاريع إنشائياً، بل نعمل كقناة سيادية مستقلة لهندسة روابط الوساطة التجارية الرفيعة؛ لتوطين القدرات والتحالفات المليارية الكبرى بأعلى مستويات الحوكمة والسرية الصامتة خلف الكواليس."</div>
         </div>
     </div>
 
     <div class="section-spacer"></div>
 
-    <!-- 07 // SIGNATURES -->
-    <div class="signatures-section">
-        <div class="signature-grid">
-            <div class="signature-node">
-                <div class="signature-title">Portal Endorsement Validation</div>
-                <div class="signature-script">Najd Link Authority</div>
-                <div class="signature-subtext">Sovereign Compliance, Market Entry & Integrity Office</div>
-            </div>
-            <div class="signature-node" style="text-align: right; align-items: flex-end;">
-                <div class="signature-title">Cross-Border Connection Approval</div>
-                <div class="signature-script">The Vision Conduit</div>
-                <div class="signature-subtext">Global Industrial, Luxury & Giga Hub Syndication</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="section-spacer"></div>
-
-    <div class="metadata-cluster">
-        <span class="metadata-tag">#NajdLink</span>
-        <span class="metadata-tag">#StrategicFacilitation</span>
-        <span class="metadata-tag">#Vision2030</span>
-        <span class="metadata-tag">#MarketEntry</span>
-        <span class="metadata-tag">#12KDepth</span>
-        <span class="metadata-tag">#InvisibleOrchestrators</span>
-    </div>
-
-    <div style="height: 40px;"></div>
-
-    <!-- Footer -->
     <footer>
         <p>© 2026 NAJD LINK. ALL RIGHTS RESERVED.</p>
-        <p class="signature-line">SOVEREIGN INSTITUTIONAL BRIDGE — ENGINEERED FOR SUPREME OPERATIONAL INTEGRITY</p>
+        <p class="signature-line">SOVEREIGN INSTITUTIONAL BRIDGE</p>
     </footer>
 
-    <!-- نظام المحاكاة والتحريك الأسطوري المدمج -->
+    <!-- الكود البرمجي لحساب موضع الماوس وصناعة هالة الضوء النيون المتفاعلة -->
     <script>
-        // 1. نظام الجزيئات الكونية التفاعلي بالكامل (Pure Custom 3D-Like Particles Canvas)
-        const canvas = document.getElementById('cosmic-particle-field');
-        const ctx = canvas.getContext('2d');
-        let particles = [];
-        let mouse = { x: null, y: null, radius: 150 };
-
-        function resizeCanvas() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
-        window.addEventListener('resize', resizeCanvas);
-        resizeCanvas();
-
-        window.addEventListener('mousemove', (e) => {
-            mouse.x = e.clientX;
-            mouse.y = e.clientY;
-        });
-
-        class Particle {
-            constructor() {
-                this.x = Math.random() * canvas.width;
-                this.y = Math.random() * canvas.height;
-                this.size = Math.random() * 1.5 + 0.5;
-                this.baseX = this.x;
-                this.baseY = this.y;
-                this.density = (Math.random() * 30) + 10;
-                this.color = Math.random() > 0.5 ? '#E5C158' : '#0b4f31';
-                this.opacity = Math.random() * 0.6 + 0.1;
-            }
-            draw() {
-                ctx.fillStyle = this.color;
-                ctx.globalAlpha = this.opacity;
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                ctx.closePath();
-                ctx.fill();
-            }
-            update() {
-                let dx = mouse.x - this.x;
-                let dy = mouse.y - this.y;
-                let distance = Math.sqrt(dx * dx + dy * dy);
-                let forceDirectionX = dx / distance;
-                let forceDirectionY = dy / distance;
-                let maxDistance = mouse.radius;
-                let force = (maxDistance - distance) / maxDistance;
-                let directionX = forceDirectionX * force * this.density;
-                let directionY = forceDirectionY * force * this.density;
-
-                if (distance < mouse.radius) {
-                    this.x -= directionX;
-                    this.y -= directionY;
-                } else {
-                    if (this.x !== this.baseX) {
-                        let dx = this.x - this.baseX;
-                        this.x -= dx / 20;
-                    }
-                    if (this.y !== this.baseY) {
-                        let dy = this.y - this.baseY;
-                        this.y -= dy / 20;
-                    }
-                }
-            }
-        }
-
-        function initParticles() {
-            particles = [];
-            const count = (canvas.width * canvas.height) / 9000;
-            for (let i = 0; i < count; i++) {
-                particles.push(new Particle());
-            }
-        }
-        initParticles();
-
-        function animateParticles() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            for (let i = 0; i < particles.length; i++) {
-                particles[i].update();
-                particles[i].draw();
-            }
-            requestAnimationFrame(animateParticles);
-        }
-        animateParticles();
-
-        // 2. نظام الـ 3D Matrix الفيروسي عند تحريك الماوس فوق الكروت والرموز
-        document.querySelectorAll('.framer-node, .metric-card, .spatial-card').forEach(card => {
+        document.querySelectorAll('.framer-node').forEach(card => {
             card.addEventListener('mousemove', e => {
                 const rect = card.getBoundingClientRect();
                 const x = e.clientX - rect.left;
                 const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
                 
-                const rotateX = ((y / card.clientHeight) - 0.5) * -15;
-                const rotateY = ((x / card.clientWidth) - 0.5) * 15;
-                card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
+                // حركة مصفوفة 3D خفيفة جداً وعميقة لتعزيز الانطباع السينمائي الملموس
+                const rotateX = (((e.clientY - rect.top) / card.clientHeight) - 0.5) * -12;
+                const rotateY = (((e.clientX - rect.left) / card.clientWidth) - 0.5) * 12;
+                card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
             });
-
+            
             card.addEventListener('mouseleave', () => {
                 card.style.transform = `rotateX(0deg) rotateY(0deg) translateY(0px)`;
             });
-        });
-
-        // 3. أداة عداد الأرقام التفاعلية للوحة البيانات السيادية الـ 12K عند فتح الموقع
-        const metrics = document.querySelectorAll('.metric-num');
-        metrics.forEach(metric => {
-            const target = +metric.getAttribute('data-target');
-            let count = 0;
-            const updateCount = () => {
-                const speed = target / 60;
-                if(count < target) {
-                    count += speed;
-                    metric.innerText = Math.floor(count);
-                    setTimeout(updateCount, 20);
-                } else {
-                    metric.innerText = target;
-                }
-            }
-            updateCount();
-        });
-
-        // 4. تحريك شعار الهيلوجرام الأسطوري عند الاقتراب منه باستخدام الأداة الأسطورية Anime.js
-        anime({
-            targets: '.iconic-logo-3d',
-            rotateY: '360deg',
-            duration: 8000,
-            loop: true,
-            easing: 'linear'
         });
     </script>
 </body>
