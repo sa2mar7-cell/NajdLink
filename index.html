@@ -5,35 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NAJD LINK — Sovereign 12K Ultra-3D Institutional Portal</title>
     
-    <!-- Official High-End Typography Framework -->
+    <!-- Official High-End Typography & Animation Frameworks -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
     
+    <!-- الأداة الأسطورية للحركات فائقة الانسيابية -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
     <style>
         :root {
-            /* 12K Absolute Luxury Chroma Spectrum */
-            --bg-cosmic-black: #030303;     /* Absolute Deep Void Black[span_5](start_span)[span_5](end_span) */
-            --royal-gold-24k: #E5C158;      /* Hyper-Polished Sovereign Gold[span_6](start_span)[span_6](end_span) */
-            --imperial-emerald: #0b4f31;    /* Deep Imperial Emerald Green */
-            --sand-silk: #f4eee1;           /* Desert Silk Sand Accent Text */
+            --bg-cosmic-black: #020202;     
+            --royal-gold-24k: #E5C158;      
+            --imperial-emerald: #0b4f31;    
+            --sand-silk: #f4eee1;           
             --pure-white: #ffffff;
             --subtle-gray: #7d848d;
-            
-            /* 3D Glass & Neomorphic Depth Layers */
-            --glass-surface: rgba(10, 10, 10, 0.75);
-            --border-neon-gold: rgba(229, 193, 88, 0.12);
-            --border-neon-hover: rgba(229, 193, 88, 0.65);
-            
-            /* Holographic Light Vector Fields */
-            --neon-glow: 0 0 40px rgba(229, 193, 88, 0.25), 0 0 80px rgba(11, 79, 49, 0.4);
+            --glass-surface: rgba(8, 8, 8, 0.82);
+            --border-neon-gold: rgba(229, 193, 88, 0.14);
+            --border-neon-hover: rgba(229, 193, 88, 0.75);
+            --neon-glow: 0 0 50px rgba(229, 193, 88, 0.3), 0 0 100px rgba(11, 79, 49, 0.5);
         }
 
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
             background-color: var(--bg-cosmic-black);
@@ -42,111 +36,72 @@
             min-height: 100vh;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
-            position: relative;
-            perspective: 1200px; /* Activates pure 3D structural rendering space */
+            perspective: 2000px; /* فضاء ثلاثي أبعاد أعمق */
         }
 
-        /* Tiled Engraved Engraving Logo System at 2% Opacity[span_7](start_span)[span_7](end_span) */
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 100 100' opacity='0.02'%3E%3Cpath d='M50 15 C68 15, 80 30, 50 85 C20 30, 32 15, 50 15 Z' fill='none' stroke='%23E5C158' stroke-width='0.75'/%3E%3C/svg%3E");
-            background-size: 180px 180px;
-            z-index: 1;
-            pointer-events: none;
-        }
-
-        /* 12K VOLUMETRIC LIGHT FIELDS (مصفوفة الأنوار الحجمية ثلاثية الأبعاد) */
-        #dynamic-3d-canvas {
+        /* نظام الجزيئات الأسطوري المولد برمجياً خلف الكود */
+        #cosmic-particle-field {
             position: fixed;
             top: 0; left: 0; width: 100vw; height: 100vh;
-            z-index: 0; pointer-events: none;
-            background: 
-                radial-gradient(circle at 10% 20%, rgba(229, 193, 88, 0.05) 0%, transparent 50%),
-                radial-gradient(circle at 90% 80%, rgba(11, 79, 49, 0.06) 0%, transparent 60%);
+            z-index: 1; pointer-events: none;
+        }
+
+        /* نيون الخلفية الهلامي المتحرك */
+        .neon-aurora {
+            position: fixed; width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(11, 79, 49, 0.15) 0%, transparent 70%);
+            top: -10%; left: -10%; z-index: 0; pointer-events: none; filter: blur(80px);
+        }
+        .neon-aurora.gold {
+            background: radial-gradient(circle, rgba(229, 193, 88, 0.08) 0%, transparent 70%);
+            bottom: -10%; right: -10%; top: auto; left: auto;
         }
 
         header {
-            max-width: 1500px;
-            margin: 0 auto;
-            padding: 40px 60px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: relative;
-            z-index: 100;
+            max-width: 1500px; margin: 0 auto; padding: 40px 60px;
+            display: flex; justify-content: space-between; align-items: center;
+            position: relative; z-index: 100;
             border-bottom: 1px solid rgba(255, 255, 255, 0.02);
-            background: rgba(3, 3, 3, 0.85);
-            backdrop-filter: blur(30px);
-            -webkit-backdrop-filter: blur(30px);
+            background: rgba(2, 2, 2, 0.85); backdrop-filter: blur(35px); -webkit-backdrop-filter: blur(35px);
         }
 
-        .logo-container { display: flex; align-items: center; gap: 18px; transform-style: preserve-3d; }
-        
-        /* 12K Holo-3D Floating Monogram[span_8](start_span)[span_8](end_span) */
-        .iconic-logo-3d {
-            width: 60px; height: 60px;
-            filter: drop-shadow(0 0 25px rgba(229, 193, 88, 0.5));
-            animation: holoFloat 5s ease-in-out infinite;
-            transform: translateZ(30px);
-        }
-
-        @keyframes holoFloat {
-            0% { transform: translateY(0px) rotateY(0deg) rotateX(0deg); filter: drop-shadow(0 0 25px rgba(229, 193, 88, 0.4)); }
-            50% { transform: translateY(-12px) rotateY(15deg) rotateX(5deg); filter: drop-shadow(0 0 45px rgba(11, 79, 49, 0.8)); }
-            100% { transform: translateY(0px) rotateY(0deg) rotateX(0deg); filter: drop-shadow(0 0 25px rgba(229, 193, 88, 0.4)); }
-        }
-
+        .logo-container { display: flex; align-items: center; gap: 18px; transform-style: preserve-3d; cursor: pointer; }
+        .iconic-logo-3d { width: 60px; height: 60px; filter: drop-shadow(0 0 25px rgba(229, 193, 88, 0.5)); transition: transform 0.3s; }
         .logo-text { font-size: 1.4rem; font-weight: 600; letter-spacing: 6px; text-transform: uppercase; }
-        .logo-text span { color: var(--royal-gold-24k); text-shadow: 0 0 20px rgba(229,193,88,0.3); }
+        .logo-text span { color: var(--royal-gold-24k); text-shadow: 0 0 25px rgba(229,193,88,0.4); }
 
         nav { display: flex; gap: 56px; font-size: 0.75rem; font-weight: 500; color: var(--subtle-gray); letter-spacing: 3px; text-transform: uppercase; }
         nav span { position: relative; transition: color 0.4s; cursor: pointer; }
         nav span:hover { color: var(--royal-gold-24k); }
         nav span::after {
             content: ''; position: absolute; bottom: -8px; left: 50%; width: 0; height: 1px; background: var(--royal-gold-24k); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); transform: translateX(-50%);
-            box-shadow: 0 0 10px var(--royal-gold-24k);
         }
-        nav span:hover::after { width: 100%; }
+        nav span:hover::after { width: 100%; box-shadow: 0 0 10px var(--royal-gold-24k); }
         
         .language-matrix { display: flex; gap: 14px; background: rgba(255, 255, 255, 0.01); padding: 10px 24px; border-radius: 100px; border: 1px solid rgba(229, 193, 88, 0.2); font-size: 0.75rem; font-weight: 600; }
         .lang-node { cursor: pointer; color: var(--subtle-gray); transition: all 0.3s; }
         .lang-node.active { color: var(--royal-gold-24k); text-shadow: 0 0 12px rgba(229, 193, 88, 0.8); }
 
-        .section-spacer { height: 240px; position: relative; z-index: 2; }
+        .section-spacer { height: 200px; position: relative; z-index: 2; }
 
-        /* 01 // HERO VIEWPORT PORTAL (12K DEEP VIEW) */
+        /* HERO VIEWPORT PORTAL */
         .hero-viewport {
-            max-width: 1300px;
-            margin: 160px auto 0 auto;
-            text-align: center;
-            padding: 0 40px;
-            position: relative;
-            z-index: 10;
-            transform-style: preserve-3d;
+            max-width: 1300px; margin: 140px auto 0 auto; text-align: center; padding: 0 40px;
+            position: relative; z-index: 10; transform-style: preserve-3d;
         }
 
         .badge-system {
             font-size: 0.75rem; font-weight: 600; letter-spacing: 5px; text-transform: uppercase; color: var(--royal-gold-24k); margin-bottom: 40px;
             background: linear-gradient(90deg, rgba(229,193,88,0.02), rgba(11,79,49,0.1), rgba(229,193,88,0.02)); display: inline-block; padding: 8px 28px; border-radius: 4px; border: 1px solid rgba(229, 193, 88, 0.3);
             box-shadow: 0 0 30px rgba(229, 193, 88, 0.1);
-            animation: hyperPulse 4s ease-in-out infinite;
-        }
-
-        @keyframes hyperPulse {
-            0% { box-shadow: 0 0 30px rgba(229, 193, 88, 0.1); border-color: rgba(229, 193, 88, 0.3); }
-            50% { box-shadow: 0 0 50px rgba(11, 79, 49, 0.4); border-color: var(--royal-gold-24k); }
-            100% { box-shadow: 0 0 30px rgba(229, 193, 88, 0.1); border-color: rgba(229, 193, 88, 0.3); }
         }
 
         .hero-viewport h1 {
-            font-size: 5.4rem; font-weight: 100; line-height: 1.1; letter-spacing: -3px; margin-bottom: 48px;
+            font-size: 5.6rem; font-weight: 100; line-height: 1.1; letter-spacing: -3px; margin-bottom: 48px;
             background: linear-gradient(180deg, #ffffff 40%, #8b94a0 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-            transform: translateZ(50px);
         }
 
-        .hero-viewport p { color: var(--subtle-gray); font-size: 1.45rem; font-weight: 300; max-width: 1000px; margin: 0 auto; line-height: 1.9; transform: translateZ(20px); }
+        .hero-viewport p { color: var(--subtle-gray); font-size: 1.45rem; font-weight: 300; max-width: 1000px; margin: 0 auto; line-height: 1.9; }
 
         .action-container { display: flex; justify-content: center; gap: 24px; margin-top: 64px; }
         
@@ -154,7 +109,7 @@
             background: linear-gradient(135deg, var(--royal-gold-24k) 0%, #b59434 100%); color: #000; font-weight: 700; font-size: 0.8rem; padding: 22px 48px; border-radius: 4px; border: none; cursor: pointer;
             letter-spacing: 3px; text-transform: uppercase; box-shadow: 0 0 40px rgba(229, 193, 88, 0.35); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .btn-gold-glow:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 0 60px rgba(229, 193, 88, 0.7), 0 0 30px rgba(11, 79, 49, 0.5); filter: brightness(1.1); }
+        .btn-gold-glow:hover { transform: translateY(-6px); box-shadow: 0 0 60px rgba(229, 193, 88, 0.7); }
         
         .btn-slate-neon { background: rgba(255,255,255,0.01); color: #fff; font-weight: 600; font-size: 0.8rem; padding: 22px 48px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.04); cursor: pointer; letter-spacing: 2px; text-transform: uppercase; transition: all 0.3s; }
         .btn-slate-neon:hover { background: rgba(11, 79, 49, 0.15); border-color: var(--imperial-emerald); color: var(--royal-gold-24k); box-shadow: var(--neon-glow); }
@@ -173,15 +128,14 @@
             background: linear-gradient(180deg, rgba(255,255,255,0.01) 0%, rgba(255,255,255,0.00) 100%); 
             border: 1px solid var(--border-neon-gold); padding: 50px 40px; border-radius: 8px;
             transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-            position: relative; overflow: hidden; transform-style: preserve-3d;
+            transform-style: preserve-3d;
         }
         .metric-card:hover { 
             border-color: var(--border-neon-hover); 
             background: rgba(229, 193, 88, 0.02); 
-            transform: translateY(-8px) rotateX(4deg) rotateY(-4deg); 
-            box-shadow: 0 30px 60px rgba(0,0,0,0.7), 0 0 30px rgba(229,193,88,0.1); 
+            box-shadow: 0 30px 60px rgba(0,0,0,0.8); 
         }
-        .metric-num { font-size: 4rem; font-weight: 100; color: #fff; margin-bottom: 12px; transform: translateZ(30px); }
+        .metric-num { font-size: 4rem; font-weight: 100; color: #fff; margin-bottom: 12px; transition: transform 0.3s; }
         .metric-label { font-size: 0.75rem; color: var(--sand-silk); letter-spacing: 3px; text-transform: uppercase; font-weight: 500; }
 
         /* 03 // SPATIAL HQ MATRIX */
@@ -189,24 +143,20 @@
         .spatial-card {
             background: var(--glass-surface); border: 1px solid var(--border-neon-gold); border-radius: 12px; padding: 80px;
             display: grid; grid-template-columns: 1.1fr 1fr; gap: 80px; align-items: center;
-            backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);
-            box-shadow: 0 40px 80px rgba(0,0,0,0.8), inset 0 1px 1px rgba(255,255,255,0.03);
-            transition: border-color 0.4s;
+            backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px);
+            box-shadow: 0 40px 80px rgba(0,0,0,0.9);
         }
-        .spatial-card:hover { border-color: rgba(11, 79, 49, 0.4); }
         .spatial-info h3 { font-size: 2.6rem; font-weight: 100; margin-bottom: 32px; }
         .spatial-info p { color: var(--subtle-gray); line-height: 1.9; font-weight: 300; font-size: 1.1rem; }
         
-        /* 12K Geometric Spatial Mock Grid */
         .spatial-map-mock {
-            height: 360px; background: #020202; border: 1px solid rgba(229,193,88,0.2);
+            height: 360px; background: #010101; border: 1px solid rgba(229,193,88,0.2);
             border-radius: 6px; display: flex; align-items: center; justify-content: center; color: var(--royal-gold-24k);
             font-size: 0.8rem; letter-spacing: 4px; text-transform: uppercase; position: relative; overflow: hidden;
-            box-shadow: inset 0 0 50px rgba(0,0,0,0.95);
         }
         .spatial-map-mock::before {
             content: ''; position: absolute; width: 16px; height: 16px; background: var(--imperial-emerald);
-            border-radius: 50%; box-shadow: 0 0 40px var(--royal-gold-24k), 0 0 20px var(--royal-gold-24k); top: 50%; left: 50%; transform: translate(-50%, -50%);
+            border-radius: 50%; box-shadow: 0 0 40px var(--royal-gold-24k); top: 50%; left: 50%; transform: translate(-50%, -50%);
             animation: hyperTarget 2.5s infinite;
         }
         @keyframes hyperTarget {
@@ -214,7 +164,7 @@
             100% { transform: translate(-50%, -50%) scale(3); opacity: 0; }
         }
 
-        /* 04 // THE 15 STRATEGIC ACTIVITY VERTICALS (ثلاثية الأبعاد وحواف حادة نيون فائقة الدقة) */
+        /* 04 // THE 15 STRATEGIC ACTIVITY VERTICALS */
         .asset-architecture-grid {
             max-width: 1400px; margin: 0 auto; padding: 0 60px;
             display: grid; grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); gap: 32px;
@@ -229,27 +179,17 @@
             transform-style: preserve-3d;
         }
         
-        /* Volume Hidden Light Follow Matrix */
-        .framer-node::before {
-            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background: radial-gradient(circle at var(--click-x, 50%) var(--click-y, 50%), rgba(229, 193, 88, 0.12) 0%, transparent 60%);
-            z-index: 1; pointer-events: none; opacity: 0; transition: opacity 0.4s;
-        }
-        .framer-node:hover::before { opacity: 1; }
-
         .framer-node:hover { 
             border-color: var(--border-neon-hover); 
-            transform: translateY(-12px) scale(1.01) rotateY(2deg);
-            box-shadow: 0 50px 100px rgba(11, 79, 49, 0.25), 0 15px 40px rgba(229, 193, 88, 0.08); 
+            box-shadow: 0 50px 100px rgba(11, 79, 49, 0.3), 0 15px 40px rgba(229, 193, 88, 0.1); 
         }
 
         .geometric-icon-box {
-            width: 64px; height: 64px; background: rgba(3, 3, 3, 0.9); border: 1px solid rgba(229, 193, 88, 0.25);
+            width: 64px; height: 64px; background: rgba(2, 2, 2, 0.9); border: 1px solid rgba(229, 193, 88, 0.25);
             border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin-bottom: 36px;
             color: var(--royal-gold-24k); position: relative; transition: all 0.4s;
-            transform: translateZ(20px);
         }
-        .framer-node:hover .geometric-icon-box { transform: scale(1.1) translateZ(40px); background: var(--imperial-emerald); border-color: var(--royal-gold-24k); color: #fff; box-shadow: var(--neon-glow); }
+        .framer-node:hover .geometric-icon-box { background: var(--imperial-emerald); border-color: var(--royal-gold-24k); color: #fff; box-shadow: var(--neon-glow); }
 
         .node-content { padding: 50px; flex-grow: 1; display: flex; flex-direction: column; z-index: 2; position: relative; }
         .node-tags { display: flex; gap: 10px; margin-bottom: 28px; }
@@ -257,51 +197,47 @@
         .tag-gold { background: rgba(229,193,88,0.08); color: var(--royal-gold-24k); border: 1px solid rgba(229,193,88,0.2); }
         .tag-slate { background: rgba(255,255,255,0.02); color: var(--subtle-gray); border: 1px solid rgba(255,255,255,0.04); }
 
-        .framer-node h3 { font-size: 1.4rem; font-weight: 400; margin-bottom: 20px; color: #fff; transition: color 0.3s; transform: translateZ(25px); }
+        .framer-node h3 { font-size: 1.4rem; font-weight: 400; margin-bottom: 20px; color: #fff; transition: color 0.3s; }
         .framer-node:hover h3 { color: var(--royal-gold-24k); }
         .framer-node p { color: var(--subtle-gray); font-size: 0.95rem; line-height: 1.8; font-weight: 300; margin-bottom: 40px; flex-grow: 1; }
         .node-footer { font-size: 0.75rem; color: var(--royal-gold-24k); border-top: 1px solid rgba(255,255,255,0.02); padding-top: 28px; font-weight: 400; letter-spacing: 1px; opacity: 0.8; }
 
-        /* 05 // BOUNDARY POLICY STRATEGY */
+        /* BOUNDARY POLICY STRATEGY */
         .identity-container { max-width: 1400px; margin: 0 auto; padding: 0 60px; position: relative; z-index: 10; }
         .identity-split { display: grid; grid-template-columns: 1fr 1.2fr; gap: 100px; }
         .identity-left h4 { font-size: 0.8rem; color: var(--royal-gold-24k); letter-spacing: 4px; text-transform: uppercase; margin-bottom: 20px; font-weight: 600; }
         .identity-left h3 { font-size: 3rem; font-weight: 100; line-height: 1.2; }
         .identity-right p { color: var(--subtle-gray); font-size: 1.15rem; line-height: 1.9; font-weight: 300; }
 
-        /* 06 // SOVEREIGN MANIFESTO FRAME WITH GOLD & EMERALD GLOW EDGE */
+        /* SOVEREIGN MANIFESTO FRAME */
         .manifesto-blueprint-container { max-width: 1400px; margin: 0 auto; padding: 0 60px; position: relative; z-index: 10; }
         .manifesto-glass-panel {
-            background: linear-gradient(135deg, rgba(12, 12, 12, 0.98) 0%, rgba(4, 4, 4, 1) 100%);
+            background: linear-gradient(135deg, rgba(10, 10, 10, 0.98) 0%, rgba(2, 2, 2, 1) 100%);
             border: 1px solid rgba(229, 193, 88, 0.22); border-radius: 12px; padding: 100px;
             display: grid; grid-template-columns: 1fr 1.4fr; gap: 100px; align-items: flex-start;
-            box-shadow: 0 60px 120px rgba(0,0,0,0.9), inset 0 1px 2px rgba(229,193,88,0.1);
+            box-shadow: 0 60px 120px rgba(0,0,0,0.9);
             position: relative; overflow: hidden;
         }
-
         .manifesto-glass-panel::after {
             content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
             background: linear-gradient(90deg, transparent, var(--royal-gold-24k), var(--imperial-emerald), transparent);
             box-shadow: 0 -10px 40px var(--royal-gold-24k);
         }
-
         .manifesto-left h3 {
             font-size: 3rem; font-weight: 100; line-height: 1.25; letter-spacing: -2px;
             background: linear-gradient(135deg, #ffffff 40%, var(--royal-gold-24k) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
         }
         
-        /* Integrated Saudi Vision 2030 Precision Icon Framework */
         .vision-2030-neon-wrapper {
             margin-top: 48px; display: flex; align-items: center; gap: 20px;
             border: 1px solid rgba(229, 193, 88, 0.2); padding: 18px 28px; border-radius: 4px; width: fit-content;
-            background: rgba(11, 79, 49, 0.08);
-            box-shadow: 0 0 30px rgba(229, 193, 88, 0.08);
+            background: rgba(11, 79, 49, 0.08); box-shadow: 0 0 30px rgba(229, 193, 88, 0.08);
         }
         .vision-2030-neon-wrapper svg { width: 36px; height: 36px; fill: var(--royal-gold-24k); filter: drop-shadow(0 0 12px var(--royal-gold-24k)); }
         .vision-text-badge { font-size: 0.75rem; letter-spacing: 4px; font-weight: 600; text-transform: uppercase; color: #fff; }
 
         .manifesto-right p { color: #ccd2da; font-size: 1.2rem; line-height: 1.95; font-weight: 300; margin-bottom: 32px; }
-        .manifesto-right p.philosophy-italic { color: var(--royal-gold-24k); font-size: 1.35rem; margin-top: 40px; line-height: 1.8; font-weight: 300; text-shadow: 0 0 15px rgba(229,193,88,0.15); }
+        .manifesto-right p.philosophy-italic { color: var(--royal-gold-24k); font-size: 1.35rem; margin-top: 40px; line-height: 1.8; font-weight: 300; }
 
         .vision-arabic-quote {
             font-family: 'Tajawal', sans-serif; direction: rtl; text-align: right; color: var(--sand-silk);
@@ -309,37 +245,18 @@
             padding-right: 28px; margin-top: 56px; text-shadow: 0 0 25px rgba(229,193,88,0.25);
         }
 
-        /* 07 // HOLO-SEAL MAJESTIC SIGNATURES (التواقيع الهولوغرامية بنظام نبضات الـ 12K) */
+        /* SIGNATURES */
         .signatures-section { max-width: 1400px; margin: 0 auto; padding: 0 60px; position: relative; z-index: 10; }
         .signature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 140px; border-top: 1px solid rgba(255, 255, 255, 0.03); padding-top: 80px; }
         .signature-node { display: flex; flex-direction: column; position: relative; }
         .signature-title { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 3px; color: var(--subtle-gray); margin-bottom: 28px; font-weight: 600; }
-        
-        .signature-script {
-            font-size: 2.8rem; color: var(--royal-gold-24k);
-            font-weight: 300; letter-spacing: 3px; position: relative; margin-bottom: 16px;
-            text-shadow: 0 0 20px rgba(229,193,88,0.4);
-            font-family: 'Montserrat', sans-serif;
-            font-style: italic;
-        }
-        .signature-script::after { 
-            content: ''; position: absolute; bottom: -10px; left: 0; width: 220px; height: 1px; 
-            background: linear-gradient(90deg, var(--royal-gold-24k), var(--imperial-emerald), transparent); 
-            box-shadow: 0 0 12px var(--royal-gold-24k);
-        }
-        .signature-node:nth-child(2) .signature-script::after {
-            left: auto; right: 0;
-            background: linear-gradient(270deg, var(--royal-gold-24k), var(--imperial-emerald), transparent); 
-        }
+        .signature-script { font-size: 2.8rem; color: var(--royal-gold-24k); font-weight: 300; letter-spacing: 3px; position: relative; margin-bottom: 16px; text-shadow: 0 0 20px rgba(229,193,88,0.4); font-style: italic; }
+        .signature-script::after { content: ''; position: absolute; bottom: -10px; left: 0; width: 220px; height: 1px; background: linear-gradient(90deg, var(--royal-gold-24k), var(--imperial-emerald), transparent); }
+        .signature-node:nth-child(2) .signature-script::after { left: auto; right: 0; background: linear-gradient(270deg, var(--royal-gold-24k), var(--imperial-emerald), transparent); }
         .signature-subtext { font-size: 0.88rem; color: var(--subtle-gray); font-weight: 400; letter-spacing: 1px; margin-top: 8px; }
 
-        /* Meta Clusters */
-        .metadata-cluster {
-            max-width: 1400px; margin: 0 auto; padding: 0 60px; display: flex; flex-wrap: wrap; gap: 18px;
-            font-size: 0.75rem; font-weight: 500; color: var(--subtle-gray); letter-spacing: 1.5px; opacity: 0.5;
-        }
-        .metadata-tag { background: rgba(255,255,255,0.01); padding: 8px 20px; border-radius: 2px; border: 1px solid rgba(255,255,255,0.03); cursor: default; transition: all 0.3s; }
-        .metadata-tag:hover { border-color: var(--royal-gold-24k); color: #fff; background: rgba(229,193,88,0.04); box-shadow: 0 0 15px rgba(229,193,88,0.1); }
+        .metadata-cluster { max-width: 1400px; margin: 0 auto; padding: 0 60px; display: flex; flex-wrap: wrap; gap: 18px; font-size: 0.75rem; font-weight: 500; color: var(--subtle-gray); letter-spacing: 1.5px; opacity: 0.5; }
+        .metadata-tag { background: rgba(255,255,255,0.01); padding: 8px 20px; border-radius: 2px; border: 1px solid rgba(255,255,255,0.03); }
 
         footer { max-width: 1400px; margin: 0 auto; padding: 80px 60px; border-top: 1px solid rgba(255, 255, 255, 0.03); display: flex; justify-content: space-between; align-items: center; color: var(--subtle-gray); font-size: 0.8rem; position: relative; z-index: 10; background: var(--bg-cosmic-black); }
         footer .signature-line { color: var(--royal-gold-24k); font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; text-shadow: 0 0 15px rgba(229,193,88,0.25); }
@@ -348,22 +265,21 @@
             .asset-architecture-grid { grid-template-columns: 1fr; }
             .dashboard-metrics-grid { grid-template-columns: 1fr 1fr; }
             .spatial-card { grid-template-columns: 1fr; }
-            .identity-split { grid-template-columns: 1fr; gap: 50px; }
             .hero-viewport h1 { font-size: 3.4rem; }
             .manifesto-glass-panel { grid-template-columns: 1fr; padding: 60px; gap: 50px; }
-            .signature-grid { grid-template-columns: 1fr; gap: 50px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- 12K Volumetric Dynamic Particle Layer (المحاكاة ثلاثية الأبعاد) -->
-    <div id="dynamic-3d-canvas"></div>
+    <!-- الأداة الأسطورية: شبكة الجزيئات والنيون الفضائي التفاعلي -->
+    <div class="neon-aurora"></div>
+    <div class="neon-aurora gold"></div>
+    <canvas id="cosmic-particle-field"></canvas>
 
-    <!-- Official High-End Header Portal -->
+    <!-- Header -->
     <header>
-        <div class="logo-container">
-            <!-- 12K Interactive 3D Emblem Symbol (image_9.png Matching Rules)[span_9](start_span)[span_9](end_span) -->
+        <div class="logo-container" id="master-logo">
             <svg class="iconic-logo-3d" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="50" cy="50" r="44" stroke="#E5C158" stroke-width="2" stroke-dasharray="8 4"/>
                 <path d="M30 32 C40 20, 60 20, 70 32 C76 42, 66 66, 50 82 C34 66, 24 42, 30 32 Z" fill="none" stroke="#0b4f31" stroke-width="4.5" stroke-linejoin="round"/>
@@ -382,11 +298,11 @@
         </div>
     </header>
 
-    <!-- 01 // 12K INTERACTIVE HERO EXPERIENCE -->
+    <!-- 01 // HERO VIEWPORT PORTAL -->
     <div class="hero-viewport">
-        <div class="badge-system">The Pinnacle of Market Entry Hubs[span_10](start_span)[span_10](end_span)</div>
-        <h1>Architecting Strategic Corporate Integration</h1>
-        <p>Transcending standard transactional paradigms to deliver an uncompromising, independent advisory ecosystem[span_11](start_span)[span_11](end_span). We silently and flawlessly orient supreme international enterprises within Saudi Arabia's generational economic ascent[span_12](start_span)[span_12](end_span).</p>
+        <div class="badge-system">The Pinnacle of Market Entry Hubs</div>
+        <h1 id="hero-title">Architecting Strategic Corporate Integration</h1>
+        <p>Transcending standard transactional paradigms to deliver an uncompromising, independent advisory ecosystem. We silently and flawlessly orient supreme international enterprises within Saudi Arabia's generational economic ascent.</p>
         
         <div class="action-container">
             <button class="btn-gold-glow">Begin Your Saudi Journey</button>
@@ -399,24 +315,24 @@
     <!-- 02 // ANALYTICS DASHBOARD -->
     <div class="section-headline">
         <h2>02 // Sovereign Market Analytics & Indicators</h2>
-        <p>Rigorous structural indicators validating international capital entry paths[span_13](start_span)[span_13](end_span).</p>
+        <p>Rigorous structural indicators validating international capital entry paths.</p>
     </div>
     <div class="dashboard-metrics-grid">
         <div class="metric-card">
-            <div class="metric-num">SVP</div>
-            <div class="metric-label">Vision 2030 Blueprint</div>
+            <div class="metric-num" data-target="2030">0</div>
+            <div class="metric-label">Vision Blueprint Target</div>
         </div>
         <div class="metric-card">
-            <div class="metric-num">100%</div>
-            <div class="metric-label">Independent Integrity</div>
+            <div class="metric-num" data-target="100">0</div>
+            <div class="metric-label">% Independent Integrity</div>
         </div>
         <div class="metric-card">
-            <div class="metric-num">15</div>
+            <div class="metric-num" data-target="15">0</div>
             <div class="metric-label">Macro Segments</div>
         </div>
         <div class="metric-card">
-            <div class="metric-num">Zero</div>
-            <div class="metric-label">Structural Friction</div>
+            <div class="metric-num" data-target="12">0</div>
+            <div class="metric-label">K Ultra Rendering</div>
         </div>
     </div>
 
@@ -457,8 +373,8 @@
                     <span class="tag-pill tag-slate">Tourism</span>
                 </div>
                 <h3>1. Luxury Hospitality & Lifestyle</h3>
-                <p>Facilitating independent advisory and linking elite global operators, master culinary creators, and ultra-luxury hospitality concepts with pristine giga-project masterdevelopments[span_14](start_span)[span_14](end_span).</p>
-                <div class="node-footer">✦ Channeling elite creators into visionary mega-resorts[span_15](start_span)[span_15](end_span)</div>
+                <p>Facilitating independent advisory and linking elite global operators, master culinary creators, and ultra-luxury hospitality concepts with pristine giga-project masterdevelopments.</p>
+                <div class="node-footer">✦ Channeling elite creators into visionary mega-resorts</div>
             </div>
         </div>
 
@@ -468,15 +384,15 @@
                 <div class="geometric-icon-box">💎</div>
                 <div class="node-tags">
                     <span class="tag-pill tag-gold">Haute Couture</span>
-                    <span class="tag-pill tag-slate">Timepieces[span_16](start_span)[span_16](end_span)</span>
+                    <span class="tag-pill tag-slate">Timepieces</span>
                 </div>
                 <h3>2. Luxury Brands</h3>
-                <p>Advising and streamlining immaculate entry strategies for haute couture maisons, fine watchmaking firms, rare high-end jewelers, and elite boutique franchises[span_17](start_span)[span_17](end_span).</p>
-                <div class="node-footer">✦ Linking historic heritage maisons to high-net-worth landscapes[span_18](start_span)[span_18](end_span)</div>
+                <p>Advising and streamlining immaculate entry strategies for haute couture maisons, fine watchmaking firms, rare high-end jewelers, and elite boutique franchises.</p>
+                <div class="node-footer">✦ Linking historic heritage maisons to high-net-worth landscapes</div>
             </div>
         </div>
 
-        <!-- 3. Artificial Intelligence & Advanced Tech -->
+        <!-- 3. Artificial Intelligence -->
         <div class="framer-node">
             <div class="node-content">
                 <div class="geometric-icon-box">🤖</div>
@@ -490,7 +406,7 @@
             </div>
         </div>
 
-        <!-- 4. Cybersecurity & Data Protection -->
+        <!-- 4. Cybersecurity -->
         <div class="framer-node">
             <div class="node-content">
                 <div class="geometric-icon-box">🛡️</div>
@@ -518,7 +434,7 @@
             </div>
         </div>
 
-        <!-- 6. Global Healthcare Market Entry -->
+        <!-- 6. Global Healthcare -->
         <div class="framer-node">
             <div class="node-content">
                 <div class="geometric-icon-box">🧬</div>
@@ -560,7 +476,7 @@
             </div>
         </div>
 
-        <!-- 9. Professional Engineering & Maintenance -->
+        <!-- 9. Professional Engineering -->
         <div class="framer-node">
             <div class="node-content">
                 <div class="geometric-icon-box">📐</div>
@@ -574,7 +490,7 @@
             </div>
         </div>
 
-        <!-- 10. Government Tenders & Qualifications -->
+        <!-- 10. Government Tenders -->
         <div class="framer-node">
             <div class="node-content">
                 <div class="geometric-icon-box">📝</div>
@@ -583,7 +499,7 @@
                     <span class="tag-pill tag-slate">Technical Proposals</span>
                 </div>
                 <h3>10. Government Tenders & Qualifications</h3>
-                <p>Providing impeccable technical advice to ease municipal qualification stages, ensuring complete accuracy in drafting technical proposals for competitive public bids.</p>
+                <p>Providing immaculate technical advice to ease municipal qualification stages, ensuring complete accuracy in drafting technical proposals for competitive public bids.</p>
                 <div class="node-footer">✦ Streamlining enterprise compliance with public bidding standards</div>
             </div>
         </div>
@@ -644,7 +560,7 @@
             </div>
         </div>
 
-        <!-- 15. Business Continuity & Tech Recovery -->
+        <!-- 15. Business Continuity -->
         <div class="framer-node">
             <div class="node-content">
                 <div class="geometric-icon-box">🌱</div>
@@ -669,7 +585,7 @@
                 <h3>Independent Facilitation Node.</h3>
             </div>
             <div class="identity-right">
-                <p>Najd Link operates purely as an independent corporate facilitator and strategic advisory portal. We do not construct structural installations or develop physical property. Our corporate mandate is strictly fixed on offering premier brokerage services and strategic linkages—safely bridging global multinational ambition with the local commercial landscape under total data privacy[span_19](start_span)[span_19](end_span).</p>
+                <p>Najd Link operates purely as an independent corporate facilitator and strategic advisory portal. We do not construct structural installations or develop physical property. Our corporate mandate is strictly fixed on offering premier brokerage services and strategic linkages—safely bridging global multinational ambition with the local commercial landscape under total data privacy.</p>
             </div>
         </div>
     </div>
@@ -679,15 +595,13 @@
     <!-- 06 // MANIFESTO MATRIX -->
     <div class="section-headline">
         <h2>06 // Institutional Manifesto & Vision Integration</h2>
-        <p>The silent mechanisms governing elite corporate positioning inside the Vision 2030 landscape[span_20](start_span)[span_20](end_span).</p>
+        <p>The silent mechanisms governing elite corporate positioning inside the Vision 2030 landscape.</p>
     </div>
 
     <div class="manifesto-blueprint-container">
         <div class="manifesto-glass-panel">
             <div class="manifesto-left">
-                <h3>The future does not belong to those who generate noise.[span_21](start_span)[span_21](end_span)</h3>
-                
-                <!-- 12K High-End Geometry Vision Hub Component -->
+                <h3>The future does not belong to those who generate noise.</h3>
                 <div class="vision-2030-neon-wrapper">
                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <polygon points="12,2 22,9 17,22 7,22 2,9" stroke="#E5C158" stroke-width="1.5" fill="none"/>
@@ -697,10 +611,8 @@
                 </div>
             </div>
             <div class="manifesto-right">
-                <p>At Najd Link, we maintain an exclusive presence as trusted facilitators where global capability aligns with domestic long-term goals[span_22](start_span)[span_22](end_span). We do not merely open entry routes; we foster multi-sector corporate development[span_23](start_span)[span_23](end_span). From smoothing out initial multinational entry frameworks to designing custom strategic alliances for high-potential enterprises, our operation covers the entire continuum of corporate facilitation[span_24](start_span)[span_24](end_span).</p>
-                
+                <p>At Najd Link, we maintain an exclusive presence as trusted facilitators where global capability aligns with domestic long-term goals. We do not merely open entry routes; we foster multi-sector corporate development. From smoothing out initial multinational entry frameworks to designing custom strategic alliances for high-potential enterprises, our operation covers the entire continuum of corporate facilitation.</p>
                 <p class="philosophy-italic">"The future yields to the 'invisible orchestrators' and dedicated facilitators who pave the way to harmoniously transform disparate possibilities into precise, monumental, and lasting legacy."</p>
-                
                 <div class="vision-arabic-quote">
                     "نحن لا نقوم ببناء المشاريع إنشائياً، بل نعمل كقناة سيادية مستقلة لهندسة روابط الوساطة التجارية الرفيعة؛ لتوطين القدرات والتحالفات المليارية الكبرى بأعلى مستويات الحوكمة والسرية الصامتة خلف الكواليس."
                 </div>
@@ -710,11 +622,11 @@
 
     <div class="section-spacer"></div>
 
-    <!-- 07 // MAJESTIC HOLOGRAPHIC SIGNATURES MATRIX -->
+    <!-- 07 // SIGNATURES -->
     <div class="signatures-section">
         <div class="signature-grid">
             <div class="signature-node">
-                <div class="signature-title">Portal Endorsement Validation[span_25](start_span)[span_25](end_span)</div>
+                <div class="signature-title">Portal Endorsement Validation</div>
                 <div class="signature-script">Najd Link Authority</div>
                 <div class="signature-subtext">Sovereign Compliance, Market Entry & Integrity Office</div>
             </div>
@@ -730,44 +642,149 @@
 
     <div class="metadata-cluster">
         <span class="metadata-tag">#NajdLink</span>
-        <span class="metadata-tag">#StrategicFacilitation[span_26](start_span)[span_26](end_span)</span>
+        <span class="metadata-tag">#StrategicFacilitation</span>
         <span class="metadata-tag">#Vision2030</span>
-        <span class="metadata-tag">#MarketEntry[span_27](start_span)[span_27](end_span)</span>
+        <span class="metadata-tag">#MarketEntry</span>
         <span class="metadata-tag">#12KDepth</span>
         <span class="metadata-tag">#InvisibleOrchestrators</span>
     </div>
 
     <div style="height: 40px;"></div>
 
-    <!-- Ultra-Premium Footer Frame -->
+    <!-- Footer -->
     <footer>
-        <p>© 2026 NAJD LINK. ALL RIGHTS RESERVED[span_28](start_span)[span_28](end_span).</p>
-        <p class="signature-line">SOVEREIGN INSTITUTIONAL BRIDGE — ENGINEERED FOR SUPREME OPERATIONAL INTEGRITY[span_29](start_span)[span_29](end_span)</p>
+        <p>© 2026 NAJD LINK. ALL RIGHTS RESERVED.</p>
+        <p class="signature-line">SOVEREIGN INSTITUTIONAL BRIDGE — ENGINEERED FOR SUPREME OPERATIONAL INTEGRITY</p>
     </footer>
 
-    <!-- Interactive Script to compute 3D Motion and Lighting Effects -->
+    <!-- نظام المحاكاة والتحريك الأسطوري المدمج -->
     <script>
-        // High-Precision 3D Interactive Card Follow Matrix
-        document.querySelectorAll('.framer-node, .metric-card').forEach(card => {
+        // 1. نظام الجزيئات الكونية التفاعلي بالكامل (Pure Custom 3D-Like Particles Canvas)
+        const canvas = document.getElementById('cosmic-particle-field');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        let mouse = { x: null, y: null, radius: 150 };
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        window.addEventListener('mousemove', (e) => {
+            mouse.x = e.clientX;
+            mouse.y = e.clientY;
+        });
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 1.5 + 0.5;
+                this.baseX = this.x;
+                this.baseY = this.y;
+                this.density = (Math.random() * 30) + 10;
+                this.color = Math.random() > 0.5 ? '#E5C158' : '#0b4f31';
+                this.opacity = Math.random() * 0.6 + 0.1;
+            }
+            draw() {
+                ctx.fillStyle = this.color;
+                ctx.globalAlpha = this.opacity;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.closePath();
+                ctx.fill();
+            }
+            update() {
+                let dx = mouse.x - this.x;
+                let dy = mouse.y - this.y;
+                let distance = Math.sqrt(dx * dx + dy * dy);
+                let forceDirectionX = dx / distance;
+                let forceDirectionY = dy / distance;
+                let maxDistance = mouse.radius;
+                let force = (maxDistance - distance) / maxDistance;
+                let directionX = forceDirectionX * force * this.density;
+                let directionY = forceDirectionY * force * this.density;
+
+                if (distance < mouse.radius) {
+                    this.x -= directionX;
+                    this.y -= directionY;
+                } else {
+                    if (this.x !== this.baseX) {
+                        let dx = this.x - this.baseX;
+                        this.x -= dx / 20;
+                    }
+                    if (this.y !== this.baseY) {
+                        let dy = this.y - this.baseY;
+                        this.y -= dy / 20;
+                    }
+                }
+            }
+        }
+
+        function initParticles() {
+            particles = [];
+            const count = (canvas.width * canvas.height) / 9000;
+            for (let i = 0; i < count; i++) {
+                particles.push(new Particle());
+            }
+        }
+        initParticles();
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+                particles[i].draw();
+            }
+            requestAnimationFrame(animateParticles);
+        }
+        animateParticles();
+
+        // 2. نظام الـ 3D Matrix الفيروسي عند تحريك الماوس فوق الكروت والرموز
+        document.querySelectorAll('.framer-node, .metric-card, .spatial-card').forEach(card => {
             card.addEventListener('mousemove', e => {
                 const rect = card.getBoundingClientRect();
                 const x = e.clientX - rect.left;
                 const y = e.clientY - rect.top;
                 
-                card.style.setProperty('--click-x', `${(x / card.clientWidth) * 100}%`);
-                card.style.setProperty('--click-y', `${(y / card.clientHeight) * 100}%`);
-                
-                // Pure 3D angle warp calculations
-                const rotateX = ((y / card.clientHeight) - 0.5) * -12;
-                const rotateY = ((x / card.clientWidth) - 0.5) * 12;
-                card.style.transform = `translateY(-10px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+                const rotateX = ((y / card.clientHeight) - 0.5) * -15;
+                const rotateY = ((x / card.clientWidth) - 0.5) * 15;
+                card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
             });
 
             card.addEventListener('mouseleave', () => {
-                card.style.transform = `translateY(0px) rotateX(0deg) rotateY(0deg) scale(1)`;
+                card.style.transform = `rotateX(0deg) rotateY(0deg) translateY(0px)`;
             });
         });
-    </script>
 
+        // 3. أداة عداد الأرقام التفاعلية للوحة البيانات السيادية الـ 12K عند فتح الموقع
+        const metrics = document.querySelectorAll('.metric-num');
+        metrics.forEach(metric => {
+            const target = +metric.getAttribute('data-target');
+            let count = 0;
+            const updateCount = () => {
+                const speed = target / 60;
+                if(count < target) {
+                    count += speed;
+                    metric.innerText = Math.floor(count);
+                    setTimeout(updateCount, 20);
+                } else {
+                    metric.innerText = target;
+                }
+            }
+            updateCount();
+        });
+
+        // 4. تحريك شعار الهيلوجرام الأسطوري عند الاقتراب منه باستخدام الأداة الأسطورية Anime.js
+        anime({
+            targets: '.iconic-logo-3d',
+            rotateY: '360deg',
+            duration: 8000,
+            loop: true,
+            easing: 'linear'
+        });
+    </script>
 </body>
 </html>
