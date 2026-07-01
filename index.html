@@ -11,13 +11,14 @@
     
     <style>
         :root {
-            --bg-void: #030407;             /* Infinite Obsidian Void */
-            --framer-surface: rgba(13, 17, 26, 0.45); /* Cinematic Glass Surface */
-            --neon-accent: #e5c158;         /* Muted Cyber Gold */
+            --bg-void: #030508;             /* Absolute Luxury Void */
+            --framer-surface: rgba(9, 13, 24, 0.45); /* High-End Cinematic Glass */
+            --neon-accent: #e5c158;         /* Sovereign Cyber Gold */
+            --cyber-blue: rgba(30, 80, 220, 0.18); /* Deep Ambient Neon Blue */
             --text-pure: #ffffff;
             --text-muted: #828f9e;
-            --border-glow: rgba(255, 255, 255, 0.05);
-            --border-hover: rgba(229, 193, 88, 0.25);
+            --border-glow: rgba(255, 255, 255, 0.04);
+            --border-hover: rgba(229, 193, 88, 0.35);
         }
 
         *, *::before, *::after {
@@ -36,16 +37,29 @@
             position: relative;
         }
 
-        /* Ambient Lights Background */
+        /* Geometric Grid Pattern Background (الشبكة الهندسية الفاخرة الممتدة خلف الموقع) */
         body::before {
             content: '';
             position: absolute;
-            width: 1200px;
-            height: 1200px;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.007) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.007) 1px, transparent 1px);
+            background-size: 80px 80px;
+            background-position: center top;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* Ambient Dynamic Light Nodes (أنوار الألياف الضوئية الموزعة عمودياً لتبهر الأبصار) */
+        .ambient-glow-core {
+            position: absolute;
+            width: 1400px;
+            height: 1400px;
             top: -400px;
             left: 50%;
             transform: translateX(-50%);
-            background: radial-gradient(circle, rgba(229, 193, 88, 0.025) 0%, transparent 75%);
+            background: radial-gradient(circle, var(--cyber-blue) 0%, rgba(229, 193, 88, 0.015) 35%, transparent 70%);
             z-index: 0;
             pointer-events: none;
         }
@@ -60,62 +74,36 @@
             position: relative;
             z-index: 10;
             border-bottom: 1px solid var(--border-glow);
+            background: rgba(3, 5, 8, 0.7);
+            backdrop-filter: blur(12px);
         }
 
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
+        .logo-container { display: flex; align-items: center; gap: 12px; }
         .logo-dot {
-            width: 7px;
-            height: 7px;
+            width: 8px;
+            height: 8px;
             background-color: var(--neon-accent);
             border-radius: 50%;
-            box-shadow: 0 0 14px var(--neon-accent);
+            box-shadow: 0 0 16px var(--neon-accent), 0 0 30px var(--neon-accent);
         }
+        .logo-text { font-size: 1rem; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; }
 
-        .logo-text {
-            font-size: 1rem;
-            font-weight: 600;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-        }
-
-        nav {
-            display: flex;
-            gap: 48px;
-            font-size: 0.8rem;
-            font-weight: 400;
-            color: var(--text-muted);
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .language-matrix {
-            display: flex;
-            gap: 14px;
-            background: rgba(255, 255, 255, 0.02);
-            padding: 8px 20px;
-            border-radius: 100px;
-            border: 1px solid var(--border-glow);
-            font-size: 0.75rem;
-            font-weight: 500;
-        }
-
+        nav { display: flex; gap: 48px; font-size: 0.8rem; font-weight: 400; color: var(--text-muted); letter-spacing: 1px; text-transform: uppercase; }
+        .language-matrix { display: flex; gap: 14px; background: rgba(255, 255, 255, 0.02); padding: 8px 20px; border-radius: 100px; border: 1px solid var(--border-glow); font-size: 0.75rem; font-weight: 500; }
         .lang-node { cursor: pointer; color: var(--text-muted); transition: color 0.3s ease; }
         .lang-node.active { color: var(--neon-accent); font-weight: 600; }
 
-        /* Premium Breathing Spaces */
+        /* Bespoke Air Cushion Spacers (الفراغات الاحترافية الشاسعة لهيبة الأقسام) */
         .section-spacer {
-            height: 160px;
+            height: 200px; /* تعطي انطباعاً مذهلاً بالاتساع والراحة العصرية */
+            position: relative;
+            z-index: 2;
         }
 
         /* Hero Layout */
         .hero-viewport {
             max-width: 1000px;
-            margin: 140px auto 0 auto;
+            margin: 160px auto 0 auto;
             text-align: center;
             padding: 0 24px;
             position: relative;
@@ -129,45 +117,46 @@
             text-transform: uppercase;
             color: var(--neon-accent);
             margin-bottom: 28px;
+            background: rgba(229, 193, 88, 0.05);
+            display: inline-block;
+            padding: 6px 18px;
+            border-radius: 100px;
+            border: 1px solid rgba(229, 193, 88, 0.15);
         }
 
         .hero-viewport h1 {
-            font-size: 4.8rem;
+            font-size: 5.2rem;
             font-weight: 200;
             line-height: 1.1;
             letter-spacing: -3px;
             margin-bottom: 36px;
-            background: linear-gradient(180deg, #ffffff 30%, #475569 100%);
+            background: linear-gradient(180deg, #ffffff 45%, #4f617d 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        .hero-viewport p {
-            color: var(--text-muted);
-            font-size: 1.3rem;
-            font-weight: 300;
-            max-width: 820px;
-            margin: 0 auto;
-            line-height: 1.7;
-        }
+        .hero-viewport p { color: var(--text-muted); font-size: 1.35rem; font-weight: 300; max-width: 840px; margin: 0 auto; line-height: 1.75; }
 
-        /* Metrics */
+        /* Premium Actions */
+        .action-container { display: flex; justify-content: center; gap: 16px; margin-top: 48px; }
+        .btn-gold {
+            background: var(--neon-accent); color: #000; font-weight: 600; font-size: 0.85rem; padding: 16px 32px; border-radius: 12px; border: none; cursor: pointer;
+            box-shadow: 0 0 25px rgba(229, 193, 88, 0.25); transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 0 35px rgba(229, 193, 88, 0.45); }
+        .btn-slate { background: rgba(255,255,255,0.02); color: #fff; font-weight: 500; font-size: 0.85rem; padding: 16px 32px; border-radius: 12px; border: 1px solid var(--border-glow); cursor: pointer; transition: background 0.3s; }
+        .btn-slate:hover { background: rgba(255,255,255,0.06); }
+
+        /* Metrics Grid */
         .dashboard-metrics {
             max-width: 1300px;
-            margin: 80px auto 0 auto;
+            margin: 120px auto 0 auto;
             padding: 0 40px;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 32px;
             position: relative;
             z-index: 10;
-        }
-
-        @media (max-width: 992px) {
-            .dashboard-metrics { grid-template-columns: 1fr; }
-            .asset-architecture-grid { grid-template-columns: 1fr; }
-            .hero-viewport h1 { font-size: 3rem; }
-            .signature-grid { grid-template-columns: 1fr !important; gap: 40px; }
         }
 
         .metric-framer-card {
@@ -177,183 +166,134 @@
             border: 1px solid var(--border-glow);
             border-radius: 24px;
             padding: 56px 44px;
+            position: relative;
+            overflow: hidden;
             transition: border-color 0.5s ease, transform 0.5s ease;
         }
 
-        .metric-framer-card:hover {
-            border-color: var(--border-hover);
-            transform: translateY(-6px);
+        .metric-framer-card::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at top left, rgba(30, 80, 220, 0.15), transparent 60%);
+            opacity: 0; transition: opacity 0.5s ease; pointer-events: none;
         }
+        .metric-framer-card:hover::before { opacity: 1; }
+        .metric-framer-card:hover { border-color: var(--border-hover); transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6); }
 
-        .massive-digit {
-            font-size: 4.5rem;
-            font-weight: 100;
-            line-height: 1;
-            color: var(--text-pure);
-            letter-spacing: -3px;
-            margin-bottom: 20px;
-        }
-
-        .metric-title { font-size: 1.15rem; font-weight: 500; margin-bottom: 14px; }
-        .metric-desc { font-size: 0.92rem; color: var(--text-muted); line-height: 1.65; font-weight: 300; }
+        .massive-digit { font-size: 4.8rem; font-weight: 100; line-height: 1; color: var(--text-pure); letter-spacing: -3px; margin-bottom: 20px; }
+        .metric-title { font-size: 1.2rem; font-weight: 500; margin-bottom: 14px; }
+        .metric-desc { font-size: 0.95rem; color: var(--text-muted); line-height: 1.65; font-weight: 300; }
 
         /* Section Headlines */
-        .section-headline { max-width: 1300px; margin: 0 auto 56px auto; padding: 0 40px; position: relative; z-index: 10; }
+        .section-headline { max-width: 1300px; margin: 0 auto 64px auto; padding: 0 40px; position: relative; z-index: 10; }
         .section-headline h2 { font-size: 2.2rem; font-weight: 200; letter-spacing: -1px; text-transform: uppercase; }
         .section-headline p { font-size: 1rem; color: var(--text-muted); margin-top: 12px; font-weight: 300; }
 
-        /* Grid Architecture */
+        /* Grid Architecture & Project Blocks */
         .asset-architecture-grid {
-            max-width: 1300px;
-            margin: 0 auto;
-            padding: 0 40px;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-            gap: 36px;
-            position: relative;
-            z-index: 10;
+            max-width: 1300px; margin: 0 auto; padding: 0 40px;
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); gap: 36px;
+            position: relative; z-index: 10;
         }
 
         .framer-node {
-            background: var(--framer-surface);
-            backdrop-filter: blur(24px);
-            -webkit-backdrop-filter: blur(24px);
-            border: 1px solid var(--border-glow);
-            border-radius: 28px;
-            overflow: hidden;
+            background: var(--framer-surface); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+            border: 1px solid var(--border-glow); border-radius: 28px; overflow: hidden;
+            display: flex; flex-direction: column; position: relative; transition: border-color 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .framer-node:hover { border-color: var(--border-hover); transform: translateY(-8px); box-shadow: 0 30px 60px rgba(0,0,0,0.7); }
+
+        /* Geometric Icon Container (الأشكال الهندسية للأيقونات والمشاريع) */
+        .geometric-icon-box {
+            width: 56px;
+            height: 56px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 14px; /* مظهر هندسي مربع بحواف ناعمة دائرية */
             display: flex;
-            flex-direction: column;
-            transition: border-color 0.5s ease, transform 0.5s ease;
-        }
-
-        .framer-node:hover { border-color: var(--border-hover); transform: translateY(-8px); }
-        .node-canvas-ambient { width: 100%; height: 180px; background: linear-gradient(180deg, rgba(229,193,88,0.015) 0%, transparent 100%); display: flex; align-items: center; justify-content: center; font-size: 2.8rem; opacity: 0.4; }
-        .node-content { padding: 48px; flex-grow: 1; display: flex; flex-direction: column; }
-        .node-tags { display: flex; gap: 10px; margin-bottom: 28px; }
-        .tag-pill { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; padding: 6px 14px; border-radius: 100px; }
-        .tag-gold { background: rgba(229,193,88,0.04); color: var(--neon-accent); border: 1px solid rgba(229,193,88,0.08); }
-        .tag-slate { background: rgba(255,255,255,0.01); color: var(--text-muted); border: 1px solid rgba(255,255,255,0.03); }
-
-        .framer-node h3 { font-size: 1.55rem; font-weight: 300; margin-bottom: 18px; letter-spacing: -0.5px; }
-        .framer-node p { color: var(--text-muted); font-size: 0.98rem; line-height: 1.7; font-weight: 300; margin-bottom: 36px; flex-grow: 1; }
-        .node-footer { font-size: 0.8rem; color: var(--neon-accent); border-top: 1px solid rgba(255,255,255,0.02); padding-top: 24px; }
-
-        /* Vision & About Glass Panel Custom Layout */
-        .vision-container {
-            max-width: 1300px;
-            margin: 0 auto;
-            padding: 0 40px;
-            position: relative;
-            z-index: 10;
-        }
-
-        .vision-glass-panel {
-            background: linear-gradient(135deg, rgba(255,255,255,0.01) 0%, rgba(255,255,255,0.002) 100%);
-            border: 1px solid var(--border-glow);
-            border-radius: 32px;
-            padding: 80px;
-            display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            gap: 64px;
             align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 28px;
+            color: var(--neon-accent);
+            position: relative;
+            transition: transform 0.4s, background 0.4s;
+        }
+
+        .framer-node:hover .geometric-icon-box {
+            transform: rotate(45deg); /* حركة هندسية ناعمة تأسر العين عند التحويم */
+            background: rgba(229, 193, 88, 0.1);
+            border-color: var(--neon-accent);
+        }
+
+        /* حماية أيقونة النص الداخلي من الدوران لتبقى مستقيمة */
+        .geometric-icon-box span {
+            display: inline-block;
+            transition: transform 0.4s;
+        }
+        .framer-node:hover .geometric-icon-box span {
+            transform: rotate(-45deg);
+        }
+
+        .node-content { padding: 48px; flex-grow: 1; display: flex; flex-direction: column; z-index: 2; }
+        .node-tags { display: flex; gap: 10px; margin-bottom: 24px; }
+        .tag-pill { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; padding: 6px 14px; border-radius: 100px; }
+        .tag-gold { background: rgba(229,193,88,0.06); color: var(--neon-accent); border: 1px solid rgba(229,193,88,0.15); }
+        .tag-slate { background: rgba(255,255,255,0.02); color: var(--text-muted); border: 1px solid rgba(255,255,255,0.05); }
+
+        .framer-node h3 { font-size: 1.6rem; font-weight: 300; margin-bottom: 18px; letter-spacing: -0.5px; }
+        .framer-node p { color: var(--text-muted); font-size: 1rem; line-height: 1.7; font-weight: 300; margin-bottom: 36px; flex-grow: 1; }
+        .node-footer { font-size: 0.8rem; color: var(--neon-accent); border-top: 1px solid rgba(255,255,255,0.03); padding-top: 24px; }
+
+        /* Vision & About Structured Blocks */
+        .vision-container { max-width: 1300px; margin: 0 auto; padding: 0 40px; position: relative; z-index: 10; }
+        .vision-glass-panel {
+            background: linear-gradient(135deg, rgba(12, 19, 36, 0.5) 0%, rgba(18, 26, 46, 0.25) 100%);
+            border: 1px solid var(--border-glow); border-radius: 32px; padding: 80px;
+            display: grid; grid-template-columns: 1fr 1.2fr; gap: 64px; align-items: center;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.04), 0 40px 80px rgba(0,0,0,0.8);
         }
 
         .vision-left h3 {
-            font-size: 2.8rem;
-            font-weight: 200;
-            line-height: 1.2;
-            letter-spacing: -1.5px;
-            background: linear-gradient(135deg, #ffffff 0%, #e5c158 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-size: 3rem; font-weight: 200; line-height: 1.2; letter-spacing: -1.5px;
+            background: linear-gradient(135deg, #ffffff 30%, #e5c158 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
         }
 
-        .vision-right p {
-            color: var(--text-muted);
-            font-size: 1.15rem;
-            line-height: 1.8;
-            font-weight: 300;
-            margin-bottom: 24px;
-        }
-
+        .vision-right p { color: var(--text-muted); font-size: 1.2rem; line-height: 1.8; font-weight: 300; margin-bottom: 24px; }
         .vision-arabic-quote {
-            font-family: 'IBM Plex Sans Arabic', sans-serif;
-            direction: rtl;
-            text-align: right;
-            color: var(--neon-accent);
-            font-size: 1.15rem;
-            font-weight: 400;
-            line-height: 1.9;
-            border-right: 3px solid var(--neon-accent);
-            padding-right: 24px;
-            margin-top: 32px;
+            font-family: 'IBM Plex Sans Arabic', sans-serif; direction: rtl; text-align: right; color: var(--neon-accent);
+            font-size: 1.25rem; font-weight: 400; line-height: 1.9; border-right: 3px solid var(--neon-accent);
+            padding-right: 24px; margin-top: 32px; text-shadow: 0 0 15px rgba(229,193,88,0.2);
         }
 
-        /* Tawakie & Signatures Section (قسم التواقيع الآسر) */
-        .signatures-section {
-            max-width: 1300px;
-            margin: 0 auto;
-            padding: 0 40px;
-            position: relative;
-            z-index: 10;
-        }
-
-        .signature-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 120px;
-            border-top: 1px solid rgba(255, 255, 255, 0.03);
-            padding-top: 64px;
-        }
-
-        .signature-node {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .signature-title {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--text-muted);
-            margin-bottom: 24px;
-        }
-
+        /* Signatures System */
+        .signatures-section { max-width: 1300px; margin: 0 auto; padding: 0 40px; position: relative; z-index: 10; }
+        .signature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 120px; border-top: 1px solid rgba(255, 255, 255, 0.04); padding-top: 64px; }
+        .signature-node { display: flex; flex-direction: column; }
+        .signature-title { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: var(--text-muted); margin-bottom: 24px; }
         .signature-script {
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-            font-size: 2.4rem;
-            color: var(--neon-accent);
-            font-weight: 400;
-            letter-spacing: 1px;
-            opacity: 0.85;
-            position: relative;
-            margin-bottom: 12px;
+            font-family: 'Playfair Display', serif; font-style: italic; font-size: 2.6rem; color: var(--neon-accent);
+            font-weight: 400; letter-spacing: 1px; position: relative; margin-bottom: 12px; text-shadow: 0 0 10px rgba(229,193,88,0.15);
         }
+        .signature-script::after { content: ''; position: absolute; bottom: -5px; left: 0; width: 160px; height: 1px; background: linear-gradient(90deg, var(--neon-accent), transparent); opacity: 0.4; }
+        .signature-subtext { font-size: 0.88rem; color: var(--text-muted); font-weight: 400; letter-spacing: 0.5px; }
 
-        .signature-script::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 140px;
-            height: 1px;
-            background: linear-gradient(90deg, var(--neon-accent), transparent);
-            opacity: 0.3;
-        }
-
-        .signature-subtext {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            font-weight: 400;
-            letter-spacing: 0.5px;
-        }
-
-        footer { max-width: 1300px; margin: 0 auto; padding: 64px 40px; border-top: 1px solid var(--border-glow); display: flex; justify-content: space-between; align-items: center; color: var(--text-muted); font-size: 0.8rem; position: relative; z-index: 10; }
+        footer { max-width: 1300px; margin: 0 auto; padding: 64px 40px; border-top: 1px solid var(--border-glow); display: flex; justify-content: space-between; align-items: center; color: var(--text-muted); font-size: 0.8rem; position: relative; z-index: 10; background: #030508; }
         footer .signature-line { color: var(--neon-accent); font-weight: 500; letter-spacing: 1px; }
+
+        @media (max-width: 992px) {
+            .dashboard-metrics { grid-template-columns: 1fr; }
+            .asset-architecture-grid { grid-template-columns: 1fr; }
+            .hero-viewport h1 { font-size: 3.2rem; }
+            .vision-glass-panel { grid-template-columns: 1fr; padding: 40px; }
+            .signature-grid { grid-template-columns: 1fr; gap: 40px; }
+        }
     </style>
 </head>
 <body>
+
+    <div class="ambient-glow-core"></div>
 
     <header>
         <div class="logo-container">
@@ -365,13 +305,11 @@
             <span>Global Hubs</span>
             <span>Governance</span>
         </nav>
-        
         <div class="language-matrix">
             <span class="lang-node active">EN</span> · 
             <span class="lang-node" style="font-family:'IBM Plex Sans Arabic';">AR</span> · 
             <span class="lang-node">DE</span> · 
-            <span class="lang-node">FR</span> · 
-            <span class="lang-node">IT</span>
+            <span class="lang-node">FR</span>
         </div>
     </header>
 
@@ -379,6 +317,11 @@
         <div class="badge-system">Sovereign Institutional Bridge</div>
         <h1>Architecting Billion-Dollar Global Partnerships</h1>
         <p>The premier elite conduit engineering seamless cross-border alignments between sovereign wealth, mega manufacturing clusters, and world-class luxury marques with key institutional pillars within the Kingdom.</p>
+        
+        <div class="action-container">
+            <button class="btn-gold">Initiate Alliance</button>
+            <button class="btn-slate">View Portal Infrastructure</button>
+        </div>
     </div>
 
     <div class="dashboard-metrics">
@@ -402,14 +345,14 @@
     <div class="section-spacer"></div>
 
     <div class="section-headline">
-        <h2>01 // Regional Headquarters & Elite Spatial Allocation</h2>
+        <h2>03 // Regional Headquarters & Elite Spatial Allocation</h2>
         <p>Strategic orchestration and sovereign positioning of heritage marques and elite watchmaking maisons.</p>
     </div>
 
     <div class="asset-architecture-grid">
         <div class="framer-node">
-            <div class="node-canvas-ambient">⚜️</div>
             <div class="node-content">
+                <div class="geometric-icon-box"><span>⚜️</span></div>
                 <div class="node-tags">
                     <span class="tag-pill tag-gold">Active Link</span>
                     <span class="tag-pill tag-slate">RHQ</span>
@@ -421,8 +364,8 @@
         </div>
 
         <div class="framer-node">
-            <div class="node-canvas-ambient">✦</div>
             <div class="node-content">
+                <div class="geometric-icon-box"><span>✦</span></div>
                 <div class="node-tags">
                     <span class="tag-pill tag-gold">Active Link</span>
                     <span class="tag-pill tag-slate">Spatial</span>
@@ -437,7 +380,42 @@
     <div class="section-spacer"></div>
 
     <div class="section-headline">
-        <h2>02 // Elite Kinship & Identity</h2>
+        <h2>04 // Strategic Core Portfolio & Megastructures</h2>
+        <p>An overview of high-value active pipelines under architecture across prime economic clusters.</p>
+    </div>
+
+    <div class="asset-architecture-grid">
+        <div class="framer-node">
+            <div class="node-content">
+                <div class="geometric-icon-box"><span>📐</span></div>
+                <div class="node-tags">
+                    <span class="tag-pill tag-gold">Evaluation</span>
+                    <span class="tag-pill tag-slate">Automotive</span>
+                </div>
+                <h3>Hypercar Assembly Cluster Bridge</h3>
+                <p>Structuring the legal and logistical framework to anchor marquee high-performance manufacturing nodes inside dedicated sovereign industrial zones.</p>
+                <div class="node-footer">✦ Engineering multi-billion institutional syndicates</div>
+            </div>
+        </div>
+
+        <div class="framer-node">
+            <div class="node-content">
+                <div class="geometric-icon-box"><span>💎</span></div>
+                <div class="node-tags">
+                    <span class="tag-pill tag-gold">Pre-Mapped</span>
+                    <span class="tag-pill tag-slate">Fine Jewelry</span>
+                </div>
+                <h3>Heritage Haute Jewelry Flagships</h3>
+                <p>Securing off-market premium real estate assets to place century-old European maisons within the capital’s upcoming luxury epicenters.</p>
+                <div class="node-footer">✦ Private lease syndication and off-market placement</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <div class="section-headline">
+        <h2>05 // Elite Kinship & Identity</h2>
         <p>A premier executive syndicate forging unyielding economic channels for the world's most distinguished corporate lineages.</p>
     </div>
 
@@ -456,7 +434,7 @@
     <div class="section-spacer"></div>
 
     <div class="section-headline">
-        <h2>03 // Sovereign Vision & Cultural Alignment</h2>
+        <h2>06 // Sovereign Vision & Cultural Alignment</h2>
         <p>Our commitment to forging unparalleled international pipelines synchronized with monumental national transformations.</p>
     </div>
 
@@ -486,7 +464,7 @@
             </div>
             <div class="signature-node" style="text-align: right; align-items: flex-end;">
                 <div class="signature-title">Cultural & Heritage Anchor</div>
-                <div class="signature-script" style="font-family: 'Playfair Display'; font-style: italic;">The Kingdom Hub</div>
+                <div class="signature-script">The Kingdom Hub</div>
                 <div class="signature-subtext">Global Industrial & Luxury Syndication</div>
             </div>
         </div>
