@@ -3,26 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NAJD LINK — Sovereign 4K Institutional Portal</title>
+    <title>NAJD LINK — Sovereign 12K Ultra-3D Institutional Portal</title>
     
-    <!-- Official Typography Framework (image_10.png Blueprint) -->
+    <!-- Official High-End Typography Framework -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            /* Pure Pinnacle Luxury Palette from image_10.png */
-            --bg-onyx: #080808;             /* Official Onyx Black Background[span_12](start_span)[span_12](end_span) */
-            --royal-gold: #D4AF37;          /* Official Royal 24K Gold[span_13](start_span)[span_13](end_span) */
-            --imperial-green: #0d5c3a;      /* Official Imperial Green[span_14](start_span)[span_14](end_span) */
-            --sand-beige: #f1ebd9;          /* Soft Sand Beige Text Accent[span_15](start_span)[span_15](end_span) */
-            --text-pure: #ffffff;
-            --text-muted: #8c939d;
+            /* 12K Absolute Luxury Chroma Spectrum */
+            --bg-cosmic-black: #030303;     /* Absolute Deep Void Black[span_5](start_span)[span_5](end_span) */
+            --royal-gold-24k: #E5C158;      /* Hyper-Polished Sovereign Gold[span_6](start_span)[span_6](end_span) */
+            --imperial-emerald: #0b4f31;    /* Deep Imperial Emerald Green */
+            --sand-silk: #f4eee1;           /* Desert Silk Sand Accent Text */
+            --pure-white: #ffffff;
+            --subtle-gray: #7d848d;
             
-            --framer-surface: rgba(14, 14, 14, 0.75); /* High-End Volcanic Glass Surface */
-            --border-glow: rgba(212, 175, 55, 0.05);
-            --border-hover: rgba(212, 175, 55, 0.35);
+            /* 3D Glass & Neomorphic Depth Layers */
+            --glass-surface: rgba(10, 10, 10, 0.75);
+            --border-neon-gold: rgba(229, 193, 88, 0.12);
+            --border-neon-hover: rgba(229, 193, 88, 0.65);
+            
+            /* Holographic Light Vector Fields */
+            --neon-glow: 0 0 40px rgba(229, 193, 88, 0.25), 0 0 80px rgba(11, 79, 49, 0.4);
         }
 
         *, *::before, *::after {
@@ -32,289 +36,338 @@
         }
 
         body {
-            background-color: var(--bg-onyx);
-            color: var(--text-pure);
+            background-color: var(--bg-cosmic-black);
+            color: var(--pure-white);
             font-family: 'Montserrat', 'Tajawal', sans-serif;
             min-height: 100vh;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
             position: relative;
+            perspective: 1200px; /* Activates pure 3D structural rendering space */
         }
 
-        /* Watermark Tiled Logo System at 3% Opacity (Engraved Style)[span_16](start_span)[span_16](end_span) */
+        /* Tiled Engraved Engraving Logo System at 2% Opacity[span_7](start_span)[span_7](end_span) */
         body::before {
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 100 100' opacity='0.03'%3E%3Cpath d='M50 20 C65 20, 75 35, 50 75 C25 35, 35 20, 50 20 Z' fill='none' stroke='%23D4AF37' stroke-width='1'/%3E%3C/svg%3E");
-            background-size: 160px 160px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 100 100' opacity='0.02'%3E%3Cpath d='M50 15 C68 15, 80 30, 50 85 C20 30, 32 15, 50 15 Z' fill='none' stroke='%23E5C158' stroke-width='0.75'/%3E%3C/svg%3E");
+            background-size: 180px 180px;
             z-index: 1;
             pointer-events: none;
         }
 
-        /* Cinematic Hidden Light Source (الإضاءات والأنوار المخفية) */
-        .ambient-cinema-glow {
-            position: absolute;
-            width: 1600px;
-            height: 1600px;
-            top: -500px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: radial-gradient(circle, rgba(13, 92, 58, 0.12) 0%, rgba(212, 175, 55, 0.02) 40%, transparent 70%);
-            z-index: 0;
-            pointer-events: none;
-            filter: blur(80px);
+        /* 12K VOLUMETRIC LIGHT FIELDS (مصفوفة الأنوار الحجمية ثلاثية الأبعاد) */
+        #dynamic-3d-canvas {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            z-index: 0; pointer-events: none;
+            background: 
+                radial-gradient(circle at 10% 20%, rgba(229, 193, 88, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 90% 80%, rgba(11, 79, 49, 0.06) 0%, transparent 60%);
         }
 
         header {
-            max-width: 1400px;
+            max-width: 1500px;
             margin: 0 auto;
-            padding: 32px 40px;
+            padding: 40px 60px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             position: relative;
-            z-index: 10;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-            background: rgba(8, 8, 8, 0.85);
-            backdrop-filter: blur(20px);
+            z-index: 100;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+            background: rgba(3, 3, 3, 0.85);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
         }
 
-        .logo-container { display: flex; align-items: center; gap: 14px; }
+        .logo-container { display: flex; align-items: center; gap: 18px; transform-style: preserve-3d; }
         
-        /* Interactive 3D SVG Monogram System Inspired by image_10.png logo */
-        .iconic-logo-svg {
-            width: 48px; height: 48px;
-            filter: drop-shadow(0px 4px 12px rgba(212, 175, 55, 0.3));
-            animation: floatingLogo 4s ease-in-out infinite; /* Central Floating Animation[span_17](start_span)[span_17](end_span) */
+        /* 12K Holo-3D Floating Monogram[span_8](start_span)[span_8](end_span) */
+        .iconic-logo-3d {
+            width: 60px; height: 60px;
+            filter: drop-shadow(0 0 25px rgba(229, 193, 88, 0.5));
+            animation: holoFloat 5s ease-in-out infinite;
+            transform: translateZ(30px);
         }
 
-        @keyframes floatingLogo {
-            0% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-6px) rotate(1deg); }
-            100% { transform: translateY(0px) rotate(0deg); }
+        @keyframes holoFloat {
+            0% { transform: translateY(0px) rotateY(0deg) rotateX(0deg); filter: drop-shadow(0 0 25px rgba(229, 193, 88, 0.4)); }
+            50% { transform: translateY(-12px) rotateY(15deg) rotateX(5deg); filter: drop-shadow(0 0 45px rgba(11, 79, 49, 0.8)); }
+            100% { transform: translateY(0px) rotateY(0deg) rotateX(0deg); filter: drop-shadow(0 0 25px rgba(229, 193, 88, 0.4)); }
         }
 
-        .logo-text { font-size: 1.15rem; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: #fff; }
-        .logo-text span { color: var(--royal-gold); }
+        .logo-text { font-size: 1.4rem; font-weight: 600; letter-spacing: 6px; text-transform: uppercase; }
+        .logo-text span { color: var(--royal-gold-24k); text-shadow: 0 0 20px rgba(229,193,88,0.3); }
 
-        nav { display: flex; gap: 48px; font-size: 0.78rem; font-weight: 500; color: var(--text-muted); letter-spacing: 2px; text-transform: uppercase; }
-        nav span:hover { color: var(--royal-gold); cursor: pointer; transition: color 0.3s; }
+        nav { display: flex; gap: 56px; font-size: 0.75rem; font-weight: 500; color: var(--subtle-gray); letter-spacing: 3px; text-transform: uppercase; }
+        nav span { position: relative; transition: color 0.4s; cursor: pointer; }
+        nav span:hover { color: var(--royal-gold-24k); }
+        nav span::after {
+            content: ''; position: absolute; bottom: -8px; left: 50%; width: 0; height: 1px; background: var(--royal-gold-24k); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); transform: translateX(-50%);
+            box-shadow: 0 0 10px var(--royal-gold-24k);
+        }
+        nav span:hover::after { width: 100%; }
         
-        .language-matrix { display: flex; gap: 14px; background: rgba(255, 255, 255, 0.02); padding: 8px 22px; border-radius: 100px; border: 1px solid rgba(212, 175, 55, 0.1); font-size: 0.75rem; font-weight: 600; }
-        .lang-node { cursor: pointer; color: var(--text-muted); }
-        .lang-node.active { color: var(--royal-gold); }
+        .language-matrix { display: flex; gap: 14px; background: rgba(255, 255, 255, 0.01); padding: 10px 24px; border-radius: 100px; border: 1px solid rgba(229, 193, 88, 0.2); font-size: 0.75rem; font-weight: 600; }
+        .lang-node { cursor: pointer; color: var(--subtle-gray); transition: all 0.3s; }
+        .lang-node.active { color: var(--royal-gold-24k); text-shadow: 0 0 12px rgba(229, 193, 88, 0.8); }
 
-        /* Bespoke Cinematic Spatial Air Cushions */
-        .section-spacer {
-            height: 220px;
-            position: relative;
-            z-index: 2;
-        }
+        .section-spacer { height: 240px; position: relative; z-index: 2; }
 
-        /* 01 // HERO VIEWPORT PORTAL (البوابة الرئيسية الفخمة بإنارات ثلاثية الأبعاد) */
+        /* 01 // HERO VIEWPORT PORTAL (12K DEEP VIEW) */
         .hero-viewport {
-            max-width: 1200px;
-            margin: 140px auto 0 auto;
+            max-width: 1300px;
+            margin: 160px auto 0 auto;
             text-align: center;
-            padding: 0 24px;
+            padding: 0 40px;
             position: relative;
             z-index: 10;
+            transform-style: preserve-3d;
         }
 
         .badge-system {
-            font-size: 0.72rem; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: var(--royal-gold); margin-bottom: 32px;
-            background: rgba(212, 175, 55, 0.05); display: inline-block; padding: 6px 20px; border-radius: 100px; border: 1px solid rgba(212, 175, 55, 0.2);
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.1);
+            font-size: 0.75rem; font-weight: 600; letter-spacing: 5px; text-transform: uppercase; color: var(--royal-gold-24k); margin-bottom: 40px;
+            background: linear-gradient(90deg, rgba(229,193,88,0.02), rgba(11,79,49,0.1), rgba(229,193,88,0.02)); display: inline-block; padding: 8px 28px; border-radius: 4px; border: 1px solid rgba(229, 193, 88, 0.3);
+            box-shadow: 0 0 30px rgba(229, 193, 88, 0.1);
+            animation: hyperPulse 4s ease-in-out infinite;
+        }
+
+        @keyframes hyperPulse {
+            0% { box-shadow: 0 0 30px rgba(229, 193, 88, 0.1); border-color: rgba(229, 193, 88, 0.3); }
+            50% { box-shadow: 0 0 50px rgba(11, 79, 49, 0.4); border-color: var(--royal-gold-24k); }
+            100% { box-shadow: 0 0 30px rgba(229, 193, 88, 0.1); border-color: rgba(229, 193, 88, 0.3); }
         }
 
         .hero-viewport h1 {
-            font-size: 4.6rem; font-weight: 200; line-height: 1.15; letter-spacing: -2px; margin-bottom: 40px;
-            background: linear-gradient(180deg, #ffffff 40%, #b3b9c1 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            font-size: 5.4rem; font-weight: 100; line-height: 1.1; letter-spacing: -3px; margin-bottom: 48px;
+            background: linear-gradient(180deg, #ffffff 40%, #8b94a0 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            transform: translateZ(50px);
         }
 
-        .hero-viewport p { color: var(--text-muted); font-size: 1.35rem; font-weight: 300; max-width: 950px; margin: 0 auto; line-height: 1.85; }
+        .hero-viewport p { color: var(--subtle-gray); font-size: 1.45rem; font-weight: 300; max-width: 1000px; margin: 0 auto; line-height: 1.9; transform: translateZ(20px); }
 
-        .action-container { display: flex; justify-content: center; gap: 20px; margin-top: 54px; }
+        .action-container { display: flex; justify-content: center; gap: 24px; margin-top: 64px; }
         
         .btn-gold-glow {
-            background: linear-gradient(135deg, var(--royal-gold) 0%, #b3922e 100%); color: #000; font-weight: 700; font-size: 0.85rem; padding: 18px 38px; border-radius: 8px; border: none; cursor: pointer;
-            letter-spacing: 2px; text-transform: uppercase; box-shadow: 0 0 30px rgba(212, 175, 55, 0.25); transition: all 0.4s ease;
+            background: linear-gradient(135deg, var(--royal-gold-24k) 0%, #b59434 100%); color: #000; font-weight: 700; font-size: 0.8rem; padding: 22px 48px; border-radius: 4px; border: none; cursor: pointer;
+            letter-spacing: 3px; text-transform: uppercase; box-shadow: 0 0 40px rgba(229, 193, 88, 0.35); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .btn-gold-glow:hover { transform: translateY(-3px); box-shadow: 0 0 45px rgba(212, 175, 55, 0.55); filter: brightness(1.1); }
+        .btn-gold-glow:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 0 60px rgba(229, 193, 88, 0.7), 0 0 30px rgba(11, 79, 49, 0.5); filter: brightness(1.1); }
         
-        .btn-slate-neon { background: rgba(255,255,255,0.01); color: #fff; font-weight: 600; font-size: 0.85rem; padding: 18px 38px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05); cursor: pointer; letter-spacing: 1px; transition: all 0.3s; }
-        .btn-slate-neon:hover { background: rgba(13, 92, 58, 0.1); border-color: var(--imperial-green); color: var(--royal-gold); }
+        .btn-slate-neon { background: rgba(255,255,255,0.01); color: #fff; font-weight: 600; font-size: 0.8rem; padding: 22px 48px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.04); cursor: pointer; letter-spacing: 2px; text-transform: uppercase; transition: all 0.3s; }
+        .btn-slate-neon:hover { background: rgba(11, 79, 49, 0.15); border-color: var(--imperial-emerald); color: var(--royal-gold-24k); box-shadow: var(--neon-glow); }
 
-        /* Section Headline Formats */
-        .section-headline { max-width: 1300px; margin: 0 auto 64px auto; padding: 0 40px; position: relative; z-index: 10; }
-        .section-headline h2 { font-size: 2.2rem; font-weight: 200; letter-spacing: -0.5px; text-transform: uppercase; border-left: 2px solid var(--royal-gold); padding-left: 20px; }
-        .section-headline p { font-size: 1rem; color: var(--text-muted); margin-top: 12px; font-weight: 300; padding-left: 24px; }
+        /* Section Headlines */
+        .section-headline { max-width: 1400px; margin: 0 auto 80px auto; padding: 0 60px; position: relative; z-index: 10; }
+        .section-headline h2 { font-size: 2.5rem; font-weight: 100; letter-spacing: -1px; text-transform: uppercase; border-left: 4px solid var(--royal-gold-24k); padding-left: 24px; text-shadow: 0 0 20px rgba(229,193,88,0.15); }
+        .section-headline p { font-size: 1.05rem; color: var(--subtle-gray); margin-top: 16px; font-weight: 300; padding-left: 28px; }
 
-        /* 02 // SOVEREIGN DASHBOARD METRICS */
+        /* 02 // MACRO DASHBOARD METRICS */
         .dashboard-metrics-grid {
-            max-width: 1300px; margin: 0 auto; padding: 0 40px;
-            display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; position: relative; z-index: 10;
+            max-width: 1400px; margin: 0 auto; padding: 0 60px;
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; position: relative; z-index: 10;
         }
         .metric-card {
             background: linear-gradient(180deg, rgba(255,255,255,0.01) 0%, rgba(255,255,255,0.00) 100%); 
-            border: 1px solid var(--border-glow); padding: 44px; border-radius: 12px;
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            box-shadow: inset 0 1px 0 rgba(255,255,255,0.02);
+            border: 1px solid var(--border-neon-gold); padding: 50px 40px; border-radius: 8px;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative; overflow: hidden; transform-style: preserve-3d;
         }
-        .metric-card:hover { border-color: var(--border-hover); background: rgba(212, 175, 55, 0.01); transform: translateY(-4px); }
-        .metric-num { font-size: 3.6rem; font-weight: 100; color: #fff; margin-bottom: 8px; font-family: 'Montserrat', sans-serif; }
-        .metric-label { font-size: 0.72rem; color: var(--sand-beige); letter-spacing: 2px; text-transform: uppercase; font-weight: 500; }
+        .metric-card:hover { 
+            border-color: var(--border-neon-hover); 
+            background: rgba(229, 193, 88, 0.02); 
+            transform: translateY(-8px) rotateX(4deg) rotateY(-4deg); 
+            box-shadow: 0 30px 60px rgba(0,0,0,0.7), 0 0 30px rgba(229,193,88,0.1); 
+        }
+        .metric-num { font-size: 4rem; font-weight: 100; color: #fff; margin-bottom: 12px; transform: translateZ(30px); }
+        .metric-label { font-size: 0.75rem; color: var(--sand-silk); letter-spacing: 3px; text-transform: uppercase; font-weight: 500; }
 
-        /* 03 // SPATIAL ALLOCATION COMMAND */
-        .spatial-container { max-width: 1300px; margin: 0 auto; padding: 0 40px; position: relative; z-index: 10; }
+        /* 03 // SPATIAL HQ MATRIX */
+        .spatial-container { max-width: 1400px; margin: 0 auto; padding: 0 60px; position: relative; z-index: 10; }
         .spatial-card {
-            background: var(--framer-surface); border: 1px solid var(--border-glow); border-radius: 16px; padding: 64px;
-            display: grid; grid-template-columns: 1.2fr 1fr; gap: 64px; align-items: center;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.5), inset 0 1px 1px rgba(255,255,255,0.03);
+            background: var(--glass-surface); border: 1px solid var(--border-neon-gold); border-radius: 12px; padding: 80px;
+            display: grid; grid-template-columns: 1.1fr 1fr; gap: 80px; align-items: center;
+            backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);
+            box-shadow: 0 40px 80px rgba(0,0,0,0.8), inset 0 1px 1px rgba(255,255,255,0.03);
+            transition: border-color 0.4s;
         }
-        .spatial-info h3 { font-size: 2.4rem; font-weight: 200; margin-bottom: 24px; }
-        .spatial-info p { color: var(--text-muted); line-height: 1.8; font-weight: 300; font-size: 1.05rem; }
+        .spatial-card:hover { border-color: rgba(11, 79, 49, 0.4); }
+        .spatial-info h3 { font-size: 2.6rem; font-weight: 100; margin-bottom: 32px; }
+        .spatial-info p { color: var(--subtle-gray); line-height: 1.9; font-weight: 300; font-size: 1.1rem; }
         
+        /* 12K Geometric Spatial Mock Grid */
         .spatial-map-mock {
-            height: 320px; background: #050505; border: 1px solid rgba(212,175,55,0.15);
-            border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--royal-gold);
-            font-size: 0.78rem; letter-spacing: 3px; text-transform: uppercase; position: relative; overflow: hidden;
-            box-shadow: inset 0 0 40px rgba(0,0,0,0.9);
+            height: 360px; background: #020202; border: 1px solid rgba(229,193,88,0.2);
+            border-radius: 6px; display: flex; align-items: center; justify-content: center; color: var(--royal-gold-24k);
+            font-size: 0.8rem; letter-spacing: 4px; text-transform: uppercase; position: relative; overflow: hidden;
+            box-shadow: inset 0 0 50px rgba(0,0,0,0.95);
         }
         .spatial-map-mock::before {
-            content: ''; position: absolute; width: 14px; height: 14px; background: var(--imperial-green);
-            border-radius: 50%; box-shadow: 0 0 25px var(--royal-gold), 0 0 10px var(--royal-gold); top: 50%; left: 50%; transform: translate(-50%, -50%);
+            content: ''; position: absolute; width: 16px; height: 16px; background: var(--imperial-emerald);
+            border-radius: 50%; box-shadow: 0 0 40px var(--royal-gold-24k), 0 0 20px var(--royal-gold-24k); top: 50%; left: 50%; transform: translate(-50%, -50%);
+            animation: hyperTarget 2.5s infinite;
+        }
+        @keyframes hyperTarget {
+            0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+            100% { transform: translate(-50%, -50%) scale(3); opacity: 0; }
         }
 
-        /* 04 // 15 MACRO STRATEGIC VERTICAL BLOCKS (مصفوفة الـ 15 بتوهج وحواف حادة فخمة) */
+        /* 04 // THE 15 STRATEGIC ACTIVITY VERTICALS (ثلاثية الأبعاد وحواف حادة نيون فائقة الدقة) */
         .asset-architecture-grid {
-            max-width: 1300px; margin: 0 auto; padding: 0 40px;
-            display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 32px;
+            max-width: 1400px; margin: 0 auto; padding: 0 60px;
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); gap: 32px;
             position: relative; z-index: 10;
         }
 
         .framer-node {
-            background: var(--framer-surface); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255,255,255,0.03); border-radius: 12px; overflow: hidden;
-            display: flex; flex-direction: column; position: relative; transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.02);
+            background: var(--glass-surface); backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px);
+            border: 1px solid rgba(255,255,255,0.02); border-radius: 8px; overflow: hidden;
+            display: flex; flex-direction: column; position: relative; transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+            transform-style: preserve-3d;
         }
+        
+        /* Volume Hidden Light Follow Matrix */
+        .framer-node::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at var(--click-x, 50%) var(--click-y, 50%), rgba(229, 193, 88, 0.12) 0%, transparent 60%);
+            z-index: 1; pointer-events: none; opacity: 0; transition: opacity 0.4s;
+        }
+        .framer-node:hover::before { opacity: 1; }
+
         .framer-node:hover { 
-            border-color: var(--border-hover); 
-            transform: translateY(-8px); 
-            box-shadow: 0 40px 80px rgba(13, 92, 58, 0.15), 0 10px 30px rgba(212, 175, 55, 0.05); 
+            border-color: var(--border-neon-hover); 
+            transform: translateY(-12px) scale(1.01) rotateY(2deg);
+            box-shadow: 0 50px 100px rgba(11, 79, 49, 0.25), 0 15px 40px rgba(229, 193, 88, 0.08); 
         }
 
         .geometric-icon-box {
-            width: 56px; height: 56px; background: rgba(8, 8, 8, 0.8); border: 1px solid rgba(212, 175, 55, 0.15);
-            border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 32px;
-            color: var(--royal-gold); position: relative; transition: all 0.4s;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            width: 64px; height: 64px; background: rgba(3, 3, 3, 0.9); border: 1px solid rgba(229, 193, 88, 0.25);
+            border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin-bottom: 36px;
+            color: var(--royal-gold-24k); position: relative; transition: all 0.4s;
+            transform: translateZ(20px);
         }
-        .framer-node:hover .geometric-icon-box { transform: scale(1.05); background: var(--imperial-green); border-color: var(--royal-gold); color: #fff; }
+        .framer-node:hover .geometric-icon-box { transform: scale(1.1) translateZ(40px); background: var(--imperial-emerald); border-color: var(--royal-gold-24k); color: #fff; box-shadow: var(--neon-glow); }
 
-        .node-content { padding: 44px; flex-grow: 1; display: flex; flex-direction: column; z-index: 2; }
-        .node-tags { display: flex; gap: 8px; margin-bottom: 24px; }
-        .tag-pill { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; padding: 4px 12px; border-radius: 4px; }
-        .tag-gold { background: rgba(212,175,55,0.07); color: var(--royal-gold); border: 1px solid rgba(212,175,55,0.15); }
-        .tag-slate { background: rgba(255,255,255,0.02); color: var(--text-muted); border: 1px solid rgba(255,255,255,0.04); }
+        .node-content { padding: 50px; flex-grow: 1; display: flex; flex-direction: column; z-index: 2; position: relative; }
+        .node-tags { display: flex; gap: 10px; margin-bottom: 28px; }
+        .tag-pill { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; padding: 4px 14px; border-radius: 2px; }
+        .tag-gold { background: rgba(229,193,88,0.08); color: var(--royal-gold-24k); border: 1px solid rgba(229,193,88,0.2); }
+        .tag-slate { background: rgba(255,255,255,0.02); color: var(--subtle-gray); border: 1px solid rgba(255,255,255,0.04); }
 
-        .framer-node h3 { font-size: 1.3rem; font-weight: 500; margin-bottom: 16px; letter-spacing: -0.3px; color: #fff; }
-        .framer-node p { color: var(--text-muted); font-size: 0.92rem; line-height: 1.75; font-weight: 300; margin-bottom: 36px; flex-grow: 1; }
-        .node-footer { font-size: 0.72rem; color: var(--royal-gold); border-top: 1px solid rgba(255,255,255,0.03); padding-top: 24px; font-weight: 400; letter-spacing: 0.5px; }
+        .framer-node h3 { font-size: 1.4rem; font-weight: 400; margin-bottom: 20px; color: #fff; transition: color 0.3s; transform: translateZ(25px); }
+        .framer-node:hover h3 { color: var(--royal-gold-24k); }
+        .framer-node p { color: var(--subtle-gray); font-size: 0.95rem; line-height: 1.8; font-weight: 300; margin-bottom: 40px; flex-grow: 1; }
+        .node-footer { font-size: 0.75rem; color: var(--royal-gold-24k); border-top: 1px solid rgba(255,255,255,0.02); padding-top: 28px; font-weight: 400; letter-spacing: 1px; opacity: 0.8; }
 
-        /* 05 // ELITE IDENTITY POLICY */
-        .identity-container { max-width: 1300px; margin: 0 auto; padding: 0 40px; position: relative; z-index: 10; }
-        .identity-split { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
-        .identity-left h4 { font-size: 0.8rem; color: var(--royal-gold); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 16px; font-weight: 600; }
-        .identity-left h3 { font-size: 2.8rem; font-weight: 200; line-height: 1.25; }
-        .identity-right p { color: var(--text-muted); font-size: 1.1rem; line-height: 1.85; font-weight: 300; }
+        /* 05 // BOUNDARY POLICY STRATEGY */
+        .identity-container { max-width: 1400px; margin: 0 auto; padding: 0 60px; position: relative; z-index: 10; }
+        .identity-split { display: grid; grid-template-columns: 1fr 1.2fr; gap: 100px; }
+        .identity-left h4 { font-size: 0.8rem; color: var(--royal-gold-24k); letter-spacing: 4px; text-transform: uppercase; margin-bottom: 20px; font-weight: 600; }
+        .identity-left h3 { font-size: 3rem; font-weight: 100; line-height: 1.2; }
+        .identity-right p { color: var(--subtle-gray); font-size: 1.15rem; line-height: 1.9; font-weight: 300; }
 
-        /* 06 // SOVEREIGN MANIFESTO (قالب زجاجي عريض محاط بنور نيون مع الـ 3D شعار الرؤية) */
-        .manifesto-blueprint-container { max-width: 1300px; margin: 0 auto; padding: 0 40px; position: relative; z-index: 10; }
+        /* 06 // SOVEREIGN MANIFESTO FRAME WITH GOLD & EMERALD GLOW EDGE */
+        .manifesto-blueprint-container { max-width: 1400px; margin: 0 auto; padding: 0 60px; position: relative; z-index: 10; }
         .manifesto-glass-panel {
-            background: linear-gradient(135deg, rgba(14, 14, 14, 0.9) 0%, rgba(8, 8, 8, 0.95) 100%);
-            border: 1px solid rgba(212, 175, 55, 0.15); border-radius: 16px; padding: 80px;
-            display: grid; grid-template-columns: 1fr 1.3fr; gap: 80px; align-items: flex-start;
-            box-shadow: 0 50px 100px rgba(0,0,0,0.8), inset 0 1px 2px rgba(212,175,55,0.05);
-            position: relative;
+            background: linear-gradient(135deg, rgba(12, 12, 12, 0.98) 0%, rgba(4, 4, 4, 1) 100%);
+            border: 1px solid rgba(229, 193, 88, 0.22); border-radius: 12px; padding: 100px;
+            display: grid; grid-template-columns: 1fr 1.4fr; gap: 100px; align-items: flex-start;
+            box-shadow: 0 60px 120px rgba(0,0,0,0.9), inset 0 1px 2px rgba(229,193,88,0.1);
+            position: relative; overflow: hidden;
         }
 
-        /* Ambient Line Accent (Blue & Gold Subtle Mix Grid Highlight) */
         .manifesto-glass-panel::after {
-            content: ''; position: absolute; bottom: 0; left: 10%; right: 10%; height: 2px;
-            background: linear-gradient(90deg, transparent, var(--royal-gold), var(--imperial-green), transparent);
+            content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+            background: linear-gradient(90deg, transparent, var(--royal-gold-24k), var(--imperial-emerald), transparent);
+            box-shadow: 0 -10px 40px var(--royal-gold-24k);
         }
 
         .manifesto-left h3 {
-            font-size: 2.8rem; font-weight: 200; line-height: 1.25; letter-spacing: -1.5px;
-            background: linear-gradient(135deg, #ffffff 40%, var(--royal-gold) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            font-size: 3rem; font-weight: 100; line-height: 1.25; letter-spacing: -2px;
+            background: linear-gradient(135deg, #ffffff 40%, var(--royal-gold-24k) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
         }
         
-        /* Saudi Vision 2030 Neon Geometry Element */
+        /* Integrated Saudi Vision 2030 Precision Icon Framework */
         .vision-2030-neon-wrapper {
-            margin-top: 40px; display: flex; align-items: center; gap: 16px;
-            border: 1px solid rgba(212, 175, 55, 0.1); padding: 16px 24px; border-radius: 8px; width: fit-content;
-            background: rgba(13, 92, 58, 0.03);
+            margin-top: 48px; display: flex; align-items: center; gap: 20px;
+            border: 1px solid rgba(229, 193, 88, 0.2); padding: 18px 28px; border-radius: 4px; width: fit-content;
+            background: rgba(11, 79, 49, 0.08);
+            box-shadow: 0 0 30px rgba(229, 193, 88, 0.08);
         }
-        .vision-2030-neon-wrapper svg { width: 32px; height: 32px; fill: var(--royal-gold); filter: drop-shadow(0 0 8px var(--royal-gold)); }
-        .vision-text-badge { font-size: 0.72rem; letter-spacing: 3px; font-weight: 600; text-transform: uppercase; color: #fff; }
+        .vision-2030-neon-wrapper svg { width: 36px; height: 36px; fill: var(--royal-gold-24k); filter: drop-shadow(0 0 12px var(--royal-gold-24k)); }
+        .vision-text-badge { font-size: 0.75rem; letter-spacing: 4px; font-weight: 600; text-transform: uppercase; color: #fff; }
 
-        .manifesto-right p { color: #c4cbd4; font-size: 1.15rem; line-height: 1.9; font-weight: 300; margin-bottom: 28px; }
-        .manifesto-right p.philosophy-italic { color: var(--royal-gold); font-size: 1.3rem; margin-top: 32px; line-height: 1.75; font-weight: 300; }
+        .manifesto-right p { color: #ccd2da; font-size: 1.2rem; line-height: 1.95; font-weight: 300; margin-bottom: 32px; }
+        .manifesto-right p.philosophy-italic { color: var(--royal-gold-24k); font-size: 1.35rem; margin-top: 40px; line-height: 1.8; font-weight: 300; text-shadow: 0 0 15px rgba(229,193,88,0.15); }
 
         .vision-arabic-quote {
-            font-family: 'Tajawal', sans-serif; direction: rtl; text-align: right; color: var(--sand-beige);
-            font-size: 1.3rem; font-weight: 400; line-height: 2; border-right: 3px solid var(--royal-gold);
-            padding-right: 24px; margin-top: 48px; text-shadow: 0 0 15px rgba(212,175,55,0.15);
+            font-family: 'Tajawal', sans-serif; direction: rtl; text-align: right; color: var(--sand-silk);
+            font-size: 1.4rem; font-weight: 400; line-height: 2.1; border-right: 4px solid var(--royal-gold-24k);
+            padding-right: 28px; margin-top: 56px; text-shadow: 0 0 25px rgba(229,193,88,0.25);
         }
 
-        /* 07 // MAJESTIC SIGNATURES MATRIX */
-        .signatures-section { max-width: 1300px; margin: 0 auto; padding: 0 40px; position: relative; z-index: 10; }
-        .signature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 120px; border-top: 1px solid rgba(255, 255, 255, 0.04); padding-top: 64px; }
-        .signature-node { display: flex; flex-direction: column; }
-        .signature-title { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: var(--text-muted); margin-bottom: 24px; font-weight: 600; }
+        /* 07 // HOLO-SEAL MAJESTIC SIGNATURES (التواقيع الهولوغرامية بنظام نبضات الـ 12K) */
+        .signatures-section { max-width: 1400px; margin: 0 auto; padding: 0 60px; position: relative; z-index: 10; }
+        .signature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 140px; border-top: 1px solid rgba(255, 255, 255, 0.03); padding-top: 80px; }
+        .signature-node { display: flex; flex-direction: column; position: relative; }
+        .signature-title { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 3px; color: var(--subtle-gray); margin-bottom: 28px; font-weight: 600; }
+        
         .signature-script {
-            font-size: 2.4rem; color: var(--royal-gold);
-            font-weight: 300; letter-spacing: 1px; position: relative; margin-bottom: 12px; text-shadow: 0 0 10px rgba(212,175,55,0.15);
+            font-size: 2.8rem; color: var(--royal-gold-24k);
+            font-weight: 300; letter-spacing: 3px; position: relative; margin-bottom: 16px;
+            text-shadow: 0 0 20px rgba(229,193,88,0.4);
+            font-family: 'Montserrat', sans-serif;
+            font-style: italic;
         }
-        .signature-script::after { content: ''; position: absolute; bottom: -5px; left: 0; width: 160px; height: 1px; background: linear-gradient(90deg, var(--royal-gold), transparent); opacity: 0.3; }
-        .signature-subtext { font-size: 0.85rem; color: var(--text-muted); font-weight: 400; letter-spacing: 0.5px; }
+        .signature-script::after { 
+            content: ''; position: absolute; bottom: -10px; left: 0; width: 220px; height: 1px; 
+            background: linear-gradient(90deg, var(--royal-gold-24k), var(--imperial-emerald), transparent); 
+            box-shadow: 0 0 12px var(--royal-gold-24k);
+        }
+        .signature-node:nth-child(2) .signature-script::after {
+            left: auto; right: 0;
+            background: linear-gradient(270deg, var(--royal-gold-24k), var(--imperial-emerald), transparent); 
+        }
+        .signature-subtext { font-size: 0.88rem; color: var(--subtle-gray); font-weight: 400; letter-spacing: 1px; margin-top: 8px; }
 
-        /* Metadata Tags Frame */
+        /* Meta Clusters */
         .metadata-cluster {
-            max-width: 1300px; margin: 0 auto; padding: 0 40px; display: flex; flex-wrap: wrap; gap: 16px;
-            font-size: 0.75rem; font-weight: 500; color: var(--text-muted); letter-spacing: 1px; opacity: 0.5;
+            max-width: 1400px; margin: 0 auto; padding: 0 60px; display: flex; flex-wrap: wrap; gap: 18px;
+            font-size: 0.75rem; font-weight: 500; color: var(--subtle-gray); letter-spacing: 1.5px; opacity: 0.5;
         }
-        .metadata-tag { background: rgba(255,255,255,0.01); padding: 6px 16px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.04); }
+        .metadata-tag { background: rgba(255,255,255,0.01); padding: 8px 20px; border-radius: 2px; border: 1px solid rgba(255,255,255,0.03); cursor: default; transition: all 0.3s; }
+        .metadata-tag:hover { border-color: var(--royal-gold-24k); color: #fff; background: rgba(229,193,88,0.04); box-shadow: 0 0 15px rgba(229,193,88,0.1); }
 
-        footer { max-width: 1300px; margin: 0 auto; padding: 64px 40px; border-top: 1px solid rgba(255, 255, 255, 0.04); display: flex; justify-content: space-between; align-items: center; color: var(--text-muted); font-size: 0.8rem; position: relative; z-index: 10; background: var(--bg-onyx); }
-        footer .signature-line { color: var(--royal-gold); font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
+        footer { max-width: 1400px; margin: 0 auto; padding: 80px 60px; border-top: 1px solid rgba(255, 255, 255, 0.03); display: flex; justify-content: space-between; align-items: center; color: var(--subtle-gray); font-size: 0.8rem; position: relative; z-index: 10; background: var(--bg-cosmic-black); }
+        footer .signature-line { color: var(--royal-gold-24k); font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; text-shadow: 0 0 15px rgba(229,193,88,0.25); }
 
-        @media (max-width: 992px) {
+        @media (max-width: 1200px) {
             .asset-architecture-grid { grid-template-columns: 1fr; }
             .dashboard-metrics-grid { grid-template-columns: 1fr 1fr; }
             .spatial-card { grid-template-columns: 1fr; }
-            .identity-split { grid-template-columns: 1fr; gap: 40px; }
-            .hero-viewport h1 { font-size: 2.8rem; }
-            .manifesto-glass-panel { grid-template-columns: 1fr; padding: 40px; gap: 40px; }
-            .signature-grid { grid-template-columns: 1fr; gap: 40px; }
+            .identity-split { grid-template-columns: 1fr; gap: 50px; }
+            .hero-viewport h1 { font-size: 3.4rem; }
+            .manifesto-glass-panel { grid-template-columns: 1fr; padding: 60px; gap: 50px; }
+            .signature-grid { grid-template-columns: 1fr; gap: 50px; }
         }
     </style>
 </head>
 <body>
 
-    <div class="ambient-cinema-glow"></div>
+    <!-- 12K Volumetric Dynamic Particle Layer (المحاكاة ثلاثية الأبعاد) -->
+    <div id="dynamic-3d-canvas"></div>
 
-    <!-- Official Header Structure -->
+    <!-- Official High-End Header Portal -->
     <header>
         <div class="logo-container">
-            <!-- 3D Monogram Geometry Inspired by image_10.png Emblem Layout -->
-            <svg class="iconic-logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="44" stroke="#D4AF37" stroke-width="3" stroke-dasharray="6 6"/>
-                <path d="M30 35 C40 25, 60 25, 70 35 C75 45, 65 65, 50 80 C35 65, 25 45, 30 35 Z" fill="none" stroke="#0d5c3a" stroke-width="5" stroke-linejoin="round"/>
-                <path d="M40 45 L50 35 L60 45 L50 65 Z" fill="none" stroke="#D4AF37" stroke-width="3" stroke-linejoin="round"/>
+            <!-- 12K Interactive 3D Emblem Symbol (image_9.png Matching Rules)[span_9](start_span)[span_9](end_span) -->
+            <svg class="iconic-logo-3d" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="44" stroke="#E5C158" stroke-width="2" stroke-dasharray="8 4"/>
+                <path d="M30 32 C40 20, 60 20, 70 32 C76 42, 66 66, 50 82 C34 66, 24 42, 30 32 Z" fill="none" stroke="#0b4f31" stroke-width="4.5" stroke-linejoin="round"/>
+                <path d="M42 44 L50 34 L58 44 L50 64 Z" fill="none" stroke="#E5C158" stroke-width="2.5" stroke-linejoin="round"/>
             </svg>
             <div class="logo-text">Najd <span>Link</span></div>
         </div>
@@ -329,11 +382,11 @@
         </div>
     </header>
 
-    <!-- 01 // HERO EXPERIENCE PORTAL -->
+    <!-- 01 // 12K INTERACTIVE HERO EXPERIENCE -->
     <div class="hero-viewport">
-        <div class="badge-system">The Pinnacle of Market Entry Hubs</div>
+        <div class="badge-system">The Pinnacle of Market Entry Hubs[span_10](start_span)[span_10](end_span)</div>
         <h1>Architecting Strategic Corporate Integration</h1>
-        <p>Transcending standard transactional paradigms to deliver an uncompromising, independent advisory ecosystem[span_18](start_span)[span_18](end_span). We silently and flawlessly orient supreme international enterprises within Saudi Arabia's generational economic ascent[span_19](start_span)[span_19](end_span).</p>
+        <p>Transcending standard transactional paradigms to deliver an uncompromising, independent advisory ecosystem[span_11](start_span)[span_11](end_span). We silently and flawlessly orient supreme international enterprises within Saudi Arabia's generational economic ascent[span_12](start_span)[span_12](end_span).</p>
         
         <div class="action-container">
             <button class="btn-gold-glow">Begin Your Saudi Journey</button>
@@ -341,13 +394,12 @@
         </div>
     </div>
 
-    <!-- Cushion Spacer -->
     <div class="section-spacer"></div>
 
-    <!-- 02 // DASHBOARD METRICS -->
+    <!-- 02 // ANALYTICS DASHBOARD -->
     <div class="section-headline">
         <h2>02 // Sovereign Market Analytics & Indicators</h2>
-        <p>Rigorous structural indicators validating international capital entry paths[span_20](start_span)[span_20](end_span).</p>
+        <p>Rigorous structural indicators validating international capital entry paths[span_13](start_span)[span_13](end_span).</p>
     </div>
     <div class="dashboard-metrics-grid">
         <div class="metric-card">
@@ -368,10 +420,9 @@
         </div>
     </div>
 
-    <!-- Cushion Spacer -->
     <div class="section-spacer"></div>
 
-    <!-- 03 // SPATIAL ALLOCATION HQS -->
+    <!-- 03 // SPATIAL HOOD REGIONAL INTEGRATION -->
     <div class="section-headline">
         <h2>03 // Spatial Allocation & Regional Headquarters (RHQ)</h2>
         <p>Anchoring global tier-one operational command hubs into designated metropolitan zones.</p>
@@ -383,15 +434,14 @@
                 <p>We smooth out the sophisticated corporate facilitation layers required to seamlessly position multinational nodes inside local sovereign parameters, bypassing complex compliance hurdles inside Riyadh’s expansion networks.</p>
             </div>
             <div class="spatial-map-mock">
-                RIYADH GEOMETRIC EXPANSION VECTOR COMPLIANT // ACTIVE
+                RIYADH GEOMETRIC EXPANSION VECTOR COMPLIANT // ACTIVE 12K GRID
             </div>
         </div>
     </div>
 
-    <!-- Cushion Spacer -->
     <div class="section-spacer"></div>
 
-    <!-- 04 // THE 15 OFFICIAL SECTORS MATRIX -->
+    <!-- 04 // THE 15 APPROVED STRATEGIC ACTIVITY VERTICALS -->
     <div class="section-headline">
         <h2>04 // The 15 Approved Strategic Activity Verticals</h2>
         <p>Official tactical blueprint mapping independent advisory networks, prestige brokerage frameworks, and enterprise linkages.</p>
@@ -407,8 +457,8 @@
                     <span class="tag-pill tag-slate">Tourism</span>
                 </div>
                 <h3>1. Luxury Hospitality & Lifestyle</h3>
-                <p>Facilitating independent advisory and linking elite global operators, master culinary creators, and ultra-luxury hospitality concepts with pristine giga-project masterdevelopments[span_21](start_span)[span_21](end_span).</p>
-                <div class="node-footer">✦ Channeling elite creators into visionary mega-resorts[span_22](start_span)[span_22](end_span)</div>
+                <p>Facilitating independent advisory and linking elite global operators, master culinary creators, and ultra-luxury hospitality concepts with pristine giga-project masterdevelopments[span_14](start_span)[span_14](end_span).</p>
+                <div class="node-footer">✦ Channeling elite creators into visionary mega-resorts[span_15](start_span)[span_15](end_span)</div>
             </div>
         </div>
 
@@ -418,11 +468,11 @@
                 <div class="geometric-icon-box">💎</div>
                 <div class="node-tags">
                     <span class="tag-pill tag-gold">Haute Couture</span>
-                    <span class="tag-pill tag-slate">Timepieces[span_23](start_span)[span_23](end_span)</span>
+                    <span class="tag-pill tag-slate">Timepieces[span_16](start_span)[span_16](end_span)</span>
                 </div>
                 <h3>2. Luxury Brands</h3>
-                <p>Advising and streamlining immaculate entry strategies for haute couture maisons, fine watchmaking firms, rare high-end jewelers, and elite boutique franchises[span_24](start_span)[span_24](end_span).</p>
-                <div class="node-footer">✦ Linking historic heritage maisons to high-net-worth landscapes[span_25](start_span)[span_25](end_span)</div>
+                <p>Advising and streamlining immaculate entry strategies for haute couture maisons, fine watchmaking firms, rare high-end jewelers, and elite boutique franchises[span_17](start_span)[span_17](end_span).</p>
+                <div class="node-footer">✦ Linking historic heritage maisons to high-net-worth landscapes[span_18](start_span)[span_18](end_span)</div>
             </div>
         </div>
 
@@ -457,7 +507,7 @@
         <!-- 5. Entertainment & Gaming -->
         <div class="framer-node">
             <div class="node-content">
-                <div class="geometric-icon-box">🏎️</div>
+                <div class="geometric-icon-box">🎮</div>
                 <div class="node-tags">
                     <span class="tag-pill tag-gold">Esports</span>
                     <span class="tag-pill tag-slate">Massive Events</span>
@@ -609,10 +659,9 @@
         </div>
     </div>
 
-    <!-- Cushion Spacer -->
     <div class="section-spacer"></div>
 
-    <!-- 05 // ELITE IDENTITY STATEMENT -->
+    <!-- 05 // BOUND CLAUSE CONCEPT -->
     <div class="identity-container">
         <div class="identity-split">
             <div class="identity-left">
@@ -620,36 +669,35 @@
                 <h3>Independent Facilitation Node.</h3>
             </div>
             <div class="identity-right">
-                <p>Najd Link operates purely as an independent corporate facilitator and strategic advisory portal. We do not construct structural installations or develop physical property. Our corporate mandate is strictly fixed on offering premier brokerage services and strategic linkages—safely bridging global multinational ambition with the local commercial landscape under total data privacy[span_26](start_span)[span_26](end_span).</p>
+                <p>Najd Link operates purely as an independent corporate facilitator and strategic advisory portal. We do not construct structural installations or develop physical property. Our corporate mandate is strictly fixed on offering premier brokerage services and strategic linkages—safely bridging global multinational ambition with the local commercial landscape under total data privacy[span_19](start_span)[span_19](end_span).</p>
             </div>
         </div>
     </div>
 
-    <!-- Cushion Spacer -->
     <div class="section-spacer"></div>
 
-    <!-- 06 // SOVEREIGN MANIFESTO FRAME WITH GOLD & BLUE NEON AMBIENT LINE -->
+    <!-- 06 // MANIFESTO MATRIX -->
     <div class="section-headline">
-        <h2>06 // Institutional Manifesto & Vision integration</h2>
-        <p>The silent mechanisms governing elite corporate positioning inside the Vision 2030 landscape[span_27](start_span)[span_27](end_span).</p>
+        <h2>06 // Institutional Manifesto & Vision Integration</h2>
+        <p>The silent mechanisms governing elite corporate positioning inside the Vision 2030 landscape[span_20](start_span)[span_20](end_span).</p>
     </div>
 
     <div class="manifesto-blueprint-container">
         <div class="manifesto-glass-panel">
             <div class="manifesto-left">
-                <h3>The future does not belong to those who generate noise.[span_28](start_span)[span_28](end_span)</h3>
+                <h3>The future does not belong to those who generate noise.[span_21](start_span)[span_21](end_span)</h3>
                 
-                <!-- Official Saudi Vision 2030 Gold-Neon Element Block -->
+                <!-- 12K High-End Geometry Vision Hub Component -->
                 <div class="vision-2030-neon-wrapper">
                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <polygon points="12,2 22,9 17,22 7,22 2,9" stroke="#D4AF37" stroke-width="1.5" fill="none"/>
-                        <circle cx="12" cy="13" r="4" fill="#D4AF37"/>
+                        <polygon points="12,2 22,9 17,22 7,22 2,9" stroke="#E5C158" stroke-width="1.5" fill="none"/>
+                        <circle cx="12" cy="13" r="4" fill="#E5C158"/>
                     </svg>
                     <div class="vision-text-badge">Vision 2030 Hub Enabler</div>
                 </div>
             </div>
             <div class="manifesto-right">
-                <p>At Najd Link, we maintain an exclusive presence as trusted facilitators where global capability aligns with domestic long-term goals[span_29](start_span)[span_29](end_span). We do not merely open entry routes; we foster multi-sector corporate development[span_30](start_span)[span_30](end_span). From smoothing out initial multinational entry frameworks to designing custom strategic alliances for high-potential enterprises, our operation covers the entire continuum of corporate facilitation[span_31](start_span)[span_31](end_span).</p>
+                <p>At Najd Link, we maintain an exclusive presence as trusted facilitators where global capability aligns with domestic long-term goals[span_22](start_span)[span_22](end_span). We do not merely open entry routes; we foster multi-sector corporate development[span_23](start_span)[span_23](end_span). From smoothing out initial multinational entry frameworks to designing custom strategic alliances for high-potential enterprises, our operation covers the entire continuum of corporate facilitation[span_24](start_span)[span_24](end_span).</p>
                 
                 <p class="philosophy-italic">"The future yields to the 'invisible orchestrators' and dedicated facilitators who pave the way to harmoniously transform disparate possibilities into precise, monumental, and lasting legacy."</p>
                 
@@ -660,14 +708,13 @@
         </div>
     </div>
 
-    <!-- Cushion Spacer -->
     <div class="section-spacer"></div>
 
-    <!-- 07 // MAJESTIC SIGNATURES MATRIX -->
+    <!-- 07 // MAJESTIC HOLOGRAPHIC SIGNATURES MATRIX -->
     <div class="signatures-section">
         <div class="signature-grid">
             <div class="signature-node">
-                <div class="signature-title">Portal Endorsement Validation[span_32](start_span)[span_32](end_span)</div>
+                <div class="signature-title">Portal Endorsement Validation[span_25](start_span)[span_25](end_span)</div>
                 <div class="signature-script">Najd Link Authority</div>
                 <div class="signature-subtext">Sovereign Compliance, Market Entry & Integrity Office</div>
             </div>
@@ -679,26 +726,48 @@
         </div>
     </div>
 
-    <!-- Cushion Spacer -->
     <div class="section-spacer"></div>
 
-    <!-- Velvet Metadata Tags Frame -->
     <div class="metadata-cluster">
         <span class="metadata-tag">#NajdLink</span>
-        <span class="metadata-tag">#StrategicFacilitation[span_33](start_span)[span_33](end_span)</span>
+        <span class="metadata-tag">#StrategicFacilitation[span_26](start_span)[span_26](end_span)</span>
         <span class="metadata-tag">#Vision2030</span>
-        <span class="metadata-tag">#MarketEntry[span_34](start_span)[span_34](end_span)</span>
-        <span class="metadata-tag">#SaudiArabia</span>
+        <span class="metadata-tag">#MarketEntry[span_27](start_span)[span_27](end_span)</span>
+        <span class="metadata-tag">#12KDepth</span>
         <span class="metadata-tag">#InvisibleOrchestrators</span>
     </div>
 
     <div style="height: 40px;"></div>
 
-    <!-- Ultra-Premium Footer -->
+    <!-- Ultra-Premium Footer Frame -->
     <footer>
-        <p>© 2026 NAJD LINK. ALL RIGHTS RESERVED[span_35](start_span)[span_35](end_span).</p>
-        <p class="signature-line">SOVEREIGN INSTITUTIONAL BRIDGE — ENGINEERED FOR SUPREME OPERATIONAL INTEGRITY[span_36](start_span)[span_36](end_span)</p>
+        <p>© 2026 NAJD LINK. ALL RIGHTS RESERVED[span_28](start_span)[span_28](end_span).</p>
+        <p class="signature-line">SOVEREIGN INSTITUTIONAL BRIDGE — ENGINEERED FOR SUPREME OPERATIONAL INTEGRITY[span_29](start_span)[span_29](end_span)</p>
     </footer>
+
+    <!-- Interactive Script to compute 3D Motion and Lighting Effects -->
+    <script>
+        // High-Precision 3D Interactive Card Follow Matrix
+        document.querySelectorAll('.framer-node, .metric-card').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                card.style.setProperty('--click-x', `${(x / card.clientWidth) * 100}%`);
+                card.style.setProperty('--click-y', `${(y / card.clientHeight) * 100}%`);
+                
+                // Pure 3D angle warp calculations
+                const rotateX = ((y / card.clientHeight) - 0.5) * -12;
+                const rotateY = ((x / card.clientWidth) - 0.5) * 12;
+                card.style.transform = `translateY(-10px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = `translateY(0px) rotateX(0deg) rotateY(0deg) scale(1)`;
+            });
+        });
+    </script>
 
 </body>
 </html>
