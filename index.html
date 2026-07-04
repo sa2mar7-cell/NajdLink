@@ -1,26 +1,76 @@
-# ─── ORDERS & PROMPTS FOR AI EXECUTION (NAJD LINK) ───
+/* ==========================================================================
+   NAJD LINK - ROYAL EMPIRE REBRANDING & ANIMATION UPDATES (DIRECT CODE)
+   ========================================================================== */
 
-### [ORDER 1] Platform Structure & Database Expansion
-Add two missing service categories (Verticals) into the Framer/Web database with the following specifications to fill sequential gaps 7 and 8:
-- Category ID 7: "Sovereign AI & Deep Tech" (الذكاء الاصطناعي السيادي والتقنيات العميقة)
-  Focus: National sovereign cloud infrastructures, advanced data security, and big data management.
-- Category ID 8: "Renewable Energy & Green FDI" (الطاقة المتجددة والاستثمارات الخضراء)
-  Focus: Green foreign direct investment, hydrogen initiatives, and Saudi Vision 2030 sustainability integration.
+:root {
+    /* تطبيق الألوان الملكية الأسطورية من الهوية الرسمية */
+    --royal-green: #005A36;        /* الأخضر الملكي الأسطوري */
+    --polished-gold: #D5B87D;      /* الذهب المصقول */
+    --deep-charcoal: #1E232A;      /* الخلفية الفخمة المعتمة */
+    --neon-green-glow: #00ff9d;    /* توهج أسطوري خفيف */
+}
 
-### [ORDER 2] UI Styling & Color Palette Variables
-Apply the precise corporate color tokens across the entire platform UI system:
-- Background Primary (Deep Charcoal): HEX #1E232A
-- Core Accent & Brand Logo (Imperial Green): HEX #005A36
-- Headings & Primary Text (Polished Gold): HEX #D5B87D (Alternative Metallic Gold: HEX #D4AF37)
+/* 1. تحديث الألوان الباهتة الحالية إلى الأخضر الملكي والذهبي */
+body {
+    background-color: var(--deep-charcoal) !important;
+}
 
-### [ORDER 3] Components & Icons Enhancement
-Upgrade service card elements in Framer with the following UI rules:
-1. Replace all generic or flat raster image previews inside cards with Premium 3D Linear Icons.
-2. Icon Color: Default layout in Gold (#D5B87D) with thin line styling.
-3. Card Hover Effect: Implement a smooth CSS transition change on mouse hover that shifts the card background from #1E232A to a dark-to-light gradient blending Imperial Green (#005A36) into Polished Gold highlights.
+/* تحديث البادج العلوي الصغير (SOVEREIGN LINKAGE CHANNEL) */
+.sovereign-badge, [class*="badge"], [class*="SOVEREIGN LINKAGE"] {
+    background-color: rgba(0, 90, 54, 0.2) !important;
+    border: 1px solid var(--royal-green) !important;
+    color: var(--polished-gold) !important;
+    text-shadow: 0 0 8px rgba(0, 90, 54, 0.6);
+}
 
-### [ORDER 4] Watermark Background Integration
-Generate and set a seamless, low-opacity repeating watermark asset for the platform's main canvas background:
-1. Pattern Design: Seamless repeating pattern consisting of the circular "Najd Link" geometric logo mark.
-2. Multi-lingual Text: Embed the text "NAJD LINK" in clean English typography and "نجد لينك" in elegant Arabic font centered beneath each repeating logo node.
-3. Opacity & Color: Text and logo opacity must not exceed 5% to 8% to maintain absolute text readability of the foreground content. Use alpha colors: rgba(0, 90, 54, 0.05) and rgba(213, 184, 125, 0.05).
+/* الخط الجانبي العمودي المؤشر للأقسام (Indicator Line) */
+.section-indicator, div[style*="border-left"] {
+    border-left: 4px solid var(--royal-green) !important;
+}
+
+
+/* 2. تحسين أيقونات الصور وإضافة حركة التلاشي والانتقال (2.5 ثانية) */
+.card-image-container img, 
+.industrial-gateways img, 
+div[class*="Gateway"] img, 
+.card img {
+    border-radius: 16px !important;                 /* جعل حواف الصور دائرية وجذابة بدلاً من الحادة */
+    filter: grayscale(30%) contrast(110%);          /* دمج الصور مع الطابع الفخم للموقع */
+    
+    /* أمر حركة التلاشي والنعومة المطلوبة بغضون 2.5 ثانية */
+    transition: all 2.5s cubic-bezier(0.25, 1, 0.5, 1) !important; 
+    opacity: 0.85;
+}
+
+/* التأثير السحري الفخم عند مرور الماوس على الكرت أو الصورة (Hover Effect) */
+.card:hover img, 
+div[class*="Gateway"]:hover img,
+.industrial-gateways > div:hover img {
+    opacity: 1 !important;
+    filter: grayscale(0%) contrast(120%) !important;
+    transform: scale(1.04);                         /* حركة زووم بطيئة وانسيابية جداً */
+}
+
+/* إضافة خلفية متدرجة ملكية (أخضر مع ذهبي) خلف الصور لتظهر عند التلاشي */
+.card, div[class*="Gateway"], .industrial-gateways > div {
+    background: linear-gradient(145deg, #1E232A, #0a0d10) !important;
+    border: 1px solid rgba(213, 184, 125, 0.1) !important;
+    border-radius: 20px !important;
+    overflow: hidden;
+    transition: all 2.5s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+.card:hover, div[class*="Gateway"]:hover {
+    border-color: var(--royal-green) !important;
+    box-shadow: 0 15px 40px rgba(0, 90, 54, 0.25), 0 0 20px rgba(213, 184, 125, 0.05) !important;
+    transform: translateY(-5px);
+}
+
+
+/* 3. دمج العلامة المائية للشعار المتكرر (نجد لينك - NAJD LINK) في خلفية الموقع */
+html, body {
+    /* استدعاء ملف الخلفية المائية المتكررة المجهزة بدقة */
+    background-image: url('najd_link_watermark_bg.png') !important;
+    background-repeat: repeat !important;
+    background-size: 512px 512px !important; /* حجم متناسق للعلامة المائية المتكررة */
+    background-attachment: fixed !important;  /* تثبيت الخلفية أثناء التمرير لراحة العين */
