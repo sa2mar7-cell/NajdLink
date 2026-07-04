@@ -3,24 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NAJD LINK — Sovereign Cinematic Experience</title>
+    <title>NAJD LINK — Sovereign Elite Advisory Ecosystem</title>
    
-    <!-- استدعاء خط Cairo الاحترافي المعتمد للمحتوى العربي وخطوط المظهر الفخم للإنجليزي -->
+    <!-- استدعاء خطوط النخبة وصيحات التصميم الفاخر لعام 2026 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&family=Cinzel:wght@800;900&family=Syne:wght@700;800&family=Space+Grotesk:wght@500;700&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&family=Cormorant+Garamond:ital,wght@1,600;1,700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
    
-    <!-- مكتبة الأيقونات المتطورة -->
+    <!-- الأيقونات والرموز التعبيرية الفخمة -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
  
     <style>
         :root {
-            --bg-dark-absolute: #050505;
-            --neon-gold: #e5c158; 
+            --bg-dark-absolute: #030304;
+            --neon-gold: #dfb743; 
+            --gold-glow: rgba(223, 183, 67, 0.35);
             --text-pure: #ffffff;
-            --text-muted: #8a99ad;
-            --card-glass: #0f1319;
-            --card-border: rgba(229, 193, 88, 0.12);
+            --text-muted: #94a3b8;
+            --card-glass: rgba(13, 17, 23, 0.7);
+            --card-border: rgba(223, 183, 67, 0.08);
+            --font-display: 'Plus Jakarta Sans', sans-serif;
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-arabic: 'Cairo', sans-serif;
         }
  
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -28,171 +32,210 @@
         body {
             background-color: var(--bg-dark-absolute);
             color: var(--text-pure);
-            font-family: 'Space Grotesk', sans-serif;
+            font-family: var(--font-display);
             min-height: 100vh;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
         }
  
-        .ambient-glow {
-            position: fixed; width: 600px; height: 600px;
-            background: radial-gradient(circle, rgba(229, 193, 88, 0.04) 0%, transparent 70%);
-            top: -10%; left: -5%; z-index: 0; pointer-events: none; filter: blur(120px);
+        /* نظام الإضاءة البانورامية الممتدة والمتحركة عبر أقسام الموقع كاملة */
+        .panoramic-glow-1 {
+            position: absolute; width: 80vw; height: 80vh;
+            background: radial-gradient(circle, rgba(223, 183, 67, 0.04) 0%, transparent 70%);
+            top: -10%; left: -10%; z-index: 0; pointer-events: none; filter: blur(140px);
+            animation: pulseGlow 12s ease-in-out infinite alternate;
         }
-        .ambient-glow.bottom-right {
-            bottom: -10%; right: -5%; top: auto; left: auto;
-            background: radial-gradient(circle, rgba(229, 193, 88, 0.05) 0%, transparent 70%);
+        .panoramic-glow-2 {
+            position: absolute; width: 90vw; height: 90vh;
+            background: radial-gradient(circle, rgba(223, 183, 67, 0.03) 0%, transparent 75%);
+            top: 40%; right: -20%; z-index: 0; pointer-events: none; filter: blur(160px);
+        }
+        .panoramic-glow-3 {
+            position: absolute; width: 80vw; height: 80vh;
+            background: radial-gradient(circle, rgba(223, 183, 67, 0.04) 0%, transparent 70%);
+            bottom: -5%; left: -10%; z-index: 0; pointer-events: none; filter: blur(140px);
+        }
+
+        @keyframes pulseGlow {
+            0% { transform: scale(1) translate(0, 0); opacity: 0.8; }
+            100% { transform: scale(1.15) translate(3%, 2%); opacity: 1; }
         }
  
+        /* الهيدر وتنسيق الصفحات والملاحة */
         header {
-            width: 100%; max-width: 1200px; margin: 25px auto; padding: 16px 28px;
+            width: 100%; max-width: 1240px; margin: 30px auto; padding: 20px 35px;
             display: flex; justify-content: space-between; align-items: center;
             position: sticky; top: 20px; z-index: 100;
-            backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-            background-color: rgba(5, 5, 5, 0.75);
-            border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+            background-color: rgba(3, 3, 4, 0.75);
+            border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.04);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
         }
  
-        .logo-text { font-family: 'Cinzel', serif; font-size: 1.5rem; font-weight: 900; letter-spacing: 3px; text-transform: uppercase; }
-        .logo-text span { color: var(--neon-gold); text-shadow: 0 0 20px rgba(229, 193, 88, 0.4); }
+        .logo-text { font-family: var(--font-display); font-size: 1.6rem; font-weight: 800; letter-spacing: -0.5px; }
+        .logo-text span { color: var(--neon-gold); text-shadow: 0 0 30px var(--gold-glow); font-family: var(--font-serif); font-style: italic; font-weight: 700; margin-left: 4px; }
  
-        nav { font-weight: 700; display: flex; gap: 35px; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; }
-        nav span { color: var(--text-muted); transition: color 0.3s; cursor: pointer; }
+        nav { font-weight: 600; display: flex; gap: 40px; font-size: 0.85rem; letter-spacing: 1.5px; text-transform: uppercase; }
+        nav span { color: var(--text-muted); transition: all 0.3s ease; cursor: pointer; position: relative; }
         nav span:hover { color: #fff; }
+        nav span:hover::after { content: ''; position: absolute; bottom: -6px; left: 0; width: 100%; height: 2px; background: var(--neon-gold); box-shadow: 0 0 10px var(--neon-gold); }
  
+        /* قطاع الهيرو الآسر */
         .hero-section {
-            max-width: 1200px; margin: 0 auto; padding: 80px 20px 40px 20px;
+            max-width: 1200px; margin: 0 auto; padding: 100px 20px 50px 20px;
             text-align: center; position: relative; z-index: 10;
         }
  
         .badge {
-            font-size: 0.75rem; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--neon-gold);
-            background: rgba(229, 193, 88, 0.06); display: inline-block; padding: 8px 24px; border-radius: 50px;
-            border: 1px solid rgba(229, 193, 88, 0.2); margin-bottom: 20px;
+            font-size: 0.75rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--neon-gold);
+            background: linear-gradient(90deg, rgba(223, 183, 67, 0.1), rgba(223, 183, 67, 0.02)); 
+            display: inline-block; padding: 10px 28px; border-radius: 50px;
+            border: 1px solid rgba(223, 183, 67, 0.25); margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(223, 183, 67, 0.05);
         }
  
         .hero-section h1 {
-            font-family: "Montserrat", sans-serif; font-size: 4.2rem; font-weight: 900; line-height: 1.1; letter-spacing: -0.03em;
-            text-transform: uppercase; margin-bottom: 24px; color: #fff;
+            font-family: var(--font-display); font-size: 4.8rem; font-weight: 800; line-height: 1.05; letter-spacing: -0.04em;
+            margin-bottom: 28px; color: #fff;
         }
+        .hero-section h1 em { font-family: var(--font-serif); font-style: italic; font-weight: 400; color: var(--neon-gold); }
  
-        .hero-section p { color: var(--text-muted); font-size: 1.25rem; max-width: 800px; margin: 0 auto 35px auto; line-height: 1.6; }
+        .hero-section p { color: var(--text-muted); font-size: 1.3rem; max-width: 840px; margin: 0 auto 40px auto; line-height: 1.65; font-weight: 500; }
  
         .btn-prime {
-            background: #fff; color: #000; font-family: 'Syne', sans-serif; font-weight: 800; font-size: 0.85rem; padding: 18px 40px;
-            border-radius: 8px; border: none; cursor: pointer; letter-spacing: 2px; text-transform: uppercase;
-            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.15); transition: all 0.3s ease;
+            background: #fff; color: #000; font-family: var(--font-display); font-weight: 700; font-size: 0.9rem; padding: 20px 45px;
+            border-radius: 12px; border: none; cursor: pointer; letter-spacing: 1.5px; text-transform: uppercase;
+            box-shadow: 0 10px 40px rgba(255, 255, 255, 0.15); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .btn-prime:hover { background: var(--neon-gold); transform: translateY(-2px); box-shadow: 0 15px 40px rgba(229, 193, 88, 0.3); }
+        .btn-prime:hover { background: var(--neon-gold); color: #000; transform: translateY(-3px); box-shadow: 0 20px 50px rgba(223, 183, 67, 0.4); }
  
-        /* تم تحديث المعرض وتوسيع صور دور الأزياء والمجوهرات الفاخرة بشكل تتابعي احترافي */
+        /* سلايدر استعراض الكولاج المتنوع الفاخر مع صور منوعة تملأ المظهر البصري */
         .ticker-viewport {
-            width: 100%; max-width: 1200px; margin: 40px auto; overflow: hidden; position: relative; z-index: 10;
+            width: 100%; max-width: 1240px; margin: 50px auto; overflow: hidden; position: relative; z-index: 10;
         }
         .ticker-viewport::before, .ticker-viewport::after {
-            content: ''; position: absolute; top: 0; width: 100px; height: 100%; z-index: 5; pointer-events: none;
+            content: ''; position: absolute; top: 0; width: 140px; height: 100%; z-index: 5; pointer-events: none;
         }
         .ticker-viewport::before { left: 0; background: linear-gradient(to right, var(--bg-dark-absolute), transparent); }
         .ticker-viewport::after { right: 0; background: linear-gradient(to left, var(--bg-dark-absolute), transparent); }
 
-        .ticker-track { display: flex; gap: 20px; width: max-content; animation: scrollAnimation 40s linear infinite; }
+        .ticker-track { display: flex; gap: 30px; width: max-content; animation: scrollAnimation 50s linear infinite; }
         
         .ticker-card {
-            width: 280px; height: 360px; border-radius: 16px; overflow: hidden; position: relative;
-            border: 1px solid rgba(255,255,255,0.08); background: #111;
+            width: 340px; height: 400px; border-radius: 24px; overflow: hidden; position: relative;
+            border: 1px solid rgba(255,255,255,0.06); background: #090c10;
         }
-        .ticker-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
-        .ticker-card:hover img { transform: scale(1.08); }
+        
+        .card-image-grid {
+            display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr;
+            width: 100%; height: 100%; gap: 3px; transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .card-image-grid img { width: 100%; height: 100%; object-fit: cover; }
+        .ticker-card:hover .card-image-grid { transform: scale(1.06); }
         
         .ticker-card::after {
-            content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 50%;
-            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent); z-index: 2;
+            content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 65%;
+            background: linear-gradient(to top, rgba(3,3,4,0.98) 25%, transparent); z-index: 2;
         }
         
         .ticker-text {
-            position: absolute; bottom: 20px; left: 20px; right: 20px; z-index: 3;
-            font-size: 1rem; font-weight: 700; color: #fff; text-transform: uppercase; letter-spacing: 1px;
+            position: absolute; bottom: 30px; left: 24px; right: 24px; z-index: 3;
+            font-size: 1.1rem; font-weight: 700; color: #fff; letter-spacing: -0.2px;
         }
-        .ticker-text span { display: block; font-family: 'Cairo', sans-serif; font-weight: 700; font-size: 0.8rem; color: var(--neon-gold); margin-top: 5px; letter-spacing: 0; }
+        .ticker-text span { display: block; font-family: var(--font-arabic); font-weight: 700; font-size: 0.85rem; color: var(--neon-gold); margin-top: 8px; }
 
         @keyframes scrollAnimation {
             0% { transform: translateX(0); }
-            100% { transform: translateX(calc(-50% - 10px)); }
+            100% { transform: translateX(calc(-50% - 15px)); }
         }
 
-        .headline-box { max-width: 1200px; margin: 60px auto 25px auto; padding: 0 20px; z-index: 10; position: relative; }
+        .headline-box { max-width: 1240px; margin: 90px auto 40px auto; padding: 0 24px; z-index: 10; position: relative; }
         .headline-box h2 {
-            font-family: 'Syne', sans-serif; font-size: 2.2rem; font-weight: 800; text-transform: uppercase;
-            border-left: 4px solid var(--neon-gold); padding-left: 20px;
+            font-family: var(--font-display); font-size: 2.5rem; font-weight: 800; letter-spacing: -1px;
+            border-left: 5px solid var(--neon-gold); padding-left: 24px;
         }
  
-        /* شبكة المحتوى المحدثة لتصميم المربعات الاحترافي المنسق */
+        /* شبكة التصميم Bento الموزونة لـ 15 قطاع ومجال معتمد */
         .content-grid {
-            max-width: 1200px; margin: 0 auto; padding: 0 20px;
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 20px;
+            max-width: 1240px; margin: 0 auto; padding: 0 24px;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 24px;
             position: relative; z-index: 10;
         }
  
         .custom-card {
-            background: var(--card-glass); border: 1px solid var(--card-border); border-radius: 16px;
-            padding: 30px; display: flex; flex-direction: column; justify-content: space-between;
-            min-height: 310px; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            background: var(--card-glass); border: 1px solid var(--card-border); border-radius: 24px;
+            padding: 35px; display: flex; flex-direction: column; justify-content: space-between;
+            min-height: 360px; backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative; overflow: hidden;
         }
+        /* إضاءة تفاعلية ناعمة تظهر خلف كل كرت عند تحريك الماوس */
+        .custom-card::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(800px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(223, 183, 67, 0.06), transparent 40%);
+            z-index: 1; pointer-events: none; opacity: 0; transition: opacity 0.5s ease;
+        }
+        .custom-card:hover::before { opacity: 1; }
+
         .custom-card:hover {
-            border-color: rgba(229, 193, 88, 0.35);
-            box-shadow: 0 10px 30px rgba(229, 193, 88, 0.06);
-            transform: translateY(-4px);
+            border-color: rgba(223, 183, 67, 0.4);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(223, 183, 67, 0.03);
+            transform: translateY(-5px);
         }
  
-        .card-top { display: flex; flex-direction: column; gap: 16px; }
+        .card-top { display: flex; flex-direction: column; gap: 20px; z-index: 2; position: relative; }
         
         .icon-wrapper {
-            width: 50px; height: 50px; background: rgba(229, 193, 88, 0.05);
-            border: 1px solid rgba(229, 193, 88, 0.2); border-radius: 10px;
+            width: 56px; height: 56px; background: rgba(223, 183, 67, 0.03);
+            border: 1px solid rgba(223, 183, 67, 0.2); border-radius: 14px;
             display: flex; align-items: center; justify-content: center;
+            box-shadow: inset 0 0 15px rgba(223, 183, 67, 0.05);
         }
-        .icon-wrapper i { font-size: 1.3rem; color: var(--neon-gold); }
+        .icon-wrapper i { font-size: 1.4rem; color: var(--neon-gold); text-shadow: 0 0 15px var(--gold-glow); }
  
-        .custom-card h3 { font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 700; color: #fff; }
-        .custom-card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; }
+        .custom-card h3 { font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; color: #fff; letter-spacing: -0.3px; }
+        .custom-card p { color: var(--text-muted); font-size: 1rem; line-height: 1.65; font-weight: 500; }
        
-        /* تحسين الخط العربي هنا بالكامل باستخدام Cairo الموزون */
+        /* تنسيق الخط العربي الفاخر بوضوح تام وانسيابية تامة يمنع التكدس */
         .card-bottom-arabic {
-            font-family: 'Cairo', sans-serif; font-weight: 700; font-size: 0.88rem; line-height: 1.5; direction: rtl; text-align: right;
-            color: var(--neon-gold); border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 15px; margin-top: 15px; letter-spacing: 0;
+            font-family: var(--font-arabic); font-weight: 700; font-size: 0.92rem; line-height: 1.7; direction: rtl; text-align: right;
+            color: var(--neon-gold); border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 20px; margin-top: 20px;
+            z-index: 2; position: relative; text-shadow: 0 0 1px rgba(0,0,0,0.5);
         }
  
-        .manifesto-section { max-width: 1200px; margin: 60px auto 30px auto; padding: 0 20px; z-index: 10; position: relative; }
+        /* قطاع البيان الختامي الصامت */
+        .manifesto-section { max-width: 1240px; margin: 90px auto 50px auto; padding: 0 24px; z-index: 10; position: relative; }
         .manifesto-card {
-            background: #000; border: 1px solid var(--neon-gold); border-radius: 20px; padding: 50px;
-            display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; align-items: center;
-            box-shadow: 0 0 40px rgba(229, 193, 88, 0.05);
+            background: linear-gradient(135deg, #06090e, #020304); border: 1px solid var(--neon-gold); border-radius: 28px; padding: 60px;
+            display: grid; grid-template-columns: 1fr 1.3fr; gap: 50px; align-items: center;
+            box-shadow: 0 30px 70px rgba(0,0,0,0.6), 0 0 40px rgba(223, 183, 67, 0.03);
         }
-        .manifesto-card h3 { font-family: 'Syne', sans-serif; font-size: 2.6rem; font-weight: 800; text-transform: uppercase; line-height: 1.1; }
-        
-        /* تطبيق خط Cairo المنظم على الاقتباس الاستراتيجي لمنع تداخل الأحرف تماماً */
-        .manifesto-quote { font-family: 'Cairo', sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.8; direction: rtl; text-align: right; border-right: 4px solid var(--neon-gold); padding-right: 25px; letter-spacing: 0; }
+        .manifesto-card h3 { font-family: var(--font-display); font-size: 2.8rem; font-weight: 800; line-height: 1.1; letter-spacing: -1px; }
+        .manifesto-quote { font-family: var(--font-arabic); font-weight: 700; font-size: 1.28rem; line-height: 1.9; direction: rtl; text-align: right; border-right: 5px solid var(--neon-gold); padding-right: 30px; }
  
         footer {
-            max-width: 1200px; margin: 40px auto; padding: 30px 20px;
+            max-width: 1240px; margin: 60px auto 40px auto; padding: 35px 24px;
             display: flex; justify-content: space-between; align-items: center;
-            color: var(--text-muted); font-size: 0.85rem; border-top: 1px solid rgba(255, 255, 255, 0.05); z-index: 10; position: relative;
+            color: var(--text-muted); font-size: 0.85rem; border-top: 1px solid rgba(255, 255, 255, 0.04); z-index: 10; position: relative;
         }
-        footer .sig { font-family: 'Cinzel', serif; color: var(--neon-gold); font-weight: 900; letter-spacing: 1px; }
+        footer .sig { font-family: var(--font-display); color: var(--neon-gold); font-weight: 800; letter-spacing: 2px; font-size: 0.8rem; text-transform: uppercase; }
  
-        @media (max-width: 850px) {
-            .manifesto-card { grid-template-columns: 1fr; padding: 30px; }
-            .hero-section h1 { font-size: 2.6rem; }
+        @media (max-width: 900px) {
+            .manifesto-card { grid-template-columns: 1fr; padding: 40px; }
+            .hero-section h1 { font-size: 3rem; }
+            header { margin: 15px; padding: 15px 20px; }
         }
     </style>
 </head>
 <body>
  
-    <div class="ambient-glow"></div>
-    <div class="ambient-glow bottom-right"></div>
+    <!-- الإضاءة البانورامية الشاملة للموقع -->
+    <div class="panoramic-glow-1"></div>
+    <div class="panoramic-glow-2"></div>
+    <div class="panoramic-glow-3"></div>
  
     <header>
-        <div class="logo-text">Najd <span>Link</span></div>
+        <div class="logo-text">Najd<span>Link</span></div>
         <nav>
             <span>Ecosystem</span>
             <span>Global Hubs</span>
@@ -201,144 +244,217 @@
     </header>
  
     <div class="hero-section">
-        <div class="badge">The Sovereign Hub</div>
-        <h1>Architecting Strategic Corporate Integration</h1>
+        <div class="badge">Sovereign Linkage Channel</div>
+        <h1>Architecting Premium <em>Strategic</em> Integration</h1>
         <p>Transcending standard transactional paradigms to deliver an uncompromising, independent advisory ecosystem. We silently and flawlessly orient supreme international enterprises within Saudi Arabia's economic ascent.</p>
         <button class="btn-prime">Begin Your Saudi Journey</button>
     </div>
  
-    <!-- تم إثراء المعرض بصور متعددة للعلامات الفاخرة والأزياء الراقية بالإضافة للأقسام الجديدة المتنوعة -->
+    <!-- معرض الصور المتطور الفاخر بكولاج شامل لكل نمط قطاعي -->
     <div class="ticker-viewport">
         <div class="ticker-track">
+            
             <div class="ticker-card">
-                <!-- صورة تعبر عن الأزياء الراقية الفاخرة Haute Couture -->
-                <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=600&q=80" alt="Haute Couture">
-                <div class="ticker-text">Haute Couture Houses<span>✦ دور الأزياء الراقية العالمية</span></div>
+                <div class="card-image-grid">
+                    <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=300&q=80" alt="Couture">
+                    <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=300&q=80" alt="Jewelry">
+                    <img src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&w=300&q=80" alt="Watch">
+                    <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=300&q=80" alt="Asset">
+                </div>
+                <div class="ticker-text">Haute Couture Hub<span>✦ دور الأزياء الراقية والمجوهرات وعلامات النخبة</span></div>
             </div>
+
             <div class="ticker-card">
-                <!-- صورة تعبر عن المجوهرات النادرة للعلامات الفاخرة -->
-                <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=80" alt="Fine Jewelry">
-                <div class="ticker-text">High Jewelry Maisons<span>✦ قطاع المجوهرات النادرة والساعات الثمينة</span></div>
+                <div class="card-image-grid">
+                    <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=300&q=80" alt="Fine Dining">
+                    <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=300&q=80" alt="Luxury Hotel">
+                    <img src="https://images.unsplash.com/photo-1581798459219-318e76aecc7b?auto=format&fit=crop&w=300&q=80" alt="Sweets & Chocolate">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=300&q=80" alt="Culinary art">
+                </div>
+                <div class="ticker-text">Elite Gastronomy & Lifestyle<span>✦ السلاسل الفاخرة والمحلية والشعبية وصناعة الحلويات النخبوية</span></div>
             </div>
+
             <div class="ticker-card">
-                <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=600&q=80" alt="Hospitality">
-                <div class="ticker-text">Elite Destinations<span>✦ الفندقة الراقية والمنتجعات الاستثنائية</span></div>
+                <div class="card-image-grid">
+                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=300&q=80" alt="Gaming">
+                    <img src="https://images.unsplash.com/photo-1513885535751-8b9238bd345a?auto=format&fit=crop&w=300&q=80" alt="Theme Parks">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=300&q=80" alt="Mega Events">
+                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=300&q=80" alt="Esports">
+                </div>
+                <div class="ticker-text">Entertainment & Digital Parks<span>✦ الألعاب الإلكترونية ومدن الملاهي والأنشطة الكبرى</span></div>
             </div>
+
+            <!-- تكرار المسار للحركة التلقائية اللانهائية وبثبات بصري -->
             <div class="ticker-card">
-                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80" alt="Tech">
-                <div class="ticker-text">Futuristic Frameworks<span>✦ الحوسبة الفائقة والذكاء الاصطناعي</span></div>
+                <div class="card-image-grid">
+                    <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=300&q=80" alt="Couture">
+                    <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=300&q=80" alt="Jewelry">
+                    <img src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&w=300&q=80" alt="Watch">
+                    <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=300&q=80" alt="Asset">
+                </div>
+                <div class="ticker-text">Haute Couture Hub<span>✦ دور الأزياء الراقية والمجوهرات وعلامات النخبة</span></div>
             </div>
-            <div class="ticker-card">
-                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" alt="Infrastructure">
-                <div class="ticker-text">Sovereign Architecture<span>✦ المدن والمشاريع العملاقة المستدامة</span></div>
-            </div>
-            <!-- تكرار الصور لضمان الحركة اللانهائية المنسقة في الخلفية -->
-            <div class="ticker-card">
-                <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=600&q=80" alt="Haute Couture">
-                <div class="ticker-text">Haute Couture Houses<span>✦ دور الأزياء الراقية العالمية</span></div>
-            </div>
-            <div class="ticker-card">
-                <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=80" alt="Fine Jewelry">
-                <div class="ticker-text">High Jewelry Maisons<span>✦ قطاع المجوهرات النادرة والساعات الثمينة</span></div>
-            </div>
+
         </div>
     </div>
 
     <div class="headline-box">
-        <h2>04 // Approved Verticals</h2>
+        <h2>15 // Approved Verticals</h2>
     </div>
  
+    <!-- المربعات الـ 15 الاستراتيجية المعتمدة لـ نجد لينك -->
     <div class="content-grid">
        
-        <!-- 1 -->
+        <!-- 1 (تحديث دقيق وشامل للضيافة والمطاعم والحلويات) -->
         <div class="custom-card">
             <div class="card-top">
-                <div class="icon-wrapper"><i class="fa-solid fa-hotel"></i></div>
-                <h3>1. Luxury Hospitality & Lifestyle</h3>
-                <p>Linking elite global operators, master culinary creators, and ultra-luxury hospitality concepts with pristine giga-project masterdevelopments.</p>
+                <div class="icon-wrapper"><i class="fa-solid fa-utensils"></i></div>
+                <h3>1. Luxury Hospitality & Culinary Chains</h3>
+                <p>Linking global operators, premium international, local, and authentic traditional restaurant chains, along with ultra-luxury confectionery and elite chocolate brands with major giga-projects.</p>
             </div>
-            <div class="card-bottom-arabic">توطين أرقى العلامات الفندقية والطهي الفاخر بداخل المشاريع الكبرى.</div>
+            <div class="card-bottom-arabic">تيسير واستشارة وربط المشغلين الدوليين، سلاسل المطاعم العالمية والمحلية والشعبية، وقطاعات الحلويات والشوكولاتة الفاخرة بالمشاريع السياحية الكبرى.</div>
         </div>
  
         <!-- 2 -->
         <div class="custom-card">
             <div class="card-top">
                 <div class="icon-wrapper"><i class="fa-solid fa-gem"></i></div>
-                <h3>2. Luxury Brands & Couture</h3>
+                <h3>2. Luxury Brands</h3>
                 <p>Advising and streamlining immaculate entry strategies for haute couture maisons, fine watchmaking firms, rare high-end jewelers, and elite boutique franchises.</p>
             </div>
-            <div class="card-bottom-arabic">ربط دور الأزياء العالمية والمجوهرات النادرة بالنخبة المحلية وعشاق الموضة الفاخرة.</div>
+            <div class="card-bottom-arabic">تقديم الاستشارات وتسهيل دخول قطاعات الأزياء الراقية، الساعات والمجوهرات الثمينة، والخدمات الحصرية التي تستهدف النخبة للسوق المحلي.</div>
         </div>
  
         <!-- 3 -->
         <div class="custom-card">
             <div class="card-top">
                 <div class="icon-wrapper"><i class="fa-solid fa-brain"></i></div>
-                <h3>3. Artificial Intelligence & Tech</h3>
+                <h3>3. Artificial Intelligence & Advanced Tech</h3>
                 <p>Orchestrating digital entry networks, connecting emerging automation platforms, neural frameworks, and pioneering tech operators with mega smart city core systems.</p>
             </div>
-            <div class="card-bottom-arabic">دمج أنظمة الذكاء الاصطناعي والحوسبة الفائقة بالمدن الذكية الكبرى.</div>
+            <div class="card-bottom-arabic">تيسير الشراكات والاستشارات الرقمية، وربط مزودي حلول التكنولوجيا الناشئة والمتقدمة بالبنى التحتية والمشاريع الكبرى.</div>
         </div>
 
         <!-- 4 -->
         <div class="custom-card">
             <div class="card-top">
                 <div class="icon-wrapper"><i class="fa-solid fa-shield-halved"></i></div>
-                <h3>4. Cybersecurity & Data Defense</h3>
+                <h3>4. Cybersecurity & Data Protection</h3>
                 <p>Advising, structuring, and linking world-class digital defense providers and operational risk architects to protect institutional databases.</p>
             </div>
-            <div class="card-bottom-arabic">تأمين البنى التحتية الحساسة وقواعد البيانات السيادية ضد المخاطر السيبرانية المتطورة.</div>
+            <div class="card-bottom-arabic">استشارة وتسهيل وربط الكيانات المتخصصة في أنظمة الحماية الرقمية واستمرارية الأعمال بالجهات الحيوية لتأمين بياناتها.</div>
         </div>
 
-        <!-- 5 -->
+        <!-- 5 (تحديث دقيق وشامل للألعاب الترفيهية ومدن الملاهي) -->
         <div class="custom-card">
             <div class="card-top">
                 <div class="icon-wrapper"><i class="fa-solid fa-gamepad"></i></div>
-                <h3>5. Entertainment & Gaming</h3>
-                <p>Acting as the key strategic liaison for major international entertainment developers and global event companies establishing high-value local ecosystems.</p>
+                <h3>5. Entertainment, Gaming & Theme Parks</h3>
+                <p>Connecting strategic international investors, electronic gaming developers, esports syndicates, and mega theme park operators to establish dominant local presences.</p>
             </div>
-            <div class="card-bottom-arabic">تسريع اندماج قطاعات الألعاب الإلكترونية والفعاليات الكبرى والترفيه عالمياً محلياً.</div>
+            <div class="card-bottom-arabic">الربط الاستراتيجي والتسهيل للشركات العالمية والمستثمرين في قطاع الترفيه، الفعاليات الضخمة، صناعة الألعاب الإلكترونية، ومدن الملاهي الترفيهية لتمكين تواجدها.</div>
         </div>
 
         <!-- 6 -->
         <div class="custom-card">
             <div class="card-top">
                 <div class="icon-wrapper"><i class="fa-solid fa-dna"></i></div>
-                <h3>6. Global Healthcare Entry</h3>
+                <h3>6. Global Healthcare Market Entry</h3>
                 <p>Simplifying structural entry requirements for international clinical networks, bio-tech centers, and unique wellness solution providers.</p>
             </div>
-            <div class="card-bottom-arabic">استقطاب المراكز الطبية العالمية المتقدمة وحلول التكنولوجيا الحيوية للرعاية الصحية السيادية.</div>
+            <div class="card-bottom-arabic">تيسير واستشارة وربط الكيانات الطبية والمستشفيات الدولية ومزودي الحلول الصحية المبتكرة للدخول والعمل ضمن البيئة التنظيمية المحلية.</div>
         </div>
 
-        <!-- 7 (قسم جديد مضاف) -->
+        <!-- 7 -->
         <div class="custom-card">
             <div class="card-top">
-                <div class="icon-wrapper"><i class="fa-solid fa-seedling"></i></div>
-                <h3>7. Sustainable Energy & Green Infrastructure</h3>
-                <p>Bridging pioneering cleantech operators, hydrogen pioneers, and institutional framework providers with the Kingdom's net-zero strategic assets.</p>
+                <div class="icon-wrapper"><i class="fa-solid fa-industry"></i></div>
+                <h3>7. Global Manufacturing</h3>
+                <p>Serving as a strategic advisory gateway to seamlessly transition and link premium international industrial entities into the domestic manufacturing landscape.</p>
             </div>
-            <div class="card-bottom-arabic">هندسة الشراكات النوعية في مجالات الطاقة المستدامة النظيفة والبنية التحتية الخضراء.</div>
+            <div class="card-bottom-arabic">العمل كبوابة استشارية لتسهيل وربط المصنعين الدوليين والكيانات الصناعية الكبرى الراغبة في تأسيس موطئ قدم لها في السوق المحلي.</div>
         </div>
 
-        <!-- 8 (قسم جديد مضاف) -->
+        <!-- 8 -->
         <div class="custom-card">
             <div class="card-top">
-                <div class="icon-wrapper"><i class="fa-solid fa-building-columns"></i></div>
-                <h3>8. Sovereign Wealth Advisory</h3>
-                <p>Facilitating seamless top-tier pathways for private asset managers and global multi-family offices to align capital frameworks with macroeconomic structures.</p>
+                <div class="icon-wrapper"><i class="fa-solid fa-mobile-screen"></i></div>
+                <h3>8. Live & Social Commerce</h3>
+                <p>Consulting and aligning strategic frameworks to forge cutting-edge models in interactive shopping platforms and smart applications defying legacy systems.</p>
             </div>
-            <div class="card-bottom-arabic">تقديم الاستشارات لتيسير مسارات الصناديق والمكاتب العائلية الكبرى ضمن الأطر الاستثمارية المحلية.</div>
+            <div class="card-bottom-arabic">تقديم الاستشارات والربط لابتكار وتطوير نماذج عمل جديدة في منصات التجارة التفاعلية والتطبيقات الذكية التي تخدم السوق وتنافس النماذج التقليدية.</div>
         </div>
 
-        <!-- 9 (قسم جديد مضاف) -->
+        <!-- 9 -->
         <div class="custom-card">
             <div class="card-top">
-                <div class="icon-wrapper"><i class="fa-solid fa-plane-departure"></i></div>
-                <h3>9. Aerospace & Advanced Logistics</h3>
-                <p>Streamlining key integration modules for international aerospace networks and high-capacity global supply chain architects into core regional hubs.</p>
+                <div class="icon-wrapper"><i class="fa-solid fa-gears"></i></div>
+                <h3>9. Professional Engineering & Maintenance</h3>
+                <p>Structuring governance blueprints to align international heavy infrastructure, advanced road specifications, and technical machinery maintenance with macro developments [cite: Evidence: Interests & Preferences. "The user maintains an interest in professional engineering and maintenance standards, including road construction specifications and the technical cleaning of industrial steam machinery.". Conversation Date: 2026-04 to 2026-05.].</p>
             </div>
-            <div class="card-bottom-arabic">ربط شبكات الطيران العالمية وسلاسل الإمداد المتقدمة بالمراكز اللوجستية الإقليمية الكبرى.</div>
+            <div class="card-bottom-arabic">تيسير وحوكمة وربط الكيانات الدولية المتخصصة في البنية التحتية، إنشاء الطرق، الصيانة الصناعية، والمعدات الثقيلة بالمشاريع المحلية [cite: Evidence: Interests & Preferences. "The user maintains an interest in professional engineering and maintenance standards, including road construction specifications and the technical cleaning of industrial steam machinery.". Conversation Date: 2026-04 to 2026-05.].</div>
         </div>
+
+        <!-- 10 -->
+        <div class="custom-card">
+            <div class="card-top">
+                <div class="icon-wrapper"><i class="fa-solid fa-file-signature"></i></div>
+                <h3>10. Government Tenders & Qualifications</h3>
+                <p>Delivering high-tier technical advisory to streamline corporate qualification processes and architect precise technical bid responses across official procurement channels.</p>
+            </div>
+            <div class="card-bottom-arabic">تقديم الاستشارات الفنية لتسهيل عمليات تأهيل الشركات وبناء المقترحات التقنية للمنافسات والمزايدات عبر المنصات الرسمية.</div>
+        </div>
+
+        <!-- 11 -->
+        <div class="custom-card">
+            <div class="card-top">
+                <div class="icon-wrapper"><i class="fa-solid fa-tower-broadcast"></i></div>
+                <h3>11. Regional Events Platforms</h3>
+                <p>Facilitating, consulting, and linking sophisticated digital architectures and executive broadcasting networks tasked with highlighting premier regional activities.</p>
+            </div>
+            <div class="card-bottom-arabic">تيسير واستشارة وربط الأنظمة الرقمية والمنصات الإخبارية المسؤولة عن تغطية وإبراز المناسبات والاحتفالات والأنشطة الكبرى في المنطقة.</div>
+        </div>
+
+        <!-- 12 -->
+        <div class="custom-card">
+            <div class="card-top">
+                <div class="icon-wrapper"><i class="fa-solid fa-city"></i></div>
+                <h3>12. Luxury Real Estate</h3>
+                <p>Acting as the elite conduit for structuring supreme asset deals, sovereign developments, and next-generation smart cities between top-tier investors and master builders.</p>
+            </div>
+            <div class="card-bottom-arabic">تيسير وربط صفقات الأصول العقارية الكبرى، والمشاريع السيادية والمدن الجديدة بين المستثمرين والمطورين العقاريين.</div>
+        </div>
+
+        <!-- 13 -->
+        <div class="custom-card">
+            <div class="card-top">
+                <div class="icon-wrapper"><i class="fa-solid fa-money-bill-trend-up"></i></div>
+                <h3>13. Global FDI</h3>
+                <p>Attracting, orchestrating, and channeling multi-sector strategic alliances and sovereign cross-border capital inflows towards high-value visionary opportunities.</p>
+            </div>
+            <div class="card-bottom-arabic">جذب وتنسيق التحالفات الاستراتيجية متعددة القطاعات، وتسهيل دخول السيولة والأموال الأجنبية المباشرة وتوجيهها للفرص الواعدة.</div>
+        </div>
+
+        <!-- 14 -->
+        <div class="custom-card">
+            <div class="card-top">
+                <div class="icon-wrapper"><i class="fa-solid fa-user-tie"></i></div>
+                <h3>14. Executive Digital Branding</h3>
+                <p>Providing pristine advisory to curate high-end digital personas and managing premium communication ecosystems for sovereign leaders and decision-makers.</p>
+            </div>
+            <div class="card-bottom-arabic">تقديم الاستشارات لبناء الهوية المهنية الرقمية وإدارة الحسابات التنفيذية لصناع القرار وقادة الأعمال لتعزيز حضورهم الرقمي.</div>
+        </div>
+
+        <!-- 15 -->
+        <div class="custom-card">
+            <div class="card-top">
+                <div class="icon-wrapper"><i class="fa-solid fa-database"></i></div>
+                <h3>15. Business Continuity & Tech Recovery</h3>
+                <p>Consulting and linking ultra-secure automated recovery networks and complex software architecture to rescue enterprise data and secure system runtime operations.</p>
+            </div>
+            <div class="card-bottom-arabic">تقديم استشارات الربط والتسهيل للحلول البرمجية المتقدمة المعنية بإنقاذ البيانات وإصلاح الأزمات التقنية الطارئة للأنظمة التشغيلية.</div>
+        </div>
+
     </div>
  
     <div class="manifesto-section">
@@ -352,6 +468,19 @@
         <p>© 2026 NAJD LINK. ALL RIGHTS RESERVED.</p>
         <p class="sig">SOVEREIGN INSTITUTIONAL BRIDGE</p>
     </footer>
+
+    <!-- سكربت تتبع الماوس لإضفاء تأثير التوهج التفاعلي الفريد على الكروت -->
+    <script>
+        document.querySelectorAll('.custom-card').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
 
 </body>
 </html>
