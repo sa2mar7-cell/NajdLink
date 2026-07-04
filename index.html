@@ -1,76 +1,69 @@
-/* ==========================================================================
-   NAJD LINK - ROYAL EMPIRE REBRANDING & ANIMATION UPDATES (DIRECT CODE)
-   ========================================================================== */
-
+<style>
+/* 1. حقن لوحة الألوان الإمبراطورية الصارمة داخل النظام */
 :root {
-    /* تطبيق الألوان الملكية الأسطورية من الهوية الرسمية */
-    --royal-green: #005A36;        /* الأخضر الملكي الأسطوري */
-    --polished-gold: #D5B87D;      /* الذهب المصقول */
-    --deep-charcoal: #1E232A;      /* الخلفية الفخمة المعتمة */
-    --neon-green-glow: #00ff9d;    /* توهج أسطوري خفيف */
+    --royal-imperial-green: #005A36 !important; /* الأخضر الملكي الأسطوري */
+    --polished-gold-metallic: #D5B87D !important; /* الذهب المصقول النخبوي */
+    --deep-charcoal-canvas: #1E232A !important; /* الخلفية الفخمة المعتمة */
+    --sovereign-glow-neon: #00ff9d !important; /* التوهج الخفيف الذكي */
 }
 
-/* 1. تحديث الألوان الباهتة الحالية إلى الأخضر الملكي والذهبي */
-body {
-    background-color: var(--deep-charcoal) !important;
+/* 2. تصحيح أرضية الموقع بالكامل */
+html, body {
+    background-color: var(--deep-charcoal-canvas) !important;
 }
 
-/* تحديث البادج العلوي الصغير (SOVEREIGN LINKAGE CHANNEL) */
-.sovereign-badge, [class*="badge"], [class*="SOVEREIGN LINKAGE"] {
-    background-color: rgba(0, 90, 54, 0.2) !important;
-    border: 1px solid var(--royal-green) !important;
-    color: var(--polished-gold) !important;
-    text-shadow: 0 0 8px rgba(0, 90, 54, 0.6);
+/* 3. معالجة وتغيير البادجات (التي تظهر باللون الفيروزي أو النيلي الباهت حالياً) */
+div[style*="background-color: rgb(24,"], 
+div[style*="background-color"], 
+[class*="badge"], 
+span[style*="color"],
+div[style*="color: rgb(0, 229"] {
+    background-color: rgba(0, 90, 54, 0.25) !important; /* أرضية خضراء ملكية شفافة */
+    border: 1px solid var(--royal-imperial-green) !important; /* حدود خضراء مصمتة */
+    color: var(--polished-gold-metallic) !important; /* نصوص تشع بالذهب المصقول */
+    box-shadow: 0 0 10px rgba(0, 255, 157, 0.1) !important; /* التوهج الخفيف المحيط بالبادج */
 }
 
-/* الخط الجانبي العمودي المؤشر للأقسام (Indicator Line) */
-.section-indicator, div[style*="border-left"] {
-    border-left: 4px solid var(--royal-green) !important;
-}
-
-
-/* 2. تحسين أيقونات الصور وإضافة حركة التلاشي والانتقال (2.5 ثانية) */
-.card-image-container img, 
-.industrial-gateways img, 
-div[class*="Gateway"] img, 
-.card img {
-    border-radius: 16px !important;                 /* جعل حواف الصور دائرية وجذابة بدلاً من الحادة */
-    filter: grayscale(30%) contrast(110%);          /* دمج الصور مع الطابع الفخم للموقع */
+/* 4. معالجة صور الـ CMS والـ Industrial Gateways لتفعيل تأثير تلاشي الـ 2.5 ثانية */
+div[class*="framer"] img, 
+div[class*="Collection"] img, 
+div[class*="Grid"] img, 
+.industrial-gateways img,
+img {
+    border-radius: 20px !important; /* تدوير حواف الصور الحادة الحالية بشكل فاخر */
+    opacity: 0.35 !important; /* الصورة متلاشية وضبابية افتراضياً لتندمج مع عمق الظلام */
+    filter: grayscale(45%) contrast(110%) brightness(85%) !important;
     
-    /* أمر حركة التلاشي والنعومة المطلوبة بغضون 2.5 ثانية */
-    transition: all 2.5s cubic-bezier(0.25, 1, 0.5, 1) !important; 
-    opacity: 0.85;
+    /* المحرك الزمني: حركة انتقال سحرية ناعمة وممتدة على مدار ثانيتين ونصف */
+    transition: all 2.5s cubic-bezier(0.25, 1, 0.5, 1) !important;
+    will-change: opacity, transform, filter;
 }
 
-/* التأثير السحري الفخم عند مرور الماوس على الكرت أو الصورة (Hover Effect) */
-.card:hover img, 
-div[class*="Gateway"]:hover img,
-.industrial-gateways > div:hover img {
-    opacity: 1 !important;
-    filter: grayscale(0%) contrast(120%) !important;
-    transform: scale(1.04);                         /* حركة زووم بطيئة وانسيابية جداً */
+/* 5. تأثير الـ Hover (عند تحريك الماوس فوق الكرت أو فوق أي صورة) */
+/* هنا تنبثق الصورة من التلاشي والرمادي لتظهر بكامل ألوانها وسطوعها ببطء أسطوري */
+div[class*="framer"]:hover img, 
+div[class*="CollectionItem"]:hover img,
+div[class*="Grid"] > div:hover img,
+div:hover > img,
+img:hover {
+    opacity: 1 !important; /* الخروج التام من التلاشي لسطوع كامل 100% */
+    filter: grayscale(0%) contrast(125%) brightness(100%) !important; /* عودة الألوان السيادية الكاملة */
+    transform: scale(1.04) !important; /* تقريب وزووم تنفسي هادئ وبطيء جداً ممتد لـ 2.5 ثانية */
 }
 
-/* إضافة خلفية متدرجة ملكية (أخضر مع ذهبي) خلف الصور لتظهر عند التلاشي */
-.card, div[class*="Gateway"], .industrial-gateways > div {
-    background: linear-gradient(145deg, #1E232A, #0a0d10) !important;
-    border: 1px solid rgba(213, 184, 125, 0.1) !important;
-    border-radius: 20px !important;
-    overflow: hidden;
+/* 6. إضاءة حواف الكروت بالكامل بالتوهج الإمبراطوري المتناسق */
+div[class*="CollectionItem"], 
+div[class*="framer-"] > div[style*="border"],
+div[style*="border-radius"] {
     transition: all 2.5s cubic-bezier(0.25, 1, 0.5, 1) !important;
 }
 
-.card:hover, div[class*="Gateway"]:hover {
-    border-color: var(--royal-green) !important;
-    box-shadow: 0 15px 40px rgba(0, 90, 54, 0.25), 0 0 20px rgba(213, 184, 125, 0.05) !important;
-    transform: translateY(-5px);
+div[class*="CollectionItem"]:hover, 
+div[class*="framer-"]:hover,
+div[style*="border-radius"]:hover {
+    border-color: var(--royal-imperial-green) !important;
+    /* توهج ملكي خفيف خافت وثري يشع أسفل ومحيط الكروت عند التفاعل */
+    box-shadow: 0 25px 55px rgba(0, 90, 54, 0.35), 0 0 15px rgba(213, 184, 125, 0.08) !important;
+    transform: translateY(-5px) !important; /* رفع الكرت للأعلى بشكل انسيابي */
 }
-
-
-/* 3. دمج العلامة المائية للشعار المتكرر (نجد لينك - NAJD LINK) في خلفية الموقع */
-html, body {
-    /* استدعاء ملف الخلفية المائية المتكررة المجهزة بدقة */
-    background-image: url('najd_link_watermark_bg.png') !important;
-    background-repeat: repeat !important;
-    background-size: 512px 512px !important; /* حجم متناسق للعلامة المائية المتكررة */
-    background-attachment: fixed !important;  /* تثبيت الخلفية أثناء التمرير لراحة العين */
+</style>
