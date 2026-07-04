@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NAJD LINK — Sovereign Cinematic Experience</title>
    
-    <!-- استدعاء الخطوط الاحترافية الضخمة والفخمة مباشرة من جوجل -->
+    <!-- استدعاء خط Cairo الاحترافي المعتمد للمحتوى العربي وخطوط المظهر الفخم للإنجليزي -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@800;900&family=Syne:wght@700;800&family=Reem+Kufi:wght@600;700&family=Space+Grotesk:wght@500;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&family=Cinzel:wght@800;900&family=Syne:wght@700;800&family=Space+Grotesk:wght@500;700&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
    
-    <!-- مكتبة أيقونات متطورة -->
+    <!-- مكتبة الأيقونات المتطورة -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
  
     <style>
@@ -34,7 +34,6 @@
             -webkit-font-smoothing: antialiased;
         }
  
-        /* تأثيرات إضاءة خلفية خافتة وفخمة لمنع الفراغات الميتة */
         .ambient-glow {
             position: fixed; width: 600px; height: 600px;
             background: radial-gradient(circle, rgba(229, 193, 88, 0.04) 0%, transparent 70%);
@@ -86,7 +85,7 @@
         }
         .btn-prime:hover { background: var(--neon-gold); transform: translateY(-2px); box-shadow: 0 15px 40px rgba(229, 193, 88, 0.3); }
  
-        /* تم إصلاح معرض الصور وتغيير صورة الصابون المنافية للرفاهية والموضة */
+        /* تم تحديث المعرض وتوسيع صور دور الأزياء والمجوهرات الفاخرة بشكل تتابعي احترافي */
         .ticker-viewport {
             width: 100%; max-width: 1200px; margin: 40px auto; overflow: hidden; position: relative; z-index: 10;
         }
@@ -96,7 +95,7 @@
         .ticker-viewport::before { left: 0; background: linear-gradient(to right, var(--bg-dark-absolute), transparent); }
         .ticker-viewport::after { right: 0; background: linear-gradient(to left, var(--bg-dark-absolute), transparent); }
 
-        .ticker-track { display: flex; gap: 20px; width: max-content; animation: scrollAnimation 30s linear infinite; }
+        .ticker-track { display: flex; gap: 20px; width: max-content; animation: scrollAnimation 40s linear infinite; }
         
         .ticker-card {
             width: 280px; height: 360px; border-radius: 16px; overflow: hidden; position: relative;
@@ -114,20 +113,20 @@
             position: absolute; bottom: 20px; left: 20px; right: 20px; z-index: 3;
             font-size: 1rem; font-weight: 700; color: #fff; text-transform: uppercase; letter-spacing: 1px;
         }
-        .ticker-text span { display: block; font-family: 'Reem Kufi', sans-serif; font-size: 0.85rem; color: var(--neon-gold); margin-top: 5px; }
+        .ticker-text span { display: block; font-family: 'Cairo', sans-serif; font-weight: 700; font-size: 0.8rem; color: var(--neon-gold); margin-top: 5px; letter-spacing: 0; }
 
         @keyframes scrollAnimation {
             0% { transform: translateX(0); }
             100% { transform: translateX(calc(-50% - 10px)); }
         }
 
-        .headline-box { max-width: 1200px; margin: 50px auto 25px auto; padding: 0 20px; z-index: 10; position: relative; }
+        .headline-box { max-width: 1200px; margin: 60px auto 25px auto; padding: 0 20px; z-index: 10; position: relative; }
         .headline-box h2 {
             font-family: 'Syne', sans-serif; font-size: 2.2rem; font-weight: 800; text-transform: uppercase;
             border-left: 4px solid var(--neon-gold); padding-left: 20px;
         }
  
-        /* إعادة تصميم الكروت لتكون أكثر مرونة واحترافية مثل تصاميم فرامير الحقيقية */
+        /* شبكة المحتوى المحدثة لتصميم المربعات الاحترافي المنسق */
         .content-grid {
             max-width: 1200px; margin: 0 auto; padding: 0 20px;
             display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 20px;
@@ -137,7 +136,7 @@
         .custom-card {
             background: var(--card-glass); border: 1px solid var(--card-border); border-radius: 16px;
             padding: 30px; display: flex; flex-direction: column; justify-content: space-between;
-            min-height: 290px; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            min-height: 310px; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .custom-card:hover {
             border-color: rgba(229, 193, 88, 0.35);
@@ -157,9 +156,10 @@
         .custom-card h3 { font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 700; color: #fff; }
         .custom-card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; }
        
+        /* تحسين الخط العربي هنا بالكامل باستخدام Cairo الموزون */
         .card-bottom-arabic {
-            font-family: 'Reem Kufi', sans-serif; font-weight: 600; font-size: 0.95rem; direction: rtl; text-align: right;
-            color: var(--neon-gold); border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 15px; margin-top: 15px;
+            font-family: 'Cairo', sans-serif; font-weight: 700; font-size: 0.88rem; line-height: 1.5; direction: rtl; text-align: right;
+            color: var(--neon-gold); border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 15px; margin-top: 15px; letter-spacing: 0;
         }
  
         .manifesto-section { max-width: 1200px; margin: 60px auto 30px auto; padding: 0 20px; z-index: 10; position: relative; }
@@ -169,7 +169,9 @@
             box-shadow: 0 0 40px rgba(229, 193, 88, 0.05);
         }
         .manifesto-card h3 { font-family: 'Syne', sans-serif; font-size: 2.6rem; font-weight: 800; text-transform: uppercase; line-height: 1.1; }
-        .manifesto-quote { font-family: 'Reem Kufi', sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 1.9; direction: rtl; text-align: right; border-right: 4px solid var(--neon-gold); padding-right: 25px; }
+        
+        /* تطبيق خط Cairo المنظم على الاقتباس الاستراتيجي لمنع تداخل الأحرف تماماً */
+        .manifesto-quote { font-family: 'Cairo', sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.8; direction: rtl; text-align: right; border-right: 4px solid var(--neon-gold); padding-right: 25px; letter-spacing: 0; }
  
         footer {
             max-width: 1200px; margin: 40px auto; padding: 30px 20px;
@@ -205,13 +207,18 @@
         <button class="btn-prime">Begin Your Saudi Journey</button>
     </div>
  
-    <!-- سلايدر الصور المتكامل - تم إتلاف صورة الصابون القديمة ووضع كادر يليق بدول الموضة الكبرى والمجوهرات الفخمة -->
+    <!-- تم إثراء المعرض بصور متعددة للعلامات الفاخرة والأزياء الراقية بالإضافة للأقسام الجديدة المتنوعة -->
     <div class="ticker-viewport">
         <div class="ticker-track">
             <div class="ticker-card">
-                <!-- تم الاستبدال بصورة مجوهرات وساعات فاخرة للتعبير الحقيقي عن الـ Haute Couture -->
-                <img src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&w=600&q=80" alt="Luxury Brands">
-                <div class="ticker-text">Haute Couture Hub<span>✦ العلامات الفاخرة والدور المرموقة</span></div>
+                <!-- صورة تعبر عن الأزياء الراقية الفاخرة Haute Couture -->
+                <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=600&q=80" alt="Haute Couture">
+                <div class="ticker-text">Haute Couture Houses<span>✦ دور الأزياء الراقية العالمية</span></div>
+            </div>
+            <div class="ticker-card">
+                <!-- صورة تعبر عن المجوهرات النادرة للعلامات الفاخرة -->
+                <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=80" alt="Fine Jewelry">
+                <div class="ticker-text">High Jewelry Maisons<span>✦ قطاع المجوهرات النادرة والساعات الثمينة</span></div>
             </div>
             <div class="ticker-card">
                 <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=600&q=80" alt="Hospitality">
@@ -225,14 +232,14 @@
                 <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" alt="Infrastructure">
                 <div class="ticker-text">Sovereign Architecture<span>✦ المدن والمشاريع العملاقة المستدامة</span></div>
             </div>
-            <!-- تكرار المسار لضمان حركة مستمرة وسلسة وبدون انقطاع -->
+            <!-- تكرار الصور لضمان الحركة اللانهائية المنسقة في الخلفية -->
             <div class="ticker-card">
-                <img src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&w=600&q=80" alt="Luxury Brands">
-                <div class="ticker-text">Haute Couture Hub<span>✦ العلامات الفاخرة والدور المرموقة</span></div>
+                <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=600&q=80" alt="Haute Couture">
+                <div class="ticker-text">Haute Couture Houses<span>✦ دور الأزياء الراقية العالمية</span></div>
             </div>
             <div class="ticker-card">
-                <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=600&q=80" alt="Hospitality">
-                <div class="ticker-text">Elite Destinations<span>✦ الفندقة الراقية والمنتجعات الاستثنائية</span></div>
+                <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=80" alt="Fine Jewelry">
+                <div class="ticker-text">High Jewelry Maisons<span>✦ قطاع المجوهرات النادرة والساعات الثمينة</span></div>
             </div>
         </div>
     </div>
@@ -250,17 +257,17 @@
                 <h3>1. Luxury Hospitality & Lifestyle</h3>
                 <p>Linking elite global operators, master culinary creators, and ultra-luxury hospitality concepts with pristine giga-project masterdevelopments.</p>
             </div>
-            <div class="card-bottom-arabic">✦ توطين أرقى العلامات الفندقية والطهي الفاخر بداخل المشاريع الكبرى</div>
+            <div class="card-bottom-arabic">توطين أرقى العلامات الفندقية والطهي الفاخر بداخل المشاريع الكبرى.</div>
         </div>
  
         <!-- 2 -->
         <div class="custom-card">
             <div class="card-top">
                 <div class="icon-wrapper"><i class="fa-solid fa-gem"></i></div>
-                <h3>2. Luxury Brands</h3>
+                <h3>2. Luxury Brands & Couture</h3>
                 <p>Advising and streamlining immaculate entry strategies for haute couture maisons, fine watchmaking firms, rare high-end jewelers, and elite boutique franchises.</p>
             </div>
-            <div class="card-bottom-arabic">✦ ربط دور الأزياء العالمية والمجوهرات النادرة بالنخبة المحلية</div>
+            <div class="card-bottom-arabic">ربط دور الأزياء العالمية والمجوهرات النادرة بالنخبة المحلية وعشاق الموضة الفاخرة.</div>
         </div>
  
         <!-- 3 -->
@@ -270,7 +277,7 @@
                 <h3>3. Artificial Intelligence & Tech</h3>
                 <p>Orchestrating digital entry networks, connecting emerging automation platforms, neural frameworks, and pioneering tech operators with mega smart city core systems.</p>
             </div>
-            <div class="card-bottom-arabic">✦ دمج أنظمة الذكاء الاصطناعي والحوسبة الفائقة بالمدن الذكية الكبرى</div>
+            <div class="card-bottom-arabic">دمج أنظمة الذكاء الاصطناعي والحوسبة الفائقة بالمدن الذكية الكبرى.</div>
         </div>
 
         <!-- 4 -->
@@ -280,7 +287,7 @@
                 <h3>4. Cybersecurity & Data Defense</h3>
                 <p>Advising, structuring, and linking world-class digital defense providers and operational risk architects to protect institutional databases.</p>
             </div>
-            <div class="card-bottom-arabic">✦ تأمين البنى التحتية الحساسة وقواعد البيانات السيادية ضد المخاطر</div>
+            <div class="card-bottom-arabic">تأمين البنى التحتية الحساسة وقواعد البيانات السيادية ضد المخاطر السيبرانية المتطورة.</div>
         </div>
 
         <!-- 5 -->
@@ -290,7 +297,7 @@
                 <h3>5. Entertainment & Gaming</h3>
                 <p>Acting as the key strategic liaison for major international entertainment developers and global event companies establishing high-value local ecosystems.</p>
             </div>
-            <div class="card-bottom-arabic">✦ تسريع اندماج قطاعات الألعاب الإلكترونية والفعاليات الكبرى عالمياً</div>
+            <div class="card-bottom-arabic">تسريع اندماج قطاعات الألعاب الإلكترونية والفعاليات الكبرى والترفيه عالمياً محلياً.</div>
         </div>
 
         <!-- 6 -->
@@ -300,7 +307,37 @@
                 <h3>6. Global Healthcare Entry</h3>
                 <p>Simplifying structural entry requirements for international clinical networks, bio-tech centers, and unique wellness solution providers.</p>
             </div>
-            <div class="card-bottom-arabic">✦ استقطاب المراكز الطبية العالمية المتقدمة وحلول التكنولوجيا الحيوية</div>
+            <div class="card-bottom-arabic">استقطاب المراكز الطبية العالمية المتقدمة وحلول التكنولوجيا الحيوية للرعاية الصحية السيادية.</div>
+        </div>
+
+        <!-- 7 (قسم جديد مضاف) -->
+        <div class="custom-card">
+            <div class="card-top">
+                <div class="icon-wrapper"><i class="fa-solid fa-seedling"></i></div>
+                <h3>7. Sustainable Energy & Green Infrastructure</h3>
+                <p>Bridging pioneering cleantech operators, hydrogen pioneers, and institutional framework providers with the Kingdom's net-zero strategic assets.</p>
+            </div>
+            <div class="card-bottom-arabic">هندسة الشراكات النوعية في مجالات الطاقة المستدامة النظيفة والبنية التحتية الخضراء.</div>
+        </div>
+
+        <!-- 8 (قسم جديد مضاف) -->
+        <div class="custom-card">
+            <div class="card-top">
+                <div class="icon-wrapper"><i class="fa-solid fa-building-columns"></i></div>
+                <h3>8. Sovereign Wealth Advisory</h3>
+                <p>Facilitating seamless top-tier pathways for private asset managers and global multi-family offices to align capital frameworks with macroeconomic structures.</p>
+            </div>
+            <div class="card-bottom-arabic">تقديم الاستشارات لتيسير مسارات الصناديق والمكاتب العائلية الكبرى ضمن الأطر الاستثمارية المحلية.</div>
+        </div>
+
+        <!-- 9 (قسم جديد مضاف) -->
+        <div class="custom-card">
+            <div class="card-top">
+                <div class="icon-wrapper"><i class="fa-solid fa-plane-departure"></i></div>
+                <h3>9. Aerospace & Advanced Logistics</h3>
+                <p>Streamlining key integration modules for international aerospace networks and high-capacity global supply chain architects into core regional hubs.</p>
+            </div>
+            <div class="card-bottom-arabic">ربط شبكات الطيران العالمية وسلاسل الإمداد المتقدمة بالمراكز اللوجستية الإقليمية الكبرى.</div>
         </div>
     </div>
  
