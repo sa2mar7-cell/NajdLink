@@ -1,9 +1,638 @@
-<style>
-/* تصفير الأكواد السابقة وإرجاع الموقع الأصلي */
-html, body, div, img {
-    opacity: 1 !important;
-    filter: none !important;
-    transform: none !important;
-    box-shadow: none !important;
-}
-</style>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAJD LINK — Sovereign Elite Advisory Ecosystem</title>
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&family=Cormorant+Garamond:ital,wght@1,600;1,700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+ 
+    <style>
+        :root {
+            --bg-dark-absolute: #020306;
+            --neon-gold: #dfb743; 
+            --neon-cyan: #00f2fe;
+            --neon-purple: #7000ff;
+            --gold-glow: rgba(223, 183, 67, 0.4);
+            --cyan-glow: rgba(0, 242, 254, 0.35);
+            --purple-glow: rgba(112, 0, 255, 0.25);
+            --text-pure: #ffffff;
+            --text-muted: #94a3b8;
+            --card-glass: rgba(6, 9, 15, 0.85);
+            --card-border: rgba(0, 242, 254, 0.12);
+            --font-display: 'Plus Jakarta Sans', sans-serif;
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-arabic: 'Cairo', sans-serif;
+        }
+ 
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+        body {
+            background-color: var(--bg-dark-absolute);
+            color: var(--text-pure);
+            font-family: var(--font-display);
+            min-height: 100vh;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            position: relative;
+        }
+
+        /* زخارف هندسية حديثة - شبكة برمجية رقمية تغطي الخلفية بأناقة */
+        body::before {
+            content: ''; position: absolute; inset: 0;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+            background-size: 60px 60px; z-index: 1; pointer-events: none;
+        }
+ 
+        /* نظام الإضاءة البانورامية الثلاثي المخملي (الذهبي، السيان، البنفسجي) */
+        .panoramic-glow-1 {
+            position: absolute; width: 80vw; height: 80vh;
+            background: radial-gradient(circle at top left, var(--gold-glow) 0%, var(--purple-glow) 50%, transparent 75%);
+            top: -10%; left: -10%; z-index: 0; pointer-events: none; filter: blur(140px);
+            animation: pulseGlow 16s ease-in-out infinite alternate;
+        }
+        .panoramic-glow-2 {
+            position: absolute; width: 85vw; height: 85vh;
+            background: radial-gradient(circle at center, rgba(112, 0, 255, 0.05) 0%, transparent 70%);
+            top: 30%; right: -20%; z-index: 0; pointer-events: none; filter: blur(160px);
+        }
+        .panoramic-glow-3 {
+            position: absolute; width: 75vw; height: 75vh;
+            background: radial-gradient(circle at bottom left, var(--cyan-glow) 0%, transparent 65%);
+            bottom: -5%; left: -15%; z-index: 0; pointer-events: none; filter: blur(130px);
+        }
+
+        @keyframes pulseGlow {
+            0% { transform: scale(1) translate(0, 0); opacity: 0.8; }
+            100% { transform: scale(1.1) translate(3%, 4%); opacity: 1; }
+        }
+ 
+        /* الهيدر وتنسيق الملاحة الملوكي */
+        header {
+            width: 100%; max-width: 1280px; margin: 30px auto; padding: 22px 40px;
+            display: flex; justify-content: space-between; align-items: center;
+            position: sticky; top: 20px; z-index: 100;
+            backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px);
+            background-color: rgba(2, 3, 6, 0.8);
+            border-radius: 24px; border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.8);
+        }
+ 
+        .logo-text { font-family: var(--font-display); font-size: 1.75rem; font-weight: 900; letter-spacing: -0.5px; }
+        .logo-text span { color: var(--neon-gold); text-shadow: 0 0 35px var(--gold-glow); font-family: var(--font-serif); font-style: italic; font-weight: 700; margin-left: 4px; }
+ 
+        nav { font-weight: 700; display: flex; gap: 45px; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; }
+        nav span { color: var(--text-muted); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); cursor: pointer; position: relative; }
+        nav span::before { content: '✦ '; color: var(--neon-cyan); font-size: 0.7rem; opacity: 0; transition: opacity 0.3s ease; }
+        nav span:hover { color: #fff; text-shadow: 0 0 15px var(--cyan-glow); }
+        nav span:hover::before { opacity: 1; }
+        nav span:hover::after { content: ''; position: absolute; bottom: -6px; left: 0; width: 100%; height: 2px; background: var(--neon-cyan); box-shadow: 0 0 15px var(--neon-cyan); }
+ 
+        /* قطاع الهيرو الملوكي الآسر */
+        .hero-section {
+            max-width: 1200px; margin: 0 auto; padding: 120px 20px 60px 20px;
+            text-align: center; position: relative; z-index: 10;
+        }
+ 
+        .badge {
+            font-size: 0.75rem; font-weight: 800; letter-spacing: 4px; text-transform: uppercase; color: var(--neon-cyan);
+            background: linear-gradient(90deg, rgba(0, 242, 254, 0.15), rgba(0, 242, 254, 0.02)); 
+            display: inline-block; padding: 12px 32px; border-radius: 50px;
+            border: 1px solid rgba(0, 242, 254, 0.3); margin-bottom: 35px;
+            box-shadow: 0 5px 25px rgba(0, 242, 254, 0.08);
+            animation: breathe 3s ease-in-out infinite;
+        }
+        @keyframes breathe { 0%, 100% { opacity: 0.8; border-color: rgba(0, 242, 254, 0.3); } 50% { opacity: 1; border-color: var(--neon-cyan); box-shadow: 0 0 20px var(--cyan-glow); } }
+ 
+        .hero-section h1 {
+            font-family: var(--font-display); font-size: 5.5rem; font-weight: 800; line-height: 1.05; letter-spacing: -0.04em;
+            margin-bottom: 32px; color: #fff; text-shadow: 0 10px 40px rgba(0,0,0,0.6);
+        }
+        .hero-section h1 em { font-family: var(--font-serif); font-style: italic; font-weight: 400; color: var(--neon-gold); text-shadow: 0 0 40px var(--gold-glow); }
+ 
+        .hero-section p { color: var(--text-muted); font-size: 1.35rem; max-width: 880px; margin: 0 auto 45px auto; line-height: 1.7; font-weight: 500; }
+ 
+        .btn-prime {
+            background: #fff; color: #000; font-family: var(--font-display); font-weight: 800; font-size: 0.95rem; padding: 22px 50px;
+            border-radius: 14px; border: none; cursor: pointer; letter-spacing: 2px; text-transform: uppercase;
+            box-shadow: 0 10px 40px rgba(255, 255, 255, 0.2); transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .btn-prime:hover { background: var(--neon-cyan); color: #000; transform: translateY(-4px); box-shadow: 0 25px 60px var(--cyan-glow); }
+ 
+        /* العناوين الكبرى للأقسام مع زخرفة هندسية جانبية */
+        .headline-box { max-width: 1280px; margin: 90px auto 40px auto; padding: 0 24px; z-index: 10; position: relative; }
+        .headline-box h2 {
+            font-family: var(--font-display); font-size: 2.8rem; font-weight: 800; letter-spacing: -1px;
+            border-left: 6px solid var(--neon-cyan); padding-left: 28px; display: flex; align-items: center; justify-content: space-between;
+        }
+        .headline-box h2 span { font-family: var(--font-serif); font-style: italic; color: var(--neon-gold); font-weight: 400; }
+        .headline-box::after {
+            content: ''; display: block; width: 100%; height: 1px; 
+            background: linear-gradient(90deg, var(--neon-cyan), var(--neon-gold), transparent);
+            margin-top: 15px; opacity: 0.3;
+        }
+
+        /* ==================== بوابة المشاريع الكبرى والمدن الصناعية والجزر (تحسين وضوح الصور الفائق) ==================== */
+        .giga-projects-grid {
+            max-width: 1280px; margin: 0 auto 50px auto; padding: 0 24px;
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+            position: relative; z-index: 10;
+        }
+
+        .giga-card {
+            height: 540px; border-radius: 32px; overflow: hidden; position: relative;
+            border: 1px solid rgba(0, 242, 254, 0.15); background: #06090f;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.7);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        /* تقنية معالجة وضوح الصور عالية التباين Digital HD Clarity */
+        .giga-img-wrapper { width: 100%; height: 100%; transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1); overflow: hidden; }
+        .giga-img-wrapper img { 
+            width: 100%; height: 100%; object-fit: cover; 
+            filter: brightness(0.7) contrast(1.25) saturate(1.15); /* إبراز حواف وتفاصيل الصورة بقوة */
+        }
+        
+        .giga-card::after {
+            content: ''; position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(2,3,6,1) 18%, rgba(2,3,6,0.4) 60%, transparent 100%);
+            z-index: 2; transition: all 0.5s ease;
+        }
+
+        .giga-content {
+            position: absolute; bottom: 0; left: 0; width: 100%; padding: 32px; z-index: 3;
+            display: flex; flex-direction: column; gap: 12px;
+        }
+
+        .giga-badge {
+            font-size: 0.65rem; font-weight: 800; letter-spacing: 2px; color: #000; background: var(--neon-cyan);
+            padding: 5px 14px; border-radius: 50px; align-self: flex-start; text-transform: uppercase;
+            box-shadow: 0 0 15px var(--cyan-glow);
+        }
+
+        .giga-content h3 { font-family: var(--font-display); font-size: 1.6rem; font-weight: 800; color: #fff; letter-spacing: -0.5px; }
+        .giga-content p { color: #cbd5e1; font-size: 0.9rem; line-height: 1.6; font-weight: 500; }
+        
+        .giga-arabic {
+            font-family: var(--font-arabic); font-weight: 700; font-size: 0.9rem; color: var(--neon-gold);
+            direction: rtl; text-align: right; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px; margin-top: 5px;
+            line-height: 1.65; text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .giga-card:hover { transform: translateY(-12px); border-color: var(--neon-gold); box-shadow: 0 40px 80px rgba(223, 183, 67, 0.25); }
+        .giga-card:hover .giga-img-wrapper { transform: scale(1.06); }
+        .giga-card:hover .giga-img-wrapper img { filter: brightness(0.85) contrast(1.3) saturate(1.2); } /* زيادة الوضوح عند التمرير */
+
+
+        /* ==================== قسم الرادار الاستشرافي والمشاريع الحديثة القادمة ==================== */
+        .horizon-grid {
+            max-width: 1280px; margin: 0 auto 80px auto; padding: 0 24px;
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
+            position: relative; z-index: 10;
+        }
+
+        .horizon-card {
+            background: linear-gradient(145deg, rgba(10, 15, 28, 0.9), rgba(3, 5, 10, 0.95));
+            border: 1px solid rgba(112, 0, 255, 0.25); border-radius: 30px; padding: 45px;
+            display: flex; flex-direction: column; justify-content: space-between; min-height: 440px;
+            backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); position: relative; overflow: hidden;
+        }
+
+        /* زخرفة هندسية حديثة لزوايا الكروت الاستشرافية */
+        .horizon-card::after {
+            content: ''; position: absolute; bottom: 0; right: 0; width: 40px; height: 40px;
+            background: linear-gradient(135deg, transparent 50%, var(--neon-purple) 50%);
+            opacity: 0.4; transition: all 0.4s ease;
+        }
+
+        .horizon-card::before {
+            content: 'SOVEREIGN CORE'; position: absolute; top: 25px; right: -35px;
+            background: var(--neon-purple); color: #fff; font-size: 0.55rem; font-weight: 900;
+            padding: 6px 40px; transform: rotate(45deg); letter-spacing: 2px;
+            box-shadow: 0 5px 15px var(--purple-glow);
+        }
+
+        .horizon-card:hover {
+            border-color: var(--neon-cyan);
+            box-shadow: 0 35px 70px rgba(0, 242, 254, 0.15), 0 0 30px rgba(112, 0, 255, 0.2);
+            transform: translateY(-10px);
+        }
+        .horizon-card:hover::after { opacity: 1; scale: 1.2; }
+
+        .horizon-icon {
+            width: 65px; height: 65px; background: rgba(112, 0, 255, 0.04);
+            border: 1px solid rgba(112, 0, 255, 0.3); border-radius: 20px;
+            display: flex; align-items: center; justify-content: center; margin-bottom: 30px;
+            transition: all 0.4s ease;
+        }
+        .horizon-card:hover .horizon-icon { background: rgba(0, 242, 254, 0.1); border-color: var(--neon-cyan); transform: scale(1.08); }
+        .horizon-icon i { font-size: 1.6rem; color: var(--neon-cyan); text-shadow: 0 0 20px var(--cyan-glow); }
+        .horizon-card:hover .horizon-icon i { color: var(--neon-cyan); }
+
+        .horizon-card h3 { font-family: var(--font-display); font-size: 1.6rem; font-weight: 800; color: #fff; margin-bottom: 15px; letter-spacing: -0.3px; }
+        .horizon-card p { color: var(--text-muted); font-size: 1.02rem; line-height: 1.7; font-weight: 500; margin-bottom: 25px; }
+        
+        .horizon-arabic {
+            font-family: var(--font-arabic); font-weight: 700; font-size: 0.95rem; line-height: 1.8; direction: rtl; text-align: right;
+            color: var(--neon-gold); border-top: 1px solid rgba(255, 255, 255, 0.08); padding-top: 22px;
+        }
+
+
+        /* ==================== شبكة التصميم Bento لـ الأقسام الـ 17 الاستراتيجية المحدثة ==================== */
+        .content-grid {
+            max-width: 1280px; margin: 0 auto; padding: 0 24px;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 28px;
+            position: relative; z-index: 10;
+        }
+ 
+        .custom-card {
+            background: var(--card-glass); border: 1px solid var(--card-border); border-radius: 28px;
+            padding: 40px; display: flex; flex-direction: column; justify-content: space-between;
+            min-height: 410px; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative; overflow: hidden;
+        }
+        
+        /* تأثير زخرفي هندسي ناعم في زوايا كروت الـ Bento */
+        .custom-card::after {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(800px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(0, 242, 254, 0.08), transparent 45%);
+            z-index: 1; pointer-events: none; opacity: 0; transition: opacity 0.6s ease;
+        }
+        .custom-card:hover::after { opacity: 1; }
+
+        .custom-card:hover {
+            border-color: var(--neon-gold);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(223, 183, 67, 0.05);
+            transform: translateY(-8px);
+        }
+ 
+        .card-top { display: flex; flex-direction: column; gap: 24px; z-index: 2; position: relative; }
+        
+        .icon-wrapper {
+            width: 60px; height: 60px; background: rgba(0, 242, 254, 0.02);
+            border: 1px solid rgba(0, 242, 254, 0.25); border-radius: 16px;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: inset 0 0 20px rgba(0, 242, 254, 0.05);
+            transition: all 0.4s ease;
+        }
+        .custom-card:hover .icon-wrapper { background: rgba(223, 183, 67, 0.1); border-color: var(--neon-gold); transform: scale(1.05); }
+        .icon-wrapper i { font-size: 1.5rem; color: var(--neon-cyan); text-shadow: 0 0 20px var(--cyan-glow); }
+        .custom-card:hover .icon-wrapper i { color: var(--neon-gold); text-shadow: 0 0 20px var(--gold-glow); }
+ 
+        .custom-card h3 { font-family: var(--font-display); font-size: 1.45rem; font-weight: 800; color: #fff; letter-spacing: -0.4px; }
+        .custom-card p { color: var(--text-muted); font-size: 1.02rem; line-height: 1.7; font-weight: 500; }
+       
+        .card-bottom-arabic {
+            font-family: var(--font-arabic); font-weight: 700; font-size: 0.95rem; line-height: 1.75; direction: rtl; text-align: right;
+            color: var(--text-pure); border-top: 1px solid rgba(255, 255, 255, 0.06); padding-top: 22px; margin-top: 22px;
+            z-index: 2; position: relative; transition: color 0.4s ease;
+        }
+        .custom-card:hover .card-bottom-arabic { color: var(--neon-gold); }
+ 
+        /* قطاع البيان الختامي الملوكي الصامت */
+        .manifesto-section { max-width: 1280px; margin: 110px auto 60px auto; padding: 0 24px; z-index: 10; position: relative; }
+        .manifesto-card {
+            background: linear-gradient(135deg, #070b12, #020306); border: 1px solid var(--neon-cyan); border-radius: 32px; padding: 70px;
+            display: grid; grid-template-columns: 1fr 1.4fr; gap: 60px; align-items: center;
+            box-shadow: 0 40px 80px rgba(0,0,0,0.8), 0 0 50px rgba(0, 242, 254, 0.05);
+            position: relative;
+        }
+        /* زخرفة هندسية متطورة في زوايا كرت البيان */
+        .manifesto-card::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100px; height: 100px;
+            border-top: 2px solid var(--neon-gold); border-left: 2px solid var(--neon-gold);
+            border-radius: 32px 0 0 0; opacity: 0.3;
+        }
+        .manifesto-card h3 { font-family: var(--font-display); font-size: 3.2rem; font-weight: 800; line-height: 1.1; letter-spacing: -1px; }
+        .manifesto-quote { font-family: var(--font-arabic); font-weight: 700; font-size: 1.35rem; line-height: 1.95; direction: rtl; text-align: right; border-right: 6px solid var(--neon-gold); padding-right: 35px; }
+ 
+        footer {
+            max-width: 1280px; margin: 70px auto 45px auto; padding: 40px 24px;
+            display: flex; justify-content: space-between; align-items: center;
+            color: var(--text-muted); font-size: 0.88rem; border-top: 1px solid rgba(255, 255, 255, 0.05); z-index: 10; position: relative;
+        }
+        footer .sig { font-family: var(--font-display); color: var(--neon-cyan); font-weight: 800; letter-spacing: 3px; font-size: 0.85rem; text-transform: uppercase; text-shadow: 0 0 10px var(--cyan-glow); }
+ 
+        @media (max-width: 1200px) {
+            .giga-projects-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+            .horizon-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .giga-projects-grid { grid-template-columns: 1fr; gap: 20px; }
+            .horizon-grid { grid-template-columns: 1fr; }
+            .manifesto-card { grid-template-columns: 1fr; padding: 45px; }
+            .hero-section h1 { font-size: 3.4rem; }
+        }
+    </style>
+</head>
+<body>
+ 
+    <div class="panoramic-glow-1"></div>
+    <div class="panoramic-glow-2"></div>
+    <div class="panoramic-glow-3"></div>
+ 
+    <header>
+        <div class="logo-text">Najd<span>Link</span></div>
+        <nav>
+            <span>Ecosystem</span>
+            <span>Giga Hubs</span>
+            <span>Horizon Radar</span>
+            <span>Sovereign Vault</span>
+        </nav>
+    </header>
+ 
+    <div class="hero-section">
+        <div class="badge">Sovereign Linkage Channel // Global Tier 1</div>
+        <h1>Architecting Premium <em>Strategic</em> Integration</h1>
+        <p>Transcending standard transactional paradigms to deliver an uncompromising, independent advisory ecosystem. We silently and flawlessly orient supreme international enterprises within Saudi Arabia's economic ascent.</p>
+        <button class="btn-prime">Begin Your Saudi Journey</button>
+    </div>
+ 
+    <div class="headline-box">
+        <h2>Sovereign Giga-Projects & Industrial Gateways <span>— المشاريع الفخمة والجزر والمدن الصناعية</span></h2>
+    </div>
+
+    <div class="giga-projects-grid">
+        
+        <div class="giga-card">
+            <div class="giga-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="NEOM Hub">
+            </div>
+            <div class="giga-content">
+                <div class="giga-badge">The Future of Living</div>
+                <h3>NEOM Gateway</h3>
+                <p>Connecting pioneer neural algorithms, advanced biotech firms, and sustainable smart-city tech entities with THE LINE, Oxagon, and Trojena core execution tracks.</p>
+                <div class="giga-arabic">بوابة نيوم للابتكار: حلقة الوصل الاستشارية لربط التقنيات العميقة، شبكات الذكاء الاصطناعي السيادي، ومزودي الطاقة النظيفة بأكبر مشروع مستقبلي تاريخي.</div>
+            </div>
+        </div>
+
+        <div class="giga-card">
+            <div class="giga-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80" alt="Red Sea Global">
+            </div>
+            <div class="giga-content">
+                <div class="giga-badge">Regenerative Luxury Islands</div>
+                <h3>Shurayrah & Sindalah Sovereignty</h3>
+                <p>Orienting absolute elite hospitality brands, boutique island asset buyers, ultra-luxury yacht networks, and global operators within Shurayrah and Sindalah ecosystems.</p>
+                <div class="giga-arabic">جزيرة سندالة وجزيرة شُورى الملكية: هندسة وتوجيه الاستثمارات النخبوية، العلامات الفندقية العالمية الفاخرة وسياحة اليخوت الفخمة في قلب جزر البحر الأحمر ومشاريع أمالا.</div>
+            </div>
+        </div>
+
+        <div class="giga-card">
+            <div class="giga-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=600&q=80" alt="Industrial Megacities">
+            </div>
+            <div class="giga-content">
+                <div class="giga-badge">Industrial Infrastructure & FDI</div>
+                <h3>Industrial Megacities & Manufacturing</h3>
+                <p>Attracting global factory owners, industrial conglomerates, and multinational production firms into advanced economic zones, MODON, and manufacturing corridors.</p>
+                <div class="giga-arabic">المدن الصناعية وتوطين التصنيع: استقطاب وجلب أصحاب المصانع والشركات الصناعية العالمية الكبرى لتأسيس خطوط إنتاج متطورة داخل المدن والمناطق الاقتصادية الخاصة.</div>
+            </div>
+        </div>
+
+        <div class="giga-card">
+            <div class="giga-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1513885535751-8b9238bd345a?auto=format&fit=crop&w=600&q=80" alt="Qiddiya Gateway">
+            </div>
+            <div class="giga-content">
+                <div class="giga-badge">Global Entertainment Capital</div>
+                <h3>Qiddiya Ecosystem</h3>
+                <p>Architecting strategic links for global entertainment conglomerates, gaming empires, massive theme park developers, and world-class sporting syndicates.</p>
+                <div class="giga-arabic">بوابة القدية: عاصمة الترفيه والرياضة والثقافة؛ صياغة مسارات الربط الاستراتيجي لشركات الترفيه والألعاب والمدن الترفيهية والمهرجانات العالمية الكبرى.</div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="headline-box">
+        <h2>Sovereign Horizon Radar <span>— مجالات ومشاريع استشرافية تحت الرادار السيادي</span></h2>
+    </div>
+
+    <div class="horizon-grid">
+        
+        <div class="horizon-card">
+            <div>
+                <div class="horizon-icon"><i class="fa-solid fa-microchip"></i></div>
+                <h3>Quantum Infrastructure & Sovereign AI</h3>
+                <p>Positioning elite global semiconductor architects and quantum computing syndicates within Saudi Arabia's upcoming deep-tech computational hubs.</p>
+            </div>
+            <div class="horizon-arabic">بنية الحوسبة الفائقة والذكاء الاصطناعي السيادي: استقطاب مطوري الرقائق الإلكترونية ومراكز معالجة البيانات الكمية فائقة السرعة للمدن الذكية القادمة.</div>
+        </div>
+
+        <div class="horizon-card">
+            <div>
+                <div class="horizon-icon"><i class="fa-solid fa-mound"></i></div>
+                <h3>Arabian Shield Mining & Green Hydrogen</h3>
+                <p>Advising international mining conglomerates on the unexploited $2.5T mineral wealth corridors and green hydrogen manufacturing networks.</p>
+            </div>
+            <div class="horizon-arabic">تعدين الدرع العربي والهيدروجين الأخضر: استشارة وجلب الشركات العالمية الكبرى للتنقيب عن المعادن النادرة وصناعات الطاقة البديلة التي تترقبها الأسواق.</div>
+        </div>
+
+        <div class="horizon-card">
+            <div>
+                <div class="horizon-icon"><i class="fa-solid fa-satellite"></i></div>
+                <h3>Orbital Economy & Aerospace Hubs</h3>
+                <p>Structuring core connection frameworks for private space tech companies, satellite manufacturers, and low-Earth-orbit communication enterprises.</p>
+            </div>
+            <div class="horizon-arabic">اقتصاد الفضاء والطيران المداري: هندسة مسارات الربط لشركات تكنولوجيا الفضاء، مصنعي الأقمار الصناعية، وشبكات الاتصالات المدارية الحديثة.</div>
+        </div>
+
+    </div>
+
+
+    <div class="headline-box">
+        <h2>17 // Core Strategic Advisory Verticals</h2>
+    </div>
+ 
+    <div class="content-grid">
+       
+        <div class="custom-card">
+            <div class="card-top">
+                <div class="icon-wrapper"><i class="fa-solid fa-bowl-food"></i></div>
+                <h3>1. Luxury Hospitality & Culinary Chains</h3>
+                <p>Linking global operators, premium international, local, and authentic traditional restaurant chains, along with ultra-luxury confectionery and elite chocolate brands with major giga-projects.</p>
+            </div>
+            <div class="card-bottom-arabic">تيسير واستشارة وربط المشغلين الدوليين، سلاسل المطاعم العالمية والمحلية والشعبية، وقطاعات الحلويات والشوكولاتة الفاخرة بالمشاريع السياحية الكبرى.</div>
+        </div>
+ 
+        <div class="custom-card">
+            <div class="card-top">
+                <div class="icon-wrapper"><i class="fa-solid fa-gem"></i></div>
+                <h3>2. Luxury Brands & Haute Couture</h3>
+                <p>Advising and streamlining immaculate entry strategies for haute couture maisons, fine watchmaking firms, rare high-end jewelers, and elite boutique franchises.</p>
+            </div>
+            <div class="card-bottom-arabic">تقديم الاستشارات وتسهيل دخول قطاعات الأزياء الراقية، الساعات والمجوهرات الثمينة، والخدمات الحصرية التي تستهدف النخبة للسوق المحلي.</div>
+        </div>
+ 
+        <div class="custom-card">
+            <div class="card-top">
+                <div class="icon-wrapper"><i class="fa-solid fa-brain"></i></div>
+                <h3>3. Artificial Intelligence & Advanced Tech</h3>
+                <p>Orchestrating digital entry networks, connecting emerging automation platforms, neural frameworks, and pioneering tech operators with mega smart city core systems.</p>
+            </div>
+            <div class="card-bottom-arabic">تيسير الشراكات والاستشارات الرقمية، وربط مزودي حلول التكنولوجيا الناشئة والمتقدمة بالبنى التحتية والمشاريع الكبرى.</div>
+        </div>
+
+        <div class="custom-card">
+            <div class="card-top">
+                <div class="icon-wrapper"><i class="fa-solid fa-shield-halved"></i></div>
+                <h3>4. Cybersecurity & Data Protection</h3>
+                <p>Advising, structuring, and linking world-class digital defense providers and operational risk architects to protect institutional databases.</p>
+            </div>
+            <div class="card-bottom-arabic">استشارة وتسهيل وربط الكيانات المتخصصة في أنظمة الحماية الرقمية واستمرارية الأعمال بالجهات الحيوية لتأمين بياناتها.</div>
+        </div>
+
+        <div class="custom-card">
+            <div class="card-top">
+                <div class="icon-wrapper"><i class="fa-solid fa-gamepad"></i></div>
+                <h3>5. Entertainment, Gaming & Theme Parks</h3>
+                <p>Connecting strategic international investors, electronic gaming developers, esports syndicates, and mega theme park operators to establish dominant local presences.</p>
+            </div>
+            <div class="card-bottom-arabic">الربط الاستراتيجي والتسهيل للشركات العالمية والمستثمرين في قطاع الترفيه, الفعاليات الضخمة، صناعة الألعاب الإلكترونية، ومدن الملاهي الترفيهية لتمكين تواجدها.</div>
+        </div>
+
+        <div class="custom-card">
+            <div class="card-top">
+                <div class="icon-wrapper"><i class="fa-solid fa-dna"></i></div>
+                <h3>6. Global Healthcare Market Entry</h3>
+                <p>Simplifying structural entry requirements for international clinical networks, bio-tech centers, and unique wellness solution providers.</p>
+            </div>
+            <div class="card-bottom-arabic">تيسير واستشارة وربط الكيانات الطبية والمستشفيات الدولية ومزودي الحلول الصحية المبتكرة للدخول والعمل ضمن البيئة التنظيمية المحلية.</div>
+        </div>
+
+        <div class="custom-card">
+            <div class="card-top">
+                <div class="icon-wrapper"><i class="fa-solid fa-industry"></i></div>
+                <h3>7. Global Manufacturing & Production</h3>
+                <p>Serving as a strategic advisory gateway to seamlessly transition and link premium international industrial entities and factory owners into the domestic manufacturing landscape.</p>
+            </div>
+            <div class="card-bottom-arabic">العمل كبوابة استشارية لتسهيل وربط المصنعين الدوليين وجلب أصحاب المصانع الكبرى لتأسيس خطوط إنتاج وتكامل اقتصادي متين.</div>
+        </div>
+
+        <div class="custom-card">
+            <div class="card-top">
+                <div class="icon-wrapper"><i class="fa-solid fa-mobile-screen"></i></div>
+                <h3>8. Live & Social Commerce</h3>
+                <p>Consulting and aligning strategic frameworks to forge cutting-edge models in interactive shopping platforms and smart applications defying legacy systems.</p>
+            </div>
+            <div class="card-bottom-arabic">تقديم الاستشارات والربط لابتكار وتطوير نماذج عمل جديدة في منصات التجارة التفاعلية والتطبيقات الذكية التي تخدم السوق وتنافس النماذج التقليدية.</div>
+        </div>
+
+        <div class="custom-card">
+            <div class="card-top">
+                <div class="icon-wrapper"><i class="fa-solid fa-gears"></i></div>
+                <h3>9. Professional Engineering & Maintenance</h3>
+                <p>Structuring governance blueprints to align international heavy infrastructure, advanced road specifications, and technical machinery maintenance with macro developments.</p>
+            </div>
+            <div class="card-bottom-arabic">تيسير وحوكمة وربط الكيانات الدولية المتخصصة في البنية التحتية، إنشاء الطرق، الصيانة الصناعية، والمعدات الثقيلة بالمشاريع المحلية.</div>
+        </div>
+
+        <div class="custom-card">
+            <div class="card-top">
+                <div class="icon-wrapper"><i class="fa-solid fa-file-signature"></i></div>
+                <h3>10. Government Tenders & Qualifications</h3>
+                <p>Delivering high-tier technical advisory to streamline corporate qualification processes and architect precise technical bid responses across official procurement channels.</p>
+            </div>
+            <div class="card-bottom-arabic">تقديم الاستشارات الفنية لتسهيل عمليات تأهيل الشركات وبناء المقترحات التقنية للمنافسات والمزايدات عبر المنصات الرسمية.</div>
+        </div>
+
+        <div class="custom-card">
+            <div class="card-top">
+                <div class="icon-wrapper"><i class="fa-solid fa-tower-broadcast"></i></div>
+                <h3>11. Regional Events Platforms</h3>
+                <p>Facilitating, consulting, and linking sophisticated digital architectures and executive broadcasting networks tasked with highlighting premier regional activities.</p>
+            </div>
+            <div class="card-bottom-arabic">تيسير واستشارة وربط الأنظمة الرقمية والمنصات الإخبارية المسؤولة عن تغطية وإبراز المناسبات والاحتفالات والأنشطة الكبرى في المنطقة.</div>
+        </div>
+
+        <div class="custom-card">
+            <div class="card-top">
+                <div class="icon-wrapper"><i class="fa-solid fa-city"></i></div>
+                <h3>12. Luxury Real Estate & Sovereign Expansion</h3>
+                <p>Acting as the elite conduit for structuring supreme asset deals, sovereign developments, and next-generation smart cities between top-tier investors and master builders.</p>
+            </div>
+            <div class="card-bottom-arabic">تيسير وربط صفقات الأصول العقارية الكبرى، والمشاريع السيادية والمدن الجديدة بين المستثمرين والمطورين العقاريين.</div>
+        </div>
+
+        <div class="custom-card">
+            <div class="card-top">
+                <div class="icon-wrapper"><i class="fa-solid fa-money-bill-trend-up"></i></div>
+                <h3>13. Global Foreign Direct Investment (FDI)</h3>
+                <p>Attracting, orchestrating, and channeling multi-sector strategic alliances and sovereign cross-border capital inflows towards high-value visionary opportunities.</p>
+            </div>
+            <div class="card-bottom-arabic">جذب وتنسيق التحالفات الاستراتيجية متعددة القطاعات، وتسهيل دخول السيولة والأموال الأجنبية المباشرة وتوجيهها للفرص الواعدة.</div>
+        </div>
+
+        <div class="custom-card">
+            <div class="card-top">
+                <div class="icon-wrapper"><i class="fa-solid fa-user-tie"></i></div>
+                <h3>14. Executive Digital Branding</h3>
+                <p>Providing pristine advisory to curate high-end digital personas and managing premium communication ecosystems for sovereign leaders and decision-makers.</p>
+            </div>
+            <div class="card-bottom-arabic">تقديم الاستشارات لبناء الهوية المهنية الرقمية وإدارة الحسابات التنفيذية لصناع القرار وقادة الأعمال لتعزيز حضورهم الرقمي.</div>
+        </div>
+
+        <div class="custom-card">
+            <div class="card-top">
+                <div class="icon-wrapper"><i class="fa-solid fa-database"></i></div>
+                <h3>15. Business Continuity & Tech Recovery</h3>
+                <p>Consulting and linking ultra-secure automated recovery networks and complex software architecture to rescue enterprise data and secure system runtime operations.</p>
+            </div>
+            <div class="card-bottom-arabic">تقديم استشارات الربط والتسهيل للحلول البرمجية المتقدمة المعنية بإنقاذ البيانات وإصلاح الأزمات التقنية الطارئة للأنظمة التشغيلية.</div>
+        </div>
+
+        <div class="custom-card" style="border-color: var(--neon-gold);">
+            <div class="card-top">
+                <div class="icon-wrapper"><i class="fa-solid fa-vault"></i></div>
+                <h3>16. Sovereign Escrow & Elite Compliance Desk</h3>
+                <p>Structuring independent due-diligence parameters, ultra-secure transaction mitigation frameworks, and elite legal compliance protocols for multi-billion dollar integrations.</p>
+            </div>
+            <div class="card-bottom-arabic">✦ حصرى لـ نجد لينك: حوكمة وهندسة قنوات الفحص النافي للجهالة، بروتوكولات الامتثال القانوني السيادي، والوساطة الآمنة لحماية الصفقات الكبرى وتأمينها.</div>
+        </div>
+
+        <div class="custom-card" style="border-color: var(--neon-gold);">
+            <div class="card-top">
+                <div class="icon-wrapper"><i class="fa-solid fa-plane-departure"></i></div>
+                <h3>17. Royal Concierge & Private Jet Access</h3>
+                <p>Providing end-to-end sovereign logistical facilitation, including private aviation clearance, executive protection frameworks, and high-tier bilateral meeting curations.</p>
+            </div>
+            <div class="card-bottom-arabic">✦ حصرى لـ نجد لينك: التيسير والترتيب اللوجستي الملوكي المتكامل، تذاكر الطيران الخاص، الحماية التنفيذية، وتنسيق اللقاءات الثنائية رفيعة المستوى مع صناع القرار.</div>
+        </div>
+
+    </div>
+ 
+    <div class="manifesto-section">
+        <div class="manifesto-card">
+            <h3>The future belongs to the silent architects.</h3>
+            <div class="manifesto-quote">"نحن لا نقوم ببناء المشاريع إنشائياً، بل نعمل كقناة سيادية مستقلة لهندسة روابط الوساطة التجارية الرفيعة؛ لتوطين القدرات والتحالفات المليارية الكبرى بأعلى مستويات الحوكمة والسرية الصامتة خلف الكواليس."</div>
+        </div>
+    </div>
+ 
+    <footer>
+        <p>© 2026 NAJD LINK. ALL RIGHTS RESERVED.</p>
+        <p class="sig">SOVEREIGN INSTITUTIONAL BRIDGE // GLOBAL NUMBER 1</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.custom-card').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+
+</body>
+</html>
