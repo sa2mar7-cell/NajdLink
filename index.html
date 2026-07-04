@@ -1,69 +1,43 @@
 <style>
-/* 1. حقن لوحة الألوان الإمبراطورية الصارمة داخل النظام */
+/* ==========================================================================
+   NAJD LINK - SAFE SAFE REBRANDING & ANIMATION CODE (FIXED VERSION)
+   ========================================================================== */
+
 :root {
-    --royal-imperial-green: #005A36 !important; /* الأخضر الملكي الأسطوري */
-    --polished-gold-metallic: #D5B87D !important; /* الذهب المصقول النخبوي */
-    --deep-charcoal-canvas: #1E232A !important; /* الخلفية الفخمة المعتمة */
-    --sovereign-glow-neon: #00ff9d !important; /* التوهج الخفيف الذكي */
+    --royal-green: #005A36 !important;     /* الأخضر الملكي الأسطوري */
+    --polished-gold: #D5B87D !important;   /* الذهب المصقول */
+    --deep-charcoal: #1E232A !important;   /* الخلفية المعتمة */
 }
 
-/* 2. تصحيح أرضية الموقع بالكامل */
-html, body {
-    background-color: var(--deep-charcoal-canvas) !important;
+/* 1. تعيين خلفية الموقع الأساسية بأمان دون حجب العناصر */
+body {
+    background-color: var(--deep-charcoal) !important;
 }
 
-/* 3. معالجة وتغيير البادجات (التي تظهر باللون الفيروزي أو النيلي الباهت حالياً) */
-div[style*="background-color: rgb(24,"], 
-div[style*="background-color"], 
-[class*="badge"], 
-span[style*="color"],
-div[style*="color: rgb(0, 229"] {
-    background-color: rgba(0, 90, 54, 0.25) !important; /* أرضية خضراء ملكية شفافة */
-    border: 1px solid var(--royal-imperial-green) !important; /* حدود خضراء مصمتة */
-    color: var(--polished-gold-metallic) !important; /* نصوص تشع بالذهب المصقول */
-    box-shadow: 0 0 10px rgba(0, 255, 157, 0.1) !important; /* التوهج الخفيف المحيط بالبادج */
+/* 2. تحديث ألوان البادجات والخطوط التوجيهية الحالية فقط */
+[class*="badge"], .sovereign-badge {
+    background-color: rgba(0, 90, 54, 0.25) !important;
+    border: 1px solid var(--royal-green) !important;
+    color: var(--polished-gold) !important;
 }
 
-/* 4. معالجة صور الـ CMS والـ Industrial Gateways لتفعيل تأثير تلاشي الـ 2.5 ثانية */
-div[class*="framer"] img, 
-div[class*="Collection"] img, 
-div[class*="Grid"] img, 
-.industrial-gateways img,
+/* 3. تطبيق حركة تلاشي الصور الفخمة بأمان دون إخفاء الحاويات (الـ 2.5 ثانية) */
+/* الكود يستهدف الصور بشكل ناعم وخفيف جداً لضمان عدم حدوث تعتيم كلي */
 img {
-    border-radius: 20px !important; /* تدوير حواف الصور الحادة الحالية بشكل فاخر */
-    opacity: 0.35 !important; /* الصورة متلاشية وضبابية افتراضياً لتندمج مع عمق الظلام */
-    filter: grayscale(45%) contrast(110%) brightness(85%) !important;
-    
-    /* المحرك الزمني: حركة انتقال سحرية ناعمة وممتدة على مدار ثانيتين ونصف */
-    transition: all 2.5s cubic-bezier(0.25, 1, 0.5, 1) !important;
-    will-change: opacity, transform, filter;
+    border-radius: 16px !important;       /* تدوير الحواف الحادة للصور */
+    opacity: 0.75 !important;              /* جعل التلاشي خفيف جداً وآمن لضمان ظهور الصور دائماً */
+    transition: opacity 2.5s cubic-bezier(0.25, 1, 0.5, 1), transform 2.5s cubic-bezier(0.25, 1, 0.5, 1) !important;
 }
 
-/* 5. تأثير الـ Hover (عند تحريك الماوس فوق الكرت أو فوق أي صورة) */
-/* هنا تنبثق الصورة من التلاشي والرمادي لتظهر بكامل ألوانها وسطوعها ببطء أسطوري */
-div[class*="framer"]:hover img, 
-div[class*="CollectionItem"]:hover img,
-div[class*="Grid"] > div:hover img,
-div:hover > img,
+/* 4. التأثير السحري الفوري عند مرور الماوس فوق أي صورة */
 img:hover {
-    opacity: 1 !important; /* الخروج التام من التلاشي لسطوع كامل 100% */
-    filter: grayscale(0%) contrast(125%) brightness(100%) !important; /* عودة الألوان السيادية الكاملة */
-    transform: scale(1.04) !important; /* تقريب وزووم تنفسي هادئ وبطيء جداً ممتد لـ 2.5 ثانية */
+    opacity: 1 !important;                 /* تظهر الصورة فوراً بوضوح كامل 100% */
+    transform: scale(1.03) !important;     /* زووم خفيف وانسيابي ممتد لـ 2.5 ثانية */
 }
 
-/* 6. إضاءة حواف الكروت بالكامل بالتوهج الإمبراطوري المتناسق */
-div[class*="CollectionItem"], 
-div[class*="framer-"] > div[style*="border"],
-div[style*="border-radius"] {
-    transition: all 2.5s cubic-bezier(0.25, 1, 0.5, 1) !important;
-}
-
-div[class*="CollectionItem"]:hover, 
-div[class*="framer-"]:hover,
-div[style*="border-radius"]:hover {
-    border-color: var(--royal-imperial-green) !important;
-    /* توهج ملكي خفيف خافت وثري يشع أسفل ومحيط الكروت عند التفاعل */
-    box-shadow: 0 25px 55px rgba(0, 90, 54, 0.35), 0 0 15px rgba(213, 184, 125, 0.08) !important;
-    transform: translateY(-5px) !important; /* رفع الكرت للأعلى بشكل انسيابي */
+/* 5. إضاءة حواف الكروت المحيطية عند تفاعل المستخدم */
+[class*="card"]:hover, [class*="Gateway"]:hover {
+    border-color: var(--royal-green) !important;
+    box-shadow: 0 15px 40px rgba(0, 90, 54, 0.25) !important;
 }
 </style>
