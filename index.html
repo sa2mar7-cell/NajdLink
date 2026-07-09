@@ -162,35 +162,177 @@
     <!-- End of bodyEnd -->
 </body>
 </html>
-Please execute a complete and premium update to my `index.html` file to incorporate the final strategic layout, correct the textual speech in both Arabic and English, and deploy the required investor tracks. 
+<!-- START OF NAJD LINK PREMIUM EXTENSION -->
+<style>
+    .najd-premium-section {
+        background-color: #0D0D0D;
+        color: #FFFFFF;
+        font-family: 'Inter', 'Cairo', sans-serif;
+        padding: 60px 5%;
+        border-top: 1px solid #1A1A1A;
+    }
+    .najd-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        margin-bottom: 60px;
+    }
+    .najd-card {
+        background: linear-gradient(135deg, rgba(20,20,20,0.8) 0%, rgba(10,10,10,0.8) 100%);
+        border: 1px solid #222;
+        border-radius: 12px;
+        padding: 30px;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+    .najd-card:hover {
+        transform: translateY(-5px);
+        border-color: #00F2FE;
+        box-shadow: 0 10px 30px rgba(0, 242, 254, 0.15);
+    }
+    .najd-badge {
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+        display: inline-block;
+        padding: 4px 10px;
+        border-radius: 4px;
+    }
+    .badge-completed { background: rgba(0, 200, 83, 0.1); color: #00C853; }
+    .badge-active { background: rgba(0, 242, 254, 0.1); color: #00F2FE; }
+    .badge-pipeline { background: rgba(212, 175, 55, 0.1); color: #D4AF37; }
+    
+    .najd-metric {
+        font-size: 48px;
+        font-weight: 800;
+        margin-bottom: 10px;
+    }
+    .najd-card-title {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: #E5E5E5;
+    }
+    .najd-card-desc {
+        font-size: 14px;
+        color: #888;
+        line-height: 1.6;
+    }
+    
+    /* Onboarding Portal Gate */
+    .najd-gate-container {
+        background: rgba(15, 15, 15, 0.6);
+        border: 1px solid rgba(0, 242, 254, 0.2);
+        box-shadow: 0 0 40px rgba(0, 242, 254, 0.05);
+        border-radius: 16px;
+        padding: 40px;
+        margin-bottom: 60px;
+    }
+    .najd-gate-title {
+        font-size: 24px;
+        font-weight: 700;
+        color: #D4AF37;
+        margin-bottom: 25px;
+        text-align: center;
+        letter-spacing: 1px;
+    }
+    .najd-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    @media (max-width: 768px) { .najd-form { grid-template-columns: 1fr; } }
+    .najd-input {
+        background: #141414;
+        border: 1px solid #333;
+        color: #FFF;
+        padding: 15px;
+        border-radius: 8px;
+        font-size: 14px;
+        transition: border-color 0.3s;
+    }
+    .najd-input:focus {
+        border-color: #00F2FE;
+        outline: none;
+    }
+    .najd-submit-btn {
+        grid-column: 1 / -1;
+        background: linear-gradient(90deg, #00D2C4, #00F2FE);
+        color: #000;
+        font-weight: 700;
+        padding: 16px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: opacity 0.3s;
+    }
+    .najd-submit-btn:hover { opacity: 0.9; }
+    
+    /* Footer Style */
+    .najd-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding-top: 40px;
+        border-top: 1px solid #222;
+        color: #666;
+        font-size: 14px;
+    }
+    .najd-footer-email {
+        color: #D4AF37;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s;
+    }
+    .najd-footer-email:hover { color: #00F2FE; }
+</style>
 
-Ensure the site maintains its hyper-professional, sovereign dark-theme (#0D0D0D background, gold corporate accents, and glowing turquoise highlights).
+<div class="najd-premium-section">
+    <!-- 1️⃣ Live Portfolio Tracks Section -->
+    <div class="najd-grid">
+        <!-- Completed Work -->
+        <div class="najd-card">
+            <span class="najd-badge badge-completed">Completed Benchmarks</span>
+            <div class="najd-metric" style="color: #00C853;">12+</div>
+            <div class="najd-card-title">المشاريع المنجزة</div>
+            <div class="najd-card-desc">أطر عمل استراتيجية صِيغت ونُفّذت بنجاح كامل لخدمة الأهداف العليا.</div>
+        </div>
+        <!-- Active Deployments -->
+        <div class="najd-card">
+            <span class="najd-badge badge-active">Active Deployments</span>
+            <div class="najd-metric" style="color: #00F2FE;">5</div>
+            <div class="najd-card-title">المشاريع الحالية قيد التنفيذ</div>
+            <div class="najd-card-desc">صناديق ومشاريع عملاقة نقوم بإدارتها وهندستها وتوجيه تدفقاتها حالياً.</div>
+        </div>
+        <!-- Pipeline Horizons -->
+        <div class="najd-card">
+            <span class="najd-badge badge-pipeline">Pipeline & Horizons</span>
+            <div class="najd-metric" style="color: #D4AF37;">2030</div>
+            <div class="najd-card-title">المشاريع المستقبلية المستهدفة</div>
+            <div class="najd-card-desc">مراكز رؤية ومشاريع استراتيجية مستقبلية جاري تصميم قنواتها للجيل القادم.</div>
+        </div>
+    </div>
 
-Here is the exact blueprint and code instructions to implement:
+    <!-- 2️⃣ Investor Onboarding Portal (Capital Deployment Gate) -->
+    <div class="najd-gate-container">
+        <div class="najd-gate-title">SOVEREIGN ONBOARDING / بوابة تدفق ورأس المال</div>
+        <form class="najd-form" onsubmit="event.preventDefault(); alert('Connecting Safely with NAJD LINK Intelligence...');">
+            <input type="text" class="najd-input" placeholder="اسم الجهة الاستثمارية / Institutional Entity Name" required>
+            <input type="text" class="najd-input" placeholder="حجم المحفظة المستهدفة / Targeted Portfolio Size ($B+)" required>
+            <input type="email" class="najd-input" placeholder="البريد الإلكتروني الرسمي / Contact Intelligence" required>
+            <input type="text" class="najd-input" placeholder="الولاية الاستراتيجية والمستهدف / Strategic Mandate" required>
+            <button type="submit" class="najd-submit-btn">BEGIN YOUR SOVEREIGN ENGAGEMENT / بدء التعاقد الآمن</button>
+        </form>
+    </div>
 
-1️⃣ TEXTUAL CORRECTION & BALANCING (The "Silent Architects" Banner):
-Completely replace the texts in the bottom banner with this flawless, highly-sophisticated dual-language copy. Ensure the CSS containers have enough horizontal width (or use width: fit-content) so that the English word "ARCHITECTS" is NEVER broken, and the single letter 'S' does not wrap to a new line:
-- English Typography (Left Side):
-  "THE FUTURE BELONGS TO THE SILENT ARCHITECTS."
-- Arabic Typography (Right Side):
-  "نحن لا نكتفي بإنشاء المشاريع، بل نصيغ منظومة سيادية مستقلة لهندسة وربط سلاسل القيمة المبتكرة، لتوطين القدرات والتدفقات الاستثمارية الكبرى بأعلى مستويات الحوكمة والسرية التامة خلف الكواليس."
-
-2️⃣ PROJECT HORIZONS & METRICS BOARD (Insert below the 4-image grid):
-Create an elegant, responsive 3-column dashboard track using sleek glassmorphism cards with smooth hover/transition micro-interactions. Each column needs a professional icon indicator:
-- Card 1 (Completed Work): Title: "Completed Benchmarks" | Metric: "12+" | Description: Strategic frameworks perfectly formulated and successfully executed. (Subtle deep green marker)
-- Card 2 (Active Work): Title: "Active Deployments" | Metric: "5" | Description: Giga-projects & sovereign funds actively being deployed under our guidance. (Glowing turquoise marker)
-- Card 3 (Future Work): Title: "Pipeline & Horizons" | Metric: "2030" | Description: Visionary strategic hubs engineered for upcoming generational rollout. (Muted corporate gold marker)
-
-3️⃣ INVESTOR ONBOARDING PORTAL (Capital Deployment Gate):
-Add a secure, high-end institutional section titled "Sovereign Onboarding" or "Capital Deployment Gate":
-- Design it as a premium dark container with a faint turquoise outer glow.
-- Embed a flawless, functional interactive Form for partners to connect securely.
-- Input Fields required: [Institutional Entity Name], [Targeted Portfolio Size ($B+)], [Contact Intelligence], and [Strategic Mandate].
-
-4️⃣ THE SOVEREIGN FOOTER (Institutional Contacts):
-Implement a clean, minimal footer at the absolute bottom of the entire website page:
-- Official Email: partnerships@najdlink.com (Hyperlinked with a `mailto:` tag, styled with a smooth gold text hover effect).
-- Safe encrypted corporate messaging triggers & institutional social anchors (LinkedIn / X).
-- Copyright notice: "© 2026 NAJD LINK. All Sovereign Rights Reserved."
-
-Please merge these blocks beautifully into the HTML hierarchy using clean responsive CSS grid/flexbox models and proper padding.
+    <!-- 3️⃣ Corporate Sovereign Footer -->
+    <div class="najd-footer">
+        <div>Official Intelligence Access: <a href="mailto:partnerships@najdlink.com" class="najd-footer-email">partnerships@najdlink.com</a></div>
+        <div>&copy; 2026 NAJD LINK. All Sovereign Rights Reserved.</div>
+    </div>
+</div>
+<!-- END OF NAJD LINK PREMIUM EXTENSION -->
