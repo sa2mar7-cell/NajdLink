@@ -163,175 +163,48 @@
 </body>
 </html>
 <!-- START OF NAJD LINK PREMIUM EXTENSION -->
-<style>
-    .najd-premium-section {
-        background-color: #0D0D0D;
-        color: #FFFFFF;
-        font-family: 'Inter', 'Cairo', sans-serif;
-        padding: 60px 5%;
-        border-top: 1px solid #1A1A1A;
-    }
-    .najd-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 30px;
-        margin-bottom: 60px;
-    }
-    .najd-card {
-        background: linear-gradient(135deg, rgba(20,20,20,0.8) 0%, rgba(10,10,10,0.8) 100%);
-        border: 1px solid #222;
-        border-radius: 12px;
-        padding: 30px;
-        transition: all 0.3s ease;
-        position: relative;
-    }
-    .najd-card:hover {
-        transform: translateY(-5px);
-        border-color: #00F2FE;
-        box-shadow: 0 10px 30px rgba(0, 242, 254, 0.15);
-    }
-    .najd-badge {
-        font-size: 12px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        margin-bottom: 15px;
-        display: inline-block;
-        padding: 4px 10px;
-        border-radius: 4px;
-    }
-    .badge-completed { background: rgba(0, 200, 83, 0.1); color: #00C853; }
-    .badge-active { background: rgba(0, 242, 254, 0.1); color: #00F2FE; }
-    .badge-pipeline { background: rgba(212, 175, 55, 0.1); color: #D4AF37; }
+<div class="najd-premium-container" style="background-color: #0D0D0D; color: #FFFFFF; font-family: sans-serif; padding: 60px 5%; border-top: 1px solid #1A1A1A; direction: ltr;">
     
-    .najd-metric {
-        font-size: 48px;
-        font-weight: 800;
-        margin-bottom: 10px;
-    }
-    .najd-card-title {
-        font-size: 18px;
-        font-weight: 600;
-        margin-bottom: 10px;
-        color: #E5E5E5;
-    }
-    .najd-card-desc {
-        font-size: 14px;
-        color: #888;
-        line-height: 1.6;
-    }
-    
-    /* Onboarding Portal Gate */
-    .najd-gate-container {
-        background: rgba(15, 15, 15, 0.6);
-        border: 1px solid rgba(0, 242, 254, 0.2);
-        box-shadow: 0 0 40px rgba(0, 242, 254, 0.05);
-        border-radius: 16px;
-        padding: 40px;
-        margin-bottom: 60px;
-    }
-    .najd-gate-title {
-        font-size: 24px;
-        font-weight: 700;
-        color: #D4AF37;
-        margin-bottom: 25px;
-        text-align: center;
-        letter-spacing: 1px;
-    }
-    .najd-form {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-    }
-    @media (max-width: 768px) { .najd-form { grid-template-columns: 1fr; } }
-    .najd-input {
-        background: #141414;
-        border: 1px solid #333;
-        color: #FFF;
-        padding: 15px;
-        border-radius: 8px;
-        font-size: 14px;
-        transition: border-color 0.3s;
-    }
-    .najd-input:focus {
-        border-color: #00F2FE;
-        outline: none;
-    }
-    .najd-submit-btn {
-        grid-column: 1 / -1;
-        background: linear-gradient(90deg, #00D2C4, #00F2FE);
-        color: #000;
-        font-weight: 700;
-        padding: 16px;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        font-size: 16px;
-        transition: opacity 0.3s;
-    }
-    .najd-submit-btn:hover { opacity: 0.9; }
-    
-    /* Footer Style */
-    .najd-footer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 20px;
-        padding-top: 40px;
-        border-top: 1px solid #222;
-        color: #666;
-        font-size: 14px;
-    }
-    .najd-footer-email {
-        color: #D4AF37;
-        text-decoration: none;
-        font-weight: 600;
-        transition: color 0.3s;
-    }
-    .najd-footer-email:hover { color: #00F2FE; }
-</style>
-
-<div class="najd-premium-section">
     <!-- 1️⃣ Live Portfolio Tracks Section -->
-    <div class="najd-grid">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 60px;">
         <!-- Completed Work -->
-        <div class="najd-card">
-            <span class="najd-badge badge-completed">Completed Benchmarks</span>
-            <div class="najd-metric" style="color: #00C853;">12+</div>
-            <div class="najd-card-title">المشاريع المنجزة</div>
-            <div class="najd-card-desc">أطر عمل استراتيجية صِيغت ونُفّذت بنجاح كامل لخدمة الأهداف العليا.</div>
+        <div style="background: #141414; border: 1px solid #222; border-radius: 12px; padding: 30px; text-align: center;">
+            <div style="color: #00C853; font-size: 12px; text-transform: uppercase; margin-bottom: 10px;">Completed Benchmarks</div>
+            <div style="font-size: 48px; font-weight: 800; color: #00C853; margin-bottom: 10px;">12+</div>
+            <div style="font-size: 18px; font-weight: 600; color: #E5E5E5; margin-bottom: 10px; direction: rtl;">المشاريع المنجزة</div>
+            <div style="font-size: 14px; color: #888; line-height: 1.6; direction: rtl;">أطر عمل استراتيجية صِيغت ونُفّذت بنجاح كامل لخدمة الأهداف العليا.</div>
         </div>
         <!-- Active Deployments -->
-        <div class="najd-card">
-            <span class="najd-badge badge-active">Active Deployments</span>
-            <div class="najd-metric" style="color: #00F2FE;">5</div>
-            <div class="najd-card-title">المشاريع الحالية قيد التنفيذ</div>
-            <div class="najd-card-desc">صناديق ومشاريع عملاقة نقوم بإدارتها وهندستها وتوجيه تدفقاتها حالياً.</div>
+        <div style="background: #141414; border: 1px solid #00F2FE; border-radius: 12px; padding: 30px; text-align: center; box-shadow: 0 0 20px rgba(0,242,254,0.1);">
+            <div style="color: #00F2FE; font-size: 12px; text-transform: uppercase; margin-bottom: 10px;">Active Deployments</div>
+            <div style="font-size: 48px; font-weight: 800; color: #00F2FE; margin-bottom: 10px;">5</div>
+            <div style="font-size: 18px; font-weight: 600; color: #E5E5E5; margin-bottom: 10px; direction: rtl;">المشاريع الحالية قيد التنفيذ</div>
+            <div style="font-size: 14px; color: #888; line-height: 1.6; direction: rtl;">صناديق ومشاريع عملاقة نقوم بإدارتها وهندستها وتوجيه تدفقاتها حالياً.</div>
         </div>
         <!-- Pipeline Horizons -->
-        <div class="najd-card">
-            <span class="najd-badge badge-pipeline">Pipeline & Horizons</span>
-            <div class="najd-metric" style="color: #D4AF37;">2030</div>
-            <div class="najd-card-title">المشاريع المستقبلية المستهدفة</div>
-            <div class="najd-card-desc">مراكز رؤية ومشاريع استراتيجية مستقبلية جاري تصميم قنواتها للجيل القادم.</div>
+        <div style="background: #141414; border: 1px solid #222; border-radius: 12px; padding: 30px; text-align: center;">
+            <div style="color: #D4AF37; font-size: 12px; text-transform: uppercase; margin-bottom: 10px;">Pipeline & Horizons</div>
+            <div style="font-size: 48px; font-weight: 800; color: #D4AF37; margin-bottom: 10px;">2030</div>
+            <div style="font-size: 18px; font-weight: 600; color: #E5E5E5; margin-bottom: 10px; direction: rtl;">المشاريع المستقبلية المستهدفة</div>
+            <div style="font-size: 14px; color: #888; line-height: 1.6; direction: rtl;">مراكز رؤية ومشاريع استراتيجية مستقبلية جاري تصميم قنواتها للجيل القادم.</div>
         </div>
     </div>
 
     <!-- 2️⃣ Investor Onboarding Portal (Capital Deployment Gate) -->
-    <div class="najd-gate-container">
-        <div class="najd-gate-title">SOVEREIGN ONBOARDING / بوابة تدفق ورأس المال</div>
-        <form class="najd-form" onsubmit="event.preventDefault(); alert('Connecting Safely with NAJD LINK Intelligence...');">
-            <input type="text" class="najd-input" placeholder="اسم الجهة الاستثمارية / Institutional Entity Name" required>
-            <input type="text" class="najd-input" placeholder="حجم المحفظة المستهدفة / Targeted Portfolio Size ($B+)" required>
-            <input type="email" class="najd-input" placeholder="البريد الإلكتروني الرسمي / Contact Intelligence" required>
-            <input type="text" class="najd-input" placeholder="الولاية الاستراتيجية والمستهدف / Strategic Mandate" required>
-            <button type="submit" class="najd-submit-btn">BEGIN YOUR SOVEREIGN ENGAGEMENT / بدء التعاقد الآمن</button>
+    <div style="background: rgba(20, 20, 20, 0.8); border: 1px solid rgba(0, 242, 254, 0.2); border-radius: 16px; padding: 40px; margin-bottom: 60px;">
+        <div style="font-size: 22px; font-weight: 700; color: #D4AF37; margin-bottom: 25px; text-align: center; letter-spacing: 1px;">SOVEREIGN ONBOARDING / بوابة تدفق ورأس المال</div>
+        <form style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;" onsubmit="event.preventDefault(); alert('Connecting Safely with NAJD LINK Intelligence...');">
+            <input type="text" placeholder="اسم الجهة الاستثمارية / Institutional Entity Name" style="background: #0D0D0D; border: 1px solid #333; color: #FFF; padding: 15px; border-radius: 8px; font-size: 14px;">
+            <input type="text" placeholder="حجم المحفظة المستهدفة / Targeted Portfolio Size ($B+)" style="background: #0D0D0D; border: 1px solid #333; color: #FFF; padding: 15px; border-radius: 8px; font-size: 14px;">
+            <input type="email" placeholder="البريد الإلكتروني الرسمي / Contact Intelligence" style="background: #0D0D0D; border: 1px solid #333; color: #FFF; padding: 15px; border-radius: 8px; font-size: 14px;">
+            <input type="text" placeholder="الولاية الاستراتيجية والمستهدف / Strategic Mandate" style="background: #0D0D0D; border: 1px solid #333; color: #FFF; padding: 15px; border-radius: 8px; font-size: 14px;">
+            <button type="submit" style="grid-column: 1 / -1; background: linear-gradient(90deg, #00D2C4, #00F2FE); color: #000; font-weight: 700; padding: 16px; border: none; border-radius: 8px; cursor: pointer; font-size: 16px;">BEGIN YOUR SOVEREIGN ENGAGEMENT / بدء التعاقد الآمن</button>
         </form>
     </div>
 
     <!-- 3️⃣ Corporate Sovereign Footer -->
-    <div class="najd-footer">
-        <div>Official Intelligence Access: <a href="mailto:partnerships@najdlink.com" class="najd-footer-email">partnerships@najdlink.com</a></div>
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; padding-top: 40px; border-top: 1px solid #222; color: #666; font-size: 14px;">
+        <div>Official Intelligence Access: <a href="mailto:partnerships@najdlink.com" style="color: #D4AF37; text-decoration: none; font-weight: 600;">partnerships@najdlink.com</a></div>
         <div>&copy; 2026 NAJD LINK. All Sovereign Rights Reserved.</div>
     </div>
 </div>
