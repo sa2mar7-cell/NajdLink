@@ -162,3 +162,207 @@
     <!-- End of bodyEnd -->
 </body>
 </html>
+<!-- ==========================================
+     NAJD LINK WORLD-CLASS INSTITUTIONAL BLOCK 
+     ========================================== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+<style>
+    .najd-global-hub {
+        background-color: #0D0D0D;
+        color: #FFFFFF;
+        font-family: 'Inter', 'Cairo', sans-serif;
+        padding: 80px 6%;
+        border-top: 1px solid #161616;
+        letter-spacing: -0.02em;
+    }
+    
+    /* 1️⃣ Metrics Dashboard Grid */
+    .najd-metrics-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 35px;
+        margin-bottom: 80px;
+    }
+    .najd-metric-card {
+        background: linear-gradient(180deg, rgba(20, 20, 20, 0.7) 0%, rgba(10, 10, 10, 0.9) 100%);
+        border: 1px solid rgba(255, 255, 255, 0.03);
+        border-radius: 16px;
+        padding: 40px 35px;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .najd-metric-card:hover {
+        transform: translateY(-8px);
+        background: linear-gradient(180deg, rgba(25, 25, 25, 0.8) 0%, rgba(13, 13, 13, 1) 100%);
+    }
+    .card-completed:hover { border-color: #00C853; box-shadow: 0 20px 40px rgba(0, 200, 83, 0.08); }
+    .card-active:hover { border-color: #00F2FE; box-shadow: 0 20px 40px rgba(0, 242, 254, 0.08); }
+    .card-pipeline:hover { border-color: #D4AF37; box-shadow: 0 20px 40px rgba(212, 175, 55, 0.08); }
+
+    .najd-status-indicator {
+        position: absolute;
+        top: 25px;
+        right: 30px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+    }
+    .dot { width: 6px; height: 6px; border-radius: 50%; display: inline-block; }
+    .dot-completed { background-color: #00C853; box-shadow: 0 0 10px #00C853; color: #00C853; }
+    .dot-active { background-color: #00F2FE; box-shadow: 0 0 10px #00F2FE; color: #00F2FE; }
+    .dot-pipeline { background-color: #D4AF37; box-shadow: 0 0 10px #D4AF37; color: #D4AF37; }
+
+    .najd-big-number {
+        font-size: 56px;
+        font-weight: 800;
+        line-height: 1;
+        margin-bottom: 20px;
+        font-family: 'Inter', sans-serif;
+    }
+    .najd-card-heading {
+        font-size: 20px;
+        font-weight: 700;
+        color: #F5F5F5;
+        margin-bottom: 12px;
+        direction: rtl;
+        text-align: right;
+    }
+    .najd-card-body-text {
+        font-size: 14px;
+        color: #8E8E93;
+        line-height: 1.6;
+        direction: rtl;
+        text-align: right;
+    }
+
+    /* 2️⃣ Sovereign Capital Deployment Gate */
+    .najd-gate-panel {
+        background: linear-gradient(135deg, rgba(15, 15, 15, 0.5) 0%, rgba(5, 5, 5, 0.8) 100%);
+        border: 1px solid rgba(0, 242, 254, 0.15);
+        border-radius: 24px;
+        padding: 50px;
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+        margin-bottom: 80px;
+    }
+    .najd-gate-header {
+        font-size: 24px;
+        font-weight: 700;
+        color: #D4AF37;
+        text-align: center;
+        letter-spacing: 0.05em;
+        margin-bottom: 35px;
+    }
+    .najd-gate-form {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 25px;
+    }
+    .najd-geometric-input {
+        background: #121212;
+        border: 1px solid #2C2C2E;
+        color: #FFFFFF;
+        padding: 18px;
+        border-radius: 10px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+    .najd-geometric-input:focus {
+        border-color: #00F2FE;
+        background: #1C1C1E;
+        outline: none;
+        box-shadow: 0 0 15px rgba(0, 242, 254, 0.1);
+    }
+    .najd-gate-action {
+        grid-column: 1 / -1;
+        background: linear-gradient(90deg, #00D2C4 0%, #00F2FE 100%);
+        color: #000000;
+        font-weight: 700;
+        font-size: 15px;
+        letter-spacing: 0.05em;
+        padding: 20px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: opacity 0.3s;
+    }
+    .najd-gate-action:hover {
+        opacity: 0.92;
+    }
+
+    /* 3️⃣ Elite Sovereign Footer */
+    .najd-institutional-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 25px;
+        padding-top: 40px;
+        border-top: 1px solid #1C1C1E;
+        font-size: 13px;
+        color: #636366;
+    }
+    .najd-secure-anchor {
+        color: #D4AF37;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s;
+    }
+    .najd-secure-anchor:hover {
+        color: #00F2FE;
+    }
+</style>
+
+<div class="najd-global-hub">
+    <!-- 1️⃣ Iconic Tracks Grid -->
+    <div class="najd-metrics-wrapper">
+        <!-- Completed Work Card -->
+        <div class="najd-metric-card card-completed">
+            <div class="najd-status-indicator"><span class="dot dot-completed"></span>Benchmarks</div>
+            <div class="najd-big-number" style="color: #00C853;">12+</div>
+            <div class="najd-card-heading">الإنجازات الاستراتيجية المحققة</div>
+            <div class="najd-card-body-text">أطر عمل سيادية معقدة تمت هندستها وصياغتها بنجاح كامل لخدمة مستهدفات الربط الدولي المتكامل.</div>
+        </div>
+        
+        <!-- Active Projects Card -->
+        <div class="najd-metric-card card-active">
+            <div class="najd-status-indicator"><span class="dot dot-active"></span>Deployments</div>
+            <div class="najd-big-number" style="color: #00F2FE;">5</div>
+            <div class="najd-card-heading">المشاريع الحالية قيد التنفيذ</div>
+            <div class="najd-card-body-text">صناديق استثمارية ومشاريع كبرى (Giga-Projects) تدار وتوجه تدفقاتها بكفاءة بالغة تحت مظلتنا الآن.</div>
+        </div>
+        
+        <!-- Future Horizons Card -->
+        <div class="najd-metric-card card-pipeline">
+            <div class="najd-status-indicator"><span class="dot dot-pipeline"></span>Horizons</div>
+            <div class="najd-big-number" style="color: #D4AF37;">2030</div>
+            <div class="najd-card-heading">المستهدفات والمشاريع المستقبلية</div>
+            <div class="najd-card-body-text">منصات ومراكز حيوية جاري رسم قنواتها الهيكلية لتأمين النقلة الاستثمارية القادمة للجيل الجديد.</div>
+        </div>
+    </div>
+
+    <!-- 2️⃣ Capital Deployment Gate Panel -->
+    <div class="najd-gate-panel">
+        <div class="najd-gate-header">CAPITAL DEPLOYMENT GATE | بوابة تدفق ورأس المال</div>
+        <form class="najd-gate-form" onsubmit="event.preventDefault(); alert('Initiating secure institutional handshake...');">
+            <input type="text" class="najd-geometric-input" placeholder="اسم الجهة الاستثمارية / Institutional Entity Name" required>
+            <input type="text" class="najd-geometric-input" placeholder="حجم المحفظة المستهدفة / Targeted Portfolio Size ($B+)" required>
+            <input type="email" class="najd-geometric-input" placeholder="البريد الإلكتروني الرسمي / Contact Intelligence" required>
+            <input type="text" class="najd-geometric-input" placeholder="الولاية الاستراتيجية والمستهدف / Strategic Mandate" required>
+            <button type="submit" class="najd-gate-action">BEGIN SOVEREIGN ENGAGEMENT | بدء التعاقد الآمن</button>
+        </form>
+    </div>
+
+    <!-- 3️⃣ Corporate Sovereign Footer -->
+    <div class="najd-institutional-footer">
+        <div>Official Intelligence Access: <a href="mailto:partnerships@najdlink.com" class="najd-secure-anchor">partnerships@najdlink.com</a></div>
+        <div>&copy; 2026 NAJD LINK. All Sovereign Rights Reserved.</div>
+    </div>
+</div>
